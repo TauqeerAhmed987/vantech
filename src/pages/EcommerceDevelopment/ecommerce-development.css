@@ -1,0 +1,2024 @@
+/* ---------- Ecommerce Development Page ---------- */
+/* Reuses design tokens (colors, .container, .section, .eyebrow-pill,
+   .section-title, .section-head, .btn) defined in src/styles/global.css. */
+
+.ecommerce-page {
+  position: relative;
+  overflow-x: clip;
+}
+
+/* Full-page background texture, faded out over its last 10% so it blends
+   smoothly into the CTA/footer instead of cutting off with a hard edge. */
+.ecommerce-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../assets/images/ecommerce-development/figma/services-body-bg.webp);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 90%, transparent 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ecommerce-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Shared heading styles ---------- */
+
+.ecommerce-h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1.2;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.ecommerce-h1-lg {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1.15;
+  color: var(--color-white);
+}
+
+.ecommerce-h1-lg .accent {
+  color: var(--color-white);
+}
+
+.ecommerce-h1-lg--center {
+  text-align: center;
+}
+
+.ecommerce-p-lg {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: 620px;
+}
+
+.ecommerce-section-copy {
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+/* ---------- Card surface (shared by build / use-case / process cards) ---------- */
+
+.ecommerce-card {
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background: linear-gradient(175deg, rgba(0, 0, 0, 0.8) 2.45%, rgba(22, 22, 22, 0.9) 102.09%);
+  backdrop-filter: blur(25px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ecommerce-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 15px;
+  background: conic-gradient(from var(--gradient-border-angle), var(--color-orange-3), #000000, var(--color-blue-2), var(--color-orange-3));
+  animation: gradient-border-spin 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ecommerce-card:hover {
+  transform: translateY(-6px);
+}
+
+.ecommerce-card:hover::before {
+  background: var(--color-orange);
+}
+
+.ecommerce-card--flat {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.ecommerce-icon-badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--color-bg-card-3);
+  border: 1.5px solid var(--color-orange-3);
+  box-shadow: 0 20px 40px rgba(255, 88, 0, 0.25);
+  color: var(--color-orange);
+}
+
+.ecommerce-icon-badge .icon {
+  width: 26px;
+  height: 26px;
+}
+
+.ecommerce-badge-img {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+
+/* ---------- Hero ---------- */
+
+.ecommerce-hero {
+  position: relative;
+  padding: 240px 0 140px;
+}
+
+.ecommerce-hero .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.ecommerce-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.ecommerce-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border: 0.84px solid var(--color-orange);
+  border-radius: 19px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-white);
+}
+
+.ecommerce-hero__badge .icon {
+  width: 13px;
+  height: 14px;
+}
+
+.ecommerce-hero__title {
+  margin-top: 28px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.ecommerce-hero__desc {
+  margin-top: 24px;
+  max-width: 492px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.ecommerce-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.ecommerce-hero__actions .btn-primary {
+  background: transparent;
+  border: 1.8px solid var(--color-border);
+  box-shadow: none;
+}
+
+.ecommerce-hero__actions .btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-orange-2) 100%);
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(255, 102, 0, 0.4);
+}
+
+.ecommerce-hero__graphic {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 0;
+  width: 680px;
+  pointer-events: none;
+}
+
+.ecommerce-hero__mockup {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Where Commerce Operations Leak ---------- */
+
+.ecommerce-leak {
+  padding-top: 0;
+}
+
+.ecommerce-leak__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.ecommerce-leak__copy {
+  max-width: 565px;
+}
+
+.ecommerce-leak__list {
+  flex: 1;
+  max-width: 725px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+}
+
+.ecommerce-leak__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  border: 1px solid transparent;
+}
+
+.ecommerce-leak__item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 10px;
+  background: conic-gradient(from var(--gradient-border-angle), var(--color-orange-3), #000000, var(--color-blue-2), var(--color-orange-3));
+  animation: gradient-border-spin 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ecommerce-leak__item-number {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-orange-2);
+}
+
+.ecommerce-leak__item-text {
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+/* ---------- Solution ---------- */
+
+.ecommerce-solution {
+  padding-top: 134px;
+}
+
+.ecommerce-solution__row {
+  display: flex;
+  align-items: center;
+  gap: 134px;
+}
+
+.ecommerce-solution__graphic {
+  position: relative;
+  flex-shrink: 0;
+  width: 620px;
+}
+
+.ecommerce-solution__mockup {
+  width: 100%;
+  height: auto;
+}
+
+.ecommerce-solution__copy {
+  flex: 1;
+  max-width: 651px;
+}
+
+.ecommerce-solution__title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1.2;
+  color: var(--color-white);
+  width: 420px;
+}
+
+.ecommerce-solution__desc {
+  margin-top: 20px;
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--color-white);
+  width: 540px;
+}
+
+/* ---------- What We Build ---------- */
+
+.ecommerce-build {
+  position: relative;
+  padding-top: 100px;
+}
+
+.ecommerce-build .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-build__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 71px;
+}
+
+.ecommerce-build-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px 28px;
+}
+
+.ecommerce-build-card__glow {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 160px;
+  height: 160px;
+  background: var(--color-orange);
+  filter: blur(80px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.ecommerce-build-card:hover .ecommerce-build-card__glow {
+  opacity: 0.5;
+}
+
+.ecommerce-build-card__head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.ecommerce-build-card__badge {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  box-shadow:
+    0 41.672px 54.377px rgba(255, 88, 0, 0.19),
+    0 17.308px 22.585px rgba(255, 88, 0, 0.22),
+    0 70.8px 180.371px rgba(255, 88, 0, 0.34);
+}
+
+.ecommerce-build-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--color-orange);
+}
+
+.ecommerce-build-card__desc {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: calc(var(--dw) * 1px);
+}
+
+/* ---------- Capabilities ---------- */
+
+.ecommerce-capabilities {
+  position: relative;
+  padding-top: 186px;
+}
+
+.ecommerce-capabilities .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-capabilities__rows {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.ecommerce-capabilities__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 19px;
+}
+
+.ecommerce-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 7px;
+  border: 1.5px solid transparent;
+  background: linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+              conic-gradient(from var(--gradient-border-angle), var(--color-orange-3), #000000, var(--color-blue-2), var(--color-orange-3)) border-box;
+  animation: gradient-border-spin 3s linear infinite;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-white);
+  white-space: nowrap;
+  cursor: default;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.ecommerce-pill:hover {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.ecommerce-pill__dot {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecommerce-pill__dot span {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: var(--color-orange);
+  transition: background 0.3s ease;
+}
+
+.ecommerce-pill:hover .ecommerce-pill__dot span {
+  background: var(--color-white);
+}
+
+/* ---------- Use Cases ---------- */
+
+.ecommerce-usecases {
+  padding-top: 125px;
+}
+
+.ecommerce-usecases__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 27px;
+  margin-top: 30px;
+}
+
+.ecommerce-usecase-card {
+  padding: 24px 26px;
+}
+
+.ecommerce-usecase-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--color-white);
+}
+
+.ecommerce-usecase-card__divider {
+  margin: 43px 0 19px;
+  border: none;
+  border-top: 1px solid var(--color-border-soft-4);
+}
+
+.ecommerce-usecase-card__desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-white);
+}
+
+/* ---------- MVP architecture (pipeline) ---------- */
+
+.ecommerce-architecture {
+  position: relative;
+  padding-top: 223px;
+}
+
+
+.ecommerce-architecture .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ecommerce-architecture__divider {
+  position: relative;
+  margin-top: 63px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.ecommerce-architecture__divider-dot {
+  position: absolute;
+  right: 0;
+  top: -6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-orange-3);
+  box-shadow: 0 0 14px var(--color-orange-3);
+}
+
+.ecommerce-timeline {
+  position: relative;
+  z-index: 0;
+  margin-top: -33px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ecommerce-timeline-step {
+  flex: 1;
+  min-width: 0;
+}
+
+.ecommerce-timeline-step__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: var(--color-orange-3);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-white);
+}
+
+.ecommerce-timeline-step__title {
+  margin: 50px 0 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--color-orange-3);
+}
+
+.ecommerce-timeline-step__tags {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.ecommerce-timeline-step__tag-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ecommerce-timeline-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 83px;
+  background: #11161d;
+  border: 1.33px solid #292d34;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+/* ---------- Development Process ---------- */
+
+.ecommerce-process2 {
+  padding-top: 200px;
+}
+
+.ecommerce-process2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 64px;
+}
+
+.ecommerce-process2-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px 38px 50px 25px;
+}
+
+.ecommerce-process2-card__badge {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.ecommerce-process2-card__body {
+  min-width: 0;
+}
+
+.ecommerce-process2-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--color-orange);
+}
+
+.ecommerce-process2-card__desc {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: calc(var(--dw) * 1px);
+}
+
+/* ---------- Potential Integrations ---------- */
+
+.ecommerce-integrations {
+  padding-top: 211px;
+}
+
+.ecommerce-integrations__grid {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.ecommerce-integrations__row {
+  display: flex;
+  align-items: center;
+}
+
+.ecommerce-integration-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 197px;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.ecommerce-integration-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 7px;
+  background: conic-gradient(from var(--gradient-border-angle), var(--color-orange-3), #000000, var(--color-blue-2), var(--color-orange-3));
+  animation: gradient-border-spin 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ecommerce-integration-connector {
+  position: relative;
+  width: 105px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ecommerce-integration-connector__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #0267bc 0%,
+    rgba(2, 103, 188, 0) 49%,
+    rgba(255, 110, 20, 0) 51%,
+    #ff6e14 100%
+  );
+}
+
+.ecommerce-integration-connector__diamond-outer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14.167px;
+  height: 14.167px;
+  border: 0.4px solid #0173d4;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ecommerce-integration-connector__diamond-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background: #d75c11;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ecommerce-integration-pill .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ---------- Why Van Tech Systems ---------- */
+
+.ecommerce-why {
+  padding-top: 251px;
+}
+
+.ecommerce-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 64px;
+}
+
+.ecommerce-why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px;
+  min-height: 195px;
+}
+
+.ecommerce-why-card__badge {
+  margin-bottom: 40px;
+  box-shadow:
+    0 41.672px 54.377px rgba(255, 88, 0, 0.19),
+    0 17.308px 22.585px rgba(255, 88, 0, 0.22),
+    0 70.8px 180.371px rgba(255, 88, 0, 0.34);
+}
+
+.ecommerce-why-card__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--color-orange);
+}
+
+.ecommerce-why-card__desc {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: calc(var(--dw) * 1px);
+}
+
+/* ---------- Pricing CTA banner ---------- */
+
+.ecommerce-pricing-cta {
+  padding: 60px 0 120px;
+}
+
+.ecommerce-pricing-cta__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 50px 60px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.ecommerce-pricing-cta__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 10px;
+  background: conic-gradient(from var(--gradient-border-angle), var(--color-orange-3), #000000, var(--color-blue-2), var(--color-orange-3));
+  animation: gradient-border-spin 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ecommerce-pricing-cta__glow {
+  position: absolute;
+  right: 20px;
+  width: 480px;
+  z-index: 0;
+  pointer-events: none;
+  bottom: 0;
+}
+
+.ecommerce-pricing-cta__copy {
+  position: relative;
+  z-index: 1;
+  max-width: 611px;
+}
+
+.ecommerce-pricing-cta__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1.2;
+  color: var(--color-orange);
+}
+
+.ecommerce-pricing-cta__desc {
+  margin: 18px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.ecommerce-pricing-cta .btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  font-size: 27px;
+  padding: 18px 27px;
+  gap: 18px;
+}
+
+.ecommerce-pricing-cta .btn .btn-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* ---------- Responsive ---------- */
+
+/* ---------- Fluid desktop scaling (min-width: 981px) ---------- */
+/* Auto-generated: mirrors the vw-scaling pattern used on Home/About pages.
+   Base px rules above remain unchanged and are used for tablet/mobile. */
+
+@media (min-width: 981px) {
+  .ecommerce-h2 {
+    font-size: 2.6042vw;
+  }
+
+  .ecommerce-h1-lg {
+    font-size: 3.6458vw;
+  }
+
+  .ecommerce-p-lg {
+    margin-top: 1.0417vw;
+    font-size: 1.0417vw;
+    max-width: 32.2917vw;
+  }
+
+  .ecommerce-section-copy {
+    font-size: 0.8333vw;
+  }
+
+  .ecommerce-card {
+    border-radius: 0.7813vw;
+    border: 0.0521vw solid transparent;
+    backdrop-filter: blur(1.3021vw);
+  }
+
+  .ecommerce-card::before {
+    padding: 0.0521vw;
+    border-radius: 0.7813vw;
+  }
+
+  .ecommerce-card:hover {
+    transform: translateY(-0.3125vw);
+  }
+
+  .ecommerce-icon-badge {
+    width: 3.2292vw;
+    height: 3.2292vw;
+    border: 0.0781vw solid var(--color-orange-3);
+    box-shadow: 0 1.0417vw 2.0833vw rgba(255, 88, 0, 0.25);
+  }
+
+  .ecommerce-icon-badge .icon {
+    width: 1.3542vw;
+    height: 1.3542vw;
+  }
+
+  .ecommerce-badge-img {
+    width: 3.2292vw;
+    height: 3.2292vw;
+  }
+
+  .ecommerce-hero {
+    padding: 12.5vw 0 7.2917vw;
+  }
+
+  .ecommerce-hero .row {
+    gap: 2.0833vw;
+  }
+
+  .ecommerce-hero__content {
+    max-width: 32.2917vw;
+  }
+
+  .ecommerce-hero__badge {
+    gap: 0.3125vw;
+    padding: 0.4688vw 0.9375vw;
+    border: 0.0438vw solid var(--color-orange);
+    border-radius: 0.9896vw;
+    font-size: 0.6771vw;
+  }
+
+  .ecommerce-hero__badge .icon {
+    width: 0.6771vw;
+    height: 0.7292vw;
+  }
+
+  .ecommerce-hero__title {
+    margin-top: 1.4583vw;
+    font-size: 3.2292vw;
+  }
+
+  .ecommerce-hero__desc {
+    margin-top: 1.25vw;
+    max-width: 25.625vw;
+    font-size: 0.8333vw;
+  }
+
+  .ecommerce-hero__actions {
+    gap: 0.8333vw;
+    margin-top: 1.6667vw;
+  }
+
+  .ecommerce-hero__actions .btn-primary {
+    border: 0.0938vw solid var(--color-border);
+  }
+
+  .ecommerce-hero__actions .btn-primary:hover {
+    box-shadow: 0 0.625vw 1.4583vw rgba(255, 102, 0, 0.4);
+  }
+
+  .ecommerce-hero__graphic {
+    width: 35.4167vw;
+  }
+
+  .ecommerce-leak__row {
+    gap: 3.125vw;
+  }
+
+  .ecommerce-leak__copy {
+    max-width: 29.4271vw;
+  }
+
+  .ecommerce-leak__list {
+    max-width: 37.7604vw;
+    gap: 1.3021vw;
+    margin: 0.2083vw 0 0;
+  }
+
+  .ecommerce-leak__item {
+    gap: 1.0417vw;
+    padding: 1.0417vw 1.5625vw;
+    border-radius: 0.5208vw;
+    backdrop-filter: blur(1.3021vw);
+    border: 0.0521vw solid transparent;
+  }
+
+  .ecommerce-leak__item::before {
+    padding: 0.0521vw;
+    border-radius: 0.5208vw;
+  }
+
+  .ecommerce-leak__item-number {
+    font-size: 0.8333vw;
+  }
+
+  .ecommerce-leak__item-text {
+    font-size: 0.8333vw;
+  }
+
+  .ecommerce-solution {
+    padding-top: 6.9792vw;
+  }
+
+  .ecommerce-solution__row {
+    gap: 6.9792vw;
+  }
+
+  .ecommerce-solution__graphic {
+    width: 32.2917vw;
+  }
+
+  .ecommerce-solution__copy {
+    max-width: 33.9063vw;
+  }
+
+  .ecommerce-solution__title {
+    font-size: 3.6458vw;
+    width: 21.875vw;
+  }
+
+  .ecommerce-solution__desc {
+    margin-top: 1.0417vw;
+    font-size: 1.1458vw;
+    width: 28.125vw;
+  }
+
+  .ecommerce-build {
+    padding-top: 5.2083vw;
+  }
+
+  .ecommerce-build__grid {
+    gap: 1.3542vw;
+    margin-top: 3.6979vw;
+  }
+
+  .ecommerce-build-card {
+    gap: 1.0417vw;
+    padding: 1.6667vw 1.4583vw;
+  }
+
+  .ecommerce-build-card__glow {
+    right: -2.0833vw;
+    bottom: -3.125vw;
+    width: 8.3333vw;
+    height: 8.3333vw;
+    filter: blur(4.1667vw);
+  }
+
+  .ecommerce-build-card__head {
+    gap: 0.8333vw;
+  }
+
+  .ecommerce-build-card__badge {
+    width: 3.2292vw;
+    height: 3.2292vw;
+    box-shadow: 0 2.1704vw 2.8321vw rgba(255, 88, 0, 0.19),
+    0 0.9015vw 1.1763vw rgba(255, 88, 0, 0.22),
+    0 3.6875vw 9.3943vw rgba(255, 88, 0, 0.34);
+  }
+
+  .ecommerce-build-card__title {
+    font-size: 1.3542vw;
+  }
+
+  .ecommerce-build-card__desc {
+    font-size: 0.9375vw;
+    max-width: calc(var(--dw) / 1920 * 100vw);
+  }
+
+  .ecommerce-capabilities {
+    padding-top: 9.6875vw;
+  }
+
+  .ecommerce-capabilities__rows {
+    margin-top: 3.125vw;
+    gap: 1.3021vw;
+  }
+
+  .ecommerce-capabilities__row {
+    gap: 0.9896vw;
+  }
+
+  .ecommerce-pill {
+    gap: 0.5208vw;
+    padding: 0.7813vw;
+    border-radius: 0.3646vw;
+    border: 0.0781vw solid transparent;
+    font-size: 0.9375vw;
+  }
+
+  .ecommerce-pill__dot {
+    width: 0.5729vw;
+    height: 0.5729vw;
+  }
+
+  .ecommerce-pill__dot span {
+    width: 0.4167vw;
+    height: 0.4167vw;
+  }
+
+  .ecommerce-usecases {
+    padding-top: 6.5104vw;
+  }
+
+  .ecommerce-usecases__grid {
+    gap: 1.4063vw;
+    margin-top: 1.5625vw;
+  }
+
+  .ecommerce-usecase-card {
+    padding: 1.25vw 1.3542vw;
+  }
+
+  .ecommerce-usecase-card__title {
+    font-size: 1.1458vw;
+  }
+
+  .ecommerce-usecase-card__divider {
+    margin: 2.2396vw 0 0.9896vw;
+    border-top: 0.0521vw solid var(--color-border-soft-4);
+  }
+
+  .ecommerce-usecase-card__desc {
+    font-size: 0.8333vw;
+  }
+
+  .ecommerce-architecture {
+    padding-top: 11.6146vw;
+  }
+
+  .ecommerce-architecture__divider {
+    margin-top: 3.2813vw;
+    border: 0.0521vw dashed rgba(255, 255, 255, 0.5);
+  }
+
+  .ecommerce-architecture__divider-dot {
+    top: -0.3125vw;
+    width: 0.6771vw;
+    height: 0.6771vw;
+    box-shadow: 0 0 0.7292vw var(--color-orange-3);
+  }
+
+  .ecommerce-timeline {
+    margin-top: -1.7188vw;
+    gap: 1.0417vw;
+  }
+
+  .ecommerce-timeline-step__badge {
+    width: 2.2396vw;
+    height: 2.2396vw;
+    font-size: 1.0417vw;
+  }
+
+  .ecommerce-timeline-step__title {
+    margin: 2.6042vw 0 0;
+    font-size: 1.5625vw;
+  }
+
+  .ecommerce-timeline-step__tags {
+    margin-top: 1.5104vw;
+    gap: 0.6771vw;
+  }
+
+  .ecommerce-timeline-step__tag-row {
+    gap: 0.7292vw;
+  }
+
+  .ecommerce-timeline-tag {
+    height: 1.875vw;
+    padding: 0 1.0417vw;
+    border-radius: 4.3229vw;
+    border: 0.0693vw solid #292d34;
+    font-size: 0.8854vw;
+  }
+
+  .ecommerce-process2 {
+    padding-top: 10.4167vw;
+  }
+
+  .ecommerce-process2__grid {
+    gap: 1.3542vw;
+    margin-top: 3.3333vw;
+  }
+
+  .ecommerce-process2-card {
+    gap: 1.25vw;
+    padding: 2.0833vw 1.9792vw 2.6042vw 1.3021vw;
+  }
+
+  .ecommerce-process2-card__badge {
+    width: 6.25vw;
+    height: 6.25vw;
+  }
+
+  .ecommerce-process2-card__title {
+    font-size: 1.3542vw;
+  }
+
+  .ecommerce-process2-card__desc {
+    margin: 0.4167vw 0 0;
+    font-size: 0.8333vw;
+    max-width: calc(var(--dw) / 1920 * 100vw);
+  }
+
+  .ecommerce-integrations {
+    padding-top: 10.9896vw;
+  }
+
+  .ecommerce-integrations__grid {
+    margin-top: 3.3333vw;
+    gap: 1.875vw;
+  }
+
+  .ecommerce-integration-pill {
+    gap: 0.5208vw;
+    min-width: 10.2604vw;
+    padding: 0.7813vw;
+    border-radius: 0.3646vw;
+    font-size: 0.9375vw;
+  }
+
+  .ecommerce-integration-pill::before {
+    padding: 0.0521vw;
+    border-radius: 0.3646vw;
+  }
+
+  .ecommerce-integration-connector {
+    width: 5.4688vw;
+    height: 1.0417vw;
+  }
+
+  .ecommerce-integration-connector__line {
+    height: 0.0521vw;
+  }
+
+  .ecommerce-integration-connector__diamond-outer {
+    width: 0.7379vw;
+    height: 0.7379vw;
+    border: 0.0208vw solid #0173d4;
+  }
+
+  .ecommerce-integration-connector__diamond-inner {
+    width: 0.4688vw;
+    height: 0.4688vw;
+  }
+
+  .ecommerce-integration-pill .icon {
+    width: 0.9375vw;
+    height: 0.9375vw;
+  }
+
+  .ecommerce-why {
+    padding-top: 13.0729vw;
+  }
+
+  .ecommerce-why__grid {
+    gap: 1.3542vw;
+    margin-top: 3.3333vw;
+  }
+
+  .ecommerce-why-card {
+    padding: 1.4583vw;
+    min-height: 10.1563vw;
+  }
+
+  .ecommerce-why-card__badge {
+    margin-bottom: 2.0833vw;
+    box-shadow: 0 2.1704vw 2.8321vw rgba(255, 88, 0, 0.19),
+    0 0.9015vw 1.1763vw rgba(255, 88, 0, 0.22),
+    0 3.6875vw 9.3943vw rgba(255, 88, 0, 0.34);
+  }
+
+  .ecommerce-why-card__title {
+    font-size: 1.3542vw;
+  }
+
+  .ecommerce-why-card__desc {
+    margin: 0.5208vw 0 0;
+    font-size: 0.8333vw;
+    max-width: calc(var(--dw) / 1920 * 100vw);
+  }
+
+  .ecommerce-pricing-cta {
+    padding: 3.125vw 0 6.25vw;
+  }
+
+  .ecommerce-pricing-cta__card {
+    gap: 2.0833vw;
+    padding: 2.6042vw 3.125vw;
+    border-radius: 0.5208vw;
+    backdrop-filter: blur(1.3021vw);
+    border: 0.0521vw solid transparent;
+  }
+
+  .ecommerce-pricing-cta__card::before {
+    padding: 0.0521vw;
+    border-radius: 0.5208vw;
+  }
+
+  .ecommerce-pricing-cta__glow {
+    right: 1.0417vw;
+    width: 25vw;
+  }
+
+  .ecommerce-pricing-cta__copy {
+    max-width: 31.8229vw;
+  }
+
+  .ecommerce-pricing-cta__title {
+    font-size: 2.6042vw;
+  }
+
+  .ecommerce-pricing-cta__desc {
+    margin: 0.9375vw 0 0;
+    font-size: 0.9375vw;
+  }
+
+  .ecommerce-pricing-cta .btn {
+    font-size: 1.4063vw;
+    padding: 0.9375vw 1.4063vw;
+    gap: 0.9375vw;
+  }
+
+  .ecommerce-pricing-cta .btn .btn-icon {
+    width: 1.875vw;
+    height: 1.875vw;
+  }
+}
+
+@media (max-width: 980px) {
+  .ecommerce-hero {
+    padding: 130px 0 60px;
+  }
+  .ecommerce-hero .row {
+    flex-direction: column;
+  }
+  .ecommerce-hero__content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ecommerce-hero__desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+  .ecommerce-hero__actions {
+    justify-content: center;
+  }
+  .ecommerce-hero__graphic {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    margin: 40px auto 0;
+  }
+  .ecommerce-hero__title {
+    font-size: 42px;
+  }
+  .ecommerce-h2 {
+    font-size: 38px;
+  }
+  .ecommerce-h1-lg {
+    font-size: 42px;
+  }
+  .ecommerce-p-lg {
+    margin: 20px auto 0;
+    font-size: 18px;
+    max-width: 90%;
+  }
+  .ecommerce-leak {
+    padding-top: 20px;
+  }
+  .ecommerce-solution {
+    padding-top: 100px;
+  }
+  .ecommerce-capabilities {
+    position: relative;
+    padding-top: 116px;
+  }
+  .ecommerce-architecture {
+    position: relative;
+    padding-top: 113px;
+  }
+  .ecommerce-solution__row {
+    flex-direction: column;
+  }
+  .ecommerce-solution__title {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+  }
+  .ecommerce-solution__copy {
+    max-width: 100%;
+    text-align: center;
+  }
+  .ecommerce-solution__desc {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .ecommerce-solution__graphic {
+    max-width: 100%;
+    width: 360px;
+  }
+  .ecommerce-build__grid,
+  .ecommerce-process2__grid,
+  .ecommerce-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-usecases__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ecommerce-timeline {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .ecommerce-pricing-cta__card {
+    justify-content: center;
+    text-align: center;
+    padding: 40px 32px;
+  }
+  .ecommerce-pricing-cta__copy {
+    max-width: 100%;
+  }
+  .ecommerce-integrations__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .ecommerce-integration-connector {
+    display: none;
+  }
+  .ecommerce-leak__row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .ecommerce-leak__copy {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ecommerce-leak__list {
+    max-width: 100%;
+    margin: 4px auto 0;
+  }
+  .ecommerce-leak__item {
+    gap: 10px;
+  }
+  .ecommerce-process2 {
+    padding-top: 70px;
+  }
+  .ecommerce-timeline-step__title {
+    margin: 20px 0 0;
+    font-size: 22px;
+  }
+  .ecommerce-section-copy {
+    max-width: 100%;
+  }
+  .ecommerce-timeline-tag {
+    font-size: 13px;
+    height: auto;
+    padding: 8px 16px;
+  }
+  .ecommerce-timeline-step__tag-row {
+    gap: 8px;
+  }
+  .ecommerce-timeline-step__badge {
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
+  }
+  .ecommerce-process2-card__badge {
+    width: 100px;
+    height: 100px;
+  }
+  .ecommerce-process2-card {
+    gap: 29px;
+    padding: 30px 20px 30px 20px;
+  }
+  .ecommerce-process2-card__title {
+    font-size: 20px;
+  }
+  .ecommerce-integrations {
+    padding-top: 131px;
+  }
+  .ecommerce-integrations__grid {
+    margin-top: 40px;
+    gap: 22px;
+  }
+  .ecommerce-integration-pill {
+    gap: 10px;
+    min-width: 0;
+    width: 195px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .ecommerce-why {
+    padding-top: 121px;
+  }
+  .ecommerce-why-card__badge {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 40px;
+  }
+  .ecommerce-why-card__title {
+    font-size: 20px;
+  }
+  .ecommerce-pricing-cta {
+    padding: 60px 0 60px;
+  }
+  .ecommerce-pricing-cta__glow {
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .ecommerce-hero__title {
+    font-size: 32px;
+  }
+  .ecommerce-hero__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .ecommerce-hero__actions .btn {
+    justify-content: center;
+    width: 60%;
+  }
+  .ecommerce-h2 {
+    font-size: 30px;
+  }
+  .ecommerce-h1-lg {
+    font-size: 32px;
+  }
+  .ecommerce-leak__item {
+    padding: 16px 20px;
+    align-items: start;
+  }
+  .ecommerce-build__grid,
+  .ecommerce-process2__grid,
+  .ecommerce-why__grid,
+  .ecommerce-usecases__grid {
+    grid-template-columns: 1fr;
+  }
+  .ecommerce-why-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .ecommerce-process2-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 30px 10px;
+  }
+  .ecommerce-process2-card__badge {
+    order: -1;
+  }
+  .ecommerce-integration-pill {
+    width: calc(50% - 10px);
+  }
+  .ecommerce-pricing-cta__title {
+    font-size: 32px;
+  }
+  .ecommerce-timeline {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-orange-3) rgba(255, 255, 255, 0.1);
+  }
+  .ecommerce-timeline::-webkit-scrollbar {
+    height: 6px;
+  }
+  .ecommerce-timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  .ecommerce-timeline::-webkit-scrollbar-thumb {
+    background: var(--color-orange-3);
+    border-radius: 4px;
+  }
+  .ecommerce-timeline-step {
+    flex: 0 0 240px;
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 599px) {
+  .ecommerce-card.ecommerce-build-card {
+    align-items: center;
+    text-align: center;
+  }
+  .ecommerce-build-card__head {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+  }
+  .ecommerce-process2-card__badge {
+    width: 80px;
+    height: 80px;
+  }
+  .ecommerce-hero__title {
+    font-size: 30px;
+  }
+  .ecommerce-hero__desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .ecommerce-hero {
+    padding: 130px 0 0px;
+  }
+  .ecommerce-h1-lg {
+    font-size: 30px;
+  }
+  .ecommerce-hero__graphic {
+    width: 100%;
+  }
+  .ecommerce-hero__actions .btn {
+    justify-content: center;
+    width: 70%;
+  }
+  .ecommerce-p-lg {
+    margin: 20px auto 0;
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .ecommerce-leak__item {
+    padding: 16px 20px;
+    align-items: start;
+    flex-direction: column;
+  }
+  .ecommerce-build-card__title {
+    font-size: 22px;
+  }
+  .ecommerce-integrations__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ecommerce-integration-pill {
+    width: 100%;
+  }
+  .ecommerce-why-card__title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .ecommerce-pricing-cta__desc {
+    margin: 14px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-white);
+  }
+  .ecommerce-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 481px) {
+  .ecommerce-h1-lg {
+    font-size: 25px;
+  }
+  .ecommerce-solution__title {
+    font-size: 24px;
+  }
+  .ecommerce-integrations {
+    padding-top: 80px;
+  }
+  .ecommerce-why {
+    padding-top: 81px;
+  }
+  .ecommerce-h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+}
+
+/* ---------- Motion (scroll + load animations) ---------- */
+
+@keyframes ecommerce-fade-scale-in {
+  from { opacity: 0; transform: scale(0.94) translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.ecommerce-hero__graphic {
+  animation: ecommerce-fade-scale-in 0.9s ease both;
+}
+
+.ecommerce-build-card,
+.ecommerce-usecase-card,
+.ecommerce-why-card,
+.ecommerce-process2-card,
+.ecommerce-timeline-step,
+.ecommerce-pill,
+.ecommerce-integration-pill {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ecommerce-build__grid.is-visible .ecommerce-build-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-why__grid.is-visible .ecommerce-why-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-timeline.is-visible .ecommerce-timeline-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-build__grid.is-visible .ecommerce-build-card:nth-child(6) { transition-delay: 0.42s; }
+
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-usecases__grid.is-visible .ecommerce-usecase-card:nth-child(6) { transition-delay: 0.42s; }
+
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-why__grid.is-visible .ecommerce-why-card:nth-child(6) { transition-delay: 0.42s; }
+
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-process2__grid.is-visible .ecommerce-process2-card:nth-child(6) { transition-delay: 0.42s; }
+
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-timeline.is-visible .ecommerce-timeline-step:nth-child(6) { transition-delay: 0.42s; }
+
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(6) { transition-delay: 0.42s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(7) { transition-delay: 0.49s; }
+.ecommerce-capabilities__rows.is-visible .ecommerce-pill:nth-child(8) { transition-delay: 0.56s; }
+
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(1) { transition-delay: 0.07s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(2) { transition-delay: 0.14s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(3) { transition-delay: 0.21s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(4) { transition-delay: 0.28s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(5) { transition-delay: 0.35s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(6) { transition-delay: 0.42s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(7) { transition-delay: 0.49s; }
+.ecommerce-integrations__grid.is-visible .ecommerce-integration-pill:nth-child(8) { transition-delay: 0.56s; }
+
+@property --ecommerce-border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.ecommerce-leak__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 10px;
+  background: conic-gradient(
+    from var(--ecommerce-border-angle),
+    var(--color-orange) 0%,
+    var(--color-orange-3) 25%,
+    transparent 50%,
+    var(--color-orange-3) 75%,
+    var(--color-orange) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: ecommerce-border-travel 4s linear infinite;
+}
+
+@keyframes ecommerce-border-travel {
+  to { --ecommerce-border-angle: 360deg; }
+}
+
+/* Integration connector: converging sparks + subtle burst */
+.ecommerce-integration-connector__diamond-inner {
+  animation: ecommerce-connector-burst 2.6s ease-in-out infinite;
+}
+
+.ecommerce-integration-connector::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%);
+  animation: ecommerce-connector-travel-left 2.6s ease-in infinite;
+  pointer-events: none;
+}
+
+.ecommerce-integration-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%);
+  animation: ecommerce-connector-travel-right 2.6s ease-in infinite;
+  pointer-events: none;
+}
+
+@keyframes ecommerce-connector-travel-left {
+  0% { left: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  44% { left: 50%; opacity: 1; }
+  48% { left: 50%; opacity: 0; }
+  100% { left: 50%; opacity: 0; }
+}
+
+@keyframes ecommerce-connector-travel-right {
+  0% { left: 100%; opacity: 0; }
+  8% { opacity: 1; }
+  44% { left: 50%; opacity: 1; }
+  48% { left: 50%; opacity: 0; }
+  100% { left: 50%; opacity: 0; }
+}
+
+@keyframes ecommerce-connector-burst {
+  0%, 40% { transform: translate(-50%, -50%) rotate(45deg) scale(1); box-shadow: none; }
+  48% { transform: translate(-50%, -50%) rotate(45deg) scale(1.5); box-shadow: 0 0 6px 2px rgba(255, 150, 50, 0.5); }
+  64% { transform: translate(-50%, -50%) rotate(45deg) scale(0.85); box-shadow: none; }
+  100% { transform: translate(-50%, -50%) rotate(45deg) scale(1); box-shadow: none; }
+}
+
+/* Gentle reveal-in + float for the solution mockup graphic */
+@keyframes ecommerce-mockup-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.ecommerce-solution__graphic.is-visible .ecommerce-solution__mockup {
+  animation: ecommerce-mockup-float 3s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes ecommerce-icon-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.ecommerce-build-card__badge,
+.ecommerce-process2-card__badge,
+.ecommerce-why-card__badge {
+  animation: ecommerce-icon-float 3.6s ease-in-out infinite;
+}
+
+.ecommerce-build-card:nth-child(1) .ecommerce-build-card__badge { animation-delay: -0.4s; }
+.ecommerce-build-card:nth-child(2) .ecommerce-build-card__badge { animation-delay: -0.8s; }
+.ecommerce-build-card:nth-child(3) .ecommerce-build-card__badge { animation-delay: -1.2s; }
+.ecommerce-build-card:nth-child(4) .ecommerce-build-card__badge { animation-delay: -1.6s; }
+.ecommerce-build-card:nth-child(5) .ecommerce-build-card__badge { animation-delay: -2.0s; }
+.ecommerce-build-card:nth-child(6) .ecommerce-build-card__badge { animation-delay: -2.4s; }
+.ecommerce-process2-card:nth-child(1) .ecommerce-process2-card__badge { animation-delay: -0.4s; }
+.ecommerce-process2-card:nth-child(2) .ecommerce-process2-card__badge { animation-delay: -0.8s; }
+.ecommerce-process2-card:nth-child(3) .ecommerce-process2-card__badge { animation-delay: -1.2s; }
+.ecommerce-process2-card:nth-child(4) .ecommerce-process2-card__badge { animation-delay: -1.6s; }
+.ecommerce-process2-card:nth-child(5) .ecommerce-process2-card__badge { animation-delay: -2.0s; }
+.ecommerce-process2-card:nth-child(6) .ecommerce-process2-card__badge { animation-delay: -2.4s; }
+.ecommerce-why-card:nth-child(1) .ecommerce-why-card__badge { animation-delay: -0.4s; }
+.ecommerce-why-card:nth-child(2) .ecommerce-why-card__badge { animation-delay: -0.8s; }
+.ecommerce-why-card:nth-child(3) .ecommerce-why-card__badge { animation-delay: -1.2s; }
+.ecommerce-why-card:nth-child(4) .ecommerce-why-card__badge { animation-delay: -1.6s; }
+.ecommerce-why-card:nth-child(5) .ecommerce-why-card__badge { animation-delay: -2.0s; }
+.ecommerce-why-card:nth-child(6) .ecommerce-why-card__badge { animation-delay: -2.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+.ecommerce-hero__graphic,
+.ecommerce-build-card,
+.ecommerce-usecase-card,
+.ecommerce-why-card,
+.ecommerce-process2-card,
+.ecommerce-timeline-step,
+.ecommerce-pill,
+.ecommerce-integration-pill,
+.ecommerce-build-card__badge,
+.ecommerce-process2-card__badge,
+.ecommerce-why-card__badge,
+.ecommerce-solution__mockup {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .ecommerce-leak__item::after {
+    animation: none;
+    opacity: 0;
+  }
+  .ecommerce-integration-connector__diamond-inner {
+    animation: none;
+  }
+  .ecommerce-integration-connector::before,
+  .ecommerce-integration-connector::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* Scoped reveal easing polish (matching the other service pages) */
+.ecommerce-page .reveal {
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecommerce-page .reveal--left { transform: translateX(-70px) scale(0.97); }
+.ecommerce-page .reveal--right { transform: translateX(70px) scale(0.97); }
+.ecommerce-page .reveal--up { transform: translateY(40px) scale(0.97); }
+
+.ecommerce-page .reveal.is-visible {
+  transform: translate(0, 0) scale(1);
+}
+

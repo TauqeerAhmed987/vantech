@@ -1,0 +1,22 @@
+<svg width="631" height="721" viewBox="0 0 631 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="banner-star-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="36" result="blur" />
+    </filter>
+    <radialGradient id="banner-star-gradient" cx="50%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F5A046" />
+    </radialGradient>
+  </defs>
+  <path
+    d="M540 360C345 381 331 399 315 654C299 399 285 381 90 360C285 339 299 321 315 66C331 321 345 339 540 360Z"
+    fill="#F5A046"
+    opacity="0.5"
+    filter="url(#banner-star-glow)"
+  />
+  <path
+    d="M540 360C345 381 331 399 315 654C299 399 285 381 90 360C285 339 299 321 315 66C331 321 345 339 540 360Z"
+    fill="url(#banner-star-gradient)"
+  />
+</svg>
