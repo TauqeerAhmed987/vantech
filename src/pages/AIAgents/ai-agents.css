@@ -1814,6 +1814,9 @@
   .agents-why__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .agents-build-card__title {
+    max-width: 9ch;
+  }
   .agents-usecases__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1845,9 +1848,13 @@
     justify-content: center;
     text-align: center;
     padding: 40px 32px;
+    gap: 60px;
   }
   .agents-pricing-cta__copy {
     max-width: 100%;
+  }
+  .agents-pricing-cta__desc {
+    margin: 22px 0 0;
   }
   .agents-integrations__row {
     flex-wrap: wrap;
@@ -1897,15 +1904,15 @@
     height: 38px;
   }
   .agents-process2-card__badge {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   .agents-process2-card {
     gap: 29px;
     padding: 30px 20px 30px 20px;
   }
   .agents-process2-card__title {
-    font-size: 20px;
+    font-size: 22px;
   }
   .agents-integrations {
     padding-top: 131px;
@@ -1943,8 +1950,8 @@
     font-size: 40px;
   }
   .agents-pricing-cta .btn {
-    font-size: 22px;
-    padding: 16px 25px;
+    font-size: 18px;
+    padding: 9px 20px;
   }
   .agents-why-card__title {
     font-size: 20px;
@@ -1983,22 +1990,43 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 50px 20px;
+    min-height: 195px;
+  }
+  .agents-why-card__badge {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
   }
   .agents-process2-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
-    padding: 30px 10px 30px 10px;
+    gap: 22px;
+    padding: 50px 10px 50px 10px;
   }
   .agents-process2-card__badge {
     order: -1;
+    width: 80px;
+    height: 80px;
+  }
+  .agents-process2-card__desc {
+    margin: 10px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-white);
+    max-width: calc(var(--dw) * 1px);
   }
   .agents-integration-pill {
     width: calc(50% - 10px);
   }
   .agents-pricing-cta__title {
     font-size: 32px;
+  }
+  .agents-build-card__title {
+    max-width: none;
   }
   .agents-build-card__desc {
     max-width: 100%;
@@ -2060,18 +2088,31 @@
   .agents-disappoint {
     padding-top: 60px;
   }
+  .agents-timeline-step {
+    flex: 0 0 180px;
+    min-width: 140px;
+  }
+  .agents-process2-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding: 40px 20px 40px 20px;
+  }
   .agents-card.agents-build-card {
     align-items: center;
     text-align: center;
+    gap: 12px;
+    padding: 34px 18px;
   }
   .agents-build-card__head {
     flex-direction: column-reverse;
     align-items: center;
-    gap: 12px;
+    gap: 25px;
   }
   .agents-process2-card__badge {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
   .agents-hero__title {
     font-size: 30px;
@@ -2129,7 +2170,7 @@
     line-height: 1.2;
   }
   .agents-pricing-cta__desc {
-    margin: 14px 0 0;
+    margin: 20px 0 0;
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-white);
@@ -2196,7 +2237,8 @@
     padding: 60px 0 30px;
   }
   .agents-pricing-cta__card {
-    padding: 30px 20px;
+    padding: 50px 10px;
+    gap: 40px;
   }
 }
 
@@ -2227,7 +2269,10 @@
   }
   .agents-page .btn {
     font-size: 14px;
-    padding: 12px 12px;
+    padding: 10px 13px;
+    line-height: 1.4;
+    height: 47px;
+    letter-spacing: 0;
   }
   .agents-build__grid {
     margin-top: 30px;
@@ -2249,7 +2294,8 @@
   }
   .agents-process2-card__desc {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 10px;
+    line-height: 1.8;
   }
   .agents-why__grid {
     margin-top: 30px;

@@ -4204,7 +4204,7 @@ a.navbar__cta--mobile {
   .faq__row {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 80px;
     text-align: center;
     justify-content: center;
   }
@@ -4272,6 +4272,10 @@ a.navbar__cta--mobile {
     width: 290px;
     height: 290px;
     padding: 22px;
+    border-radius: 28px;
+  }
+
+  .testimonial-card::before {
     border-radius: 28px;
   }
 
@@ -5100,8 +5104,8 @@ a.navbar__cta--mobile {
     margin-top: 28px;
   }
   .faq__intro-heading {
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 18px;
+    margin: 18px 0;
   }
   .faq__intro-desc {
     width: 100%;

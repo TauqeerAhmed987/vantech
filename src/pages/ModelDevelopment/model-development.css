@@ -1758,8 +1758,8 @@
     gap: 12px;
   }
   .modeldev-process2-card__badge {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
   .modeldev-hero__title {
     font-size: 30px;
@@ -1819,6 +1819,7 @@
     font-size: 12px;
     padding: 12px 20px;
     gap: 10px;
+    height: 50px;
   }
   .modeldev-disappoint {
     padding-top: 80px;

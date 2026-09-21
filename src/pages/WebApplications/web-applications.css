@@ -1490,6 +1490,7 @@
   }
   .webapps-solution__row {
     flex-direction: column;
+    gap: 60px;
   }
   .webapps-solution__title {
     font-size: 40px;
@@ -1526,6 +1527,14 @@
   }
   .webapps-pricing-cta__copy {
     max-width: 100%;
+  }
+  .webapps-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 18px;
+    padding: 13px 18px;
+    gap: 14px;
   }
   .webapps-integrations__row {
     flex-wrap: wrap;
@@ -1575,12 +1584,15 @@
     height: 38px;
   }
   .webapps-process2-card__badge {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   .webapps-process2-card {
-    gap: 29px;
-    padding: 30px 20px 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 50px 20px;
   }
   .webapps-process2-card__title {
     font-size: 20px;
@@ -1645,6 +1657,10 @@
     padding: 16px 20px;
     align-items: start;
   }
+  .webapps-solution__row {
+    flex-direction: column;
+    gap: 30px;
+  }
   .webapps-build__grid,
   .webapps-process2__grid,
   .webapps-why__grid,
@@ -1661,16 +1677,26 @@
     align-items: center;
     text-align: center;
     gap: 16px;
-    padding: 30px 10px;
+    padding: 50px 20px;
   }
   .webapps-process2-card__badge {
     order: -1;
+    width: 80px;
+    height: 80px;
   }
   .webapps-integration-pill {
     width: calc(50% - 10px);
   }
   .webapps-pricing-cta__title {
     font-size: 32px;
+  }
+  .webapps-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: 13px 18px;
+    gap: 14px;
   }
   .webapps-timeline {
     overflow-x: scroll;
@@ -1701,6 +1727,10 @@
     align-items: center;
     text-align: center;
   }
+  .webapps-build-card {
+    gap: 20px;
+    padding: 50px 28px;
+  }
   .webapps-build-card__head {
     flex-direction: column-reverse;
     align-items: center;
@@ -1720,6 +1750,9 @@
   }
   .webapps-hero {
     padding: 130px 0 0px;
+  }
+  .webapps-solution {
+    padding-top: 60px;
   }
   .webapps-h1-lg {
     font-size: 30px;
@@ -1790,6 +1823,9 @@
 }
 
 @media (max-width: 320px) {
+  .webapps-hero__title {
+    font-size: 26px;
+  }
 }
 
 /* ---------- Motion (scroll + load animations) ---------- */

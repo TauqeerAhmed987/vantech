@@ -259,8 +259,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--badge-size, 68) * 1px);
-  height: calc(var(--badge-size, 68) * 1px);
+  width: calc(var(--badge-size, 68) * var(--orbit-badge-scale, 1) * 1px);
+  height: calc(var(--badge-size, 68) * var(--orbit-badge-scale, 1) * 1px);
   border-radius: 50%;
   background-size: cover;
   background-position: center;
@@ -1980,11 +1980,16 @@
     align-items: center;
     text-align: center;
     gap: 16px;
-    padding: 30px 10px;
+    padding: 40px 10px;
   }
 
   .ai-automation-process2-card__badge {
     order: -1;
+  }
+
+  .ai-automation-process2-card__body {
+    min-width: 230px;
+    width: 290px;
   }
 
   .ai-automation-integration-pill {
@@ -2198,11 +2203,30 @@
   .ai-automation-page::before {
     background-size: cover;
   }
+  .ai-automation-why-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 40px;
+  }
   /* Cancel the 767px tier's extra scale(0.62) on the badge itself — it was
      double-shrinking badges on top of --orbit-scale, making the icons
      inside them too small to read at this tier. */
   .ai-automation-orbit__badge {
     transform: translate(-50%, -50%);
+  }
+  .ai-automation-orbit__ellipse {
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    width: 90%;
+    height: auto;
+    transform: translate(-50%, -50%) rotate(14.11deg);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .ai-automation-orbit__anchor {
+    top: 50%;
   }
   .ai-automation-friction-item {
     padding: 16px 12px;
@@ -2316,6 +2340,7 @@
   }
   .ai-automation-orbit {
     --orbit-scale: 0.7;
+    --orbit-badge-scale: 0.65;
   }
   .ai-automation-orbit__star {
     width: 62%;
@@ -2344,7 +2369,7 @@
   }
 
   .ai-automation-orbit__ring {
-    width: 100%;
+    width: 80%;
   }
 
   .ai-automation-friction__desc {
@@ -2822,9 +2847,10 @@
   }
   .ai-automation-orbit {
     --orbit-scale: 0.7;
+    --orbit-badge-scale: 0.43;
   }
   .ai-automation-orbit__star {
-    width: 62%;
+    width: 100%;
   }
   .ai-automation-orbit__star-glow {
     width: 50%;

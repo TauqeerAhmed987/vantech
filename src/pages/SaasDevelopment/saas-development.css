@@ -1532,8 +1532,8 @@
     height: 38px;
   }
   .saas-process2-card__badge {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .saas-process2-card {
     gap: 29px;
@@ -1577,6 +1577,14 @@
     bottom: 0;
     transform: translateX(-50%);
   }
+  .saas-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 19px;
+    padding: 12px 20px;
+    gap: 6px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1598,6 +1606,25 @@
   .saas-h1-lg {
     font-size: 32px;
   }
+  .saas-solution__desc {
+    font-size: 18px;
+    margin-top: 26px;
+  }
+  .saas-build {
+    padding-top: 120px;
+  }
+  .saas-build-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 45px 30px;
+  }
+  .saas-usecase-card__divider {
+    margin: 25px 0 18px;
+  }
   .saas-disappoint__item {
     padding: 16px 20px;
     align-items: start;
@@ -1618,7 +1645,7 @@
     align-items: center;
     text-align: center;
     gap: 16px;
-    padding: 30px 10px;
+    padding: 50px 20px;
   }
   .saas-process2-card__badge {
     order: -1;
@@ -1651,6 +1678,11 @@
     flex: 0 0 240px;
     min-width: 240px;
   }
+  .saas-pricing-cta .btn {
+    font-size: 17px;
+    padding: 10px 16px;
+    gap: 4px;
+  }
 }
 
 @media (max-width: 599px) {
@@ -1663,9 +1695,39 @@
     align-items: center;
     gap: 12px;
   }
+  .saas-solution__desc {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .saas-build {
+    padding-top: 90px;
+  }
+  .saas-build__grid {
+    margin-top: 40px;
+  }
+  .saas-build-card__desc {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+  }
+  .saas-usecase-card__title {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+  }
+  .saas-usecase-card__desc {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .saas-process2-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 40px 10px;
+  }
   .saas-process2-card__badge {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   .saas-hero__title {
     font-size: 30px;
@@ -1722,9 +1784,9 @@
     position: relative;
     z-index: 1;
     flex-shrink: 0;
-    font-size: 12px;
-    padding: 12px 20px;
-    gap: 10px;
+    font-size: 13px;
+    padding: 8px 15px;
+    gap: 9px;
   }
 }
 

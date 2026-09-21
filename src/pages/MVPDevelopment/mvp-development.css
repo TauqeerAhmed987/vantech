@@ -1607,6 +1607,14 @@
   .mvp-pricing-cta__copy {
     max-width: 100%;
   }
+  .mvp-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 18px;
+    padding: 12px 19px;
+    gap: 12px;
+  }
   .mvp-integrations__row {
     flex-wrap: wrap;
     justify-content: center;
@@ -1740,17 +1748,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
-    padding: 30px 10px;
+    gap: 20px;
+    padding: 50px 20px;
   }
   .mvp-process2-card__badge {
     order: -1;
+    width: 80px;
+    height: 80px;
   }
   .mvp-integration-pill {
     width: calc(50% - 10px);
   }
   .mvp-pricing-cta__title {
     font-size: 32px;
+  }
+  .mvp-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: 9px 16px;
+    gap: 10px;
   }
   .mvp-timeline {
     overflow-x: scroll;
@@ -1774,6 +1792,52 @@
     flex: 0 0 240px;
     min-width: 240px;
   }
+  /* Keep the graphic box square (instead of inheriting the base 600px
+     height) so the ellipse/star, which are sized in %, shrink correctly
+     with the box. */
+  .mvp-hero__graphic {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  /* The badge orbit path below is a hand-traced animation in fixed px,
+     tuned for the 600px desktop box — it doesn't shrink on its own like
+     the %-based ellipse does, so at this box size (380px, i.e. 0.633x)
+     the badges fly past the now-smaller ellipse line. Redefine the same
+     keyframes here with every translate scaled by 0.633 so the orbit
+     radius matches the ellipse again. Do NOT use --orbit-scale/transform
+     here — scaling the whole .mvp-orbit box would shrink the
+     already-correct ellipse a second time. */
+  @keyframes mvp-badge-orbit {
+    0.0000% { transform: translate(-50%, -50%) translate(133.28px, 33.50px); }
+    4.1667% { transform: translate(-50%, -50%) translate(126.96px, 39.43px); }
+    8.3333% { transform: translate(-50%, -50%) translate(111.98px, 42.68px); }
+    12.5000% { transform: translate(-50%, -50%) translate(89.38px, 43.02px); }
+    16.6667% { transform: translate(-50%, -50%) translate(60.69px, 40.42px); }
+    20.8333% { transform: translate(-50%, -50%) translate(27.86px, 35.07px); }
+    25.0000% { transform: translate(-50%, -50%) translate(-6.87px, 27.33px); }
+    29.1667% { transform: translate(-50%, -50%) translate(-41.13px, 17.73px); }
+    33.3333% { transform: translate(-50%, -50%) translate(-72.60px, 6.92px); }
+    37.5000% { transform: translate(-50%, -50%) translate(-99.10px, -4.36px); }
+    41.6667% { transform: translate(-50%, -50%) translate(-118.86px, -15.35px); }
+    45.8333% { transform: translate(-50%, -50%) translate(-130.53px, -25.29px); }
+    50.0000% { transform: translate(-50%, -50%) translate(-133.28px, -33.50px); }
+    54.1667% { transform: translate(-50%, -50%) translate(-126.96px, -39.43px); }
+    58.3333% { transform: translate(-50%, -50%) translate(-111.98px, -42.68px); }
+    62.5000% { transform: translate(-50%, -50%) translate(-89.38px, -43.02px); }
+    66.6667% { transform: translate(-50%, -50%) translate(-60.69px, -40.42px); }
+    70.8333% { transform: translate(-50%, -50%) translate(-27.86px, -35.07px); }
+    75.0000% { transform: translate(-50%, -50%) translate(6.87px, -27.33px); }
+    79.1667% { transform: translate(-50%, -50%) translate(41.13px, -17.73px); }
+    83.3333% { transform: translate(-50%, -50%) translate(72.60px, -6.92px); }
+    87.5000% { transform: translate(-50%, -50%) translate(99.10px, 4.36px); }
+    91.6667% { transform: translate(-50%, -50%) translate(118.86px, 15.35px); }
+    95.8333% { transform: translate(-50%, -50%) translate(130.53px, 25.29px); }
+    100.0000% { transform: translate(-50%, -50%) translate(133.28px, 33.50px); }
+  }
+  .mvp-orbit__anchor {
+    left: 44%;
+    top: 43%;
+  }
 }
 
 @media (max-width: 599px) {
@@ -1787,8 +1851,8 @@
     gap: 12px;
   }
   .mvp-process2-card__badge {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
   .mvp-hero__title {
     font-size: 30px;
@@ -1816,13 +1880,32 @@
     font-size: 15px;
     max-width: 100%;
   }
+  .mvp-solution__desc {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+  }
   .mvp-disappoint__item {
     padding: 16px 20px;
     align-items: start;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .mvp-build {
+    position: relative;
+    padding-top: 80px;
+  }
+  .mvp-build__grid {
+    margin-top: 40px;
   }
   .mvp-build-card__title {
     font-size: 22px;
+  }
+  .mvp-build-card__desc {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .mvp-process2__grid {
+    margin-top: 40px;
   }
   .mvp-integrations__row {
     flex-direction: column;
@@ -1845,9 +1928,10 @@
     position: relative;
     z-index: 1;
     flex-shrink: 0;
-    font-size: 12px;
-    padding: 12px 20px;
+    font-size: 13px;
+    padding: 12px 14px;
     gap: 10px;
+    height: 47px;
   }
 }
 
@@ -1870,6 +1954,22 @@
 }
 
 @media (max-width: 320px) {
+  .mvp-hero__graphic {
+    position: relative;
+    width: 100% !important;
+    max-width: 100%;
+    margin: 60px auto 0;
+  }
+  .mvp-orbit__anchor {
+    left: 27%;
+    top: 48%;
+  }
+  .mvp-solution__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
 }
 
 /* This page's testimonials section doesn't use the shared background graphic. */

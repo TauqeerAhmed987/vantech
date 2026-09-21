@@ -1473,6 +1473,14 @@
   .mobileapp-why__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .mobileapp-build-card__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: calc(1.2em * 2);
+    max-width: 140px;
+  }
   .mobileapp-usecases__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1487,6 +1495,14 @@
   }
   .mobileapp-pricing-cta__copy {
     max-width: 100%;
+  }
+  .mobileapp-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 20px;
+    padding: 12px 15px;
+    gap: 15px;
   }
   .mobileapp-integrations__row {
     flex-wrap: wrap;
@@ -1514,6 +1530,10 @@
   }
   .mobileapp-process2 {
     padding-top: 70px;
+  }
+  .mobileapp-process2-card__badge {
+    width: 80px;
+    height: 80px;
   }
   .mobileapp-timeline-step__title {
     margin: 20px 0 0;
@@ -1612,6 +1632,13 @@
   .mobileapp-usecases__grid {
     grid-template-columns: 1fr;
   }
+  .mobileapp-build-card__title {
+    display: block;
+    -webkit-line-clamp: unset;
+    max-width: none;
+    min-height: auto;
+    white-space: nowrap;
+  }
   .mobileapp-why-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1621,17 +1648,37 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
-    padding: 30px 10px;
+    gap: 18px;
+    padding: 50px 20px;
   }
   .mobileapp-process2-card__badge {
     order: -1;
+    width: 80px;
+    height: 80px;
+  }
+  .mobileapp-process2-card__body {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mobileapp-process2-card__body .mobileapp-process2-card__desc {
+    width: 100%;
+    max-width: 100%;
   }
   .mobileapp-integration-pill {
     width: calc(50% - 10px);
   }
   .mobileapp-pricing-cta__title {
     font-size: 32px;
+  }
+  .mobileapp-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: 8px 11px;
+    gap: 12px;
   }
   .mobileapp-timeline {
     overflow-x: scroll;
@@ -1668,8 +1715,24 @@
     gap: 12px;
   }
   .mobileapp-process2-card__badge {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+  }
+  .mobileapp-build-card__desc {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.4px;
+  }
+  .mobileapp-usecase-card__title {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    height: auto;
+  }
+  .mobileapp-usecase-card__divider {
+    margin: 16px 0 12px;
+  }
+  .mobileapp-process2__grid {
+    margin-top: 44px;
   }
   .mobileapp-hero__title {
     font-size: 30px;
@@ -1681,6 +1744,11 @@
   }
   .mobileapp-hero {
     padding: 130px 0 0px;
+  }
+  .mobileapp-solution__desc {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 23px;
   }
   .mobileapp-h1-lg {
     font-size: 30px;
@@ -1751,6 +1819,15 @@
 }
 
 @media (max-width: 320px) {
+  .mobileapp-pricing-cta .btn {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 12px 11px;
+    gap: 10px;
+    height: 45px;
+  }
 }
 
 /* ---------- Motion (scroll + load animations) ---------- */
