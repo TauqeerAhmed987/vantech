@@ -231,6 +231,10 @@ h1, h2, h3, h4, p {
   width: 100%;
 }
 
+.testimonials.section h2.section-title {
+  width: 100%;
+}
+
 .section-title--layers,
 .section-title--work {
   width: auto;
@@ -2643,6 +2647,10 @@ a.navbar__cta--mobile {
     font-size: 2.3958vw;
     width: 42.7083vw;
   }
+  .testimonials.section h2.section-title {
+    width: 100%;
+    max-width: 100%;
+  }
   .section-title--layers,
   .section-title--work {
     width: auto;
@@ -4956,7 +4964,7 @@ a.navbar__cta--mobile {
   /* ---------- CTA ---------- */
 
   .cta__title {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .cta__desc {
@@ -5088,7 +5096,7 @@ a.navbar__cta--mobile {
     padding: 6px 22px;
   }
   .faq__title {
-    font-size: 22px;
+    font-size: 30px;
     margin-top: 28px;
   }
   .faq__intro-heading {
@@ -5128,7 +5136,7 @@ a.navbar__cta--mobile {
   }
   .cta__desc {
     font-size: 14px;
-    margin: 18px 0;
+    margin: 20px 0 0;
   }
   .cta__preview {
     width: 100%;

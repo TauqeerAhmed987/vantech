@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 513.229vw;
+  height: 100%;
   background-image: url(../../assets/images/ai-agents/figma/services-body-bg.webp);
   background-repeat: no-repeat;
   background-position: top center;
@@ -1696,6 +1696,9 @@
 }
 
 @media (max-width: 980px) {
+  .agents-page::before {
+    background-size: cover;
+  }
   .agents-hero {
     padding: 130px 0 60px;
   }
@@ -1725,11 +1728,29 @@
     margin: 40px auto 0;
   }
   .agents-hero__orb-wrap {
-    width: 294px;
-    height: 294px;
+    width: 77.368%;
+    height: 79.891%;
   }
-  .agents-hero__graphic .hero__orbit-ring {
-    display: none;
+  /* Rings sized in % of .agents-hero__graphic (380x368 reference box) instead
+     of fixed px, so they stay concentric with the orb at any box size —
+     including the fluid width this box gets from 599px down. */
+  .agents-hero__graphic .hero__orbit-ring--1 {
+    left: 8.947%;
+    top: 7.880%;
+    width: 83.158%;
+    height: 84.783%;
+  }
+  .agents-hero__graphic .hero__orbit-ring--2 {
+    left: 5.789%;
+    top: 4.076%;
+    width: 90.263%;
+    height: 92.391%;
+  }
+  .agents-hero__graphic .hero__orbit-ring--3 {
+    left: 2.368%;
+    top: 0.543%;
+    width: 97.632%;
+    height: 99.728%;
   }
   .agents-hero__orb {
     animation: none;
@@ -1798,7 +1819,27 @@
   }
   .agents-timeline {
     flex-direction: row;
+    flex-wrap: nowrap;
     gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-orange-3) rgba(255, 255, 255, 0.1);
+  }
+  .agents-timeline::-webkit-scrollbar {
+    height: 6px;
+  }
+  .agents-timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  .agents-timeline::-webkit-scrollbar-thumb {
+    background: var(--color-orange-3);
+    border-radius: 4px;
+  }
+  .agents-timeline-step {
+    flex: 0 0 240px;
+    min-width: 240px;
   }
   .agents-pricing-cta__card {
     justify-content: center;
@@ -1895,7 +1936,15 @@
     left: 50%;
     right: auto;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
+    width: 390px;
+  }
+  .agents-pricing-cta__title {
+    font-size: 40px;
+  }
+  .agents-pricing-cta .btn {
+    font-size: 22px;
+    padding: 16px 25px;
   }
   .agents-why-card__title {
     font-size: 20px;
@@ -2008,6 +2057,9 @@
 }
 
 @media (max-width: 599px) {
+  .agents-disappoint {
+    padding-top: 60px;
+  }
   .agents-card.agents-build-card {
     align-items: center;
     text-align: center;
@@ -2037,6 +2089,8 @@
   }
   .agents-hero__graphic {
     width: 100%;
+    height: auto;
+    aspect-ratio: 380 / 368;
   }
   .agents-hero__sparkle--a {
     top: auto;
@@ -2049,10 +2103,6 @@
     right: auto;
     width: 66px;
     left: 30%;
-  }
-  .agents-hero__actions .btn {
-    justify-content: center;
-    width: 100%;
   }
   .agents-p-lg {
     margin: 20px auto 0;
@@ -2096,7 +2146,7 @@
 
 @media (max-width: 481px) {
   .agents-h1-lg {
-    font-size: 25px;
+    font-size: 28px;
   }
   .agents-hero__sparkle--a {
     top: 200px;
@@ -2111,6 +2161,28 @@
   .agents-solution__title {
     font-size: 24px;
   }
+  .agents-solution__desc {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .agents-build {
+    padding-top: 70px;
+  }
+  .agents-build__grid {
+    margin-top: 50px;
+  }
+  .agents-capabilities {
+    padding-top: 90px;
+  }
+  .agents-capabilities__rows {
+    margin-top: 40px;
+  }
+  .agents-usecases {
+    padding-top: 70px;
+  }
+  .agents-architecture {
+    padding-top: 80px;
+  }
   .agents-integrations {
     padding-top: 80px;
   }
@@ -2120,9 +2192,71 @@
   .agents-h2 {
     font-size: 30px;
   }
+  .agents-pricing-cta {
+    padding: 60px 0 30px;
+  }
+  .agents-pricing-cta__card {
+    padding: 30px 20px;
+  }
 }
 
 @media (max-width: 320px) {
+  .agents-h1-lg {
+    font-size: 25px;
+  }
+  .agents-p-lg {
+    margin: 20px auto 0;
+    font-size: 13px;
+    max-width: 100%;
+  }
+  .agents-solution__title {
+    font-size: 22px;
+  }
+  .agents-solution__desc {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .agents-hero__desc {
+    margin-top: 20px;
+    max-width: 100%;
+    font-size: 14px;
+    width: 100%;
+  }
+  .agents-hero__actions .btn {
+    width: 100%;
+  }
+  .agents-page .btn {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+  .agents-build__grid {
+    margin-top: 30px;
+  }
+  .agents-build-card__desc {
+    font-size: 16px;
+  }
+  .agents-usecase-card {
+    padding: 24px 15px;
+  }
+  .agents-usecase-card__divider {
+    margin: 20px 0px 12px;
+  }
+  .agents-usecase-card__desc {
+    font-size: 14px;
+  }
+  .agents-section-copy {
+    font-size: 14px;
+  }
+  .agents-process2-card__desc {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .agents-why__grid {
+    margin-top: 30px;
+  }
+  .agents-h2 {
+    font-size: 28px;
+  }
 }
 
 /* ---------- Motion (scroll + load animations) ---------- */
