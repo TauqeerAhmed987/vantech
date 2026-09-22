@@ -273,9 +273,14 @@ export default function MVPDevelopmentPage() {
             <div className="mvp-hero__graphic" aria-hidden="true">
               <div className="mvp-orbit">
                 <img src={rocketBgLines} alt="" className="mvp-orbit__bg-lines" />
-                <img src={orbitEllipse} alt="" className="mvp-orbit__ellipse" />
+                {/* Split into two copies so the ring can pass behind the
+                    rocket on top and in front of it on the bottom, like a
+                    ring around a sphere — a single flat image can't be on
+                    both sides of the rocket layer at once. */}
+                <img src={orbitEllipse} alt="" className="mvp-orbit__ellipse mvp-orbit__ellipse--back" />
                 <img src={heroStar} alt="" className="mvp-orbit__star-glow" />
                 <img src={heroStar} alt="" className="mvp-orbit__star" />
+                <img src={orbitEllipse} alt="" className="mvp-orbit__ellipse mvp-orbit__ellipse--front" />
 
                 {orbitBadges.map((item, i) => (
                   <div

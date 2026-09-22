@@ -228,31 +228,31 @@
 }
 
 @keyframes ai-automation-badge-orbit {
-  0.0000% { transform: translate(-50%, -50%) translate(210.45px, 52.90px); }
-  4.1667% { transform: translate(-50%, -50%) translate(200.47px, 62.27px); }
-  8.3333% { transform: translate(-50%, -50%) translate(176.83px, 67.39px); }
-  12.5000% { transform: translate(-50%, -50%) translate(141.14px, 67.93px); }
-  16.6667% { transform: translate(-50%, -50%) translate(95.83px, 63.83px); }
-  20.8333% { transform: translate(-50%, -50%) translate(43.99px, 55.38px); }
-  25.0000% { transform: translate(-50%, -50%) translate(-10.85px, 43.16px); }
-  29.1667% { transform: translate(-50%, -50%) translate(-64.95px, 28.00px); }
-  33.3333% { transform: translate(-50%, -50%) translate(-114.62px, 10.93px); }
-  37.5000% { transform: translate(-50%, -50%) translate(-156.48px, -6.89px); }
-  41.6667% { transform: translate(-50%, -50%) translate(-187.68px, -24.23px); }
-  45.8333% { transform: translate(-50%, -50%) translate(-206.09px, -39.93px); }
-  50.0000% { transform: translate(-50%, -50%) translate(-210.45px, -52.90px); }
-  54.1667% { transform: translate(-50%, -50%) translate(-200.47px, -62.27px); }
-  58.3333% { transform: translate(-50%, -50%) translate(-176.83px, -67.39px); }
-  62.5000% { transform: translate(-50%, -50%) translate(-141.14px, -67.93px); }
-  66.6667% { transform: translate(-50%, -50%) translate(-95.83px, -63.83px); }
-  70.8333% { transform: translate(-50%, -50%) translate(-43.99px, -55.38px); }
-  75.0000% { transform: translate(-50%, -50%) translate(10.85px, -43.16px); }
-  79.1667% { transform: translate(-50%, -50%) translate(64.95px, -28.00px); }
-  83.3333% { transform: translate(-50%, -50%) translate(114.62px, -10.93px); }
-  87.5000% { transform: translate(-50%, -50%) translate(156.48px, 6.89px); }
-  91.6667% { transform: translate(-50%, -50%) translate(187.68px, 24.23px); }
-  95.8333% { transform: translate(-50%, -50%) translate(206.09px, 39.93px); }
-  100.0000% { transform: translate(-50%, -50%) translate(210.45px, 52.90px); }
+  0.0000% { transform: translate(-50%, -50%) translate(calc(210.45px * var(--orbit-radius-scale, 1)), calc(52.90px * var(--orbit-radius-scale, 1))); }
+  4.1667% { transform: translate(-50%, -50%) translate(calc(200.47px * var(--orbit-radius-scale, 1)), calc(62.27px * var(--orbit-radius-scale, 1))); }
+  8.3333% { transform: translate(-50%, -50%) translate(calc(176.83px * var(--orbit-radius-scale, 1)), calc(67.39px * var(--orbit-radius-scale, 1))); }
+  12.5000% { transform: translate(-50%, -50%) translate(calc(141.14px * var(--orbit-radius-scale, 1)), calc(67.93px * var(--orbit-radius-scale, 1))); }
+  16.6667% { transform: translate(-50%, -50%) translate(calc(95.83px * var(--orbit-radius-scale, 1)), calc(63.83px * var(--orbit-radius-scale, 1))); }
+  20.8333% { transform: translate(-50%, -50%) translate(calc(43.99px * var(--orbit-radius-scale, 1)), calc(55.38px * var(--orbit-radius-scale, 1))); }
+  25.0000% { transform: translate(-50%, -50%) translate(calc(-10.85px * var(--orbit-radius-scale, 1)), calc(43.16px * var(--orbit-radius-scale, 1))); }
+  29.1667% { transform: translate(-50%, -50%) translate(calc(-64.95px * var(--orbit-radius-scale, 1)), calc(28.00px * var(--orbit-radius-scale, 1))); }
+  33.3333% { transform: translate(-50%, -50%) translate(calc(-114.62px * var(--orbit-radius-scale, 1)), calc(10.93px * var(--orbit-radius-scale, 1))); }
+  37.5000% { transform: translate(-50%, -50%) translate(calc(-156.48px * var(--orbit-radius-scale, 1)), calc(-6.89px * var(--orbit-radius-scale, 1))); }
+  41.6667% { transform: translate(-50%, -50%) translate(calc(-187.68px * var(--orbit-radius-scale, 1)), calc(-24.23px * var(--orbit-radius-scale, 1))); }
+  45.8333% { transform: translate(-50%, -50%) translate(calc(-206.09px * var(--orbit-radius-scale, 1)), calc(-39.93px * var(--orbit-radius-scale, 1))); }
+  50.0000% { transform: translate(-50%, -50%) translate(calc(-210.45px * var(--orbit-radius-scale, 1)), calc(-52.90px * var(--orbit-radius-scale, 1))); }
+  54.1667% { transform: translate(-50%, -50%) translate(calc(-200.47px * var(--orbit-radius-scale, 1)), calc(-62.27px * var(--orbit-radius-scale, 1))); }
+  58.3333% { transform: translate(-50%, -50%) translate(calc(-176.83px * var(--orbit-radius-scale, 1)), calc(-67.39px * var(--orbit-radius-scale, 1))); }
+  62.5000% { transform: translate(-50%, -50%) translate(calc(-141.14px * var(--orbit-radius-scale, 1)), calc(-67.93px * var(--orbit-radius-scale, 1))); }
+  66.6667% { transform: translate(-50%, -50%) translate(calc(-95.83px * var(--orbit-radius-scale, 1)), calc(-63.83px * var(--orbit-radius-scale, 1))); }
+  70.8333% { transform: translate(-50%, -50%) translate(calc(-43.99px * var(--orbit-radius-scale, 1)), calc(-55.38px * var(--orbit-radius-scale, 1))); }
+  75.0000% { transform: translate(-50%, -50%) translate(calc(10.85px * var(--orbit-radius-scale, 1)), calc(-43.16px * var(--orbit-radius-scale, 1))); }
+  79.1667% { transform: translate(-50%, -50%) translate(calc(64.95px * var(--orbit-radius-scale, 1)), calc(-28.00px * var(--orbit-radius-scale, 1))); }
+  83.3333% { transform: translate(-50%, -50%) translate(calc(114.62px * var(--orbit-radius-scale, 1)), calc(-10.93px * var(--orbit-radius-scale, 1))); }
+  87.5000% { transform: translate(-50%, -50%) translate(calc(156.48px * var(--orbit-radius-scale, 1)), calc(6.89px * var(--orbit-radius-scale, 1))); }
+  91.6667% { transform: translate(-50%, -50%) translate(calc(187.68px * var(--orbit-radius-scale, 1)), calc(24.23px * var(--orbit-radius-scale, 1))); }
+  95.8333% { transform: translate(-50%, -50%) translate(calc(206.09px * var(--orbit-radius-scale, 1)), calc(39.93px * var(--orbit-radius-scale, 1))); }
+  100.0000% { transform: translate(-50%, -50%) translate(calc(210.45px * var(--orbit-radius-scale, 1)), calc(52.90px * var(--orbit-radius-scale, 1))); }
 }
 
 .ai-automation-orbit__badge {
@@ -2118,15 +2118,11 @@
 
   .ai-automation-hero__graphic {
     width: 100%;
-    height: 300px;
+    height: 420px;
   }
 
   .ai-automation-orbit {
-    --orbit-scale: 0.484;
-  }
-
-  .ai-automation-orbit__badge {
-    transform: translate(-50%, -50%) scale(0.62);
+    --orbit-scale: 0.677;
   }
 
   .ai-automation-hero__actions {
@@ -2209,24 +2205,18 @@
     text-align: center;
     padding: 40px 40px;
   }
-  /* Cancel the 767px tier's extra scale(0.62) on the badge itself — it was
-     double-shrinking badges on top of --orbit-scale, making the icons
-     inside them too small to read at this tier. */
-  .ai-automation-orbit__badge {
-    transform: translate(-50%, -50%);
-  }
+  /* Ellipse is widened to 80% (vs. its base 70%) here — --orbit-radius-scale
+     grows the badges' orbit radius by the same 80/70 ratio (see
+     ai-automation-badge-orbit keyframe) so they stay exactly on the line. */
   .ai-automation-orbit__ellipse {
-    position: absolute;
-    left: 51%;
-    top: 50%;
-    width: 90%;
-    height: auto;
-    transform: translate(-50%, -50%) rotate(14.11deg);
-    pointer-events: none;
-    z-index: 3;
+    left: 48%;
+    top: 42%;
+    width: 100%;
   }
   .ai-automation-orbit__anchor {
-    top: 50%;
+    top: 42%;
+    left: 50%;
+    --orbit-radius-scale: 1.142857;
   }
   .ai-automation-friction-item {
     padding: 16px 12px;
@@ -2260,13 +2250,11 @@
   .ai-automation-orbit {
     --orbit-scale: 0.87;
   }
-  /* Shrink the star itself (not the orbit path) so orbiting badges keep
-     visible clearance around it instead of passing behind/into it. */
   .ai-automation-orbit__star {
-    width: 62%;
+    width:85%;
   }
   .ai-automation-orbit__star-glow {
-    width: 50%;
+    width: 64%;
   }
   .ai-automation-integrations__row {
     flex-direction: row;
@@ -2343,10 +2331,15 @@
     --orbit-badge-scale: 0.65;
   }
   .ai-automation-orbit__star {
-    width: 62%;
+    width:90%;
+  }
+  .ai-automation-orbit__anchor {
+    top: 42%;
+    left: 50%;
+    --orbit-radius-scale: 1;
   }
   .ai-automation-orbit__star-glow {
-    width: 50%;
+    width: 64%;
   }
   .ai-automation-integrations__row {
     flex-direction: column;
@@ -2850,10 +2843,15 @@
     --orbit-badge-scale: 0.43;
   }
   .ai-automation-orbit__star {
-    width: 100%;
+    width:100%;
+  }
+  .ai-automation-orbit__anchor {
+    top: 42%;
+    left: 50%;
+    --orbit-radius-scale: 0.7;
   }
   .ai-automation-orbit__star-glow {
-    width: 50%;
+    width: 64%;
   }
   .ai-automation-hero__title {
     font-size: 30px;

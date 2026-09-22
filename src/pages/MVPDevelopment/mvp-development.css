@@ -267,7 +267,18 @@
   height: auto;
   transform: translate(-50%, -50%) rotate(14.11deg);
   pointer-events: none;
+}
+
+/* Top half of the ring: behind the rocket (z-index 2). */
+.mvp-orbit__ellipse--back {
+  z-index: 1;
+  clip-path: inset(0 0 50% 0);
+}
+
+/* Bottom half of the ring: in front of the rocket. */
+.mvp-orbit__ellipse--front {
   z-index: 3;
+  clip-path: inset(50% 0 0 0);
 }
 
 .mvp-orbit__anchor {
@@ -1536,7 +1547,7 @@
   .mvp-hero__graphic {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width:430px;
     margin: 40px auto 0;
   }
   .mvp-hero__title {
@@ -1708,6 +1719,15 @@
     bottom: 0;
     transform: translateX(-50%);
   }
+  .mvp-orbit__ellipse {
+    left: 64%;
+    top: 34%;
+    width:100%;
+  }
+  .mvp-orbit__anchor {
+    left: 50%;
+    top: 46%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1836,11 +1856,72 @@
   }
   .mvp-orbit__anchor {
     left: 44%;
-    top: 43%;
+    top: 50%;
+  }
+  .mvp-orbit__star, .mvp-orbit__star-glow {
+    top: 50%;
+  }
+  .mvp-orbit__ellipse {
+    left: 60%;
+    top: 38%;
+    width: 80%;
+    rotate: 9deg;
+  }
+  .mvp-hero__graphic {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    margin: 40px auto 0;
   }
 }
 
 @media (max-width: 599px) {
+  /* Below this width the graphic box can render at almost any width
+     (device + container padding dependent), not just the one size the
+     767px tier's hand-tuned keyframe assumed. Make .mvp-hero__graphic a
+     query container and express the badge orbit radius in cqw (% of this
+     box's own width) instead of fixed px, so the badge center is always
+     mathematically on the ellipse curve, at any box width — no per-device
+     retuning, and no gap between badge and line. Values are the same
+     hand-traced path as the base mvp-badge-orbit keyframe, just each px
+     amount converted to px/600*100 = cqw (600px being the desktop box
+     the base keyframe was traced against). The anchor stays at the same
+     49%/35% the ellipse itself is already centered on — moving it off
+     that is what previously made the badges drift off the line. */
+  .mvp-hero__graphic {
+    container-type: inline-size;
+  }
+  .mvp-orbit__badge {
+    width: 46px;
+    height: 46px;
+  }
+  @keyframes mvp-badge-orbit {
+    0.0000% { transform: translate(-50%, -50%) translate(35.0750cqw, 8.8167cqw); }
+    4.1667% { transform: translate(-50%, -50%) translate(33.4117cqw, 10.3783cqw); }
+    8.3333% { transform: translate(-50%, -50%) translate(29.4717cqw, 11.2317cqw); }
+    12.5000% { transform: translate(-50%, -50%) translate(23.5233cqw, 11.3217cqw); }
+    16.6667% { transform: translate(-50%, -50%) translate(15.9717cqw, 10.6383cqw); }
+    20.8333% { transform: translate(-50%, -50%) translate(7.3317cqw, 9.2300cqw); }
+    25.0000% { transform: translate(-50%, -50%) translate(-1.8083cqw, 7.1933cqw); }
+    29.1667% { transform: translate(-50%, -50%) translate(-10.8250cqw, 4.6667cqw); }
+    33.3333% { transform: translate(-50%, -50%) translate(-19.1033cqw, 1.8217cqw); }
+    37.5000% { transform: translate(-50%, -50%) translate(-26.0800cqw, -1.1483cqw); }
+    41.6667% { transform: translate(-50%, -50%) translate(-31.2800cqw, -4.0383cqw); }
+    45.8333% { transform: translate(-50%, -50%) translate(-34.3483cqw, -6.6550cqw); }
+    50.0000% { transform: translate(-50%, -50%) translate(-35.0750cqw, -8.8167cqw); }
+    54.1667% { transform: translate(-50%, -50%) translate(-33.4117cqw, -10.3783cqw); }
+    58.3333% { transform: translate(-50%, -50%) translate(-29.4717cqw, -11.2317cqw); }
+    62.5000% { transform: translate(-50%, -50%) translate(-23.5233cqw, -11.3217cqw); }
+    66.6667% { transform: translate(-50%, -50%) translate(-15.9717cqw, -10.6383cqw); }
+    70.8333% { transform: translate(-50%, -50%) translate(-7.3317cqw, -9.2300cqw); }
+    75.0000% { transform: translate(-50%, -50%) translate(1.8083cqw, -7.1933cqw); }
+    79.1667% { transform: translate(-50%, -50%) translate(10.8250cqw, -4.6667cqw); }
+    83.3333% { transform: translate(-50%, -50%) translate(19.1033cqw, -1.8217cqw); }
+    87.5000% { transform: translate(-50%, -50%) translate(26.0800cqw, 1.1483cqw); }
+    91.6667% { transform: translate(-50%, -50%) translate(31.2800cqw, 4.0383cqw); }
+    95.8333% { transform: translate(-50%, -50%) translate(34.3483cqw, 6.6550cqw); }
+    100.0000% { transform: translate(-50%, -50%) translate(35.0750cqw, 8.8167cqw); }
+  }
   .mvp-card.mvp-build-card {
     align-items: center;
     text-align: center;
@@ -1960,15 +2041,21 @@
     max-width: 100%;
     margin: 60px auto 0;
   }
-  .mvp-orbit__anchor {
-    left: 27%;
-    top: 48%;
-  }
   .mvp-solution__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+  }
+  .mvp-orbit__anchor {
+    left: 30%;
+    top: 58%;
+  }
+  .mvp-orbit__ellipse {
+    left: 54%;
+    top: 38%;
+    width: 82%;
+    rotate: 7deg;
   }
 }
 
