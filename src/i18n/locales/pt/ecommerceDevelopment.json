@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Comércio que funciona de forma mais inteligente.",
+    "desc": "Lojas online, pagamentos e experiências pós-compra ligadas à automatização e à IA — para que os clientes obtenham respostas e a sua equipa deixe de tratar manualmente os mesmos pedidos.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "leak": {
+    "title": "Onde as operações de <span class=\"accent\">comércio</span> se perdem",
+    "desc": "A maioria das lojas não perde dinheiro na montra. Perde-o em carrinhos abandonados, perguntas de suporte repetidas e trabalho pós-compra manual.",
+    "problems": [
+      "O suporte responde às mesmas perguntas sobre encomendas todos os dias.",
+      "Os carrinhos são abandonados sem um processo de recuperação estruturado.",
+      "A descoberta de produtos não corresponde à forma como os clientes pesquisam.",
+      "Os dados de encomendas, pagamentos e logística vivem em sistemas separados."
+    ]
+  },
+  "solution": {
+    "title": "Comércio ligado de ponta a ponta",
+    "desc": "Construímos a loja e a camada operacional por trás dela: pagamentos, fluxo de encomendas, atualizações logísticas, mensagens a clientes e análise de dados — com assistência de IA para as questões e jornadas que se repetem."
+  },
+  "build": {
+    "heading": "O que construímos",
+    "cards": [
+      {
+        "title": "Loja online",
+        "desc": "Uma experiência de compra rápida e responsiva concebida à volta do seu catálogo."
+      },
+      {
+        "title": "Assistente de comércio",
+        "desc": "Respostas de IA para questões sobre encomendas, produtos e políticas."
+      },
+      {
+        "title": "Checkout e pagamentos",
+        "desc": "Fluxos de pagamento, subscrições e confirmação de encomendas."
+      },
+      {
+        "title": "Recuperação e ciclo de vida",
+        "desc": "Recuperação de carrinhos e mensagens de ciclo de vida com base no comportamento real."
+      },
+      {
+        "title": "Pós-compra",
+        "desc": "Estado da encomenda, atualizações de envio e comunicação de devoluções."
+      },
+      {
+        "title": "Operações",
+        "desc": "Ferramentas de administração e relatórios para a equipa que gere a loja."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Catálogo e merchandising",
+      "Checkout",
+      "Pagamentos e subscrições",
+      "Gestão de encomendas",
+      "Atualizações de envio"
+    ],
+    "row2": [
+      "Automatização do apoio ao cliente",
+      "Recuperação de carrinhos",
+      "Descoberta de produtos",
+      "Mensagens de ciclo de vida",
+      "Análise de comércio"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Marcas de venda direta ao consumidor",
+        "desc": "Uma loja com comunicação pós-compra automatizada."
+      },
+      {
+        "title": "Comércio por subscrição",
+        "desc": "Faturação recorrente com gestão de contas e planos."
+      },
+      {
+        "title": "Lojas com catálogos extensos",
+        "desc": "Pesquisa e descoberta concebidas para grandes catálogos de produtos."
+      },
+      {
+        "title": "Comércio de serviços",
+        "desc": "Serviços reserváveis vendidos e geridos online."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitetura do MVP",
+    "desc": "Mesmo um primeiro lançamento é um sistema completo. Mantemo-lo pequeno, mas estruturado — para que a segunda versão seja uma extensão, e não uma reconstrução.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Experiência",
+        "tags": [["Loja", "Pesquisa"], ["Checkout"], ["Conta"]]
+      },
+      {
+        "number": "02",
+        "title": "Comércio",
+        "tags": [["Catálogo"], ["Encomendas", "Pagamentos"], ["Subscrições"]]
+      },
+      {
+        "number": "03",
+        "title": "Operações",
+        "tags": [["Logística"], ["Suporte", "Notificações"]]
+      },
+      {
+        "number": "04",
+        "title": "Inteligência",
+        "tags": [["Assistente"], ["Recuperação", "Análise de dados"], ["Recomendações"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Processo de desenvolvimento",
+    "cards": [
+      {
+        "title": "Descoberta",
+        "desc": "Catálogo, jornadas de clientes e restrições operacionais."
+      },
+      {
+        "title": "Design",
+        "desc": "Experiência de loja e checkout em todos os dispositivos."
+      },
+      {
+        "title": "Construção",
+        "desc": "Loja, pagamentos, fluxo de encomendas e integrações."
+      },
+      {
+        "title": "Automatização",
+        "desc": "Suporte, recuperação e mensagens de ciclo de vida."
+      },
+      {
+        "title": "Teste",
+        "desc": "Testes de pagamento, QA responsivo e revisão de desempenho."
+      },
+      {
+        "title": "Lançamento",
+        "desc": "Implementação, análise de dados e monitorização pós-lançamento."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações possíveis",
+    "row1": [
+      { "label": "Fornecedores de pagamento" },
+      { "label": "Envio" },
+      { "label": "E-mail" },
+      { "label": "Mensagens" },
+      { "label": "CRM" }
+    ],
+    "row2": [
+      { "label": "Análise de dados" },
+      { "label": "Inventário" },
+      { "label": "Contabilidade" }
+    ]
+  },
+  "why": {
+    "heading": "Porquê a Van Tech Systems",
+    "cards": [
+      {
+        "title": "Concebido para as operações",
+        "desc": "Concebemos o trabalho por trás da encomenda, não apenas a loja."
+      },
+      {
+        "title": "Automatização onde se repete",
+        "desc": "A IA é aplicada às questões e jornadas que se repetem."
+      },
+      {
+        "title": "Mensurável",
+        "desc": "A análise de dados é integrada como parte da construção."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de $3,500/month",
+    "desc": "Os preços iniciais são referências de planeamento. O preço final depende do âmbito, arquitetura, integrações e requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

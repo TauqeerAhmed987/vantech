@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "eyebrow": ["AI", "Software", "Automation"],
+    "title": "We Build Intelligent <br/>Software for Ambitious <br/>Businesses.",
+    "desc": "Van Tech Systems designs and develops AI systems, SaaS platforms, web applications, mobile apps, automation infrastructure, ecommerce solutions and custom software built around real business operations.",
+    "startAProject": "Start a Project",
+    "ourWork": "Our Work",
+    "statsTitle": "A measurable engineering footprint.",
+    "stats": {
+      "portfolioProjects": "Portfolio Projects",
+      "languagesSupported": "Languages Supported",
+      "technologyServices": "Technology Services",
+      "coreCapabilities": "Core Capabilities"
+    }
+  },
+  "categories": {
+    "eyebrow": "What we build",
+    "title": "Four categories. One engineering standard.",
+    "subtitle": "Every engagement is scoped, architected and delivered by the same team — from a first MVP to a multi-tenant platform.",
+    "items": [
+      {
+        "number": "01",
+        "title": "AI Systems",
+        "items": ["AI Agents", "AI Employees", "Automation", "Voice AI", "Conversational AI", "Custom AI"]
+      },
+      {
+        "number": "02",
+        "title": "Digital Products",
+        "items": ["MVPs", "SaaS", "Web Applications", "Mobile Applications"]
+      },
+      {
+        "number": "03",
+        "title": "Business Platforms",
+        "items": ["CRM", "Client Portals", "Workflow Systems", "Operations Software"]
+      },
+      {
+        "number": "04",
+        "title": "Digital Commerce",
+        "items": ["Ecommerce", "Payments", "Subscriptions", "AI Commerce"]
+      }
+    ]
+  },
+  "solutions": {
+    "channel": {
+      "eyebrow": "AI & Automation",
+      "title": "One intelligence layer across every channel.",
+      "desc": "Capture demand wherever it arrives, qualify it with AI, and push structured outcomes into the systems your team already uses.",
+      "cta": "Explore All Services"
+    },
+    "agencies": {
+      "eyebrow": "For Agencies",
+      "title": "AI Solutions Built for Agencies",
+      "desc": "Expand your services, deliver more value to your clients, and grow recurring revenue with white-label AI, automation, and development solutions.",
+      "cta": "Explore Agencies Services"
+    },
+    "dashboardSearch": "Explore Agencies Services",
+    "pills": {
+      "voiceAi": "Voice AI",
+      "crm": "CRM",
+      "payments": "Payments",
+      "ragData": "RAG / Data",
+      "email": "Email",
+      "messages": "Messages"
+    }
+  },
+  "steps": {
+    "eyebrow": "What we build",
+    "title": "Three Simple Steps. One Clear Price.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Discovery Call",
+        "desc": "A focused conversation to understand your goals, challenges, and the right solution for your business."
+      },
+      {
+        "number": "02",
+        "title": "Fixed Scope + Timeline",
+        "desc": "We define the scope, timeline, deliverables, and cost upfront—so everyone knows exactly what to expect."
+      },
+      {
+        "number": "03",
+        "title": "Build + Launch",
+        "desc": "We design, develop, test, and launch your solution. Once complete, everything is handed over to you."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "Context matters as<br/>much as code.",
+    "cta": "Get Started",
+    "row1": {
+      "healthcare": "Healthcare",
+      "dental": "Dental",
+      "legal": "Legal",
+      "insurance": "Insurance",
+      "ecommerce": "E-Commerce",
+      "retail": "Retail"
+    },
+    "row2": {
+      "education": "Education",
+      "accounting": "Accounting",
+      "realEstate": "Real Estate",
+      "homeServices": "Home Services",
+      "travel": "Travel & Immigration",
+      "finance": "Finance"
+    }
+  },
+  "whyUs": {
+    "eyebrow": "Why Van Tech Systems",
+    "title": "An engineering partner, not a vendor.",
+    "cta": "Get Started",
+    "items": [
+      {
+        "number": "01",
+        "title": "Built around your business",
+        "desc": "We design systems around your actual workflows and requirements."
+      },
+      {
+        "number": "02",
+        "title": "Production focused",
+        "desc": "Architecture, authentication, databases, permissions, integrations, QA and deployment are part of the product — not afterthoughts."
+      },
+      {
+        "number": "03",
+        "title": "One technology partner",
+        "desc": "Strategy, product design, software, AI and automation work together under one architecture."
+      },
+      {
+        "number": "04",
+        "title": "Built to evolve",
+        "desc": "Architecture that supports future capabilities instead of forcing complete rebuilds."
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Our Work",
+    "title": "Platforms We’ve Built",
+    "viewWork": "View Work",
+    "items": [
+      {
+        "number": "01",
+        "title": "Van Travel Business",
+        "desc": "A travel and immigration business platform covering packages, document intake and client enquiries."
+      },
+      {
+        "number": "02",
+        "title": "Power Mindset Breakthrough",
+        "desc": "A coaching and personal development platform with programmes, booking and content delivery."
+      },
+      {
+        "number": "03",
+        "title": "AI FNA",
+        "desc": "An AI-assisted financial needs analysis tool that turns client data into advisor-ready recommendations."
+      },
+      {
+        "number": "04",
+        "title": "OneTap Digital Card",
+        "desc": "A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple Pricing. Serious Software.",
+    "note": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations, timeline and technical requirements.",
+    "startingAt": "Starting at",
+    "customQuote": "Custom Quote",
+    "categories": {
+      "ai": "AI",
+      "web": "Web",
+      "software": "Software"
+    },
+    "plans": [
+      { "category": "ai", "title": "AI Receptionist", "price": "$1,500", "note": "Ongoing from $249/mo" },
+      { "category": "ai", "title": "AI Automation System", "price": "$2,500" },
+      { "category": "web", "title": "Professional Business Website", "price": "$1,500" },
+      { "category": "web", "title": "Advanced Business Website", "price": "$3,500" },
+      { "category": "software", "title": "Custom Web Application", "price": "$5,000" },
+      { "category": "software", "title": "SaaS MVP", "price": "$7,500" },
+      { "category": "software", "title": "Advanced SaaS Platform", "customQuote": true, "note": "Custom scope." },
+      { "category": "ai", "title": "Custom AI Agent", "price": "$3,500" },
+      { "category": "ai", "title": "RAG / Business Knowledge AI", "price": "$5,000" },
+      { "category": "software", "title": "CRM / Operations Platform", "price": "$6,500" }
+    ]
+  }
+}

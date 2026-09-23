@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["SaaS", "Réseautage professionnel"],
+    "titleLines": ["OneTap", "Digital Card"],
+    "description": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, leurs liens et une page de réservation via un lien de carte public ou un code QR.",
+    "screenshotAlt": "Capture d'écran de la plateforme OneTap Digital Card"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "SaaS" },
+    { "label": "Compétences", "value": "Ingénierie produit • Design UI/UX • Logiciel sur mesure" },
+    { "label": "Secteur", "value": "Réseautage professionnel" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "OneTap Digital Card est un produit de réseautage numérique détenu et exploité par Van Tech Systems. Les professionnels créent une carte avec leur photo, leurs coordonnées et des liens personnalisés, puis la partagent via un lien public ou un code QR unique — sans application requise d'un côté comme de l'autre. Un portail client réunit en un seul endroit la gestion de la carte, la capture de prospects et l'analyse d'engagement.",
+    "challengeDesc": "Les cartes de visite papier deviennent obsolètes dès qu'un détail change, et elles ne disent rien à leur propriétaire de ce qui s'est passé après la remise. Le produit devait fonctionner instantanément sur n'importe quel téléphone sans installation d'application, se partager de manière fiable à la fois par un lien et par un code QR, et offrir au propriétaire de la carte un espace pour tout gérer par la suite.",
+    "builtDesc": "Nous avons conçu et développé le produit dans son intégralité : un générateur de carte, un moteur de rendu de carte publique servi depuis des liens courts partageables, la génération de codes QR, la capture de prospects, et un portail client où les propriétaires gèrent leur carte, leurs liens, leurs prospects et leurs analyses. Des liens de réservation tels que Calendly peuvent être associés afin qu'un scan mène directement à un rendez-vous planifié."
+  },
+  "sidebar": {
+    "serviceTags": ["Ingénierie produit", "Design UI/UX", "Logiciel sur mesure"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "number": "01", "title": "Générateur de carte numérique avec photo, coordonnées et image de marque" },
+      { "number": "02", "title": "Code QR unique par carte pour un partage imprimé ou à l'écran" },
+      { "number": "03", "title": "Lien de carte public fonctionnant sans application" },
+      { "number": "04", "title": "Liens personnalisés illimités vers portfolio, réseaux sociaux et produits" },
+      { "number": "05", "title": "Intégration de réservation pour planifier depuis la carte" },
+      { "number": "06", "title": "Capture de prospects sur la carte publique" },
+      { "number": "07", "title": "Analyses des vues, scans, clics sur les liens et prospects" },
+      { "number": "08", "title": "Portail client pour la gestion de la carte, des prospects et des intégrations" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux d'activité",
+    "steps": ["Créer", "Partager", "Connecter", "Capturer", "Suivre"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue conceptuelle", "du système"],
+    "pills": ["Lien de carte public", "Service de carte et de profil", "Stockage des prospects et analyses", "Portail client"]
+  },
+  "outcomes": [
+    "Création d'un produit unique où identité professionnelle, liens et réservation coexistent",
+    "Remplacement des cartes imprimées statiques par un profil modifiable à tout moment",
+    "Visibilité offerte aux propriétaires de carte sur l'engagement grâce à une vue d'analyse dédiée"
+  ],
+  "relatedWork": [
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'affaires, la création d'entreprise, l'image de marque et les services de croissance."
+    },
+    {
+      "tag": "Plateformes d'entreprise",
+      "title": "Mighty Oak Legacy",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'affaires, la création d'entreprise, l'image de marque et les services de croissance."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Une plateforme de leadership et d'éducation financière présentant des programmes, des publics et un parcours de réservation de consultation."
+    }
+  ]
+}

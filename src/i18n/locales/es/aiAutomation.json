@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "eyebrow": "Servicios",
+    "title": "Tus operaciones.<br/>Automatizadas.",
+    "desc": "Conecta los sistemas que tu empresa ya utiliza y elimina los pasos manuales repetitivos entre ellos: captación, calificación, actualizaciones, seguimiento, programación y reportes.",
+    "ctaPrimary": "Obtener el presupuesto de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "friction": {
+    "title": "Dónde desaparece el tiempo operativo",
+    "desc": "La mayoría de los equipos no pierden tiempo en el trabajo en sí. Lo pierden moviendo información entre herramientas, volviendo a escribir los mismos datos y recordando hacer el seguimiento.",
+    "points": [
+      "Los leads quedan sin calificar mientras alguien encuentra tiempo para revisarlos.",
+      "Los mismos datos se introducen manualmente en varios sistemas.",
+      "El seguimiento depende de que las personas lo recuerden.",
+      "Los reportes se elaboran manualmente a partir de herramientas separadas."
+    ]
+  },
+  "solution": {
+    "title": "Flujos de trabajo que funcionan sin supervisión",
+    "desc": "Mapeamos el proceso tal como ocurre realmente y luego lo reconstruimos como flujos de trabajo conectados: la información se captura una sola vez, se califica, se dirige al sistema correcto y se le da seguimiento automáticamente, con un registro claro de lo que se ejecutó y de lo que necesita la intervención de una persona."
+  },
+  "build": {
+    "heading": "Lo que automatizamos",
+    "cards": [
+      {
+        "title": "Captación y enrutamiento de leads",
+        "desc": "Formularios, mensajes entrantes y consultas enrutados por reglas o IA."
+      },
+      {
+        "title": "Calificación",
+        "desc": "Puntuación estructurada y resumen antes de que una persona lea nada."
+      },
+      {
+        "title": "Operaciones de CRM",
+        "desc": "Registros creados y actualizados automáticamente a partir de la actividad real."
+      },
+      {
+        "title": "Secuencias de seguimiento",
+        "desc": "Mensajería programada y condicional en canales de correo y mensajería."
+      },
+      {
+        "title": "Programación",
+        "desc": "Reservas, recordatorios y reprogramaciones gestionados dentro del flujo de trabajo."
+      },
+      {
+        "title": "Reportes",
+        "desc": "Métricas operativas compiladas de forma continua en lugar de mensual."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Mapeo de procesos",
+      "Enrutamiento basado en reglas",
+      "Calificación con IA",
+      "Enriquecimiento de datos",
+      "Secuencias condicionales",
+      "Gestión de errores y reintentos"
+    ],
+    "row2": [
+      "Registro de ejecuciones",
+      "Traspaso a una persona",
+      "Notificaciones",
+      "Paneles operativos"
+    ]
+  },
+  "usecases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Gestión de leads entrantes",
+        "desc": "Cada consulta calificada, registrada y respondida sin demora."
+      },
+      {
+        "title": "Operaciones de back-office",
+        "desc": "Procesos internos recurrentes ejecutados según un calendario."
+      },
+      {
+        "title": "Incorporación de clientes",
+        "desc": "Documentos, cuentas y tareas creados a partir de un único disparador."
+      },
+      {
+        "title": "Reportes",
+        "desc": "Datos operativos recopilados y resumidos automáticamente."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitectura del flujo de trabajo",
+    "desc": "La automatización solo es útil cuando es observable. Cada flujo de trabajo que construimos registra qué se ejecutó, qué falló y qué necesita todavía la decisión de una persona.",
+    "timeline": [
+      {
+        "title": "Disparadores",
+        "tags": [["Formularios", "Programaciones"], ["Webhooks"], ["Mensajes entrantes"]]
+      },
+      {
+        "title": "Lógica",
+        "tags": [["Reglas", "Calificación con IA"], ["Ramificaciones", "Validación"]]
+      },
+      {
+        "title": "Acciones",
+        "tags": [["Actualizaciones de CRM", "Mensajería"], ["Programación", "Documentos"]]
+      },
+      {
+        "title": "Supervisión",
+        "tags": [["Registros de ejecución", "Reintentos"], ["Alertas", "Traspaso a una persona"]]
+      }
+    ]
+  },
+  "process2": {
+    "heading": "Proceso de implementación",
+    "cards": [
+      {
+        "title": "Mapear",
+        "desc": "Documentar el proceso tal como funciona hoy, incluidas las excepciones."
+      },
+      {
+        "title": "Diseñar",
+        "desc": "Definir disparadores, lógica de decisión y dónde una persona permanece involucrada."
+      },
+      {
+        "title": "Conectar",
+        "desc": "Establecer el acceso a los sistemas implicados y validar el flujo de datos."
+      },
+      {
+        "title": "Construir",
+        "desc": "Implementar los flujos de trabajo con registro, validación y gestión de errores."
+      },
+      {
+        "title": "Probar",
+        "desc": "Ejecutar frente a escenarios reales, incluidos los que normalmente fallan."
+      },
+      {
+        "title": "Operar",
+        "desc": "Monitorear, ajustar y ampliar a medida que el proceso cambia."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integraciones posibles",
+    "row1": ["CRM", "Correo electrónico", "Mensajería", "Calendarios", "Formularios"],
+    "row2": ["Bases de datos", "Hojas de cálculo", "Webhooks", "Pagos"]
+  },
+  "why": {
+    "heading": "Por qué Van Tech Systems",
+    "cards": [
+      {
+        "title": "Diseñado alrededor del proceso real",
+        "desc": "Automatizamos el flujo de trabajo que realmente utilizas, incluidas sus excepciones."
+      },
+      {
+        "title": "Observable por diseño",
+        "desc": "Cada ejecución queda registrada, de modo que los fallos salen a la luz en lugar de ocultarse."
+      },
+      {
+        "title": "Observable por diseño",
+        "desc": "Cada ejecución queda registrada, de modo que los fallos salen a la luz en lugar de ocultarse."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Desde $1,500/mes",
+    "desc": "Los precios de partida son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener el presupuesto de mi proyecto"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "updated": "Última atualização: 18 de agosto de 2026"
+  },
+  "sections": {
+    "commitment": {
+      "title": "1. Nosso compromisso",
+      "body": "Criamos software no qual as pessoas confiam para funcionar, portanto a acessibilidade é tratada como um requisito de engenharia, não um toque final. Buscamos atender ao nível AA das WCAG 2.1 em todo este site e aplicar o mesmo padrão aos produtos que criamos para os clientes."
+    },
+    "implement": {
+      "title": "2. O que implementamos",
+      "items": [
+        "Estrutura HTML semântica com um único título principal por página e uma ordem lógica de títulos.",
+        "Total operabilidade por teclado, com indicadores de foco visíveis em elementos interativos.",
+        "Metas de contraste de cor atendidas nos temas claro e escuro.",
+        "Alternativas de texto para imagens significativas, e elementos decorativos ocultos de tecnologias assistivas.",
+        "Campos de formulário rotulados com mensagens de erro anunciadas, não apenas mostradas em cor.",
+        "Layouts responsivos que permanecem utilizáveis quando o texto é ampliado ou a janela é pequena.",
+        "Suporte a movimento reduzido para usuários que solicitaram menos animação no nível do sistema."
+      ]
+    },
+    "limitations": {
+      "title": "3. Limitações conhecidas",
+      "intro": "Esta é uma lista honesta, não uma alegação de perfeição:",
+      "items": [
+        "Diagramas técnicos complexos transmitem estrutura visualmente; cada um tem uma explicação em texto próxima, mas os próprios diagramas são simplificados para leitores de tela.",
+        "Algumas tabelas de dados rolam horizontalmente em telas muito pequenas.",
+        "A interação por voz no assistente de IA depende do suporte de voz do navegador e não está disponível em todos os navegadores."
+      ]
+    },
+    "assessment": {
+      "title": "4. Abordagem de avaliação",
+      "body": "Testamos com navegação por teclado, ferramentas de inspeção de acessibilidade do navegador e verificações automatizadas durante o desenvolvimento. Atualmente não somos certificados por um auditor externo, e dizemos isso em vez de sugerir que uma auditoria formal foi realizada."
+    },
+    "reporting": {
+      "title": "5. Relatando uma barreira",
+      "bodyPrefix": "Se alguma parte deste site impedir que você faça algo, avise-nos em",
+      "bodySuffix": "Descreva a página e o que aconteceu. Nosso objetivo é confirmar o recebimento de relatos de acessibilidade em até cinco dias úteis e fornecer a informação que você precisa em um formato alternativo enquanto corrigimos o problema."
+    }
+  }
+}

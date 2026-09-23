@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './contact.css';
 import { useReveal } from '../../hooks/useReveal';
 import FAQ from '../../components/FAQ';
@@ -6,6 +7,8 @@ import Testimonials from '../../components/Testimonials';
 import heroBg from '../../assets/images/contact/contact-page-banner.png';
 
 export default function ContactPage() {
+  const { t } = useTranslation('contact');
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -46,8 +49,8 @@ export default function ContactPage() {
         </div>
 
         <div className={`container contact-hero__content ${hero.className}`} ref={hero.ref}>
-          <span className="eyebrow-pill">Contact Us</span>
-          <h1 className="contact-hero__title">Get started today</h1>
+          <span className="eyebrow-pill">{t('eyebrow')}</span>
+          <h1 className="contact-hero__title">{t('title')}</h1>
         </div>
 
         <div className="container">

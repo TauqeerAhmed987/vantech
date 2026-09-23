@@ -1,0 +1,50 @@
+{
+  "hero": { "updated": "Dernière mise à jour : 18 août 2026" },
+  "sections": {
+    "acceptance": {
+      "title": "1. Acceptation",
+      "body": "En utilisant ce site web, vous acceptez ces conditions. Si vous ne les acceptez pas, n'utilisez pas le site. Les collaborations sur projet sont régies par un accord signé distinct, qui prévaut sur ces conditions en cas de conflit."
+    },
+    "permittedUse": {
+      "title": "2. Utilisation autorisée",
+      "items": [
+        "Vous pouvez parcourir, lire et partager notre contenu à des fins légales.",
+        "Vous ne pouvez pas tenter de perturber ou de surcharger le service, contourner les contrôles d'accès, ou accéder à des données auxquelles vous n'êtes pas autorisé à accéder.",
+        "Vous ne pouvez pas soumettre de fausses informations, des fichiers malveillants ou du spam automatisé via nos formulaires ou notre assistant IA.",
+        "Vous ne pouvez pas extraire ou réutiliser notre contenu à grande échelle pour entraîner des modèles commerciaux sans autorisation écrite."
+      ]
+    },
+    "enquiries": {
+      "title": "3. Les demandes ne sont pas des contrats",
+      "body": "Soumettre une demande de projet, recevoir une estimation, ou parler avec notre assistant IA ne crée pas d'accord contraignant. Le travail ne commence que dans le cadre d'un accord de collaboration écrit ou d'une proposition acceptée signée par les deux parties."
+    },
+    "pricing": {
+      "title": "4. Informations tarifaires",
+      "body": "Les prix et fourchettes publiés sur ce site sont des points de départ indicatifs destinés à vous aider à planifier. Le prix final dépend du périmètre, de la complexité, des intégrations, de la qualité des données, des exigences de conformité et du calendrier, et n'est confirmé que par écrit."
+    },
+    "ip": {
+      "title": "5. Propriété intellectuelle",
+      "body": "Le contenu du site, les éléments de marque, les illustrations et les produits propriétaires, y compris Van AI, restent la propriété de Van Tech Systems. La propriété des livrables produits pendant une collaboration est définie dans l'accord applicable. Notre position par défaut est que les clients possèdent le code et l'infrastructure que nous construisons pour eux, tandis que les outils, bibliothèques et frameworks internes préexistants restent les nôtres et sont concédés sous licence pour une utilisation au sein du système livré."
+    },
+    "thirdParty": {
+      "title": "6. Services tiers",
+      "body": "Les systèmes que nous construisons reposent souvent sur des plateformes et API tierces. Leur disponibilité, leurs prix et leurs conditions échappent à notre contrôle, et nous ne sommes pas responsables des changements apportés par ces fournisseurs."
+    },
+    "aiFeatures": {
+      "title": "7. Fonctionnalités IA sur ce site",
+      "body": "Notre assistant IA fournit des informations générales et peut être inexact ou incomplet. Ce n'est pas un conseil professionnel, et rien de ce qu'il dit ne constitue un engagement de notre part. Vérifiez tout élément important avec notre équipe avant d'agir en conséquence."
+    },
+    "warranties": {
+      "title": "8. Garanties et responsabilité",
+      "body": "Ce site web et son contenu sont fournis tels quels, sans garantie d'aucune sorte. Dans toute la mesure permise par la loi, Van Tech Systems n'est pas responsable des pertes indirectes, accessoires ou consécutives, ni des pertes de profits, de revenus ou de données découlant de l'utilisation de ce site ou de la confiance accordée à son contenu. Rien dans ces conditions n'exclut une responsabilité qui ne peut légalement être exclue."
+    },
+    "changes": {
+      "title": "9. Modifications",
+      "body": "Nous pouvons mettre à jour ces conditions. La poursuite de l'utilisation du site après une mise à jour constitue une acceptation des conditions révisées."
+    },
+    "contact": {
+      "title": "10. Contact",
+      "bodyPrefix": "Les questions concernant ces conditions peuvent être envoyées à"
+    }
+  }
+}

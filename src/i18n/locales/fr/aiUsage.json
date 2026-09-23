@@ -1,0 +1,56 @@
+{
+  "hero": { "updated": "Dernière mise à jour : 18 août 2026" },
+  "sections": {
+    "whyExists": {
+      "title": "1. Pourquoi cette politique existe",
+      "body": "Nous construisons des systèmes d'IA pour vivre, ce qui rend raisonnable d'attendre de nous que nous soyons explicites sur la façon dont nous les utilisons nous-mêmes. Cette politique couvre les fonctionnalités IA de ce site web et les normes que nous appliquons lorsque nous construisons de l'IA pour nos clients."
+    },
+    "whereUsed": {
+      "title": "2. Où l'IA est utilisée sur ce site",
+      "items": [
+        "Un assistant de site web qui répond aux questions sur nos services en utilisant notre propre contenu publié.",
+        "Résumé et priorisation des demandes de projet entrantes pour notre équipe interne.",
+        "Aide à la rédaction de contenu éditorial, qui est revu et édité par notre équipe avant publication."
+      ]
+    },
+    "disclosure": {
+      "title": "3. Divulgation",
+      "body": "Notre assistant s'identifie comme un système d'IA. Nous ne présentons pas les réponses automatisées comme des messages provenant d'un humain nommé, et nous n'utilisons pas de voix synthétiques ou de personnages conçus pour être confondus avec une personne spécifique."
+    },
+    "grounding": {
+      "title": "4. Ancrage et exactitude",
+      "body": "L'assistant répond à partir de notre contenu publié sur les services, produits et articles plutôt que de générer des affirmations ouvertes. Lorsqu'il ne sait pas quelque chose, il est conçu pour le dire et proposer de vous mettre en relation avec l'équipe. Le résultat automatisé peut néanmoins être erroné. Rien de ce que dit l'assistant ne constitue un devis contraignant, un engagement ou un conseil professionnel."
+    },
+    "oversight": {
+      "title": "5. Supervision humaine",
+      "items": [
+        "Les prix, les conditions contractuelles et les engagements de périmètre sont confirmés par une personne, jamais par un système automatisé seul.",
+        "Les conversations sensibles, ambiguës ou liées à une plainte sont transmises à l'équipe.",
+        "Les résumés de demandes sont toujours lus par une personne avant l'envoi d'une réponse."
+      ]
+    },
+    "dataUsed": {
+      "title": "6. Données utilisées par nos fonctionnalités IA",
+      "body": "Les conversations avec l'assistant et le contenu des demandes sont traités par des fournisseurs tiers de modèles IA sous contrat. Nous n'autorisons pas ce contenu à être utilisé pour entraîner des modèles de fondation publics. Merci de ne pas saisir de mots de passe, de détails de paiement, d'informations de santé ou d'autres données personnelles sensibles dans l'assistant."
+    },
+    "standards": {
+      "title": "7. Normes que nous appliquons dans le travail client",
+      "items": [
+        "Ancrer les systèmes IA dans le contenu et les données propres et vérifiés du client.",
+        "Limiter les agents à un ensemble explicite d'actions autorisées et de périmètres de données.",
+        "Journaliser les conversations et les actions exécutées afin que le comportement puisse être audité.",
+        "Concevoir un chemin d'escalade humaine avant le lancement, pas après un échec.",
+        "Tester les réponses fabriquées, l'injection de prompts et les fuites de permissions dans le cadre de la livraison.",
+        "Refuser les cas d'usage où des décisions automatisées créeraient un risque inacceptable pour les personnes concernées."
+      ]
+    },
+    "limitations": {
+      "title": "8. Limites que nous ne cachons pas",
+      "body": "Les systèmes IA peuvent se tromper avec assurance, peuvent se dégrader lorsque les modèles sous-jacents changent, et peuvent être manipulés par des entrées adverses. Nous concevons pour ces réalités avec de l'ancrage, des contraintes, une surveillance et une revue humaine plutôt que de prétendre qu'elles n'existent pas."
+    },
+    "contact": {
+      "title": "9. Contact",
+      "bodyPrefix": "Les questions ou préoccupations concernant notre utilisation de l'IA peuvent être envoyées à"
+    }
+  }
+}

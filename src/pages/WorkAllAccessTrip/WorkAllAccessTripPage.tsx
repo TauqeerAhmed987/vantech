@@ -90,5 +90,5 @@ const data = {
 };
 
 export default function WorkAllAccessTripPage() {
-  return <WorkCaseStudyTemplate data={data} />;
+  return <WorkCaseStudyTemplate data={data} pageClassName="wvt-page--solid-rock four-boxfull" />;
 }

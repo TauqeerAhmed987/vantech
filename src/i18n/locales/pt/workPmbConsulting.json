@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badges": ["Serviços profissionais"],
+    "titleLines": ["The PMB", "Consulting"],
+    "description": "Uma presença digital profissional para uma consultoria empresarial que abrange mentoria de negócios, constituição de empresas, branding e serviços de crescimento.",
+    "screenshotAlt": "Captura de tela da plataforma The PMB Consulting"
+  },
+  "stats": [
+    { "label": "Tipo de projeto", "value": "Serviços profissionais" },
+    { "label": "Capacidades", "value": "Desenvolvimento web • Design UI/UX • Automação" },
+    { "label": "Setor", "value": "Serviços profissionais" },
+    { "label": "Status", "value": "No ar" }
+  ],
+  "detail": {
+    "overviewDesc": "A The PMB Consulting é uma consultoria de branding pessoal e negócios. O site apresenta seus serviços de assessoria — mentoria e coaching, constituição de empresas, branding, presença digital, crescimento e planejamento financeiro — e oferece aos clientes em potencial um caminho direto até uma consulta.",
+    "challengeDesc": "A consultoria oferece vários serviços de assessoria distintos para públicos muito diferentes: novos empreendedores, profissionais já estabelecidos e famílias. Uma única página genérica não conseguiria explicar essas ofertas com clareza nem ajudar um visitante a identificar o atendimento mais adequado à sua situação.",
+    "builtDesc": "Estruturamos a experiência em torno das áreas de atuação da consultoria, cada uma com sua própria explicação e posicionamento, apoiadas por seções de credibilidade que abrangem credenciamento, valores e depoimentos de clientes. Um fluxo de solicitação de consulta é acessível a partir de qualquer seção, e o site oferece suporte a visitantes multilíngues."
+  },
+  "sidebar": {
+    "serviceTags": ["Desenvolvimento web", "Design UI/UX", "Automação"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "number": "01", "title": "Apresentação dedicada para cada serviço de assessoria" },
+      { "number": "02", "title": "Seção de mentoria e coaching de negócios" },
+      { "number": "03", "title": "Orientação sobre constituição e estrutura empresarial" },
+      { "number": "04", "title": "Posicionamento de branding e identidade empresarial" },
+      { "number": "05", "title": "Serviços de crescimento e expansão" },
+      { "number": "06", "title": "Fluxo de solicitação de consulta" },
+      { "number": "07", "title": "Suporte a visitantes multilíngues" }
+    ]
+  },
+  "flow": {
+    "heading": "Fluxo do negócio",
+    "steps": ["Descobrir", "Comparar serviços", "Solicitar"],
+    "caption": "Visão conceitual do sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Visão", "conceitual do sistema"],
+    "pills": ["Visitante", "Páginas de serviços", "Recepção de consultas", "Acompanhamento da consultoria"]
+  },
+  "outcomes": [
+    "Criação de uma presença digital centralizada para uma consultoria multisserviços",
+    "Separação das diferentes ofertas de assessoria para que os interessados possam se autosselecionar",
+    "Criação de um caminho consistente, a partir de qualquer página, até uma solicitação de consulta"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Serviços profissionais",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Uma plataforma de educação em liderança e finanças que apresenta programas, públicos e uma jornada de agendamento de consultas."
+    },
+    {
+      "tag": "Serviços profissionais",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, agendamento e entrega de conteúdo."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento por meio de um link público do cartão ou de um código QR."
+    }
+  ]
+}

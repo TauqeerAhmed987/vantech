@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "eyebrow": "Sobre a Van Tech Systems",
+    "title": "Uma empresa de engenharia para negócios que precisam de sistemas, não de apresentações.",
+    "desc": "Projetamos, desenvolvemos e operamos software inteligente: agentes de IA e automação que assumem carga de trabalho real, além de aplicações e plataformas que permanecem fáceis de manter muito depois do lançamento. Tudo o que entregamos é arquitetado pelos mesmos engenheiros que definem o escopo.",
+    "startAProject": "Iniciar um projeto",
+    "ourWork": "Nosso trabalho"
+  },
+  "process": {
+    "title": "Um modelo de entrega construído em torno de decisões, não de entregáveis.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Descoberta",
+        "desc": "Mapeamos o processo real, os sistemas já existentes, os dados disponíveis e as restrições relevantes. O resultado é um escopo escrito com premissas explícitas."
+      },
+      {
+        "number": "02",
+        "title": "Arquitetura",
+        "desc": "O modelo de dados, os limites de integração, o modelo de segurança e as escolhas de infraestrutura são decididos e documentados antes da implementação. Retrabalho é mais barato nesta fase."
+      },
+      {
+        "number": "03",
+        "title": "Desenvolvimento",
+        "desc": "Ciclos de entrega curtos com software funcional revisado continuamente. Verificações automatizadas, revisão de código e separação de ambientes são padrão, não extras."
+      },
+      {
+        "number": "04",
+        "title": "Integração",
+        "desc": "Conexão com os sistemas que já fazem o negócio funcionar — CRM, faturamento, e-mail, telefonia, bancos de dados internos e APIs de terceiros — com tratamento de erros incorporado desde o design."
+      },
+      {
+        "number": "05",
+        "title": "Implantação",
+        "descLine1": "Lançamento em produção com monitoramento, backups, controle de acesso e um",
+        "descLine2": "caminho de reversão. Não consideramos um lançamento completo até que seja observável."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Tecnologia construída para ser possuída, não alugada",
+    "cards": [
+      "A Van Tech Systems é uma empresa de tecnologia focada em IA, engenharia de software e automação. Trabalhamos com fundadores que lançam produtos, empresas estabelecidas que substituem operações manuais e agências que precisam de um parceiro técnico sério por trás de sua marca.",
+      "Nosso trabalho se encaixa em um de três casos: um produto que precisa existir, um processo que não deveria ser manual, ou um sistema que ultrapassou a forma como foi originalmente construído. Em cada caso, a entrega é a mesma — um sistema funcional com uma arquitetura clara, decisões documentadas e infraestrutura controlada pelo cliente.",
+      "Somos deliberadamente guiados pela engenharia. A definição de escopo é feita por quem vai construir a solução. As estimativas vêm da experiência de entrega, não de metas comerciais. Quando uma solicitação seria melhor resolvida com uma construção menor, uma mudança de configuração ou uma ferramenta existente, dizemos isso antes de existir um contrato."
+    ]
+  },
+  "layers": {
+    "title": "O que construímos, camada por camada",
+    "items": [
+      {
+        "number": "01",
+        "title": "Camada de experiência",
+        "desc": "As telas, painéis e pontos de contato que sua equipe e seus clientes realmente usam.",
+        "tags": ["Aplicações web", "Aplicações móveis", "Portais de clientes", "Painéis internos", "E-commerce"]
+      },
+      {
+        "number": "02",
+        "title": "Camada de inteligência",
+        "desc": "Agentes e modelos de IA definidos em torno de uma decisão real, não adicionados apenas por adicionar.",
+        "tags": ["Agentes de IA", "Assistentes de voz e chat", "Processamento de documentos", "Desenvolvimento de modelos", "Apoio à decisão"]
+      },
+      {
+        "number": "03",
+        "title": "Camada de automação",
+        "desc": "Os fluxos de trabalho que assumem carga real sem precisar de uma pessoa em cada etapa.",
+        "tags": ["Orquestração de fluxos de trabalho", "Roteamento de leads", "Agendamento", "Relatórios", "Alertas"]
+      },
+      {
+        "number": "04",
+        "title": "Camada de plataforma",
+        "desc": "O núcleo da aplicação: autenticação, faturamento e as APIs das quais tudo o mais depende.",
+        "tags": ["APIs", "SaaS multi-tenant", "Autenticação e RBAC", "Faturamento", "Integrações"]
+      },
+      {
+        "number": "05",
+        "title": "Camada de fundação",
+        "desc": "Hospedagem, segurança e observabilidade construídas para permanecer confiáveis à medida que o uso cresce.",
+        "tags": ["Modelagem de dados", "Infraestrutura em nuvem", "Segurança", "Observabilidade", "CI/CD"]
+      }
+    ]
+  },
+  "principles": {
+    "eyebrow": "Princípios de engenharia",
+    "title": "As decisões que tomamos sempre da mesma forma",
+    "diagram": {
+      "businessGoal": "Objetivo de negócio",
+      "existingSystems": "Sistemas existentes",
+      "realData": "Dados reais",
+      "constraints": "Restrições",
+      "architectureDecisionLine1": "Decisão de",
+      "architectureDecisionLine2": "arquitetura",
+      "documentedModel": "Modelo documentado",
+      "workingSystem": "Sistema funcional",
+      "ownedInfrastructure": "Infraestrutura própria"
+    },
+    "items": [
+      {
+        "title": "Arquitetura antes da implementação",
+        "desc": "O modelo de dados e os limites de integração são decididos primeiro. Sistemas falham lentamente quando essa etapa é pulada, e o custo aparece meses depois."
+      },
+      {
+        "title": "Automação com um limite humano",
+        "desc": "Sistemas automatizados lidam com o caminho previsível. Ambiguidade, exceções e qualquer coisa com consequência comercial ou legal são direcionadas a uma pessoa por design."
+      },
+      {
+        "title": "IA aplicada onde compensa",
+        "desc": "A IA é usada apenas onde supera comprovadamente uma solução mais simples — nunca incluída só porque está na moda."
+      },
+      {
+        "title": "Segurança como estado padrão",
+        "desc": "Acesso de privilégio mínimo, autorização em nível de linha, segredos criptografados e ações administrativas auditadas fazem parte da construção base, não de um projeto de reforço posterior."
+      },
+      {
+        "title": "Sem caixas-pretas",
+        "desc": "Os clientes recebem o código, a infraestrutura, a documentação e as credenciais. Encerrar um projeto nunca deve significar perder um sistema."
+      },
+      {
+        "title": "Escopo honesto",
+        "desc": "Preferimos perder um negócio a concordar com um cronograma que sabemos ser irreal. As estimativas refletem a experiência de entrega, incluindo as partes que costumam dar errado."
+      }
+    ]
+  },
+  "ai": {
+    "title": "IA útil é um problema de engenharia, não uma demonstração.",
+    "desc1": "Uma demonstração convincente leva uma tarde. Um sistema de IA em produção que responde com precisão, recusa-se a inventar fatos, respeita permissões, escala de forma clara e pode ser auditado depois é um projeto de engenharia com um modelo de dados por trás.",
+    "desc2": "Essa é a distinção com a qual trabalhamos. Nossos sistemas de IA são baseados no conteúdo e nos dados próprios do cliente, restritos a ações definidas, registrados de ponta a ponta e monitorados após o lançamento — porque um sistema de IA que não pode ser inspecionado não pode ser confiado aos clientes.",
+    "points": [
+      "Baseado no seu conteúdo e dados, em vez de geração aberta",
+      "Limites explícitos de ferramentas: um agente só pode fazer aquilo para o qual recebeu permissão",
+      "Caminhos de escalonamento humano para qualquer coisa sensível, ambígua ou comercialmente significativa",
+      "Registro completo de conversas e ações para que o comportamento possa ser revisado e melhorado",
+      "Ajuste contínuo baseado no uso real, em vez de suposições"
+    ]
+  },
+  "risk": {
+    "eyebrow": "Padrões e governança",
+    "title": "Como lidamos com dados, acesso e responsabilidade",
+    "cards": [
+      {
+        "title": "Tratamento de dados",
+        "desc": "Coletamos apenas os dados que um projeto exige, mantemos dados de produção fora dos ambientes de desenvolvimento quando possível, e removemos o acesso quando um projeto termina."
+      },
+      {
+        "title": "Controle de acesso",
+        "desc": "Acesso baseado em funções com privilégio mínimo em aplicações, bancos de dados e infraestrutura. Ações administrativas são registradas."
+      },
+      {
+        "title": "Confidencialidade",
+        "desc": "O trabalho do cliente é confidencial por padrão. Não publicamos nada sobre um projeto sem autorização por escrito, e trabalhamos sob NDA quando solicitado."
+      },
+      {
+        "title": "Propriedade e transição",
+        "desc": "Entregáveis, repositórios e infraestrutura pertencem ao cliente, com documentação suficiente para que outro engenheiro competente possa continuar o trabalho."
+      },
+      {
+        "title": "Uso responsável de IA",
+        "desc": "Os sistemas de IA que construímos informam que são automatizados, evitam alegações fabricadas e direcionam qualquer coisa relevante a um humano. Nossa própria política é publicada em detalhes."
+      }
+    ],
+    "note": "Políticas detalhadas estão disponíveis em nossa central jurídica, incluindo privacidade, termos, cookies, acessibilidade e uso de IA."
+  },
+  "work": {
+    "title": "Três formas de trabalhar conosco",
+    "cards": [
+      {
+        "number": "01",
+        "title": "Projetos diretos",
+        "desc": "Projetos de produto, plataforma, automação ou IA definidos e entregues de ponta a ponta, da descoberta à implantação, com suporte contínuo opcional."
+      },
+      {
+        "number": "02",
+        "title": "Engenharia contínua",
+        "desc": "Uma capacidade de engenharia contratada para negócios que precisam de iteração contínua, monitoramento e entrega de roadmap sem contratar uma equipe interna."
+      },
+      {
+        "number": "03",
+        "title": "Parcerias com agências",
+        "desc": "Entrega white label para agências, consultorias e empresas de TI que vendem tecnologia e precisam de um departamento de engenharia discreto e confiável por trás de sua marca."
+      }
+    ]
+  }
+}

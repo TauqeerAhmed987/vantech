@@ -1,4 +1,9 @@
-import WorkCaseStudyTemplate from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
+import { useTranslation } from 'react-i18next';
+import WorkCaseStudyTemplate, {
+  type WorkCaseStudyCapability,
+  type WorkCaseStudyRelatedItem,
+  type WorkCaseStudyStat,
+} from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 import { createPlaceholderWorkData } from '../../data/workPlaceholder';
 import heroScreenshot from '../../assets/images/work-onetap-digital-card/figma/browser-mockup.png';
 import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.png';
@@ -8,87 +13,57 @@ import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/rela
 // Hero content from Figma node 2319:550, middle sections from node
 // 2319:551, related work from node 2319:552 (closing CTA matches the
 // template's default, which already mirrors that node's content exactly).
-const data = {
-  ...createPlaceholderWorkData('OneTap Digital Card'),
-  hero: {
-    badges: ['SaaS', 'Professional Networking'],
-    badgesMerged: true,
-    titleLines: ['OneTap', 'Digital Card'],
-    titleOneLineOnMobile: true,
-    description:
-      'A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code.',
-    screenshot: heroScreenshot,
-    screenshotAlt: 'OneTap Digital Card platform screenshot',
-  },
-  liveUrl: 'https://www.onetapdigitalcard.com/',
-  liveUrlLabel: 'www.onetapdigitalcard.com',
-  stats: [
-    { label: 'Project type', value: 'SaaS' },
-    { label: 'Capabilities', value: 'Product Engineering • UI/UX Design • Custom Software' },
-    { label: 'Industry', value: 'Professional Networking' },
-    { label: 'Status', value: 'Live' },
-  ],
-  detail: {
-    overviewDesc:
-      'OneTap Digital Card is a digital networking product owned and operated by Van Tech Systems. Professionals create a card with their photo, contact details and custom links, then share it through a public link or a unique QR code — no app required on either side. A client portal brings card management, lead capture and engagement analytics into one place.',
-    challengeDesc:
-      'Paper business cards go out of date the moment a detail changes, and they tell their owner nothing about what happened after the handover. The product needed to work instantly on any phone with no app install, share reliably through both a link and a QR code, and give the card owner a place to manage everything afterwards.',
-    builtDesc:
-      'We designed and built the full product: a card builder, a public card renderer served from short shareable links, QR generation, lead capture, and a client portal where owners manage their card, links, leads and analytics. Booking links such as Calendly can be attached so a scan can lead straight to a scheduled conversation.',
-  },
-  sidebar: {
-    techTags: ['React', 'Type Script', 'Supabase', 'LLM APIs'],
-    serviceTags: ['Product Engineering', 'UI/UX Design', 'Custom Software'],
-  },
-  capabilities: {
-    desc: '',
-    items: [
-      { number: '01', title: 'Digital card builder with photo, contact details and branding' },
-      { number: '02', title: 'Unique QR code per card for print or on-screen sharing' },
-      { number: '03', title: 'Public card link that works without an app' },
-      { number: '04', title: 'Unlimited custom links to portfolio, socials and products' },
-      { number: '05', title: 'Booking integration for scheduling from the card' },
-      { number: '06', title: 'Lead capture on the public card' },
-      { number: '07', title: 'Analytics for views, scans, link clicks and leads' },
-      { number: '08', title: 'Client portal for card, lead and integration management' },
-    ],
-  },
-  flow: {
-    heading: 'Business workflow',
-    steps: ['Create', 'Share', 'Connect', 'Capture', 'Follow up'],
-    caption: 'Conceptual system view',
-  },
-  diagram: {
-    badgeLines: ['Conceptual', 'system view'],
-    pills: ['Public card link', 'Card & profile service', 'Leads + analytics store', 'Client portal'],
-  },
-  outcomes: [
-    'Created a single product where a professional identity, links and booking live together',
-    'Replaced static printed cards with a profile that can be updated at any time',
-    'Gave card owners visibility into engagement through a dedicated analytics view',
-  ],
-  relatedWork: [
-    {
-      image: relatedWorkPMB,
-      tag: 'Ai',
-      title: 'The PMB Consulting',
-      desc: 'A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.',
-    },
-    {
-      image: relatedWorkMightyOak,
-      tag: 'Business Platforms',
-      title: 'Mighty Oak Legacy',
-      desc: 'A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.',
-    },
-    {
-      image: relatedWorkSolidRock,
-      tag: 'Professional Services',
-      title: 'Solid Rock Leadership Development',
-      desc: 'A leadership and financial education platform presenting programs, audiences and a consultation booking journey.',
-    },
-  ],
-};
-
 export default function WorkOneTapDigitalCardPage() {
-  return <WorkCaseStudyTemplate data={data} pageClassName="wvt-page--onetap" />;
+  const { t } = useTranslation('workOnetapCard');
+
+  const relatedWorkImages = [relatedWorkPMB, relatedWorkMightyOak, relatedWorkSolidRock];
+  const relatedWorkTranslated = t('relatedWork', { returnObjects: true }) as Omit<
+    WorkCaseStudyRelatedItem,
+    'image'
+  >[];
+
+  const data = {
+    ...createPlaceholderWorkData('OneTap Digital Card'),
+    hero: {
+      badges: t('hero.badges', { returnObjects: true }) as string[],
+      badgesMerged: true,
+      titleLines: t('hero.titleLines', { returnObjects: true }) as string[],
+      titleOneLineOnMobile: true,
+      description: t('hero.description'),
+      screenshot: heroScreenshot,
+      screenshotAlt: t('hero.screenshotAlt'),
+    },
+    liveUrl: 'https://www.onetapdigitalcard.com/',
+    liveUrlLabel: 'www.onetapdigitalcard.com',
+    stats: t('stats', { returnObjects: true }) as WorkCaseStudyStat[],
+    detail: {
+      overviewDesc: t('detail.overviewDesc'),
+      challengeDesc: t('detail.challengeDesc'),
+      builtDesc: t('detail.builtDesc'),
+    },
+    sidebar: {
+      techTags: ['React', 'Type Script', 'Supabase', 'LLM APIs'],
+      serviceTags: t('sidebar.serviceTags', { returnObjects: true }) as string[],
+    },
+    capabilities: {
+      desc: t('capabilities.desc'),
+      items: t('capabilities.items', { returnObjects: true }) as WorkCaseStudyCapability[],
+    },
+    flow: {
+      heading: t('flow.heading'),
+      steps: t('flow.steps', { returnObjects: true }) as string[],
+      caption: t('flow.caption'),
+    },
+    diagram: {
+      badgeLines: t('diagram.badgeLines', { returnObjects: true }) as string[],
+      pills: t('diagram.pills', { returnObjects: true }) as string[],
+    },
+    outcomes: t('outcomes', { returnObjects: true }) as string[],
+    relatedWork: relatedWorkTranslated.map((item, index) => ({
+      ...item,
+      image: relatedWorkImages[index],
+    })),
+  };
+
+  return <WorkCaseStudyTemplate data={data} pageClassName="wvt-page--onetap four-boxfull" />;
 }

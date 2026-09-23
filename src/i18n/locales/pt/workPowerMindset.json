@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badges": ["Serviços profissionais"],
+    "titleLines": ["Power Mindset", "Breakthrough"],
+    "description": "Uma plataforma de negócios de viagens e imigração que abrange pacotes, coleta de documentos e pedidos de clientes.",
+    "screenshotAlt": "Captura de tela da plataforma Power Mindset Breakthrough"
+  },
+  "stats": [
+    { "label": "Tipo de projeto", "value": "Serviços profissionais" },
+    { "label": "Capacidades", "value": "Desenvolvimento web • Design UI/UX" },
+    { "label": "Status", "value": "No ar" }
+  ],
+  "detail": {
+    "overviewDesc": "A Power Mindset Breakthrough oferece programas de coaching em grande escala. Criamos uma plataforma que apresenta a metodologia, gerencia a reserva de sessões e distribui o conteúdo do programa aos clientes inscritos.",
+    "challengeDesc": "A entrega do coaching estava distribuída entre ferramentas de agendamento, e-mail e compartilhamento de arquivos, o que limitava quantos clientes o programa conseguia atender sem aumentar o trabalho administrativo.",
+    "builtDesc": "Criamos uma única plataforma que apresenta a metodologia, gerencia a reserva de sessões e distribui o conteúdo do programa aos clientes inscritos, com acesso vinculado à inscrição."
+  },
+  "sidebar": {
+    "serviceTags": ["Desenvolvimento web", "Automação"]
+  },
+  "capabilities": {
+    "items": [
+      { "title": "Apresentação da metodologia e do programa" },
+      { "title": "Reserva de sessões com disponibilidade" },
+      { "title": "Entrega do conteúdo do programa aos clientes inscritos" },
+      { "title": "Controle de acesso baseado na inscrição" },
+      { "title": "Confirmações de reserva automatizadas" }
+    ]
+  },
+  "flow": {
+    "steps": ["Descobrir", "Escolher", "Reservar"],
+    "caption": "Visão conceitual do sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Visão conceitual", "do sistema"],
+    "pills": ["Visitante", "Conteúdo do programa", "Jornada de reserva", "Operações do coach"]
+  },
+  "outcomes": [
+    "Reserva e entrega de conteúdo reunidas em um só lugar",
+    "A carga administrativa deixou de crescer linearmente com o número de clientes",
+    "Os clientes têm uma experiência de programa consistente"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Serviços profissionais",
+      "title": "The PMB Consulting",
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento."
+    },
+    {
+      "tag": "Serviços profissionais",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Uma plataforma de liderança e educação financeira que apresenta programas, públicos e uma jornada de reserva de consultoria."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de reservas por meio de um link de cartão público ou código QR."
+    }
+  ]
+}

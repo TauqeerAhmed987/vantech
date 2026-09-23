@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariais", "Serviços financeiros"],
+    "titleLines": ["Buketi Financial", "& Consulting"],
+    "description": "Uma plataforma para uma consultora financeira e de aconselhamento com posicionamento de serviços, ofertas de consultoria e captação de pedidos qualificados.",
+    "screenshotAlt": "Captura de ecrã da plataforma Buketi Financial & Consulting"
+  },
+  "stats": [
+    { "label": "Tipo de projeto", "value": "Plataformas empresariais" },
+    { "label": "Capacidades", "value": "Desenvolvimento Web • Design UI/UX" },
+    { "label": "Setor", "value": "Serviços financeiros" },
+    { "label": "Estado", "value": "Ao vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "A Buketi Financial & Consulting precisava de uma porta de entrada digital credível para os seus serviços de consultoria. Concebemos e desenvolvemos uma plataforma orientada para a conversão, com páginas de serviço estruturadas, captação de pedidos em várias etapas e encaminhamento de leads pronto para análise.",
+    "challengeDesc": "Os pedidos de consultoria chegavam sem contexto financeiro, pelo que cada potencial cliente exigia uma longa chamada de qualificação antes de a consultora saber se o projeto era adequado.",
+    "builtDesc": "Criámos páginas de serviço estruturadas para cada oferta de consultoria e um fluxo de pedido em várias etapas que recolhe o objetivo, a situação e o prazo, encaminhando cada submissão para a consultora como um resumo completo."
+  },
+  "sidebar": {
+    "serviceTags": ["Desenvolvimento Web", "Design UI/UX"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Páginas de serviços de consultoria estruturadas" },
+      { "title": "Captação de pedidos em várias etapas com campos de contexto" },
+      { "title": "Encaminhamento de leads pronto para análise" },
+      { "title": "Secções de credibilidade e processo" },
+      { "title": "Layout responsivo orientado para a conversão" }
+    ]
+  },
+  "flow": {
+    "heading": "Fluxo de negócio",
+    "steps": ["Descobrir", "Pedir", "Consulta"],
+    "caption": "Vista conceptual do sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista", "conceptual do sistema"],
+    "pills": ["Cliente", "Experiência pública", "Receção de pedidos", "Operações dos consultores"]
+  },
+  "outcomes": [
+    "Os pedidos chegam suficientemente qualificados para serem enquadrados",
+    "Os potenciais clientes escolhem por si próprios a oferta de consultoria certa",
+    "Acompanhamento consistente em todos os pedidos"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde os profissionais partilham dados de contacto, links e uma página de marcações através de um link de cartão público ou de um código QR."
+    },
+    {
+      "tag": "Ai",
+      "title": "The PMB Consulting",
+      "desc": "Uma presença digital profissional para uma consultora que abrange mentoria empresarial, constituição de empresas, branding e serviços de crescimento."
+    },
+    {
+      "tag": "Serviços Profissionais",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, marcações e entrega de conteúdos."
+    }
+  ]
+}

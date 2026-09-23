@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badges": ["IA", "Viajes e inmigración"],
+    "titleLines": ["AI FNA"],
+    "description": "Una herramienta de análisis de necesidades financieras asistida por IA que convierte los datos del cliente en recomendaciones listas para el asesor.",
+    "screenshotAlt": "Captura de pantalla de la plataforma AI FNA"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "IA" },
+    { "label": "Capacidades", "value": "Ingeniería de IA • Software a medida" },
+    { "label": "Industria", "value": "Seguros" },
+    { "label": "Estado", "value": "En vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "AI FNA digitaliza el análisis de necesidades financieras para los asesores. Creamos una captura de datos guiada, una capa de puntuación y recomendación con IA, e informes exportables listos para el cliente.",
+    "challengeDesc": "El análisis de necesidades financieras era una entrevista manual e inconsistente, lo que ralentizaba la admisión y dificultaba comparar las recomendaciones resultantes.",
+    "builtDesc": "Creamos un análisis de necesidades asistido por IA que guía al cliente a través de preguntas estructuradas, calcula un perfil de necesidades y entrega al asesor un resultado coherente y fácil de revisar."
+  },
+  "sidebar": {
+    "serviceTags": ["Ingeniería de IA", "Software a medida"]
+  },
+  "capabilities": {
+    "items": [
+      "Entrevista guiada de necesidades financieras",
+      "Cálculo estructurado del perfil de necesidades",
+      "Resumen orientado al asesor",
+      "Conjunto de preguntas coherente para todos los clientes",
+      "Manejo seguro de los datos ingresados por el cliente"
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Cuestionario", "Análisis", "Resumen", "Asesor"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista conceptual", "del sistema"],
+    "pills": ["Cliente", "Admisión guiada", "Análisis con IA", "Espacio del asesor"]
+  },
+  "outcomes": [
+    "La admisión es coherente para cada cliente",
+    "Los asesores reciben un perfil comparable cada vez",
+    "El tiempo de análisis por cliente se reduce significativamente"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Caso de estudio",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Una plataforma de liderazgo y educación financiera que presenta programas, audiencias y un recorrido de reserva de consultas."
+    },
+    {
+      "tag": "Caso de estudio",
+      "title": "OneTap Digital Card",
+      "desc": "Una plataforma de tarjetas de presentación digitales donde los profesionales comparten datos de contacto, enlaces y una página de reservas."
+    },
+    {
+      "tag": "Caso de estudio",
+      "title": "The PMB Consulting",
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+    }
+  ]
+}

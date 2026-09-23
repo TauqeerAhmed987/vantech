@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './work-main.css';
 import Icon from '../../components/Icon';
 import FAQ from '../../components/FAQ';
 import Testimonials from '../../components/Testimonials';
 import CTA from '../../components/CTA';
 import { useReveal } from '../../hooks/useReveal';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 
 import arrowRightSvg from '../../assets/icons/boxicons-arrow-right-stroke.svg?raw';
 import caseStudyArrowSvg from '../../assets/icons/at-icons-arrow-right.svg?raw';
 
-import oneTapImg from '../../assets/images/work-van-travel/figma/related-work-2.png';
+// import oneTapImg from '../../assets/images/work-van-travel/figma/related-work-2.png';
+import oneTapImg from '../../assets/images/Tap-Digital-Card-box.png';
 import vanTravelImg from '../../assets/images/work-van-travel/figma/browser-mockup.png';
 import mightyOakImg from '../../assets/images/work-main/figma/mighty-oak-legacy.png';
 import pmbConsultingImg from '../../assets/images/work-main/figma/pmb-consulting.png';
@@ -22,118 +26,54 @@ import buketiImg from '../../assets/images/work-main/figma/buketi-financial-cons
 
 const CASE_STUDY_CTA = 'https://vantechsystems.tech/start-a-project';
 
-const filterTabs = ['All', 'AI', 'SaaS', 'Web Applications', 'Business Platforms', 'Insurance', 'E-commerce'];
+const filterTabKeys = ['all', 'ai', 'saas', 'webApplications', 'businessPlatforms', 'insurance', 'ecommerce'] as const;
 
 const portfolioItems = [
-  {
-    title: 'OneTap Digital Card',
-    category: 'SaaS',
-    desc: 'A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code.',
-    image: oneTapImg,
-    caseHref: '/onetap-digital-card',
-  },
-  {
-    title: 'The PMB Consulting',
-    category: 'Business Platforms',
-    desc: 'A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.',
-    image: pmbConsultingImg,
-    caseHref: '/pmb-consulting',
-  },
-  {
-    title: 'Buketi Financial & Consulting',
-    category: 'Business Platforms',
-    desc: 'A financial and consulting practice platform with service positioning, advisory offers and qualified enquiry capture.',
-    image: buketiImg,
-    caseHref: '/buketi-insurance-services',
-  },
-  {
-    title: 'Mighty Oak Legacy',
-    category: 'Business Platforms',
-    desc: 'A digital platform built around financial education, mentorship, leadership development and family legacy guidance.',
-    image: mightyOakImg,
-    caseHref: '/mighty-oak-legacy',
-  },
-  {
-    title: 'Solid Rock Leadership Development',
-    category: 'Business Platforms',
-    desc: 'A leadership and financial education platform presenting programs, audiences and a consultation booking journey.',
-    image: solidRockImg,
-    caseHref: '/solid-rock-leadership-development',
-  },
-  {
-    title: 'Van Travel Business',
-    category: 'Web Applications',
-    desc: 'A travel and immigration business platform covering packages, document intake and client enquiries.',
-    image: vanTravelImg,
-    caseHref: '/van-travel-business',
-  },
-  {
-    title: 'AI FNA',
-    category: 'AI',
-    desc: 'An AI-assisted financial needs analysis tool that turns client data into advisor-ready recommendations.',
-    image: aiFnaImg,
-    caseHref: CASE_STUDY_CTA,
-  },
-  {
-    title: 'Power Mindset Breakthrough',
-    category: 'Business Platforms',
-    desc: 'A coaching and personal development platform with programmes, booking and content delivery.',
-    image: powerMindsetImg,
-    caseHref: '/power-mindset-breakthrough',
-  },
-  {
-    title: 'Lelofit',
-    category: 'SaaS',
-    desc: 'A fitness and coaching experience with programme discovery, plans and member sign-up.',
-    image: lelofitImg,
-    caseHref: '/lelofit',
-  },
-  {
-    title: 'All Access Trip',
-    category: 'Web Applications',
-    desc: 'A travel booking and itinerary platform for curated trips, groups and experiences.',
-    image: allAccessTripImg,
-    caseHref: '/all-access-trip',
-  },
-];
+  { key: 'onetap', category: 'saas', image: oneTapImg, caseHref: '/onetap-digital-card' },
+  { key: 'pmb', category: 'businessPlatforms', image: pmbConsultingImg, caseHref: '/pmb-consulting' },
+  { key: 'buketi', category: 'businessPlatforms', image: buketiImg, caseHref: '/buketi-insurance-services' },
+  { key: 'mightyOak', category: 'businessPlatforms', image: mightyOakImg, caseHref: '/mighty-oak-legacy' },
+  { key: 'solidRock', category: 'businessPlatforms', image: solidRockImg, caseHref: '/solid-rock-leadership-development' },
+  { key: 'vanTravel', category: 'webApplications', image: vanTravelImg, caseHref: '/van-travel-business' },
+  { key: 'aiFna', category: 'ai', image: aiFnaImg, caseHref: CASE_STUDY_CTA },
+  { key: 'powerMindset', category: 'businessPlatforms', image: powerMindsetImg, caseHref: '/power-mindset-breakthrough' },
+  { key: 'lelofit', category: 'saas', image: lelofitImg, caseHref: '/lelofit' },
+  { key: 'allAccessTrip', category: 'webApplications', image: allAccessTripImg, caseHref: '/all-access-trip' },
+] as const;
 
 export default function WorkMainPage() {
+  const { t, i18n } = useTranslation('workMain');
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const heroReveal = useReveal('up');
   const portfolioReveal = useReveal('up');
-  const [activeTab, setActiveTab] = useState('All');
+  const [activeTab, setActiveTab] = useState<(typeof filterTabKeys)[number]>('all');
 
   const visibleItems =
-    activeTab === 'All' ? portfolioItems : portfolioItems.filter((item) => item.category === activeTab);
+    activeTab === 'all' ? portfolioItems : portfolioItems.filter((item) => item.category === activeTab);
 
   return (
     <main className="work-page bacgron-bodyimage">
       <section className="work-hero section" id="work-hero">
         <div className={`container work-hero__content ${heroReveal.className}`} ref={heroReveal.ref}>
-          <span className="work-hero__badge">Selected work</span>
+          <span className="work-hero__badge">{t('hero.badge')}</span>
 
           <h1 className="work-hero__title">
-            Technology Built for
+            {t('hero.titleLine1')}
             <br />
-            Real Businesses.
+            {t('hero.titleLine2')}
           </h1>
 
-          <p className="work-hero__desc">
-            Explore AI systems, SaaS platforms, web applications, business software and digital
-            experiences designed and developed by Van Tech Systems.
-          </p>
+          <p className="work-hero__desc">{t('hero.desc')}</p>
 
-          <p className="work-hero__subdesc">
-            From product strategy and architecture to development, automation and production
-            deployment.
-          </p>
+          <p className="work-hero__subdesc">{t('hero.subdesc')}</p>
 
           <div className="work-hero__actions">
-            <a href="/contact" className="btn btn-outline">
-              Start a Project
+            <a href={localizePath('/contact', currentLang)} className="btn btn-outline">
+              {t('hero.startAProject')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
-            <a href="/#work" className="btn btn-outline">
-              Our Work
+            <a href={`${localizePath('/', currentLang)}#work`} className="btn btn-outline">
+              {t('hero.ourWork')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -143,57 +83,63 @@ export default function WorkMainPage() {
       <section className="work-portfolio section">
         <div className={`container ${portfolioReveal.className}`} ref={portfolioReveal.ref}>
           <div className="work-portfolio__tabs">
-            {filterTabs.map((tab) => (
+            {filterTabKeys.map((tab) => (
               <button
                 type="button"
                 key={tab}
                 className={`work-portfolio__tab${tab === activeTab ? ' is-active' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab}
+                {t(`filterTabs.${tab}`)}
               </button>
             ))}
           </div>
 
           <div className="work-portfolio__grid">
-            {visibleItems.map((item) => (
-              <article className="work-card" key={item.title}>
-                <div className="work-card__image">
-                  <img src={item.image} alt={`${item.title} platform preview`} loading="lazy" />
-                </div>
+            {visibleItems.map((item) => {
+              const title = t(`items.${item.key}.title`);
+              const desc = t(`items.${item.key}.desc`);
+              const isExternal = item.caseHref.startsWith('http');
+              const href = isExternal ? item.caseHref : localizePath(item.caseHref, currentLang);
+              return (
+                <article className="work-card" key={item.key}>
+                  <div className="work-card__image">
+                    <img src={item.image} alt={`${title} platform preview`} loading="lazy" />
+                  </div>
 
-                <a
-                  href={item.caseHref}
-                  target={item.caseHref.startsWith('http') ? '_blank' : undefined}
-                  rel={item.caseHref.startsWith('http') ? 'noreferrer' : undefined}
-                  className="work-card__title"
-                >
-                  {item.title}
-                </a>
-
-                <p className="work-card__desc">{item.desc}</p>
-
-                <div className="work-card__links">
                   <a
-                    href={item.caseHref}
-                    target={item.caseHref.startsWith('http') ? '_blank' : undefined}
-                    rel={item.caseHref.startsWith('http') ? 'noreferrer' : undefined}
-                    className="work-card__link"
+                    href={href}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noreferrer' : undefined}
+                    className="work-card__title"
                   >
-                    View Case Study
-                    <span className="work-card__link-icon work-card__link-icon--case">
-                      <Icon svg={caseStudyArrowSvg} />
-                    </span>
+                    {title}
                   </a>
-                  <span className="work-card__link">
-                    View Live Site
-                    <span className="work-card__link-icon work-card__link-icon--site">
-                      <Icon svg={caseStudyArrowSvg} />
+
+                  <p className="work-card__desc">{desc}</p>
+
+                  <div className="work-card__links">
+                    <a
+                      href={href}
+                      target={isExternal ? '_blank' : undefined}
+                      rel={isExternal ? 'noreferrer' : undefined}
+                      className="work-card__link"
+                    >
+                      {t('viewCaseStudy')}
+                      <span className="work-card__link-icon work-card__link-icon--case">
+                        <Icon svg={caseStudyArrowSvg} />
+                      </span>
+                    </a>
+                    <span className="work-card__link">
+                      {t('viewLiveSite')}
+                      <span className="work-card__link-icon work-card__link-icon--site">
+                        <Icon svg={caseStudyArrowSvg} />
+                      </span>
                     </span>
-                  </span>
-                </div>
-              </article>
-            ))}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

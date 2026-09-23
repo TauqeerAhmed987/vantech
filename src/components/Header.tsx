@@ -1,50 +1,56 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/images/logo.webp';
 import arrowDownSvg from '../assets/icons/dashicons-arrow-left-alt2.svg?raw';
 import Icon from './Icon';
+import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '../i18n/i18n';
+import { localizePath, stripLocale } from '../i18n/localizedPath';
 
-const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About us', href: '/about' },
-  {
-    label: 'Services',
-    href: '#services',
-    dropdown: [
-      { label: 'AI Agents', href: '/ai-agents' },
-      { label: 'AI Automations', href: '/ai-automation' },
-      { label: 'Model Development', href: '/model-development' },
-      { label: 'Autopilot', href: '/auto-pilot' },
-      { label: 'MVP Development', href: '/mvp-development' },
-      { label: 'Web Applications', href: '/web-applications' },
-      { label: 'Mobile Applications', href: '/mobile-application' },
-      { label: 'SaaS Development', href: '/saas-development' },
-      { label: 'Custom Software', href: '/custom-development' },
-      { label: 'Ecommerce', href: '/ecommerce-development' },
-    ],
-  },
-  { label: 'Partner Program', href: '/partners' },
-  {
-    label: 'Work',
-    href: '/work',
-    dropdown: [
-      { label: 'Power Mindset Breakthrough', href: '/power-mindset-breakthrough' },
-      { label: 'Van Travel Business', href: '/van-travel-business' },
-      { label: 'Van Travel Business Two', href: '/van-travel-business-two' },
-      { label: 'OneTap Digital Card', href: '/onetap-digital-card' },
-      { label: 'The PMB Consulting', href: '/pmb-consulting' },
-      { label: 'Mighty Oak Legacy', href: '/mighty-oak-legacy' },
-      { label: 'Solid Rock Leadership', href: '/solid-rock-leadership-development' },
-      { label: 'Buketi Financial & Consulting', href: '/buketi-insurance-services' },
-      { label: 'Lelofit', href: '/lelofit' },
-      { label: 'All Access Trip', href: '/all-access-trip' },
-    ],
-  },
-  { label: 'Faq', href: '#faq', samePage: true },
-  { label: 'Contact', href: '/contact' },
-];
+const LANGUAGE_LABELS: Record<SupportedLanguage, string> = { en: 'EN', fr: 'FR', es: 'ES', pt: 'PT' };
 
-const languages = ['EN', 'FR', 'ES', 'PT'];
+function useNavLinks() {
+  const { t } = useTranslation();
+  return [
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.aboutUs'), href: '/about' },
+    {
+      label: t('nav.services'),
+      href: '#services',
+      dropdown: [
+        { label: t('nav.aiAgents'), href: '/ai-agents' },
+        { label: t('nav.aiAutomations'), href: '/ai-automation' },
+        { label: t('nav.modelDevelopment'), href: '/model-development' },
+        { label: t('nav.autopilot'), href: '/auto-pilot' },
+        { label: t('nav.mvpDevelopment'), href: '/mvp-development' },
+        { label: t('nav.webApplications'), href: '/web-applications' },
+        { label: t('nav.mobileApplications'), href: '/mobile-application' },
+        { label: t('nav.saasDevelopment'), href: '/saas-development' },
+        { label: t('nav.customSoftware'), href: '/custom-development' },
+        { label: t('nav.ecommerce'), href: '/ecommerce-development' },
+      ],
+    },
+    { label: t('nav.partnerProgram'), href: '/partners' },
+    {
+      label: t('nav.work'),
+      href: '/work',
+      dropdown: [
+        { label: t('nav.powerMindsetBreakthrough'), href: '/power-mindset-breakthrough' },
+        { label: t('nav.vanTravelBusiness'), href: '/van-travel-business' },
+        { label: t('nav.vanTravelBusinessTwo'), href: '/van-travel-business-two' },
+        { label: t('nav.onetapDigitalCard'), href: '/onetap-digital-card' },
+        { label: t('nav.pmbConsulting'), href: '/pmb-consulting' },
+        { label: t('nav.mightyOakLegacy'), href: '/mighty-oak-legacy' },
+        { label: t('nav.solidRockLeadership'), href: '/solid-rock-leadership-development' },
+        { label: t('nav.buketiFinancial'), href: '/buketi-insurance-services' },
+        { label: t('nav.lelofit'), href: '/lelofit' },
+        { label: t('nav.allAccessTrip'), href: '/all-access-trip' },
+      ],
+    },
+    { label: t('nav.faq'), href: '#faq', samePage: true },
+    { label: t('nav.contact'), href: '/contact' },
+  ];
+}
 
 const MOBILE_NAV_QUERY = '(max-width: 980px)';
 
@@ -52,7 +58,17 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const navLinks = useNavLinks();
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
+  const basePath = stripLocale(location.pathname);
+  const isHome = basePath === '/';
+
+  const switchLanguage = (lang: SupportedLanguage) => {
+    closeMenu();
+    navigate(localizePath(basePath, lang) + location.search + location.hash);
+  };
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -63,7 +79,19 @@ export default function Header() {
     <header className="site-header">
       <div className="container">
         <div className="navbar">
-          <a href={isHome ? '#home' : '/'} className="navbar__logo">
+          <a
+            href={localizePath('/', currentLang)}
+            className="navbar__logo"
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              if (isHome) {
+                document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                navigate(localizePath('/', currentLang));
+              }
+            }}
+          >
             <img src={logo} alt="Van Tech Systems" width={113} height={54} />
           </a>
 
@@ -76,10 +104,14 @@ export default function Header() {
           <nav className={`navbar__nav${isMenuOpen ? ' is-open' : ''}`}>
             <ul className="navbar__links">
               {navLinks.map((link) => {
-                const href =
-                  link.href.startsWith('#') && !isHome && !link.samePage
-                    ? `/${link.href}`
-                    : link.href;
+                const isHomeLink = link.href === '#home';
+                const href = isHomeLink
+                  ? localizePath('/', currentLang)
+                  : link.href.startsWith('#')
+                    ? !isHome && !link.samePage
+                      ? `${localizePath('/', currentLang)}${link.href}`
+                      : link.href
+                    : localizePath(link.href, currentLang);
                 const isOpen = openDropdown === link.label;
                 return (
                 <li
@@ -93,6 +125,16 @@ export default function Header() {
                       if (link.dropdown && window.matchMedia(MOBILE_NAV_QUERY).matches) {
                         e.preventDefault();
                         setOpenDropdown((prev) => (prev === link.label ? null : link.label));
+                        return;
+                      }
+                      if (isHomeLink) {
+                        e.preventDefault();
+                        closeMenu();
+                        if (isHome) {
+                          document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          navigate(href);
+                        }
                         return;
                       }
                       closeMenu();
@@ -109,7 +151,7 @@ export default function Header() {
                       <ul className="navbar__dropdown">
                         {link.dropdown.map((item) => {
                           const itemLabel = typeof item === 'string' ? item : item.label;
-                          const itemHref = typeof item === 'string' ? '#' : item.href;
+                          const itemHref = typeof item === 'string' ? '#' : localizePath(item.href, currentLang);
                           return (
                             <li key={itemLabel}>
                               <a href={itemHref} onClick={closeMenu}>
@@ -127,9 +169,13 @@ export default function Header() {
             </ul>
 
             <ul className="navbar__langs navbar__langs--mobile">
-              {languages.map((lang, i) => (
-                <li key={lang} className={i === 0 ? 'is-active' : ''}>
-                  {lang}
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <li
+                  key={lang}
+                  className={lang === currentLang ? 'is-active' : ''}
+                  onClick={() => switchLanguage(lang)}
+                >
+                  {LANGUAGE_LABELS[lang]}
                 </li>
               ))}
             </ul>
@@ -139,20 +185,24 @@ export default function Header() {
               className="navbar__cta navbar__cta--mobile"
               onClick={closeMenu}
             >
-              Start a Project
+              {t('startAProject')}
             </a>
           </nav>
 
           <div className="navbar__actions">
             <ul className="navbar__langs">
-              {languages.map((lang, i) => (
-                <li key={lang} className={i === 0 ? 'is-active' : ''}>
-                  {lang}
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <li
+                  key={lang}
+                  className={lang === currentLang ? 'is-active' : ''}
+                  onClick={() => switchLanguage(lang)}
+                >
+                  {LANGUAGE_LABELS[lang]}
                 </li>
               ))}
             </ul>
             <a href="#contact" className="navbar__cta navbar__cta--desktop">
-              Start a Project
+              {t('startAProject')}
             </a>
             <button
               type="button"

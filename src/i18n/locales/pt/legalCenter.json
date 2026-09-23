@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Políticas, termos e compromissos",
+    "desc": "Tudo o que rege como a Van Tech Systems trata os dados, presta serviços, usa a IA e mantém a acessibilidade."
+  },
+  "updated": "Atualizado em 18 de agosto de 2026",
+  "contactPrefix": "Escreva para",
+  "contactSuffix": "e um membro da equipe responderá.",
+  "policies": {
+    "privacyPolicy": "Quais dados pessoais a Van Tech Systems coleta, por que coletamos, por quanto tempo os mantemos e os direitos que você tem sobre eles.",
+    "termsOfService": "Os termos que regem o uso deste site, nossas informações publicadas e a relação entre uma consulta e um projeto assinado.",
+    "cookiePolicy": "O que armazenamos no seu navegador, por que é armazenado e como controlá-lo — mantido deliberadamente mínimo.",
+    "accessibilityStatement": "Nosso compromisso com um site acessível, o padrão que buscamos, limitações conhecidas e como relatar uma barreira.",
+    "aiUsagePolicy": "Como usamos inteligência artificial neste site e no trabalho com clientes, o que ela pode fazer e onde um humano é sempre necessário."
+  }
+}

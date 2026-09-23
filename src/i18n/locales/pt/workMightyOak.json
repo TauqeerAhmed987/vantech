@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariais", "Planeamento patrimonial e sucessório"],
+    "titleLines": ["Mighty Oak", "Legacy"],
+    "description": "Uma plataforma digital construída em torno da educação financeira, mentoria, desenvolvimento de liderança e orientação sobre legado familiar.",
+    "screenshotAlt": "Captura de ecrã da plataforma Mighty Oak Legacy"
+  },
+  "stats": [
+    { "label": "Tipo de projeto", "value": "Plataformas empresariais" },
+    { "label": "Capacidades", "value": "Desenvolvimento Web • Design UI/UX" },
+    { "label": "Setor", "value": "Planeamento patrimonial e sucessório" },
+    { "label": "Estado", "value": "Ativo" }
+  ],
+  "detail": {
+    "overviewDesc": "A Mighty Oak Legacy capacita indivíduos, famílias e novos líderes através de educação financeira, mentoria, uma oportunidade de negócio e orientação prática. A plataforma reúne os seus temas educativos, o percurso de liderança e a marcação de consultas numa experiência serena e de confiança.",
+    "challengeDesc": "O trabalho da organização abrange educação, mentoria, liderança e uma oportunidade de negócio — quatro intenções muito diferentes para um visitante. Apresentadas como uma lista de serviços indiferenciada, nenhuma delas era clara, e não existia um percurso estruturado do interesse até uma primeira conversa.",
+    "builtDesc": "Construímos a experiência em torno daquilo que a organização realmente oferece — educação financeira, sensibilização para a proteção familiar, a oportunidade de negócio e a construção de legado — com uma secção de valores, um percurso simples em quatro etapas, workshops e perguntas frequentes. A marcação de consultas e um formulário de inscrição na oportunidade de negócio dão a cada público o seu próprio passo seguinte."
+  },
+  "sidebar": {
+    "serviceTags": ["Desenvolvimento Web", "Automação"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Secções de serviço orientadas para a educação" },
+      { "title": "Conteúdo sobre legado familiar e sensibilização para a proteção" },
+      { "title": "Percurso de oportunidade de negócio com o seu próprio formulário de inscrição" },
+      { "title": "Orientação em mentoria e crescimento pessoal" },
+      { "title": "Apresentação de workshops comunitários" },
+      { "title": "Integração de marcação de consultas" },
+      { "title": "Percurso em quatro etapas: Conectar, Aprender, Crescer, Construir legado" },
+      { "title": "Perguntas frequentes e recursos educativos" }
+    ]
+  },
+  "flow": {
+    "heading": "Fluxo de negócio",
+    "steps": ["Conectar", "Aprender", "Crescer", "Construir legado"],
+    "caption": "Vista conceptual do sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista conceptual", "do sistema"],
+    "pills": ["Visitante", "Conteúdo educativo", "Inscrição e marcações", "Acompanhamento da equipa"]
+  },
+  "outcomes": [
+    "Criação de uma experiência digital centralizada para os públicos de educação, mentoria e liderança",
+    "Cada público passou a ter um passo seguinte próprio, em vez de um formulário de contacto genérico único",
+    "Apresentação da educação financeira sem a posicionar como aconselhamento de investimento personalizado"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Plataformas empresariais",
+      "title": "Buketi Financial & Consulting",
+      "desc": "Uma plataforma para uma prática financeira e de consultoria com posicionamento de serviços, ofertas de consultoria e captação de contactos qualificados."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde os profissionais partilham dados de contacto, links e uma página de marcações através de um link de cartão público ou código QR."
+    },
+    {
+      "tag": "Serviços profissionais",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, marcações e entrega de conteúdo."
+    }
+  ]
+}

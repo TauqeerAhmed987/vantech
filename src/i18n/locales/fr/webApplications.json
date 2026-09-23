@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Un logiciel sur mesure. Conçu autour de votre entreprise.",
+    "desc": "Nous ne forçons pas votre entreprise à s'adapter à un logiciel générique. Nous concevons des applications autour de vos flux de travail, de vos utilisateurs, de vos opérations et de vos projets de croissance.",
+    "ctaPrimary": "Obtenir mon devis de projet",
+    "ctaSecondary": "Découvrir tous nos services"
+  },
+  "disappoint": {
+    "title": "Quand un logiciel générique devient une contrainte",
+    "desc": "Les outils standards fonctionnent tant que votre processus correspond aux hypothèses du produit. Ensuite, les contournements deviennent l'opération elle-même.",
+    "problems": [
+      "Des processus critiques tournent dans des tableurs, en parallèle du système officiel.",
+      "Les données sont dupliquées entre des outils qui ne sont pas synchronisés.",
+      "Les droits d'accès sont trop grossiers pour la façon dont l'équipe travaille réellement.",
+      "Les coûts de licence augmentent alors que l'adéquation se dégrade."
+    ]
+  },
+  "solution": {
+    "title": "Une application façonnée par votre activité",
+    "desc": "Nous modélisons d'abord vos entités, vos rôles et vos flux de travail, puis nous construisons l'application autour d'eux : une véritable couche de données, des permissions précises, les écrans dont votre équipe a besoin, et des intégrations avec les systèmes que vous conservez."
+  },
+  "build": {
+    "heading": "Ce que nous construisons",
+    "cards": [
+      { "title": "Plateformes CRM", "desc": "Des pipelines et des fiches clients conçus autour de votre processus commercial." },
+      { "title": "Plateformes de réservation", "desc": "Disponibilités, planification et flux de confirmation." },
+      { "title": "Portails clients", "desc": "Un accès externe sécurisé aux documents, au statut et aux échanges." },
+      { "title": "Outils internes", "desc": "Des interfaces d'administration qui remplacent le travail manuel sur tableur." },
+      { "title": "Systèmes d'exploitation", "desc": "Les outils du quotidien sur lesquels votre équipe fait tourner l'activité." },
+      { "title": "Systèmes de workflow", "desc": "Des validations, affectations et suivis de statut en plusieurs étapes." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacités",
+    "row1": [
+      "Modélisation des données",
+      "Contrôle d'accès basé sur les rôles",
+      "Moteurs de workflow",
+      "Gestion documentaire",
+      "Rapports et tableaux de bord",
+      "Pistes d'audit"
+    ],
+    "row2": ["Notifications", "Développement d'API", "Intégrations tierces", "Déploiement et supervision"]
+  },
+  "usecases": {
+    "heading": "Cas d'usage",
+    "items": [
+      { "title": "Remplacer les tableurs", "desc": "Une source unique de vérité, avec permissions et historique." },
+      { "title": "Consolider les outils", "desc": "Un seul système là où plusieurs outils déconnectés existaient auparavant." },
+      { "title": "Servir les clients en ligne", "desc": "Un portail qui réduit les e-mails de statut et les appels téléphoniques." },
+      { "title": "Faire évoluer un processus manuel", "desc": "Des workflows structurés qui tiennent la charge à plus grand volume." }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture applicative",
+    "desc": "Même une première version est un système complet. Nous la gardons simple, mais structurée — pour que la deuxième version soit une extension, et non une refonte.",
+    "timeline": [
+      { "title": "Frontend", "tags": [["Interface réactive"], ["Tableaux de bord"], ["Formulaires"], ["Rapports"]] },
+      { "title": "API", "tags": [["Points de terminaison"], ["Validation"], ["Limites de débit"]] },
+      { "title": "Logique métier", "tags": [["Workflows", "Règles"], ["Automatisation", "Automatisation"]] },
+      { "title": "Exploitation", "tags": [["Déploiement"], ["Supervision", "Analytique"]] },
+      { "title": "Plateforme", "tags": [["Authentification"], ["Supervision"], ["Déploiement", "Intégrations"]] }
+    ]
+  },
+  "process2": {
+    "heading": "Processus de développement",
+    "cards": [
+      { "title": "Découverte", "desc": "Utilisateurs, rôles, workflows et systèmes déjà en place." },
+      { "title": "Architecture", "desc": "Modèle de données, permissions, intégrations et infrastructure." },
+      { "title": "Conception", "desc": "Design d'interface pour les rôles qui l'utiliseront au quotidien." },
+      { "title": "Construction", "desc": "Développement itératif avec revue à chaque incrément." },
+      { "title": "Test", "desc": "Tests fonctionnels, tests de permissions et revue de sécurité." },
+      { "title": "Lancement", "desc": "Déploiement, migration des données si nécessaire, formation et passation." }
+    ]
+  },
+  "integrations": {
+    "heading": "Intégrations possibles",
+    "row1": ["CRM", "Comptabilité", "Paiements", "E-mail", "Calendriers"],
+    "row2": ["Stockage", "Fournisseurs d'identité", "API internes"]
+  },
+  "why": {
+    "heading": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "Modélisée sur votre activité", "desc": "La structure des données reflète la façon dont votre entreprise fonctionne réellement." },
+      { "title": "Des permissions prises au sérieux", "desc": "Le contrôle d'accès est conçu avec l'application, pas ajouté après coup." },
+      { "title": "Conçue pour évoluer", "desc": "Les nouveaux modules et intégrations s'intègrent à l'architecture existante." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de 5 000 $/mois",
+    "desc": "Les tarifs de départ sont des repères de planification. Le prix final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir mon devis de projet"
+  }
+}

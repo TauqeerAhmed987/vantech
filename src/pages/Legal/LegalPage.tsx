@@ -1,37 +1,22 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import '../../styles/legal.css';
 import './legal-center.css';
 import { useReveal } from '../../hooks/useReveal';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 
-const policies = [
-  {
-    title: 'Privacy Policy',
-    href: '/privacy-policy',
-    desc: 'What personal data Van Tech Systems collects, why we collect it, how long we keep it and the rights you have over it.',
-  },
-  {
-    title: 'Terms of Service',
-    href: '/terms-of-service',
-    desc: 'The terms that govern use of this website, our published information, and the relationship between an enquiry and a signed engagement.',
-  },
-  {
-    title: 'Cookie Policy',
-    href: '/cookie-policy',
-    desc: 'What we store in your browser, why it is stored, and how to control it — kept deliberately minimal.',
-  },
-  {
-    title: 'Accessibility Statement',
-    href: '/accessibility',
-    desc: 'Our commitment to an accessible website, the standard we work toward, known limitations and how to report a barrier.',
-  },
-  {
-    title: 'AI Usage Policy',
-    href: '/ai-usage',
-    desc: 'How we use artificial intelligence on this website and in client work, what it is allowed to do, and where a human is always required.',
-  },
-];
+const policyKeys = [
+  { key: 'privacyPolicy', href: '/privacy-policy' },
+  { key: 'termsOfService', href: '/terms-of-service' },
+  { key: 'cookiePolicy', href: '/cookie-policy' },
+  { key: 'accessibilityStatement', href: '/accessibility' },
+  { key: 'aiUsagePolicy', href: '/ai-usage' },
+] as const;
 
 export default function LegalPage() {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const hero = useReveal('up');
   const grid = useReveal('up');
 
@@ -39,23 +24,20 @@ export default function LegalPage() {
     <main className="legal-page">
       <section className="legal-hero section">
         <div className={`container legal-hero__content ${hero.className}`} ref={hero.ref}>
-          <span className="eyebrow-pill">Legal</span>
-          <h1 className="legal-hero__title">Policies, terms and commitments</h1>
-          <p className="legal-hero__updated">
-            Everything governing how Van Tech Systems handles data, delivers services, uses AI
-            and maintains accessibility.
-          </p>
+          <span className="eyebrow-pill">{t('legal.eyebrow')}</span>
+          <h1 className="legal-hero__title">{t('legalCenter.hero.title')}</h1>
+          <p className="legal-hero__updated">{t('legalCenter.hero.desc')}</p>
         </div>
       </section>
 
       <section className="legal-center section">
         <div className={`container legal-center__grid ${grid.className}`} ref={grid.ref}>
-          {policies.map((p) => (
-            <Link key={p.href} to={p.href} className="legal-center__card">
-              <h3 className="legal-center__card-title">{p.title}</h3>
-              <p className="legal-center__card-desc">{p.desc}</p>
+          {policyKeys.map((p) => (
+            <Link key={p.href} to={localizePath(p.href, currentLang)} className="legal-center__card">
+              <h3 className="legal-center__card-title">{t(`legal.${p.key}`)}</h3>
+              <p className="legal-center__card-desc">{t(`legalCenter.policies.${p.key}`)}</p>
               <div className="legal-center__card-footer">
-                <span className="legal-center__card-updated">Updated 18 August 2026</span>
+                <span className="legal-center__card-updated">{t('legalCenter.updated')}</span>
                 <span className="legal-center__card-arrow" aria-hidden="true">&rarr;</span>
               </div>
             </Link>
@@ -63,9 +45,9 @@ export default function LegalPage() {
         </div>
 
         <p className="legal-center__contact">
-          Write to{' '}
-          <a href="mailto:hello@vantechsystems.tech">hello@vantechsystems.tech</a> and a member
-          of the team will respond.
+          {t('legalCenter.contactPrefix')}{' '}
+          <a href="mailto:hello@vantechsystems.tech">hello@vantechsystems.tech</a>{' '}
+          {t('legalCenter.contactSuffix')}
         </p>
       </section>
     </main>

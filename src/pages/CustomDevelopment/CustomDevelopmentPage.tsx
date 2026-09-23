@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './custom-development.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -40,170 +41,74 @@ import whyIconEvolve from '../../assets/images/custom-development/figma/why-icon
 
 import pricingGlowOrb from '../../assets/images/custom-development/figma/pricing-glow-orb.png';
 
-const problems = [
-  'Core operations depend on spreadsheets nobody can safely change.',
-  'Teams re-enter the same information into several tools.',
-  'Reporting requires manual assembly before every meeting.',
-  'Generic software cannot express how the business actually works.',
-];
-
-const buildCards = [
-  {
-    icon: buildIconOperations,
-    title: 'Operations platforms',
-    desc: 'The core system your organization runs on daily.',
-    descWidth: 298,
-  },
-  {
-    icon: buildIconTeam,
-    title: 'Team and Permissions',
-    desc: 'Roles, assignments and accountability across departments.',
-    descWidth: 340,
-  },
-  {
-    icon: buildIconDocument,
-    title: 'Document Workflows',
-    desc: 'Generation, approval, storage and retrieval with an audit trail.',
-    descWidth: 363,
-  },
-  {
-    icon: buildIconData,
-    title: 'Data and Reporting',
-    desc: 'One source of truth with dashboards built on it.',
-    descWidth: 317,
-  },
-  {
-    icon: buildIconFinance,
-    title: 'Finance Operations',
-    desc: 'Quotes, invoicing status and financial reporting workflows.',
-    descWidth: 341,
-  },
-  {
-    icon: buildIconIntegrations,
-    title: 'Integrations',
-    desc: 'Connections to the tools that remain part of the operation.',
-    descWidth: 318,
-  },
-];
-
-const capabilityRow1 = [
-  'Business process modelling',
-  'Custom data architecture',
-  'Workflow automation',
-  'Document management',
-  'Role-based permissions',
-];
-
-const capabilityRow2 = [
-  'Reporting and dashboards',
-  'Audit trails',
-  'AI where it fits',
-  'System integrations',
-  'Security review',
-];
-
-const useCases = [
-  {
-    title: 'Multi-department operations',
-    desc: 'One platform coordinating work across teams.',
-  },
-  {
-    title: 'Productizing a service',
-    desc: 'Turning a delivered service into recurring software revenue.',
-  },
-  {
-    title: 'Internal tool to product',
-    desc: 'Extending a working internal system for external customers.',
-  },
-  {
-    title: 'Platform modernization',
-    desc: 'Rebuilding an ageing product on a maintainable architecture.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Tenants', tags: [['Organizations'], ['Members'], ['Roles'], ['Invitations']] },
-  { number: '02', title: 'Platform', tags: [['Authentication'], ['Isolation policies'], ['API'], ['Webhooks']] },
-  { number: '03', title: 'Commercial', tags: [['Plans'], ['Subscriptions'], ['Payments'], ['Usage']] },
-  { number: '04', title: 'Data', tags: [['Database'], ['Storage', 'Analytics'], ['Audit log']] },
-  { number: '05', title: 'Operations', tags: [['Admin console'], ['Monitoring'], ['Deployment'], ['Support tooling']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDiscover,
-    title: 'Discover',
-    desc: 'Departments, processes, documents and reporting requirements.',
-    descWidth: 228,
-  },
-  {
-    icon: processIconArchitect,
-    title: 'Architect',
-    desc: 'Data model, permissions, integrations and infrastructure.',
-    descWidth: 204,
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Interfaces for each role that will use the platform.',
-    descWidth: 240,
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Module-by-module development with review at each stage.',
-    descWidth: 217,
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Process testing, permissions, security and performance.',
-    descWidth: 244,
-  },
-  {
-    icon: processIconAdopt,
-    title: 'Adopt',
-    desc: 'Migration, training, rollout and continued improvement.',
-    descWidth: 254,
-  },
-];
-
-const integrations = [
-  { icon: paymentsSvg, label: 'Accounting' },
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: paymentsSvg, label: 'Payments' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: storageSvg, label: 'Storage' },
-  { icon: identityPlatformSvg, label: 'Identity providers' },
-  { icon: toolsSvg, label: 'Reporting tools' },
-  { icon: restApiSvg, label: 'Internal APIs' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconProcess,
-    title: 'Built from your process',
-    desc: "The platform reflects your operation instead of a vendor's assumptions.",
-    descWidth: 380,
-  },
-  {
-    icon: whyIconDocumented,
-    title: 'Documented architecture',
-    desc: 'Structure, decisions and data model are written down.',
-    descWidth: 366,
-  },
-  {
-    icon: whyIconEvolve,
-    title: 'Room to evolve',
-    desc: 'New departments, modules and integrations fit the same foundation.',
-    descWidth: 390,
-  },
-];
-
-const integrationsRow1 = integrations.slice(0, 5);
-const integrationsRow2 = integrations.slice(5);
+interface CardText {
+  title: string;
+  desc: string;
+}
 
 export default function CustomDevelopmentPage() {
+  const { t } = useTranslation('customDevelopment');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildIcons = [
+    buildIconOperations,
+    buildIconTeam,
+    buildIconDocument,
+    buildIconData,
+    buildIconFinance,
+    buildIconIntegrations,
+  ];
+  const buildDescWidths = [298, 340, 363, 317, 341, 318];
+  const buildCards = (t('build.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: buildIcons[i],
+    descWidth: buildDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('useCases.items', { returnObjects: true }) as CardText[];
+
+  const timelineNumbers = ['01', '02', '03', '04', '05'];
+  const timelineSteps = (
+    t('architecture.steps', { returnObjects: true }) as { title: string; tags: string[][] }[]
+  ).map((step, i) => ({ ...step, number: timelineNumbers[i] }));
+
+  const processIcons = [
+    processIconDiscover,
+    processIconArchitect,
+    processIconDesign,
+    processIconBuild,
+    processIconTest,
+    processIconAdopt,
+  ];
+  const processDescWidths = [228, 204, 240, 217, 244, 254];
+  const processCards = (t('process.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+    descWidth: processDescWidths[i],
+  }));
+
+  const integrationsRow1Icons = [paymentsSvg, funnelSvg, paymentsSvg, emailSvg, storageSvg];
+  const integrationsRow1 = (
+    t('integrations.row1', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow1Icons[i] }));
+
+  const integrationsRow2Icons = [identityPlatformSvg, toolsSvg, restApiSvg];
+  const integrationsRow2 = (
+    t('integrations.row2', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow2Icons[i] }));
+
+  const whyIcons = [whyIconProcess, whyIconDocumented, whyIconEvolve];
+  const whyDescWidths = [380, 366, 390];
+  const whyCards = (t('why.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+    descWidth: whyDescWidths[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -251,24 +156,20 @@ export default function CustomDevelopmentPage() {
             <div className={`customdev-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="customdev-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                Services
+                {t('hero.badge')}
               </span>
-              <h1 className="customdev-hero__title">
-                Software Built Around
-                <br />
-                How Your Business Works.
-              </h1>
-              <p className="customdev-hero__desc">
-                For organizations that have outgrown spreadsheets, disconnected tools, manual
-                workflows, generic SaaS and legacy processes.
-              </p>
+              <h1
+                className="customdev-hero__title"
+                dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+              />
+              <p className="customdev-hero__desc">{t('hero.desc')}</p>
               <div className="customdev-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#offerings" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -284,11 +185,8 @@ export default function CustomDevelopmentPage() {
       <section className="customdev-disappoint section">
         <div className="container customdev-disappoint__row">
           <div className={`customdev-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="customdev-h1-lg">Outgrowing The Tools You Started With</h2>
-            <p className="customdev-p-lg">
-              The systems that carried a business through its first phase often become the
-              reason it cannot move faster in the next one.
-            </p>
+            <h2 className="customdev-h1-lg">{t('disappoint.title')}</h2>
+            <p className="customdev-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`customdev-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -312,12 +210,8 @@ export default function CustomDevelopmentPage() {
           </div>
 
           <div className={`customdev-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="customdev-solution__title">One Platform Designed Around Your Operation</h2>
-            <p className="customdev-solution__desc">
-              We study how the organization runs — its entities, documents, approvals and
-              reporting — and build a platform that expresses it directly, connecting to the
-              systems worth keeping and automating the steps that do not need a person.
-            </p>
+            <h2 className="customdev-solution__title">{t('solution.title')}</h2>
+            <p className="customdev-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -325,7 +219,7 @@ export default function CustomDevelopmentPage() {
       <section className="customdev-build section" id="offerings">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="customdev-h2">What we build</h2>
+            <h2 className="customdev-h2">{t('build.heading')}</h2>
           </div>
 
           <div className={`customdev-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -346,7 +240,7 @@ export default function CustomDevelopmentPage() {
       <section className="customdev-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="customdev-h2">Capabilities</h2>
+            <h2 className="customdev-h2">{t('capabilities.heading')}</h2>
           </div>
 
           <div className={`customdev-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -377,7 +271,7 @@ export default function CustomDevelopmentPage() {
       <section className="customdev-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="customdev-h2">Use Cases</h2>
+            <h2 className="customdev-h2">{t('useCases.heading')}</h2>
           </div>
 
           <div className={`customdev-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>

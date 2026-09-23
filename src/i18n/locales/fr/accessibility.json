@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "updated": "Dernière mise à jour : 18 août 2026"
+  },
+  "sections": {
+    "commitment": {
+      "title": "1. Notre engagement",
+      "body": "Nous concevons des logiciels sur lesquels les gens comptent pour fonctionner, l'accessibilité est donc traitée comme une exigence d'ingénierie plutôt qu'une touche finale. Nous visons à respecter le niveau AA des WCAG 2.1 sur l'ensemble de ce site et à appliquer la même norme aux produits que nous construisons pour nos clients."
+    },
+    "implement": {
+      "title": "2. Ce que nous mettons en œuvre",
+      "items": [
+        "Structure HTML sémantique avec un seul titre principal par page et un ordre de titres logique.",
+        "Pleine accessibilité au clavier, avec des indicateurs de focus visibles sur les éléments interactifs.",
+        "Objectifs de contraste des couleurs atteints dans les thèmes clair et sombre.",
+        "Alternatives textuelles pour les images significatives, et visuels décoratifs masqués aux technologies d'assistance.",
+        "Champs de formulaire étiquetés avec des messages d'erreur annoncés, pas seulement affichés en couleur.",
+        "Mises en page réactives qui restent utilisables lorsque le texte est agrandi ou que la fenêtre est petite.",
+        "Prise en charge du mouvement réduit pour les utilisateurs ayant demandé moins d'animation au niveau du système."
+      ]
+    },
+    "limitations": {
+      "title": "3. Limitations connues",
+      "intro": "Voici une liste honnête plutôt qu'une prétention à la perfection :",
+      "items": [
+        "Les diagrammes techniques complexes véhiculent la structure visuellement ; chacun dispose d'une explication textuelle à proximité, mais les diagrammes eux-mêmes sont simplifiés pour les lecteurs d'écran.",
+        "Certains tableaux de données défilent horizontalement sur les très petits écrans.",
+        "L'interaction vocale dans l'assistant IA dépend de la prise en charge vocale du navigateur et n'est pas disponible dans tous les navigateurs."
+      ]
+    },
+    "assessment": {
+      "title": "4. Approche d'évaluation",
+      "body": "Nous testons avec la navigation au clavier, des outils d'inspection d'accessibilité du navigateur et des contrôles automatisés pendant le développement. Nous ne sommes pas actuellement certifiés par un auditeur externe, et nous le précisons plutôt que de laisser entendre qu'un audit formel a eu lieu."
+    },
+    "reporting": {
+      "title": "5. Signaler un obstacle",
+      "bodyPrefix": "Si une partie de ce site vous empêche de faire quelque chose, dites-le-nous à",
+      "bodySuffix": "Décrivez la page et ce qui s'est passé. Nous visons à accuser réception des signalements d'accessibilité sous cinq jours ouvrés et à fournir l'information dont vous avez besoin dans un format alternatif pendant que nous corrigeons le problème."
+    }
+  }
+}

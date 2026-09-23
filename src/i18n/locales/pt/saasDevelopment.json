@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Crie software pelo qual as pessoas pagam para usar.",
+    "desc": "Plataformas multi-inquilino com os elementos que tornam o software vendável: isolamento entre clientes, autenticação, papéis, assinaturas, administração e análises.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "disappoint": {
+    "title": "As Partes Difíceis Do <span class=\"accent\">SaaS</span> Não São As Funcionalidades",
+    "desc": "As ferramentas prontas funcionam até que o seu processo difira das suposições do produto. Depois, as soluções alternativas passam a ser a operação.",
+    "problems": [
+      "A separação de dados por cliente não foi planejada desde o início.",
+      "Os papéis e permissões não correspondem à forma como os clientes organizam as equipes.",
+      "Faturamento, testes gratuitos e mudanças de plano são geridos manualmente.",
+      "Não existe uma interface de administração para dar suporte aos clientes."
+    ]
+  },
+  "solution": {
+    "title": "Uma Plataforma Concebida Para Ser Vendida",
+    "desc": "Projetamos primeiro a arquitetura multi-inquilino, a identidade e o faturamento, e depois construímos o produto sobre essa base. Organizações, convites, papéis, planos, uso e administração fazem parte da plataforma, em vez de serem adicionados depois."
+  },
+  "build": {
+    "title": "O que construímos",
+    "cards": [
+      { "title": "Núcleo multi-inquilino", "desc": "Organizações, associação e isolamento de dados garantido." },
+      { "title": "Identidade", "desc": "Cadastro, convites, papéis e permissões por organização." },
+      { "title": "Faturamento", "desc": "Planos, testes gratuitos, upgrades e ciclo de vida da assinatura." },
+      { "title": "Superfície do produto", "desc": "A aplicação que os seus clientes usam todos os dias." },
+      { "title": "Console de administração", "desc": "Ferramentas internas para dar suporte a contas e investigar problemas." },
+      { "title": "Serviços da plataforma", "desc": "APIs, webhooks, e-mail e armazenamento para o produto." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacidades",
+    "row1": ["Arquitetura multi-inquilino", "Isolamento de inquilinos", "Autenticação", "Controle de acesso baseado em papéis", "Assinaturas e pagamentos"],
+    "row2": ["Rastreamento de uso", "Console de administração", "API pública", "E-mail transacional", "Análise de produto"]
+  },
+  "usecases": {
+    "title": "Casos de uso",
+    "items": [
+      { "title": "Novo produto SaaS", "desc": "Uma plataforma criada para clientes pagantes desde o primeiro lançamento." },
+      { "title": "Transformar um serviço em produto", "desc": "Transformar um serviço prestado em receita recorrente de software." },
+      { "title": "De ferramenta interna a produto", "desc": "Expandir um sistema interno funcional para clientes externos." },
+      { "title": "Modernização de plataforma", "desc": "Reconstruir um produto antigo sobre uma arquitetura sustentável." }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitetura SaaS",
+    "desc": "O isolamento de inquilinos é aplicado na camada de dados, não apenas na interface.",
+    "timeline": [
+      { "title": "Inquilinos", "tags": [["Organizações"], ["Membros"], ["Papéis"], ["Convites"]] },
+      { "title": "Plataforma", "tags": [["Autenticação"], ["Políticas de isolamento"], ["API"], ["Webhooks"]] },
+      { "title": "Comercial", "tags": [["Planos"], ["Assinaturas"], ["Pagamentos"], ["Uso"]] },
+      { "title": "Dados", "tags": [["Banco de dados"], ["Armazenamento", "Análises"], ["Registro de auditoria"]] },
+      { "title": "Operações", "tags": [["Console de administração"], ["Monitoramento"], ["Implantação"], ["Ferramentas de suporte"]] }
+    ]
+  },
+  "process2": {
+    "title": "Processo de desenvolvimento",
+    "steps": [
+      { "title": "Definir", "desc": "Escopo do produto, modelo de cliente e estrutura comercial." },
+      { "title": "Arquitetar", "desc": "Multi-inquilino, identidade, permissões, faturamento e design de dados." },
+      { "title": "Design", "desc": "Interface do produto e integração de novas organizações." },
+      { "title": "Construir", "desc": "Desenvolvimento da plataforma e do produto em incrementos revisáveis." },
+      { "title": "Testar", "desc": "Testes de isolamento, testes de permissões, faturamento e revisão de segurança." },
+      { "title": "Lançar", "desc": "Implantação, monitoramento, ferramentas de administração e plano de iteração." }
+    ]
+  },
+  "integrations": {
+    "title": "Integrações potenciais",
+    "row1": [
+      { "label": "Provedores de pagamento" },
+      { "label": "Provedores de identidade" },
+      { "label": "E-mail" },
+      { "label": "Análises" }
+    ],
+    "row2": [
+      { "label": "Ferramentas de suporte" },
+      { "label": "Webhooks" },
+      { "label": "APIs internas" }
+    ]
+  },
+  "why": {
+    "title": "Por que Van Tech Systems",
+    "cards": [
+      { "title": "Multi-inquilino em primeiro lugar", "desc": "O isolamento e as permissões são projetados antes das funcionalidades." },
+      { "title": "Comercialmente completo", "desc": "Planos, faturamento e administração fazem parte da construção." },
+      { "title": "Operável", "desc": "Você obtém as ferramentas necessárias para dar suporte a clientes reais." }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de $7,500/month",
+    "desc": "Os preços iniciais são referências de planejamento. O preço final depende do escopo, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

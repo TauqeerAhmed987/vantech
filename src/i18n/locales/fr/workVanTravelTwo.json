@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badges": ["IA", "Voyage et immigration"],
+    "titleLines": ["AI FNA"],
+    "description": "Un outil d'analyse des besoins financiers assisté par IA qui transforme les données clients en recommandations prêtes pour les conseillers.",
+    "screenshotAlt": "Capture d'écran de la plateforme AI FNA"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "IA" },
+    { "label": "Capacités", "value": "Ingénierie IA • Logiciel sur mesure" },
+    { "label": "Secteur", "value": "Assurance" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "AI FNA numérise l'analyse des besoins financiers pour les conseillers. Nous avons conçu une saisie de données guidée, une couche de notation et de recommandation par IA, ainsi que des rapports exportables prêts pour le client.",
+    "challengeDesc": "L'analyse des besoins financiers reposait sur un entretien manuel et incohérent, ce qui ralentissait la prise en charge et rendait les recommandations obtenues difficiles à comparer.",
+    "builtDesc": "Nous avons conçu une analyse des besoins assistée par IA qui guide le client à travers des questions structurées, calcule un profil de besoins et fournit au conseiller un résultat cohérent et facile à examiner."
+  },
+  "sidebar": {
+    "serviceTags": ["Ingénierie IA", "Logiciel sur mesure"]
+  },
+  "capabilities": {
+    "items": [
+      "Entretien guidé sur les besoins financiers",
+      "Calcul structuré du profil de besoins",
+      "Synthèse destinée au conseiller",
+      "Questionnaire cohérent pour tous les clients",
+      "Traitement sécurisé des données saisies par le client"
+    ]
+  },
+  "flow": {
+    "heading": "Flux métier",
+    "steps": ["Questionnaire", "Analyse", "Synthèse", "Conseiller"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue conceptuelle", "du système"],
+    "pills": ["Client", "Accueil guidé", "Analyse IA", "Espace conseiller"]
+  },
+  "outcomes": [
+    "La prise en charge est cohérente pour chaque client",
+    "Les conseillers reçoivent un profil comparable à chaque fois",
+    "Le temps d'analyse par client diminue considérablement"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Étude de cas",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Une plateforme de leadership et d'éducation financière présentant des programmes, des publics et un parcours de réservation de consultation."
+    },
+    {
+      "tag": "Étude de cas",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, des liens et une page de réservation."
+    },
+    {
+      "tag": "Étude de cas",
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création, l'image de marque et les services de croissance."
+    }
+  ]
+}

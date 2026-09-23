@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './mvp-development.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -52,153 +53,67 @@ const orbitBadges = [
   { img: orbitBadgeCheck, size: 68 },
 ];
 
-const problems = [
-  'Scope grows faster than the product can be built.',
-  'Prototypes are thrown away because they were never architected.',
-  'Design, development and infrastructure are handled by disconnected suppliers.',
-  'No clear definition of what the first release has to prove.',
+// Icon/geometry-only companions to the translated text arrays built inside
+// the component (text lives in the mvpDevelopment i18n namespace; only
+// non-text visuals and layout numbers stay here at module scope).
+const buildCardMeta = [
+  { icon: buildIconProductDefinition, descWidth: 301 },
+  { icon: buildIconProductDesign, descWidth: 327 },
+  { icon: buildIconApplication, descWidth: 322 },
+  { icon: buildIconDataFoundation, descWidth: 328 },
+  { icon: buildIconLaunchSetup, descWidth: 327 },
+  { icon: buildIconIterationPlan, descWidth: 329 },
 ];
 
-const buildCards = [
-  {
-    icon: buildIconProductDefinition,
-    title: 'Product Definition',
-    desc: 'Core user flows, data model and the scope of the first release.',
-    descWidth: 301,
-  },
-  {
-    icon: buildIconProductDesign,
-    title: 'Product Design',
-    desc: 'Interface design and prototypes for the flows that matter most.',
-    descWidth: 327,
-  },
-  {
-    icon: buildIconApplication,
-    title: 'Application',
-    desc: 'Frontend, backend, authentication and business logic in one codebase.',
-    descWidth: 322,
-  },
-  {
-    icon: buildIconDataFoundation,
-    title: 'Data Foundation',
-    desc: 'A schema designed for the product you intend to grow, not just to demo.',
-    descWidth: 328,
-  },
-  {
-    icon: buildIconLaunchSetup,
-    title: 'Launch Setup',
-    desc: 'Deployment, environments, monitoring and basic analytics.',
-    descWidth: 327,
-  },
-  {
-    icon: buildIconIterationPlan,
-    title: 'Iteration Plan',
-    desc: 'A prioritized backlog based on what the release actually reveals.',
-    descWidth: 329,
-  },
+const timelineNumbers = ['01', '02', '03', '04'];
+
+const processCardIcons = [
+  processIconDiscover,
+  processIconDefine,
+  processIconDesign,
+  processIconBuild,
+  processIconTest,
+  processIconLaunch,
 ];
 
-const capabilityRow1 = [
-  'Product scoping',
-  'UX and UI design',
-  'Interactive prototypes',
-  'Database architecture',
-  'Authentication',
-  'Payments',
-];
+const integrationsIcons1 = [paymentsSvg, emailSvg, fingerprintSvg, funnelSvg];
+const integrationsIcons2 = [databaseSvg, webhookSvg];
 
-const capabilityRow2 = ['Admin tooling', 'Analytics instrumentation', 'QA and testing', 'Deployment'];
+const whyCardIcons = [whyIconScoped, whyIconArchitected, whyIconTeam];
 
-const useCases = [
-  {
-    title: 'Founder validating an idea',
-    desc: 'A focused product that proves demand before larger investment.',
-  },
-  {
-    title: 'Company launching a new line',
-    desc: 'A separate product built alongside existing operations.',
-  },
-  {
-    title: 'Replacing a manual service',
-    desc: 'Turning a spreadsheet-and-email process into a real application.',
-  },
-  {
-    title: 'Pitching investors or partners',
-    desc: 'A working product rather than a slide deck.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Interface', tags: [['Web app', 'Responsive UI'], ['Onboarding']] },
-  { number: '02', title: 'Application', tags: [['Business logic', 'API'], ['Authentication', 'Roles']] },
-  { number: '03', title: 'Data', tags: [['Database', 'File storage'], ['Events']] },
-  { number: '04', title: 'Operations', tags: [['Deployment'], ['Monitoring', 'Analytics']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDiscover,
-    title: 'Discover',
-    desc: 'Requirements, users, constraints and the goal of the first release.',
-  },
-  {
-    icon: processIconDefine,
-    title: 'Define',
-    desc: 'Scope, data model and success criteria agreed before the build starts.',
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Flows and interface design for the core product experience.',
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Application development in reviewable increments.',
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Functional QA, security review and responsive testing.',
-  },
-  {
-    icon: processIconLaunch,
-    title: 'Launch',
-    desc: 'Deployment, handover and a plan for the next iteration.',
-  },
-];
-
-const integrationsRow1 = [
-  { icon: paymentsSvg, label: 'Payments' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: fingerprintSvg, label: 'Auth providers' },
-  { icon: funnelSvg, label: 'CRM' },
-];
-
-const integrationsRow2 = [
-  { icon: databaseSvg, label: 'Storage' },
-  { icon: webhookSvg, label: 'Webhooks' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconScoped,
-    title: 'Scoped before it is built',
-    desc: 'We agree what the first release proves before development starts.',
-  },
-  {
-    icon: whyIconArchitected,
-    title: 'Architected to continue',
-    desc: 'The foundation supports the next version instead of blocking it.',
-  },
-  {
-    icon: whyIconTeam,
-    title: 'One technology team',
-    desc: 'Design, development, data and deployment under one architecture.',
-  },
-];
+type CardText = { title: string; desc: string };
 
 export default function MVPDevelopmentPage() {
+  const { t } = useTranslation('mvpDevelopment');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildCardsText = t('build.cards', { returnObjects: true }) as CardText[];
+  const buildCards = buildCardsText.map((card, i) => ({ ...card, ...buildCardMeta[i] }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('usecases.items', { returnObjects: true }) as CardText[];
+
+  const architectureSteps = t('architecture.steps', { returnObjects: true }) as {
+    title: string;
+    tags: string[][];
+  }[];
+  const timelineSteps = architectureSteps.map((step, i) => ({ number: timelineNumbers[i], ...step }));
+
+  const processCardsText = t('process.cards', { returnObjects: true }) as CardText[];
+  const processCards = processCardsText.map((card, i) => ({ icon: processCardIcons[i], ...card }));
+
+  const integrationsLabels1 = t('integrations.row1', { returnObjects: true }) as string[];
+  const integrationsRow1 = integrationsLabels1.map((label, i) => ({ icon: integrationsIcons1[i], label }));
+
+  const integrationsLabels2 = t('integrations.row2', { returnObjects: true }) as string[];
+  const integrationsRow2 = integrationsLabels2.map((label, i) => ({ icon: integrationsIcons2[i], label }));
+
+  const whyCardsText = t('why.cards', { returnObjects: true }) as CardText[];
+  const whyCards = whyCardsText.map((card, i) => ({ icon: whyCardIcons[i], ...card }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -246,25 +161,17 @@ export default function MVPDevelopmentPage() {
             <div className={`mvp-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="mvp-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                MVP Development
+                {t('hero.badge')}
               </span>
-              <h1 className="mvp-hero__title">
-                Your Idea.
-                <br />
-                Built for Launch.
-              </h1>
-              <p className="mvp-hero__desc">
-                Turn an idea into a functional digital product with product strategy,
-                architecture, design, development, testing and deployment handled by
-                one technology team.
-              </p>
+              <h1 className="mvp-hero__title" dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
+              <p className="mvp-hero__desc">{t('hero.desc')}</p>
               <div className="mvp-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#what-we-build" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -314,11 +221,8 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-disappoint section">
         <div className="container mvp-disappoint__row">
           <div className={`mvp-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="mvp-h1-lg">Why Most First Versions Stall</h2>
-            <p className="mvp-p-lg">
-              Off-the-shelf tools work until your process differs from the product&apos;s
-              assumptions. Then the workarounds become the operation.
-            </p>
+            <h2 className="mvp-h1-lg">{t('disappoint.title')}</h2>
+            <p className="mvp-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`mvp-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -343,14 +247,8 @@ export default function MVPDevelopmentPage() {
           </div>
 
           <div className={`mvp-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="mvp-solution__title">A First Release You Can Build On</h2>
-            <p className="mvp-solution__desc">
-              We start by defining what your first version has to prove, then architect
-              it as a real product: a database schema, authentication, a working
-              application, and a deployment path. The build is deliberately focused,
-              but nothing is a throwaway prototype — the same foundation carries the
-              next release.
-            </p>
+            <h2 className="mvp-solution__title">{t('solution.title')}</h2>
+            <p className="mvp-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -358,7 +256,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-build section" id="what-we-build">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="mvp-h2">What We Build</h2>
+            <h2 className="mvp-h2">{t('build.title')}</h2>
           </div>
 
           <div className={`mvp-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -379,7 +277,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="mvp-h2">Capabilities</h2>
+            <h2 className="mvp-h2">{t('capabilities.title')}</h2>
           </div>
 
           <div className={`mvp-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -410,7 +308,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="mvp-h2">Use Cases</h2>
+            <h2 className="mvp-h2">{t('usecases.title')}</h2>
           </div>
 
           <div className={`mvp-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -428,11 +326,8 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="mvp-h1-lg mvp-h1-lg--center">MVP architecture</h2>
-            <p className="mvp-section-copy">
-              Even a first release is a full system. We keep it small, but structured —
-              so the second version is an extension, not a rebuild.
-            </p>
+            <h2 className="mvp-h1-lg mvp-h1-lg--center">{t('architecture.title')}</h2>
+            <p className="mvp-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }}>
@@ -465,7 +360,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-process2 section">
         <div className="container">
           <div className={`section-head ${process2Head.className}`} ref={process2Head.ref}>
-            <h2 className="mvp-h2">Development Process</h2>
+            <h2 className="mvp-h2">{t('process.title')}</h2>
           </div>
 
           <div className={`mvp-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -485,7 +380,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="mvp-h1-lg mvp-h1-lg--center">Potential Integrations</h2>
+            <h2 className="mvp-h1-lg mvp-h1-lg--center">{t('integrations.title')}</h2>
           </div>
 
           <div className={`mvp-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -530,7 +425,7 @@ export default function MVPDevelopmentPage() {
       <section className="mvp-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="mvp-h2">Why Van Tech Systems</h2>
+            <h2 className="mvp-h2">{t('why.title')}</h2>
           </div>
 
           <div className={`mvp-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -550,14 +445,11 @@ export default function MVPDevelopmentPage() {
           <div className="mvp-pricing-cta__card">
             <img src={pricingGlowOrb} alt="" className="mvp-pricing-cta__glow" loading="lazy" />
             <div className="mvp-pricing-cta__copy">
-              <h2 className="mvp-pricing-cta__title">Starting at $2,500/month</h2>
-              <p className="mvp-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="mvp-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="mvp-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

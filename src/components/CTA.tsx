@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import ctaOrbMoon from '../assets/images/orb-sphere.webp';
 import ctaOrbStar from '../assets/images/banner-star.svg';
 import { useReveal } from '../hooks/useReveal';
 
 export default function CTA() {
+  const { t, i18n } = useTranslation();
   const copy = useReveal('left');
   const preview = useReveal('right');
 
@@ -26,21 +28,14 @@ export default function CTA() {
         </div>
 
         <div className={`cta__copy ${copy.className}`} ref={copy.ref}>
-          <h2 className="cta__title">
-            Start Your{' '}
-            <br />
-            AI Journey{' '}
-            <br />
-            Today
-          </h2>
+          <h2
+            className={`cta__title cta__title--${i18n.language}`}
+            dangerouslySetInnerHTML={{ __html: t('cta.title') }}
+          />
 
-          <p className="cta__desc">
-            Whether you need an AI employee, a SaaS platform, a mobile application,
-            or a custom business system, Van Tech Systems can help turn your idea
-            into production-ready technology.
-          </p>
+          <p className="cta__desc">{t('cta.desc')}</p>
 
-          <span className="cta__banner">Book your free AI session today.</span>
+          <span className="cta__banner">{t('cta.banner')}</span>
         </div>
 
         <div className={`cta__preview ${preview.className}`} ref={preview.ref}>

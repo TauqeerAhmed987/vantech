@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Politique relative aux cookies",
+    "updated": "Dernière mise à jour : 18 août 2026"
+  },
+  "sections": {
+    "approach": {
+      "title": "1. Notre approche",
+      "body": "Nous utilisons le plus petit ensemble de stockage navigateur permettant au site de fonctionner correctement. Nous n'exploitons pas de réseaux publicitaires ni de pixels de suivi intersites sur ce site."
+    },
+    "whatWeStore": {
+      "title": "2. Ce que nous stockons",
+      "items": [
+        "<strong>Stockage de session essentiel</strong> — maintient la connexion et la protection des formulaires.",
+        "<strong>Préférence de langue</strong> — mémorise la langue du site que vous avez choisie.",
+        "<strong>État de l'assistant</strong> — préserve la disponibilité de la conversation IA.",
+        "<strong>Compteur d'articles anonyme</strong> — utilise un identifiant aléatoire pour le comptage sur un seul navigateur."
+      ]
+    },
+    "analytics": {
+      "title": "3. Analytique",
+      "body": "Le comptage des vues d'articles est anonyme : il enregistre un identifiant local aléatoire, l'article et la langue, sans nom, e-mail ni identifiant publicitaire associé. Il ne peut pas être utilisé pour vous identifier."
+    },
+    "thirdParty": {
+      "title": "4. Stockage tiers",
+      "body": "Nos fournisseurs d'infrastructure peuvent définir des cookies strictement nécessaires pour la sécurité, l'intégrité des sessions et la prévention des abus. Si vous suivez un lien vers un site externe, la politique de cookies de ce site s'applique."
+    },
+    "controlling": {
+      "title": "5. Contrôler le stockage",
+      "items": [
+        "Les paramètres de confidentialité de votre navigateur vous permettent de consulter, bloquer ou supprimer les cookies stockés et les données du site à tout moment.",
+        "Bloquer le stockage essentiel peut empêcher certaines parties du site, comme les formulaires ou l'assistant IA, de fonctionner correctement.",
+        "Effacer les données du site réinitialise votre préférence de langue et tout état local de l'assistant."
+      ]
+    },
+    "contact": {
+      "title": "6. Contact",
+      "bodyPrefix": "Pour toute question concernant le stockage navigateur sur ce site, contactez"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "hero": { "updated": "Última atualização: 18 de agosto de 2026" },
+  "sections": {
+    "whoWeAre": {
+      "title": "1. Quem somos",
+      "body": "A Van Tech Systems projeta e constrói sistemas de IA, software e automação. Esta política abrange os dados pessoais processados através do nosso site, do nosso formulário de descoberta de projeto, do nosso assistente de IA e do relacionamento comercial que possa se seguir. Para os dados que processamos em nome de um cliente durante a entrega de um projeto, o cliente é o controlador dos dados e nós atuamos como operador nos termos do acordo aplicável."
+    },
+    "dataWeCollect": {
+      "title": "2. Dados que coletamos",
+      "items": [
+        "Dados de contato que você fornece: nome, endereço de e-mail, número de telefone, nome da empresa e cargo.",
+        "Informações do projeto: descrições, requisitos, indicações de orçamento e cronograma, e quaisquer arquivos que você escolha anexar.",
+        "Dados de conversa: mensagens trocadas com nosso assistente de IA e detalhes de agendamento ao marcar uma chamada.",
+        "Dados técnicos: metadados de solicitação derivados de IP, tipo de navegador, origem de referência e páginas visualizadas, usados para manter o serviço seguro e entender qual conteúdo é útil.",
+        "Dados de colaboração com clientes: informações necessárias para entregar o trabalho contratado, incluindo detalhes de acesso a sistemas compartilhados sob acordo."
+      ]
+    },
+    "whyWeProcess": {
+      "title": "3. Por que processamos",
+      "items": [
+        "<strong>Responder a consultas e preparar propostas</strong> — passos tomados a seu pedido antes de um contrato.",
+        "<strong>Entregar e dar suporte ao trabalho contratado</strong> — execução de um contrato.",
+        "<strong>Proteger nossos sistemas e prevenir abusos</strong> — interesse legítimo.",
+        "<strong>Melhorar nosso conteúdo e serviços</strong> — interesse legítimo.",
+        "<strong>Enviar atualizações operacionais e, quando optado, ocasionais</strong> — consentimento ou interesse legítimo."
+      ]
+    },
+    "automatedAssessment": {
+      "title": "4. Avaliação automatizada de consultas",
+      "body": "As consultas de projeto podem ser resumidas e priorizadas por um sistema automatizado para que nossa equipe possa responder mais rápido e com mais precisão. O resultado é usado apenas internamente e é sempre revisado por uma pessoa antes de qualquer decisão que o afete. Nenhuma consulta é rejeitada apenas por meios automatizados, e você pode solicitar uma revisão humana de qualquer coisa que enviarmos."
+    },
+    "aiConversations": {
+      "title": "5. Conversas com o assistente de IA",
+      "body": "As conversas com o assistente do nosso site são armazenadas para que possamos manter o contexto, revisar a qualidade e melhorar as respostas. Não compartilhe senhas, dados de pagamento ou informações pessoais sensíveis no chat. Você pode solicitar a exclusão de uma conversa a qualquer momento entrando em contato conosco com a data aproximada e o e-mail utilizado."
+    },
+    "sharing": {
+      "title": "6. Compartilhamento e operadores",
+      "body": "Não vendemos dados pessoais. Compartilhamos apenas com fornecedores de serviços que nos ajudam a operar: hospedagem em nuvem e infraestrutura de banco de dados, envio de e-mails transacionais, e provedores de modelos de IA usados para alimentar recursos de assistente e avaliação. Cada fornecedor é contratualmente obrigado a processar dados apenas segundo nossas instruções e a aplicar medidas de segurança adequadas."
+    },
+    "internationalTransfers": {
+      "title": "7. Transferências internacionais",
+      "body": "Nossa infraestrutura e fornecedores podem processar dados fora do seu país de residência. Quando isso ocorre, as transferências dependem de salvaguardas reconhecidas, como cláusulas contratuais padrão ou uma decisão de adequação."
+    },
+    "retention": {
+      "title": "8. Retenção",
+      "items": [
+        "Registros de consultas: mantidos enquanto um relacionamento comercial estiver sendo considerado, depois por um período limitado para fins de registro, a menos que você solicite a exclusão.",
+        "Dados de projetos de clientes: mantidos durante a duração da colaboração e qualquer período de suporte acordado, depois excluídos ou devolvidos conforme o acordo.",
+        "Conversas do assistente: mantidas para fins de qualidade e melhoria, e excluídas mediante solicitação.",
+        "Registros de envio de e-mail: mantidos por um período limitado para diagnosticar problemas de entrega."
+      ]
+    },
+    "security": {
+      "title": "9. Segurança",
+      "body": "Aplicamos acesso de privilégio mínimo, autorização em nível de linha nos registros armazenados, transporte criptografado, armazenamento criptografado de segredos e registro de ações administrativas. O acesso aos ambientes dos clientes é restrito aos engenheiros designados para aquela colaboração e revogado ao final dela. Nenhum sistema é absolutamente seguro. Se uma violação afetar seus dados, iremos notificá-lo e, quando necessário, notificar a autoridade competente sem demora indevida."
+    },
+    "yourRights": {
+      "title": "10. Seus direitos",
+      "items": [
+        "Acessar uma cópia dos dados pessoais que mantemos sobre você.",
+        "Corrigir dados imprecisos ou incompletos.",
+        "Solicitar a exclusão de dados que não precisamos mais manter.",
+        "Opor-se a, ou solicitar a restrição de, determinados processamentos baseados em interesse legítimo.",
+        "Retirar o consentimento a qualquer momento quando o processamento se basear no consentimento.",
+        "Solicitar uma cópia portátil dos dados que você nos forneceu."
+      ]
+    },
+    "children": {
+      "title": "11. Crianças",
+      "body": "Nossos serviços são direcionados a empresas. Não coletamos conscientemente dados pessoais de crianças. Se você acredita que uma criança nos forneceu dados, entre em contato conosco e nós os excluíremos."
+    },
+    "changesContact": {
+      "title": "12. Alterações e contato",
+      "bodyPrefix": "Atualizamos esta política quando nosso processamento muda. A data no topo da página reflete a versão atual. Para exercer um direito ou fazer uma pergunta, entre em contato conosco em"
+    }
+  }
+}

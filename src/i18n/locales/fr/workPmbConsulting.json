@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badges": ["Services professionnels"],
+    "titleLines": ["The PMB", "Consulting"],
+    "description": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la formation, l'image de marque et les services de croissance.",
+    "screenshotAlt": "Capture d'écran de la plateforme The PMB Consulting"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Services professionnels" },
+    { "label": "Capacités", "value": "Développement web • Design UI/UX • Automatisation" },
+    { "label": "Secteur", "value": "Services professionnels" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "The PMB Consulting est un cabinet de conseil en image de marque personnelle et en entreprise. Le site présente ses services de conseil — mentorat et coaching, création d'entreprise, image de marque, présence numérique, croissance et planification financière — et offre aux clients potentiels un accès direct à une consultation.",
+    "challengeDesc": "Le cabinet propose plusieurs services de conseil distincts à des publics très différents : nouveaux entrepreneurs, professionnels établis et familles. Une simple page générique ne pouvait pas expliquer clairement ces offres ni aider un visiteur à identifier l'accompagnement adapté à sa situation.",
+    "builtDesc": "Nous avons structuré l'expérience autour des domaines de service du cabinet, chacun avec sa propre explication et son propre positionnement, appuyés par des sections de crédibilité couvrant l'accréditation, les valeurs et les témoignages clients. Un parcours de demande de consultation est accessible depuis chaque section, et le site prend en charge les visiteurs multilingues."
+  },
+  "sidebar": {
+    "serviceTags": ["Développement web", "Design UI/UX", "Automatisation"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "number": "01", "title": "Présentation dédiée à chaque service de conseil" },
+      { "number": "02", "title": "Section mentorat et coaching d'entreprise" },
+      { "number": "03", "title": "Accompagnement à la création et structuration d'entreprise" },
+      { "number": "04", "title": "Positionnement de l'image de marque et de l'identité d'entreprise" },
+      { "number": "05", "title": "Services de croissance et d'expansion" },
+      { "number": "06", "title": "Parcours de demande de consultation" },
+      { "number": "07", "title": "Support des visiteurs multilingues" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux d'activité",
+    "steps": ["Découvrir", "Comparer les services", "Demander"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue", "conceptuelle du système"],
+    "pills": ["Visiteur", "Pages de services", "Prise en charge des consultations", "Suivi du cabinet"]
+  },
+  "outcomes": [
+    "Création d'une présence numérique centralisée pour un cabinet de conseil multi-services",
+    "Séparation des offres de conseil distinctes pour permettre aux prospects de s'auto-sélectionner",
+    "Mise en place d'un parcours cohérent, depuis n'importe quelle page, vers une demande de consultation"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Services professionnels",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Une plateforme d'éducation au leadership et à la finance présentant des programmes, des publics et un parcours de réservation de consultation."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Une plateforme de coaching et de développement personnel avec programmes, réservation et diffusion de contenu."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, liens et une page de réservation via un lien de carte public ou un code QR."
+    }
+  ]
+}

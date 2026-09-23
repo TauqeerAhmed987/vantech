@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "eyebrow": ["IA", "Software", "Automatización"],
+    "title": "Creamos software inteligente <br/>para empresas <br/>ambiciosas.",
+    "desc": "Van Tech Systems diseña y desarrolla sistemas de IA, plataformas SaaS, aplicaciones web, aplicaciones móviles, infraestructura de automatización, soluciones de comercio electrónico y software a medida creado en torno a operaciones comerciales reales.",
+    "startAProject": "Iniciar un proyecto",
+    "ourWork": "Nuestro trabajo",
+    "statsTitle": "Una huella de ingeniería medible.",
+    "stats": {
+      "portfolioProjects": "Proyectos de portafolio",
+      "languagesSupported": "Idiomas compatibles",
+      "technologyServices": "Servicios tecnológicos",
+      "coreCapabilities": "Capacidades clave"
+    }
+  },
+  "categories": {
+    "eyebrow": "Lo que construimos",
+    "title": "Cuatro categorías. Un solo estándar de ingeniería.",
+    "subtitle": "Cada proyecto se define, arquitecta y entrega por el mismo equipo, desde un primer MVP hasta una plataforma multiinquilino.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Sistemas de IA",
+        "items": ["Agentes de IA", "Empleados de IA", "Automatización", "IA de voz", "IA conversacional", "IA personalizada"]
+      },
+      {
+        "number": "02",
+        "title": "Productos digitales",
+        "items": ["MVPs", "SaaS", "Aplicaciones web", "Aplicaciones móviles"]
+      },
+      {
+        "number": "03",
+        "title": "Plataformas empresariales",
+        "items": ["CRM", "Portales de clientes", "Sistemas de flujo de trabajo", "Software de operaciones"]
+      },
+      {
+        "number": "04",
+        "title": "Comercio digital",
+        "items": ["Comercio electrónico", "Pagos", "Suscripciones", "Comercio con IA"]
+      }
+    ]
+  },
+  "solutions": {
+    "channel": {
+      "eyebrow": "IA y automatización",
+      "title": "Una capa de inteligencia en todos los canales.",
+      "desc": "Capta la demanda dondequiera que llegue, cualifícala con IA y envía resultados estructurados a los sistemas que tu equipo ya utiliza.",
+      "cta": "Explorar todos los servicios"
+    },
+    "agencies": {
+      "eyebrow": "Para agencias",
+      "title": "Soluciones de IA creadas para agencias",
+      "desc": "Amplía tus servicios, aporta más valor a tus clientes y genera ingresos recurrentes con soluciones de IA, automatización y desarrollo de marca blanca.",
+      "cta": "Explorar servicios para agencias"
+    },
+    "dashboardSearch": "Explorar servicios para agencias",
+    "pills": {
+      "voiceAi": "IA de voz",
+      "crm": "CRM",
+      "payments": "Pagos",
+      "ragData": "RAG / Datos",
+      "email": "Correo",
+      "messages": "Mensajes"
+    }
+  },
+  "steps": {
+    "eyebrow": "Lo que construimos",
+    "title": "Tres pasos simples. Un precio claro.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Llamada de descubrimiento",
+        "desc": "Una conversación enfocada para entender tus objetivos, retos y la solución adecuada para tu negocio."
+      },
+      {
+        "number": "02",
+        "title": "Alcance fijo + cronograma",
+        "desc": "Definimos el alcance, el cronograma, los entregables y el costo por adelantado, para que todos sepan exactamente qué esperar."
+      },
+      {
+        "number": "03",
+        "title": "Desarrollo + lanzamiento",
+        "desc": "Diseñamos, desarrollamos, probamos y lanzamos tu solución. Una vez completado, todo se te entrega."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industrias",
+    "title": "El contexto importa<br/>tanto como el código.",
+    "cta": "Comenzar",
+    "row1": {
+      "healthcare": "Salud",
+      "dental": "Dental",
+      "legal": "Legal",
+      "insurance": "Seguros",
+      "ecommerce": "Comercio electrónico",
+      "retail": "Retail"
+    },
+    "row2": {
+      "education": "Educación",
+      "accounting": "Contabilidad",
+      "realEstate": "Bienes raíces",
+      "homeServices": "Servicios para el hogar",
+      "travel": "Viajes e inmigración",
+      "finance": "Finanzas"
+    }
+  },
+  "whyUs": {
+    "eyebrow": "Por qué Van Tech Systems",
+    "title": "Un socio de ingeniería, no un proveedor.",
+    "cta": "Comenzar",
+    "items": [
+      {
+        "number": "01",
+        "title": "Diseñado en torno a tu negocio",
+        "desc": "Diseñamos sistemas en función de tus flujos de trabajo y requisitos reales."
+      },
+      {
+        "number": "02",
+        "title": "Enfocado en producción",
+        "desc": "Arquitectura, autenticación, bases de datos, permisos, integraciones, control de calidad e implementación son parte del producto, no algo secundario."
+      },
+      {
+        "number": "03",
+        "title": "Un solo socio tecnológico",
+        "desc": "Estrategia, diseño de producto, software, IA y automatización trabajan juntos bajo una sola arquitectura."
+      },
+      {
+        "number": "04",
+        "title": "Diseñado para evolucionar",
+        "desc": "Una arquitectura que admite capacidades futuras en lugar de forzar reconstrucciones completas."
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Nuestro trabajo",
+    "title": "Plataformas que hemos creado",
+    "viewWork": "Ver trabajo",
+    "items": [
+      {
+        "number": "01",
+        "title": "Van Travel Business",
+        "desc": "Una plataforma empresarial de viajes e inmigración que cubre paquetes, recepción de documentos y consultas de clientes."
+      },
+      {
+        "number": "02",
+        "title": "Power Mindset Breakthrough",
+        "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+      },
+      {
+        "number": "03",
+        "title": "AI FNA",
+        "desc": "Una herramienta de análisis de necesidades financieras asistida por IA que convierte los datos del cliente en recomendaciones listas para el asesor."
+      },
+      {
+        "number": "04",
+        "title": "OneTap Digital Card",
+        "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas mediante un enlace público o un código QR."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Precios simples. Software serio.",
+    "note": "Los precios iniciales son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones, el cronograma y los requisitos técnicos.",
+    "startingAt": "Desde",
+    "customQuote": "Presupuesto personalizado",
+    "categories": {
+      "ai": "IA",
+      "web": "Web",
+      "software": "Software"
+    },
+    "plans": [
+      { "category": "ai", "title": "Recepcionista de IA", "price": "$1,500", "note": "Continuo desde $249/mes" },
+      { "category": "ai", "title": "Sistema de automatización de IA", "price": "$2,500" },
+      { "category": "web", "title": "Sitio web profesional", "price": "$1,500" },
+      { "category": "web", "title": "Sitio web avanzado", "price": "$3,500" },
+      { "category": "software", "title": "Aplicación web personalizada", "price": "$5,000" },
+      { "category": "software", "title": "MVP SaaS", "price": "$7,500" },
+      { "category": "software", "title": "Plataforma SaaS avanzada", "customQuote": true, "note": "Alcance personalizado." },
+      { "category": "ai", "title": "Agente de IA personalizado", "price": "$3,500" },
+      { "category": "ai", "title": "RAG / IA de conocimiento empresarial", "price": "$5,000" },
+      { "category": "software", "title": "Plataforma CRM / Operaciones", "price": "$6,500" }
+    ]
+  }
+}

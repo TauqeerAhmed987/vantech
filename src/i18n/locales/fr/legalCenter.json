@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Politiques, conditions et engagements",
+    "desc": "Tout ce qui régit la manière dont Van Tech Systems gère les données, fournit ses services, utilise l'IA et maintient l'accessibilité."
+  },
+  "updated": "Mis à jour le 18 août 2026",
+  "contactPrefix": "Écrivez à",
+  "contactSuffix": "et un membre de l'équipe vous répondra.",
+  "policies": {
+    "privacyPolicy": "Quelles données personnelles Van Tech Systems collecte, pourquoi nous les collectons, combien de temps nous les conservons et les droits dont vous disposez à leur égard.",
+    "termsOfService": "Les conditions qui régissent l'utilisation de ce site web, nos informations publiées, et la relation entre une demande et une collaboration signée.",
+    "cookiePolicy": "Ce que nous stockons dans votre navigateur, pourquoi cela est stocké, et comment le contrôler — délibérément minimal.",
+    "accessibilityStatement": "Notre engagement envers un site web accessible, la norme que nous visons, les limites connues et comment signaler un obstacle.",
+    "aiUsagePolicy": "Comment nous utilisons l'intelligence artificielle sur ce site et dans le travail client, ce qu'elle est autorisée à faire, et où un humain est toujours requis."
+  }
+}

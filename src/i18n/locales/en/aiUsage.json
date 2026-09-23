@@ -1,0 +1,56 @@
+{
+  "hero": { "updated": "Last updated: 18 August 2026" },
+  "sections": {
+    "whyExists": {
+      "title": "1. Why This Policy Exists",
+      "body": "We build AI systems for a living, which makes it reasonable to expect us to be explicit about how we use them ourselves. This policy covers the AI features on this website and the standards we apply when we build AI for clients."
+    },
+    "whereUsed": {
+      "title": "2. Where AI Is Used on This Site",
+      "items": [
+        "A website assistant that answers questions about our services using our own published content.",
+        "Summarisation and prioritisation of incoming project enquiries for our internal team.",
+        "Drafting support for editorial content, which is reviewed and edited by our team before publication."
+      ]
+    },
+    "disclosure": {
+      "title": "3. Disclosure",
+      "body": "Our assistant identifies itself as an AI system. We do not present automated responses as messages from a named human, and we do not use synthetic voices or personas designed to be mistaken for a specific person."
+    },
+    "grounding": {
+      "title": "4. Grounding and Accuracy",
+      "body": "The assistant answers from our published service, product and article content rather than generating open-ended claims. When it does not know something, it is designed to say so and offer to connect you with the team. Automated output can still be wrong. Nothing the assistant says is a binding quote, a commitment, or professional advice."
+    },
+    "oversight": {
+      "title": "5. Human Oversight",
+      "items": [
+        "Pricing, contractual terms and scope commitments are confirmed by a person, never by an automated system alone.",
+        "Sensitive, ambiguous or complaint-related conversations are escalated to the team.",
+        "Enquiry summaries are always read by a human before a response is sent."
+      ]
+    },
+    "dataUsed": {
+      "title": "6. Data Used by Our AI Features",
+      "body": "Assistant conversations and enquiry content are processed by third-party AI model providers under contract. We do not permit that content to be used to train public foundation models. Please do not enter passwords, payment details, health information or other sensitive personal data into the assistant."
+    },
+    "standards": {
+      "title": "7. Standards We Apply in Client Work",
+      "items": [
+        "Ground AI systems in the client’s own verified content and data.",
+        "Constrain agents to an explicit set of permitted actions and data scopes.",
+        "Log conversations and executed actions so behaviour can be audited.",
+        "Design a human escalation path before launch, not after a failure.",
+        "Test for fabricated answers, prompt injection and permission leakage as part of delivery.",
+        "Decline use cases where automated decisions would create unacceptable risk for the people affected."
+      ]
+    },
+    "limitations": {
+      "title": "8. Limitations We Do Not Hide",
+      "body": "AI systems can be confidently wrong, can degrade when underlying models change, and can be manipulated by adversarial input. We design for those realities with grounding, constraints, monitoring and human review rather than claiming they do not exist."
+    },
+    "contact": {
+      "title": "9. Contact",
+      "bodyPrefix": "Questions or concerns about our use of AI can be sent to"
+    }
+  }
+}

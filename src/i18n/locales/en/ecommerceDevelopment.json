@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Commerce That Works Smarter.",
+    "desc": "Storefronts, payments and post-purchase experiences connected to automation and AI — so customers get answers and your team stops handling the same requests manually.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "leak": {
+    "title": "Where <span class=\"accent\">Commerce</span> Operations Leak",
+    "desc": "Most stores do not lose money on the storefront. They lose it in abandoned carts, repeated support questions and manual post-purchase work.",
+    "problems": [
+      "Support answers the same order questions every day.",
+      "Carts are abandoned with no structured recovery.",
+      "Product discovery does not match how customers search.",
+      "Order, payment and fulfilment data live in separate places."
+    ]
+  },
+  "solution": {
+    "title": "Commerce Connected End To End",
+    "desc": "We build the storefront and the operational layer behind it: payments, order flow, fulfilment updates, customer messaging and analytics — with AI assistance for the questions and journeys that repeat."
+  },
+  "build": {
+    "heading": "What We Build",
+    "cards": [
+      {
+        "title": "Storefront",
+        "desc": "A fast, responsive buying experience designed around your catalogue."
+      },
+      {
+        "title": "Commerce Assistant",
+        "desc": "AI answers for order, product and policy questions."
+      },
+      {
+        "title": "Checkout and Payments",
+        "desc": "Payment flows, subscriptions and order confirmation."
+      },
+      {
+        "title": "Recovery and Lifecycle",
+        "desc": "Cart recovery and lifecycle messaging based on real behaviour."
+      },
+      {
+        "title": "Post-purchase",
+        "desc": "Order status, shipping updates and returns communication."
+      },
+      {
+        "title": "Operations",
+        "desc": "Admin tooling and reporting for the team running the store."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "Catalogue and merchandising",
+      "Checkout",
+      "Payments and subscriptions",
+      "Order management",
+      "Shipping updates"
+    ],
+    "row2": [
+      "Customer support automation",
+      "Cart recovery",
+      "Product discovery",
+      "Lifecycle messaging",
+      "Commerce analytics"
+    ]
+  },
+  "useCases": {
+    "heading": "Use Cases",
+    "items": [
+      {
+        "title": "Direct-to-consumer brands",
+        "desc": "A storefront with automated post-purchase communication."
+      },
+      {
+        "title": "Subscription Commerce",
+        "desc": "Recurring billing with account and plan management."
+      },
+      {
+        "title": "Catalogue-heavy stores",
+        "desc": "Search and discovery designed for large product sets."
+      },
+      {
+        "title": "Service commerce",
+        "desc": "Bookable services sold and managed online."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "MVP architecture",
+    "desc": "Even a first release is a full system. We keep it small, but structured — so the second version is an extension, not a rebuild.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Experience",
+        "tags": [["Storefront", "Search"], ["Checkout"], ["Account"]]
+      },
+      {
+        "number": "02",
+        "title": "Commerce",
+        "tags": [["Catalogue"], ["Orders", "Payments"], ["Subscriptions"]]
+      },
+      {
+        "number": "03",
+        "title": "Operations",
+        "tags": [["Fulfilment"], ["Support", "Notifications"]]
+      },
+      {
+        "number": "04",
+        "title": "Intelligence",
+        "tags": [["Assistant"], ["Recovery", "Analytics"], ["Recommendations"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Development Process",
+    "cards": [
+      {
+        "title": "Discover",
+        "desc": "Catalogue, customer journeys and operational constraints."
+      },
+      {
+        "title": "Design",
+        "desc": "Storefront and checkout experience across devices."
+      },
+      {
+        "title": "Build",
+        "desc": "Store, payments, order flow and integrations."
+      },
+      {
+        "title": "Automate",
+        "desc": "Support, recovery and lifecycle messaging."
+      },
+      {
+        "title": "Test",
+        "desc": "Payment testing, responsive QA and performance review."
+      },
+      {
+        "title": "Launch",
+        "desc": "Deployment, analytics and post-launch monitoring."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": [
+      { "label": "Payment providers" },
+      { "label": "Shipping" },
+      { "label": "Email" },
+      { "label": "Messaging" },
+      { "label": "CRM" }
+    ],
+    "row2": [
+      { "label": "Analytics" },
+      { "label": "Inventory" },
+      { "label": "Accounting" }
+    ]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      {
+        "title": "Built for operations",
+        "desc": "We design the work behind the order, not only the storefront."
+      },
+      {
+        "title": "Automation where it repeats",
+        "desc": "AI is applied to the questions and journeys that recur."
+      },
+      {
+        "title": "Measurable",
+        "desc": "Analytics are instrumented as part of the build."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $3,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

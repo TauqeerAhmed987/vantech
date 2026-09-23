@@ -1106,6 +1106,7 @@ body .backimage-boy {
   border: 1px solid rgba(145, 145, 145, 0.4);
   backdrop-filter: blur(33px);
   background: linear-gradient(168deg, rgba(0, 0, 0, 0.8) -2.45%, rgba(22, 22, 22, 0.9) 102%);
+  cursor: pointer;
 }
 
 .wvt-related-card__image {
@@ -1117,8 +1118,8 @@ body .backimage-boy {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
-
 .wvt-related-card__tag {
   align-self: flex-start;
   margin-top: 20px;
@@ -2273,6 +2274,7 @@ body .backimage-boy {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
   }
   
   .wvt-related-card__tag {

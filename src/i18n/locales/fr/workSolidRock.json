@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["Services professionnels", "Formation et développement"],
+    "titleLines": ["Solid Rock Leadership", "Development"],
+    "description": "Une plateforme de leadership et d'éducation financière présentant des programmes, des publics cibles et un parcours de réservation de consultation.",
+    "screenshotAlt": "Capture d'écran de la plateforme Solid Rock Leadership Development"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Services professionnels" },
+    { "label": "Capacités", "value": "Développement Web • Conception UI/UX • Automatisation" },
+    { "label": "Secteur", "value": "Formation et développement" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "Solid Rock Leadership Development & Financial Solutions accompagne les particuliers et les familles grâce à une éducation financière simplifiée et au développement du leadership. La plateforme présente ses services principaux, les publics qu'elle sert, l'histoire de son fondateur, un parcours d'opportunité de partenariat et un accès direct à la réservation d'une consultation gratuite.",
+    "challengeDesc": "Le cabinet s'adresse à des publics distincts — professionnels de santé, familles et partenaires potentiels — à travers six services différents. Sans architecture de l'information structurée, les visiteurs ne pouvaient pas déterminer quel programme leur correspondait ni comment commencer.",
+    "builtDesc": "Nous avons structuré la plateforme autour de ses six services principaux, d'une section « Qui nous servons » pour l'auto-sélection des publics, d'un récit du fondateur pour renforcer la crédibilité, d'un parcours d'opportunité pour les partenaires potentiels, ainsi que des espaces éditoriaux et de blog — le tout menant vers une étape unique de réservation de consultation à faible friction."
+  },
+  "sidebar": {
+    "serviceTags": ["Développement Web", "Conception UI/UX", "Automatisation"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Présentation des six services principaux" },
+      { "title": "Segmentation des publics « Qui nous servons »" },
+      { "title": "Récit du fondateur et de crédibilité" },
+      { "title": "Récit du fondateur et de crédibilité" },
+      { "title": "Parcours d'opportunité de partenariat" },
+      { "title": "Sections blog et médias" },
+      { "title": "Parcours de réservation de consultation gratuite" },
+      { "title": "Sections valeurs et FAQ" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux métier",
+    "steps": ["Explorer", "Auto-sélection", "Réserver", "Accompagnement"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue", "conceptuelle du système"],
+    "pills": ["Visiteur", "Contenu du programme", "Parcours de réservation", "Suivi conseiller"]
+  },
+  "outcomes": [
+    "Création d'une plateforme structurée pour les programmes de leadership et d'éducation financière",
+    "Permet à des publics distincts de sélectionner le programme adapté",
+    "Connexion de chaque section à une étape unique de réservation de consultation"
+  ],
+  "relatedWork": [
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Une plateforme de coaching et de développement personnel avec des programmes, la réservation et la diffusion de contenu."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, leurs liens et une page de réservation via un lien de carte public ou un code QR."
+    }
+  ]
+}

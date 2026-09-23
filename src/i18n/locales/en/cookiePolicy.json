@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Cookie Policy",
+    "updated": "Last updated: 18 August 2026"
+  },
+  "sections": {
+    "approach": {
+      "title": "1. Our Approach",
+      "body": "We use the smallest set of browser storage that lets the site work correctly. We do not run advertising networks or cross-site tracking pixels on this website."
+    },
+    "whatWeStore": {
+      "title": "2. What We Store",
+      "items": [
+        "<strong>Essential session storage</strong> — maintains login and form protection.",
+        "<strong>Language preference</strong> — remembers your chosen site language.",
+        "<strong>Assistant state</strong> — preserves AI conversation availability.",
+        "<strong>Anonymous article counter</strong> — uses a random identifier for single-browser counting."
+      ]
+    },
+    "analytics": {
+      "title": "3. Analytics",
+      "body": "Article view counting is anonymous: it records a random local identifier, the article and the language, with no name, email or advertising identifier attached. It cannot be used to identify you."
+    },
+    "thirdParty": {
+      "title": "4. Third-Party Storage",
+      "body": "Our infrastructure providers may set strictly necessary cookies for security, session integrity and abuse prevention. If you follow a link to an external site, that site’s own cookie policy applies."
+    },
+    "controlling": {
+      "title": "5. Controlling Storage",
+      "items": [
+        "Your browser’s privacy settings let you view, block or delete stored cookies and site data at any time.",
+        "Blocking essential storage may prevent parts of the site, such as forms or the AI assistant, from working correctly.",
+        "Clearing site data resets your language preference and any local assistant state."
+      ]
+    },
+    "contact": {
+      "title": "6. Contact",
+      "bodyPrefix": "For questions about browser storage on this site, contact"
+    }
+  }
+}

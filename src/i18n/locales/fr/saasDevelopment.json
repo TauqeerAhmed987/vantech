@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Développez des logiciels que l'on paie pour utiliser.",
+    "desc": "Des plateformes multi-locataires dotées de tout ce qui rend un logiciel commercialisable : isolation entre clients, authentification, rôles, abonnements, administration et analyses.",
+    "ctaPrimary": "Obtenir une estimation de mon projet",
+    "ctaSecondary": "Découvrir tous nos services"
+  },
+  "disappoint": {
+    "title": "Les Difficultés Du <span class=\"accent\">SaaS</span> Ne Sont Pas Les Fonctionnalités",
+    "desc": "Les outils standards fonctionnent tant que votre processus correspond aux hypothèses du produit. Ensuite, les contournements deviennent l'exploitation.",
+    "problems": [
+      "La séparation des données par client n'a pas été conçue dès le départ.",
+      "Les rôles et permissions ne correspondent pas à l'organisation des équipes de vos clients.",
+      "La facturation, les essais et les changements de forfait sont gérés manuellement.",
+      "Il n'existe aucune interface d'administration pour assister les clients."
+    ]
+  },
+  "solution": {
+    "title": "Une Plateforme Conçue Pour Être Vendue",
+    "desc": "Nous concevons d'abord l'architecture multi-locataire, l'identité et la facturation, puis nous construisons le produit par-dessus. Organisations, invitations, rôles, forfaits, usage et administration font partie de la plateforme plutôt que d'être ajoutés après coup."
+  },
+  "build": {
+    "title": "Ce que nous construisons",
+    "cards": [
+      { "title": "Cœur multi-locataire", "desc": "Organisations, adhésions et isolation des données garantie." },
+      { "title": "Identité", "desc": "Inscription, invitations, rôles et permissions par organisation." },
+      { "title": "Facturation", "desc": "Forfaits, essais, mises à niveau et cycle de vie des abonnements." },
+      { "title": "Surface produit", "desc": "L'application que vos clients utilisent chaque jour." },
+      { "title": "Console d'administration", "desc": "Outils internes pour assister les comptes et résoudre les problèmes." },
+      { "title": "Services de la plateforme", "desc": "API, webhooks, e-mail et stockage pour le produit." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacités",
+    "row1": ["Architecture multi-locataire", "Isolation des locataires", "Authentification", "Contrôle d'accès basé sur les rôles", "Abonnements et paiements"],
+    "row2": ["Suivi de l'utilisation", "Console d'administration", "API publique", "E-mails transactionnels", "Analyses produit"]
+  },
+  "usecases": {
+    "title": "Cas d'usage",
+    "items": [
+      { "title": "Nouveau produit SaaS", "desc": "Une plateforme conçue pour des clients payants dès la première version." },
+      { "title": "Transformer un service en produit", "desc": "Transformer un service livré en revenu logiciel récurrent." },
+      { "title": "D'un outil interne à un produit", "desc": "Étendre un système interne fonctionnel à des clients externes." },
+      { "title": "Modernisation de plateforme", "desc": "Reconstruire un produit vieillissant sur une architecture maintenable." }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture SaaS",
+    "desc": "L'isolation des locataires est appliquée au niveau de la couche de données, pas seulement dans l'interface.",
+    "timeline": [
+      { "title": "Locataires", "tags": [["Organisations"], ["Membres"], ["Rôles"], ["Invitations"]] },
+      { "title": "Plateforme", "tags": [["Authentification"], ["Politiques d'isolation"], ["API"], ["Webhooks"]] },
+      { "title": "Commercial", "tags": [["Forfaits"], ["Abonnements"], ["Paiements"], ["Usage"]] },
+      { "title": "Données", "tags": [["Base de données"], ["Stockage", "Analyses"], ["Journal d'audit"]] },
+      { "title": "Opérations", "tags": [["Console d'administration"], ["Supervision"], ["Déploiement"], ["Outils de support"]] }
+    ]
+  },
+  "process2": {
+    "title": "Processus de développement",
+    "steps": [
+      { "title": "Définir", "desc": "Périmètre produit, modèle client et structure commerciale." },
+      { "title": "Concevoir l'architecture", "desc": "Multi-location, identité, permissions, facturation et conception des données." },
+      { "title": "Design", "desc": "Interface produit et intégration des nouvelles organisations." },
+      { "title": "Développer", "desc": "Développement de la plateforme et du produit par incréments vérifiables." },
+      { "title": "Tester", "desc": "Tests d'isolation, tests de permissions, facturation et revue de sécurité." },
+      { "title": "Lancer", "desc": "Déploiement, supervision, outils d'administration et plan d'itération." }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations possibles",
+    "row1": [
+      { "label": "Fournisseurs de paiement" },
+      { "label": "Fournisseurs d'identité" },
+      { "label": "E-mail" },
+      { "label": "Analyses" }
+    ],
+    "row2": [
+      { "label": "Outils de support" },
+      { "label": "Webhooks" },
+      { "label": "API internes" }
+    ]
+  },
+  "why": {
+    "title": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "La multi-location d'abord", "desc": "L'isolation et les permissions sont conçues avant les fonctionnalités." },
+      { "title": "Complet sur le plan commercial", "desc": "Les forfaits, la facturation et l'administration font partie du développement." },
+      { "title": "Exploitable", "desc": "Vous disposez des outils nécessaires pour assister de vrais clients." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de $7,500/month",
+    "desc": "Les tarifs de départ sont des repères de planification. Le tarif final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir une estimation de mon projet"
+  }
+}

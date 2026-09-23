@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useParams, Navigate, Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { SUPPORTED_LANGUAGES } from './i18n/i18n';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/Home/HomePage';
@@ -48,43 +50,89 @@ function ScrollToTop() {
   return null;
 }
 
+const pageRoutes: { path: string; element: React.ReactNode }[] = [
+  { path: '/', element: <HomePage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/ai-agents', element: <AIAgentsPage /> },
+  { path: '/ai-automation', element: <AIAutomationPage /> },
+  { path: '/auto-pilot', element: <AutoPilotPage /> },
+  { path: '/model-development', element: <ModelDevelopmentPage /> },
+  { path: '/mvp-development', element: <MVPDevelopmentPage /> },
+  { path: '/web-applications', element: <WebApplicationsPage /> },
+  { path: '/mobile-application', element: <MobileApplicationPage /> },
+  { path: '/saas-development', element: <SaasDevelopmentPage /> },
+  { path: '/custom-development', element: <CustomDevelopmentPage /> },
+  { path: '/ecommerce-development', element: <EcommerceDevelopmentPage /> },
+  { path: '/work', element: <WorkMainPage /> },
+  { path: '/van-travel-business', element: <WorkVanTravelPage /> },
+  { path: '/power-mindset-breakthrough', element: <WorkPowerMindsetBreakthroughPage /> },
+  { path: '/van-travel-business-two', element: <WorkVanTravelBusinessTwoPage /> },
+  { path: '/onetap-digital-card', element: <WorkOneTapDigitalCardPage /> },
+  { path: '/pmb-consulting', element: <WorkPMBConsultingPage /> },
+  { path: '/mighty-oak-legacy', element: <WorkMightyOakLegacyPage /> },
+  { path: '/solid-rock-leadership-development', element: <WorkSolidRockLeadershipPage /> },
+  { path: '/buketi-insurance-services', element: <WorkBuketiFinancialConsultingPage /> },
+  { path: '/lelofit', element: <WorkLelofitPage /> },
+  { path: '/all-access-trip', element: <WorkAllAccessTripPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
+  { path: '/terms-of-service', element: <TermsOfServicePage /> },
+  { path: '/legal', element: <LegalPage /> },
+  { path: '/cookie-policy', element: <CookiePolicyPage /> },
+  { path: '/accessibility', element: <AccessibilityPage /> },
+  { path: '/ai-usage', element: <AIUsagePage /> },
+];
+
+const LOCALE_PARAMS = SUPPORTED_LANGUAGES.filter((l) => l !== 'en');
+
+/** Sets the English (default, unprefixed) locale for everything nested under it. */
+function EnglishFrame() {
+  const { i18n } = useTranslation();
+  useEffect(() => {
+    i18n.changeLanguage('en');
+  }, [i18n]);
+  return <Outlet />;
+}
+
+/** Reads :lang from the URL, switches i18next to it, or bounces back to / if it's not one we support. */
+function LocaleFrame() {
+  const { lang } = useParams<{ lang: string }>();
+  const { i18n } = useTranslation();
+  const isSupported = lang !== undefined && (LOCALE_PARAMS as string[]).includes(lang);
+
+  useEffect(() => {
+    if (isSupported && lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [isSupported, lang, i18n]);
+
+  if (!isSupported) {
+    return <Navigate to="/" replace />;
+  }
+  return <Outlet />;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/partners" element={<PartnersPage />} />
-        <Route path="/ai-agents" element={<AIAgentsPage />} />
-        <Route path="/ai-automation" element={<AIAutomationPage />} />
-        <Route path="/auto-pilot" element={<AutoPilotPage />} />
-        <Route path="/model-development" element={<ModelDevelopmentPage />} />
-        <Route path="/mvp-development" element={<MVPDevelopmentPage />} />
-        <Route path="/web-applications" element={<WebApplicationsPage />} />
-        <Route path="/mobile-application" element={<MobileApplicationPage />} />
-        <Route path="/saas-development" element={<SaasDevelopmentPage />} />
-        <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-        <Route path="/ecommerce-development" element={<EcommerceDevelopmentPage />} />
-        <Route path="/work" element={<WorkMainPage />} />
-        <Route path="/van-travel-business" element={<WorkVanTravelPage />} />
-        <Route path="/power-mindset-breakthrough" element={<WorkPowerMindsetBreakthroughPage />} />
-        <Route path="/van-travel-business-two" element={<WorkVanTravelBusinessTwoPage />} />
-        <Route path="/onetap-digital-card" element={<WorkOneTapDigitalCardPage />} />
-        <Route path="/pmb-consulting" element={<WorkPMBConsultingPage />} />
-        <Route path="/mighty-oak-legacy" element={<WorkMightyOakLegacyPage />} />
-        <Route path="/solid-rock-leadership-development" element={<WorkSolidRockLeadershipPage />} />
-        <Route path="/buketi-insurance-services" element={<WorkBuketiFinancialConsultingPage />} />
-        <Route path="/lelofit" element={<WorkLelofitPage />} />
-        <Route path="/all-access-trip" element={<WorkAllAccessTripPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-        <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-        <Route path="/legal" element={<LegalPage />} />
-        <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-        <Route path="/accessibility" element={<AccessibilityPage />} />
-        <Route path="/ai-usage" element={<AIUsagePage />} />
+        <Route element={<EnglishFrame />}>
+          {pageRoutes.map((r) => (
+            <Route key={r.path} path={r.path} element={r.element} />
+          ))}
+        </Route>
+        <Route path="/:lang" element={<LocaleFrame />}>
+          {pageRoutes.map((r) =>
+            r.path === '/' ? (
+              <Route key={r.path} index element={r.element} />
+            ) : (
+              <Route key={r.path} path={r.path.slice(1)} element={r.element} />
+            )
+          )}
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

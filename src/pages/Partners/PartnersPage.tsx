@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './partners.css';
 import Icon from '../../components/Icon';
 import FAQ from '../../components/FAQ';
@@ -25,37 +26,139 @@ import tiersBadgeGlow from '../../assets/images/partners-badge-glow.png';
 import tiersGlowTexture from '../../assets/images/partners-glow-texture.png';
 import visibilityOrb from '../../assets/images/partners-visibility-orb.png';
 
-const chipImageClass: Record<string, string> = {
-  'AI Chat Agents': 'ai-chat-agents',
-  'AI Customer Support': 'ai-customer-support',
-  'AI Knowledge Systems': 'ai-knowledge-systems',
-  'AI Lead Qualification': 'ai-lead-qualification',
-  'AI Receptionists': 'ai-receptionists',
-  'AI Voice Agents': 'ai-voice-agents',
-  'AI Workflow Automation': 'ai-workflow-automation',
-  'Custom Web Applications': 'custom-web-applications',
-  'SaaS Platforms': 'saas-platforms',
-  'Marketplace Platforms': 'marketplace-platforms',
-  'Client Portals': 'client-portals',
-  'Internal Business Systems': 'internal-business-systems',
-  'CRM Platforms': 'crm-platforms',
-  'CRM Automation': 'crm-automation',
-  'Email/SMS Workflows': 'email-sms-workflows',
-  'Lead Follow-Up Systems': 'lead-follow-up-systems',
-  'Operations Automation': 'operations-automation',
-  'Appointment Automation': 'appointment-automation',
-  'Business Process Automation': 'business-process-automation',
-  'Premium Website': 'premium-website',
-  'E-Commerce': 'e-commerce',
-  'Customer Portals': 'customer-portals',
-  'Business Dashboards': 'business-dashboards',
-  'Membership Platforms': 'membership-platforms',
-  'Product Strategy': 'product-strategy',
-  'Technology Architecture': 'technology-architecture',
-  'AI Readiness': 'ai-readiness',
-  'Digital Transformation': 'digital-transformation',
-  'System Audits': 'system-audits',
+// ---------- Types ----------
+
+type StatItem = { value: string; label: string };
+
+type TierColumn = { label: string; items: string[] };
+type Tier = { id: string; title: string; desc: string; columns: TierColumn[]; cta: string };
+
+type PipelineStage = { name: string; who: string };
+
+type CatalogChip = { id: string; variant?: string; label: string };
+type CatalogCardItem = { id: string; label: string };
+type CatalogTopCardData = {
+  slug: string;
+  icon: string;
+  title: string;
+  desc: string;
+  wrapChips?: boolean;
+  chipRows?: CatalogChip[][];
+  items: CatalogCardItem[];
+  titleFirst?: boolean;
+  iconRight?: boolean;
 };
+type CatalogBottomCardData = {
+  slug: string;
+  icon: string;
+  title: string;
+  desc: string;
+  items: CatalogCardItem[];
+};
+
+type BrandLayer = { label: string; tags: string[] };
+
+type PlanConfig = {
+  id: string;
+  icon: string;
+  price: string;
+  secondaryAmount?: string;
+  highlighted?: boolean;
+  accentOrange?: boolean;
+};
+type PlanText = {
+  name: string;
+  priceNote: string;
+  secondaryPeriod?: string;
+  desc: string;
+  cta: string;
+  features: string[];
+};
+type Plan = PlanConfig & PlanText;
+
+type FulfillmentConfig = { id: string; category: string; price?: string; customQuote?: boolean };
+type FulfillmentText = { title: string; note?: string };
+type FulfillmentService = FulfillmentConfig & FulfillmentText;
+
+type CompareCell = boolean | string;
+type CompareRow = { label: string; connect: CompareCell; pro: CompareCell; white: CompareCell };
+
+// ---------- Static (non-text) configuration ----------
+// Text for all of these is pulled from the `partners` i18n namespace inside
+// PartnersPage() and merged in by index/id at render time.
+
+const tierIds = ['referral', 'reseller', 'white-label', 'strategic'];
+
+const pipelineStageCount = 7;
+
+const catalogIcons: Record<string, string> = {
+  software: catalogSoftwareSvg,
+  globe: catalogGlobeSvg,
+  consulting: catalogConsultingSvg,
+};
+
+const catalogTopConfig: { slug: string; icon: string; wrapChips?: boolean; chipRows?: string[][]; items: string[]; titleFirst?: boolean; iconRight?: boolean }[] = [
+  {
+    slug: 'ai-solutions',
+    icon: 'software',
+    wrapChips: true,
+    chipRows: [
+      ['ai-receptionists', 'ai-voice-agents', 'ai-chat-agents'],
+      ['ai-lead-qualification', 'ai-customer-support', 'ai-knowledge-systems'],
+      ['ai-knowledge-systems--bottom', 'ai-workflow-automation'],
+    ],
+    items: ['ai-receptionists', 'ai-voice-agents', 'ai-chat-agents', 'ai-lead-qualification', 'ai-customer-support', 'ai-knowledge-systems', 'ai-workflow-automation'],
+  },
+  {
+    slug: 'software',
+    icon: 'software',
+    titleFirst: true,
+    iconRight: true,
+    items: ['custom-web-applications', 'saas-platforms', 'marketplace-platforms', 'client-portals', 'internal-business-systems', 'crm-platforms'],
+  },
+];
+
+const catalogBottomConfig: { slug: string; icon: string; items: string[] }[] = [
+  {
+    slug: 'automation',
+    icon: 'software',
+    items: ['crm-automation', 'email-sms-workflows', 'lead-follow-up-systems', 'operations-automation', 'appointment-automation', 'business-process-automation'],
+  },
+  {
+    slug: 'digital-platforms',
+    icon: 'globe',
+    items: ['premium-website', 'e-commerce', 'customer-portals', 'business-dashboards', 'membership-platforms'],
+  },
+  {
+    slug: 'consulting',
+    icon: 'consulting',
+    items: ['product-strategy', 'technology-architecture', 'ai-readiness', 'digital-transformation', 'system-audits'],
+  },
+];
+
+const planIcons: Record<string, string> = {
+  star: plansStarSvg,
+  flash: plansFlashSvg,
+};
+
+const planConfig: PlanConfig[] = [
+  { id: 'connect', icon: 'star', price: '$0' },
+  { id: 'pro', icon: 'flash', price: '$499', secondaryAmount: '$99', highlighted: true },
+  { id: 'white', icon: 'star', price: '$1,499', secondaryAmount: '$299', accentOrange: true },
+];
+
+const fulfillmentConfig: FulfillmentConfig[] = [
+  { id: 'ai-receptionist', category: 'AI', price: '$1,500' },
+  { id: 'ai-automation-system', category: 'AI', price: '$2,500' },
+  { id: 'professional-business-website', category: 'Web', price: '$1,500' },
+  { id: 'advanced-business-website', category: 'Web', price: '$3,500' },
+  { id: 'custom-web-application', category: 'Software', price: '$5,000' },
+  { id: 'saas-mvp', category: 'Software', price: '$7,500' },
+  { id: 'advanced-saas-platform', category: 'Software', customQuote: true },
+  { id: 'custom-ai-agent', category: 'AI', price: '$3,500' },
+  { id: 'rag-business-knowledge-ai', category: 'AI', price: '$5,000' },
+  { id: 'crm-operations-platform', category: 'Software', price: '$6,500' },
+];
 
 function CheckIcon() {
   return (
@@ -74,222 +177,7 @@ function PersonIcon() {
   );
 }
 
-const stats = [
-  { value: '0%', label: 'Equity Required' },
-  { value: '04', label: 'Ways to partner' },
-  { value: '1 Team', label: 'Technology delivery partner' },
-  { value: 'Global', label: 'Remote delivery capability' },
-];
-
-const tiers = [
-  {
-    title: 'Referral Partner',
-    desc: 'Best for people who simply want to introduce qualified businesses to Van Tech Systems.',
-    columns: [
-      { label: 'Partner', items: ['Identifies opportunity', 'Makes introduction', 'Remains relationship source'] },
-      {
-        label: 'Van Tech Systems',
-        items: ['Scopes project', 'Closes project', 'Contracts client', 'Delivers technology', 'Supports client'],
-      },
-    ],
-    cta: 'Become Referral Partner',
-  },
-  {
-    title: 'Reseller Partner',
-    desc: 'Best for agencies wanting to sell VTS solutions directly.',
-    columns: [
-      { label: 'Partner', items: ['Owns sales relationship', 'Selects solutions', 'Manages commercial relationship'] },
-      {
-        label: 'Van Tech Systems',
-        items: ['Provides partner pricing', 'Provides technical scoping', 'Builds solution', 'Supports implementation'],
-      },
-    ],
-    cta: 'Become Reseller Partner',
-  },
-  {
-    title: 'White-Label Partner',
-    desc: 'Best for agencies that want technology delivered behind their own brand.',
-    columns: [
-      { label: 'Partner', items: ['Owns brand', 'Owns client relationship', 'Sets retail pricing', 'Handles account strategy'] },
-      {
-        label: 'Van Tech Systems',
-        items: ['Performs technical delivery', 'Works behind the scenes', 'Provides QA', 'Supports deployments'],
-      },
-    ],
-    cta: 'Become White-Label Partner',
-  },
-  {
-    title: 'Strategic Delivery Partner',
-    desc: 'Best for established agencies requiring a dedicated technology capability.',
-    columns: [
-      { label: 'Possible support', items: ['Custom software', 'SaaS development', 'AI systems', 'AI agents', 'Automation'] },
-      { label: 'Also available', items: ['Integrations', 'Architecture', 'Maintenance', 'Technical consulting'] },
-    ],
-    cta: 'Become Strategic Delivery Partner',
-  },
-];
-
-const pipelineStages = [
-  { name: 'Lead', who: 'Partner' },
-  { name: 'Discovery', who: 'Partner + VTS' },
-  { name: 'Scope', who: 'VTS' },
-  { name: 'Build', who: 'VTS' },
-  { name: 'QA', who: 'VTS' },
-  { name: 'Launch', who: 'Joint' },
-  { name: 'Support', who: 'Based on partnership model' },
-];
-
-const catalogIcons: Record<string, string> = {
-  software: catalogSoftwareSvg,
-  globe: catalogGlobeSvg,
-  consulting: catalogConsultingSvg,
-};
-
-const catalogTop = [
-  {
-    title: 'AI Solutions',
-    slug: 'ai-solutions',
-    desc: "Conversational and operational AI systems built around a client's workflows.",
-    icon: 'software',
-    wrapChips: true,
-    chipRows: [
-      ['AI Receptionists', 'AI Voice Agents', 'AI Chat Agents'],
-      ['AI Lead Qualification', 'AI Customer Support', 'AI Knowledge Systems'],
-      ['AI Knowledge Systems--bottom', 'AI Workflow Automation'],
-    ],
-    items: ['AI Receptionists', 'AI Voice Agents', 'AI Chat Agents', 'AI Lead Qualification', 'AI Customer Support', 'AI Knowledge Systems', 'AI Workflow Automation'],
-  },
-  {
-    title: 'Software',
-    slug: 'software',
-    desc: 'Custom applications and platforms engineered for how a business operates.',
-    icon: 'software',
-    titleFirst: true,
-    iconRight: true,
-    items: ['Custom Web Applications', 'SaaS Platforms', 'Marketplace Platforms', 'Client Portals', 'Internal Business Systems', 'CRM Platforms'],
-  },
-];
-
-const catalogBottom = [
-  {
-    title: 'Automation',
-    slug: 'automation',
-    desc: 'Process automation that removes manual work across sales and operations.',
-    icon: 'software',
-    items: ['CRM Automation', 'Email/SMS Workflows', 'Lead Follow-Up Systems', 'Operations Automation', 'Appointment Automation', 'Business Process Automation'],
-  },
-  {
-    title: 'Digital Platforms',
-    slug: 'digital-platforms',
-    desc: 'Customer-facing digital products with a premium engineering standard.',
-    icon: 'globe',
-    items: ['Premium Website', 'E-Commerce', 'Customer Portals', 'Business Dashboards', 'Membership Platforms'],
-  },
-  {
-    title: 'Consulting',
-    slug: 'consulting',
-    desc: 'Strategic and architectural guidance ahead of a build.',
-    icon: 'consulting',
-    items: ['Product Strategy', 'Technology Architecture', 'AI Readiness', 'Digital Transformation', 'System Audits'],
-  },
-];
-
-const brandLayers = [
-  { label: 'Your Agency', tags: ['Client Relationship', 'Brand', 'Sales', 'Strategy'] },
-  { label: 'Van Tech Systems', tags: ['Architecture', 'Development', 'AI', 'Automation', 'QA', 'Infrastructure'] },
-  { label: 'Client Solution', tags: ['Website', 'AI Agent', 'SaaS', 'Automation', 'Platform'] },
-];
-
-const aiEngineChips = ['Voice', 'Chat', 'CRM', 'Email', 'SMS', 'Calendar', 'Knowledge Base', 'Analytics', 'Automation', 'API'];
-
-const planIcons: Record<string, string> = {
-  star: plansStarSvg,
-  flash: plansFlashSvg,
-};
-
-const plans = [
-  {
-    name: 'VTS Connect',
-    icon: 'star',
-    price: '$0',
-    priceNote: 'Partner Enrollment',
-    desc: 'For professionals who occasionally encounter technology opportunities and want a reliable delivery partner to hand them to.',
-    cta: 'Join VTS Connect',
-    features: [
-      'Partner account',
-      'Referral tracking',
-      'VTS service catalog',
-      'Project introduction form',
-      'Basic sales materials',
-      'Referral opportunity tracking',
-      'VTS contracts and invoices the client directly',
-    ],
-  },
-  {
-    name: 'VTS Pro Partner',
-    icon: 'flash',
-    price: '$499',
-    priceNote: 'onboarding',
-    secondary: '$99/month',
-    desc: 'Everything in Connect, plus partner pricing and reseller rights for eligible services.',
-    cta: 'Become Pro Partner',
-    highlighted: true,
-    features: [
-      'Everything in VTS Connect',
-      'Partner service pricing',
-      'Reseller rights for eligible services',
-      'Priority project scoping',
-      'Proposal support',
-      'Partner sales resources',
-      'Co-branded solution materials',
-      'Project delivery dashboard',
-      'Partner onboarding session',
-      'Technical consultation support',
-      'Access to standardized solution packages',
-    ],
-  },
-  {
-    name: 'VTS White Label',
-    icon: 'star',
-    price: '$1,499',
-    priceNote: 'onboarding',
-    secondary: '$299/month',
-    desc: 'Everything in Pro, plus delivery behind your own brand where agreed.',
-    cta: 'Apply For White Label',
-    accentOrange: true,
-    features: [
-      'Everything in VTS Pro Partner',
-      'White-label eligible services',
-      'Client-facing delivery under partner brand where agreed',
-      'Dedicated partnership contact',
-      'Priority production queue',
-      'White-label proposal templates',
-      'Technical discovery assistance',
-      'Architecture consultation',
-      'QA support',
-      'Deployment support',
-      'Partner delivery reporting',
-      'Custom service catalog assistance',
-    ],
-  },
-];
-
-type CompareCell = boolean | string;
-
-const compareRows: { label: string; connect: CompareCell; pro: CompareCell; white: CompareCell }[] = [
-  { label: 'Referral tracking', connect: true, pro: true, white: true },
-  { label: 'Partner pricing', connect: false, pro: true, white: true },
-  { label: 'Reselling', connect: false, pro: true, white: true },
-  { label: 'Proposal support', connect: false, pro: true, white: true },
-  { label: 'Technical scoping', connect: 'VTS-led', pro: true, white: true },
-  { label: 'White-label delivery', connect: false, pro: false, white: true },
-  { label: 'Priority queue', connect: false, pro: false, white: true },
-  { label: 'Dedicated partnership contact', connect: false, pro: false, white: true },
-  { label: 'Delivery reporting', connect: false, pro: true, white: true },
-  { label: 'Architecture support', connect: false, pro: 'On request', white: true },
-];
-
-function TierCard({ tier }: { tier: (typeof tiers)[number] }) {
+function TierCard({ tier }: { tier: Tier }) {
   const reveal = useReveal('up');
   return (
     <div className={`partners-tier-card ${reveal.className}`} ref={reveal.ref}>
@@ -297,7 +185,7 @@ function TierCard({ tier }: { tier: (typeof tiers)[number] }) {
       <div className="partners-tier-card__content">
         <h3 className="partners-tier-card__title">{tier.title}</h3>
         <p
-          className={`partners-tier-card__desc${tier.title === 'Referral Partner' ? ' partners-tier-card__desc--referral' : ''}`}
+          className={`partners-tier-card__desc${tier.id === 'referral' ? ' partners-tier-card__desc--referral' : ''}`}
         >
           {tier.desc}
         </p>
@@ -329,7 +217,7 @@ function PipelineStep({
   onEnter,
   onLeave,
 }: {
-  stage: (typeof pipelineStages)[number];
+  stage: PipelineStage;
   isLast: boolean;
   isActive: boolean;
   onEnter: () => void;
@@ -350,7 +238,7 @@ function PipelineStep({
   );
 }
 
-function CatalogTopCard({ cat }: { cat: (typeof catalogTop)[number] }) {
+function CatalogTopCard({ cat }: { cat: CatalogTopCardData }) {
   const reveal = useReveal('up');
   return (
     <div
@@ -367,14 +255,13 @@ function CatalogTopCard({ cat }: { cat: (typeof catalogTop)[number] }) {
             {cat.chipRows.map((row, i) => (
               <div className="partners-catalog-card__chips-row" key={i}>
                 {row.map((entry) => {
-                  const [text, variant] = entry.split('--');
-                  const suffix = variant ? `${chipImageClass[text]}-${variant}` : chipImageClass[text];
+                  const suffix = entry.variant ? `${entry.id}-${entry.variant}` : entry.id;
                   return (
                     <span
-                      className={`partners-chip partners-chip--glass${suffix ? ` partners-chip--${suffix}` : ''}`}
-                      key={entry}
+                      className={`partners-chip partners-chip--glass partners-chip--${suffix}`}
+                      key={`${entry.id}-${entry.variant ?? ''}`}
                     >
-                      {text}
+                      {entry.label}
                     </span>
                   );
                 })}
@@ -387,10 +274,10 @@ function CatalogTopCard({ cat }: { cat: (typeof catalogTop)[number] }) {
           >
             {cat.items.map((item) => (
               <span
-                className={`partners-chip partners-chip--glass${chipImageClass[item] ? ` partners-chip--${chipImageClass[item]}` : ''}`}
-                key={item}
+                className={`partners-chip partners-chip--glass partners-chip--${item.id}`}
+                key={item.id}
               >
-                {item}
+                {item.label}
               </span>
             ))}
           </div>
@@ -402,7 +289,7 @@ function CatalogTopCard({ cat }: { cat: (typeof catalogTop)[number] }) {
   );
 }
 
-function CatalogBottomCard({ cat }: { cat: (typeof catalogBottom)[number] }) {
+function CatalogBottomCard({ cat }: { cat: CatalogBottomCardData }) {
   const reveal = useReveal('up');
   return (
     <div
@@ -417,10 +304,10 @@ function CatalogBottomCard({ cat }: { cat: (typeof catalogBottom)[number] }) {
         <div className="partners-catalog-card__chips-grid partners-catalog-card__chips-grid--sm">
           {cat.items.map((item) => (
             <span
-              className={`partners-chip partners-chip--glass partners-chip--sm${chipImageClass[item] ? ` partners-chip--${chipImageClass[item]}` : ''}`}
-              key={item}
+              className={`partners-chip partners-chip--glass partners-chip--sm partners-chip--${item.id}`}
+              key={item.id}
             >
-              {item}
+              {item.label}
             </span>
           ))}
         </div>
@@ -436,7 +323,7 @@ function BrandLayerItem({
   index,
   isLast,
 }: {
-  layer: (typeof brandLayers)[number];
+  layer: BrandLayer;
   index: number;
   isLast: boolean;
 }) {
@@ -478,7 +365,8 @@ const originForEdge: Record<'top' | 'bottom' | 'left' | 'right', string> = {
   right: '100% 50%',
 };
 
-function PartnerPlanCard({ plan }: { plan: (typeof plans)[number] }) {
+function PartnerPlanCard({ plan }: { plan: Plan }) {
+  const { t } = useTranslation('partners');
   const reveal = useReveal('up');
   const fillRef = useRef<HTMLSpanElement>(null);
 
@@ -496,7 +384,7 @@ function PartnerPlanCard({ plan }: { plan: (typeof plans)[number] }) {
       onMouseLeave={setFillOrigin}
     >
       <span className="partners-plan-card__hover-fill" ref={fillRef} />
-      {plan.highlighted && <span className="partners-plan-card__recommended">Recommended</span>}
+      {plan.highlighted && <span className="partners-plan-card__recommended">{t('plans.recommended')}</span>}
       <span className="partners-plan-card__badge">
         <Icon svg={planIcons[plan.icon]} className="partners-plan-card__badge-icon" />
         {plan.name}
@@ -504,10 +392,10 @@ function PartnerPlanCard({ plan }: { plan: (typeof plans)[number] }) {
       <div className="partners-plan-card__price-row">
         <span className="partners-plan-card__price">{plan.price}</span>
         <span className="partners-plan-card__price-note">{plan.priceNote}</span>
-        {plan.secondary && (
+        {plan.secondaryAmount && (
           <span className="partners-plan-card__secondary">
-            <span className="partners-plan-card__secondary-amount">{plan.secondary.split('/')[0]}</span>
-            <span className="partners-plan-card__secondary-period">/{plan.secondary.split('/')[1]}</span>
+            <span className="partners-plan-card__secondary-amount">{plan.secondaryAmount}</span>
+            <span className="partners-plan-card__secondary-period">/{plan.secondaryPeriod}</span>
           </span>
         )}
       </div>
@@ -535,11 +423,12 @@ function FulfillmentCard({
   onEnter,
   onLeave,
 }: {
-  svc: (typeof fulfillmentServices)[number];
+  svc: FulfillmentService;
   isActive: boolean;
   onEnter: () => void;
   onLeave: () => void;
 }) {
+  const { t } = useTranslation('partners');
   const reveal = useReveal('up');
   return (
     <div
@@ -554,12 +443,12 @@ function FulfillmentCard({
       <div className="plan-card__footer">
         {svc.customQuote ? (
           <>
-            <span className="plan-card__price partners-fulfillment__price">Custom Quote</span>
+            <span className="plan-card__price partners-fulfillment__price">{t('fulfillment.customQuoteLabel')}</span>
             {svc.note && <span className="plan-card__note">{svc.note}</span>}
           </>
         ) : (
           <>
-            <span className="plan-card__label">Starting at</span>
+            <span className="plan-card__label">{t('fulfillment.startingAt')}</span>
             <div className="plan-card__price-row">
               <span className="plan-card__price partners-fulfillment__price">{svc.price}</span>
               {svc.note && <span className="plan-card__note">{svc.note}</span>}
@@ -585,23 +474,8 @@ function CompareCellView({ value }: { value: CompareCell }) {
   return <span>{value}</span>;
 }
 
-const fulfillmentServices = [
-  { category: 'AI', title: 'AI Receptionist', price: '$1,500', note: 'Ongoing from $249/mo' },
-  { category: 'AI', title: 'AI Automation System', price: '$2,500' },
-  { category: 'Web', title: 'Professional Business Website', price: '$1,500' },
-  { category: 'Web', title: 'Advanced Business Website', price: '$3,500' },
-  { category: 'Software', title: 'Custom Web Application', price: '$5,000' },
-  { category: 'Software', title: 'SaaS MVP', price: '$7,500' },
-  { category: 'Software', title: 'Advanced SaaS Platform', customQuote: true, note: 'Custom scope.' },
-  { category: 'AI', title: 'Custom AI Agent', price: '$3,500' },
-  { category: 'AI', title: 'RAG / Business Knowledge AI', price: '$5,000' },
-  { category: 'Software', title: 'CRM / Operations Platform', price: '$6,500' },
-];
-
-const verticalsRow1 = ['Digital Agencies', 'Consultants', 'CRM Consultants', 'Business Consultants', 'Freelance Developers', 'Managed Service Providers'];
-const verticalsRow2 = ['Marketing Agencies', 'Automation Agencies', 'Web Designers', 'IT Companies', 'Entrepreneurs', 'Existing AI Agencies'];
-
 function MarginCalculator() {
+  const { t } = useTranslation('partners');
   const [revenue, setRevenue] = useState(3500);
   const [fulfillment, setFulfillment] = useState(1500);
   const [additional, setAdditional] = useState(250);
@@ -619,9 +493,9 @@ function MarginCalculator() {
   return (
     <div className={`partners-calculator__card ${cardReveal.className}`} ref={cardReveal.ref}>
       <div className="partners-calculator__inputs">
-        <h3 className="partners-calculator__card-title">Model Your Own Economics</h3>
+        <h3 className="partners-calculator__card-title">{t('calculator.cardTitle')}</h3>
         <div className="partners-calculator__field">
-          <label htmlFor="calc-revenue">Gross revenue</label>
+          <label htmlFor="calc-revenue">{t('calculator.grossRevenue')}</label>
           <div className="partners-calculator__input-wrap">
             <span>$</span>
             <input
@@ -634,7 +508,7 @@ function MarginCalculator() {
           </div>
         </div>
         <div className="partners-calculator__field">
-          <label htmlFor="calc-fulfillment">VTS fulfillment cost</label>
+          <label htmlFor="calc-fulfillment">{t('calculator.fulfillmentCost')}</label>
           <div className="partners-calculator__input-wrap">
             <span>$</span>
             <input
@@ -647,7 +521,7 @@ function MarginCalculator() {
           </div>
         </div>
         <div className="partners-calculator__field">
-          <label htmlFor="calc-additional">Additional partner costs</label>
+          <label htmlFor="calc-additional">{t('calculator.additionalCosts')}</label>
           <div className="partners-calculator__input-wrap">
             <span>$</span>
             <input
@@ -664,26 +538,25 @@ function MarginCalculator() {
       <div className="partners-calculator__result">
         <div className="partners-calculator__recap">
           <div className="partners-calculator__recap-row">
-            <span>Gross revenue</span>
+            <span>{t('calculator.grossRevenue')}</span>
             <span>${revenue.toLocaleString()}</span>
           </div>
           <div className="partners-calculator__recap-row">
-            <span>Fulfillment cost</span>
+            <span>{t('calculator.recapFulfillmentCost')}</span>
             <span>${fulfillment.toLocaleString()}</span>
           </div>
         </div>
-        <span className="partners-calculator__result-label">Estimated gross margin</span>
+        <span className="partners-calculator__result-label">{t('calculator.resultLabel')}</span>
         <span className="partners-calculator__result-value">${margin.toLocaleString()}</span>
-        <span className="partners-calculator__result-pct">Margin {marginPct}%</span>
-        <p className="partners-calculator__disclaimer">
-          Illustrative calculation only. Actual pricing, costs, taxes, fees, refunds, support obligations and profitability vary by project.
-        </p>
+        <span className="partners-calculator__result-pct">{t('calculator.marginPrefix')} {marginPct}%</span>
+        <p className="partners-calculator__disclaimer">{t('calculator.disclaimer')}</p>
       </div>
     </div>
   );
 }
 
 export default function PartnersPage() {
+  const { t } = useTranslation('partners');
   const [fulfillmentActiveIndex, setFulfillmentActiveIndex] = useState(0);
   const [statsActiveIndex, setStatsActiveIndex] = useState(0);
   const [pipelineActiveIndex, setPipelineActiveIndex] = useState(0);
@@ -706,6 +579,54 @@ export default function PartnersPage() {
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
   }, []);
+
+  // ---------- Translated content, merged with the static config above ----------
+
+  const stats = t('stats', { returnObjects: true }) as StatItem[];
+
+  const tiersText = t('tiers.items', { returnObjects: true }) as Omit<Tier, 'id'>[];
+  const tiers: Tier[] = tierIds.map((id, i) => ({ id, ...tiersText[i] }));
+
+  const pipelineStages = t('pipeline.stages', { returnObjects: true }) as PipelineStage[];
+
+  const catalogItemLabels = t('catalog.items', { returnObjects: true }) as Record<string, string>;
+
+  const catalogTopText = t('catalog.top', { returnObjects: true }) as { title: string; desc: string }[];
+  const catalogTop: CatalogTopCardData[] = catalogTopConfig.map((cfg, i) => ({
+    ...cfg,
+    title: catalogTopText[i].title,
+    desc: catalogTopText[i].desc,
+    items: cfg.items.map((id) => ({ id, label: catalogItemLabels[id] })),
+    chipRows: cfg.chipRows?.map((row) =>
+      row.map((entry) => {
+        const [id, variant] = entry.split('--');
+        return { id, variant, label: catalogItemLabels[id] };
+      }),
+    ),
+  }));
+
+  const catalogBottomText = t('catalog.bottom', { returnObjects: true }) as { title: string; desc: string }[];
+  const catalogBottom: CatalogBottomCardData[] = catalogBottomConfig.map((cfg, i) => ({
+    ...cfg,
+    title: catalogBottomText[i].title,
+    desc: catalogBottomText[i].desc,
+    items: cfg.items.map((id) => ({ id, label: catalogItemLabels[id] })),
+  }));
+
+  const brandLayers = t('brand.layers', { returnObjects: true }) as BrandLayer[];
+
+  const aiEngineChips = t('intel.aiEngine.chips', { returnObjects: true }) as string[];
+
+  const plansText = t('plans.items', { returnObjects: true }) as PlanText[];
+  const plans: Plan[] = planConfig.map((cfg, i) => ({ ...cfg, ...plansText[i] }));
+
+  const compareRows = t('compare.rows', { returnObjects: true }) as CompareRow[];
+
+  const fulfillmentText = t('fulfillment.services', { returnObjects: true }) as FulfillmentText[];
+  const fulfillmentServices: FulfillmentService[] = fulfillmentConfig.map((cfg, i) => ({ ...cfg, ...fulfillmentText[i] }));
+
+  const verticalsRow1 = t('verticals.row1', { returnObjects: true }) as string[];
+  const verticalsRow2 = t('verticals.row2', { returnObjects: true }) as string[];
 
   const heroCopy = useReveal('left');
   const heroGraphic = useReveal('right');
@@ -734,24 +655,18 @@ export default function PartnersPage() {
           <div className={`partners-hero__copy ${heroCopy.className}`} ref={heroCopy.ref}>
             <span className="partners-hero__pill">
               <Icon svg={vtsSparkleSvg} className="partners-hero__pill-icon" />
-              VTS Partner Network
+              {t('hero.pill')}
             </span>
-            <h1 className="partners-hero__title">Grow Your Agency. We Power the Technology.</h1>
-            <p className="partners-hero__desc">
-              Offer premium AI, automation, software, SaaS, web development and digital
-              transformation solutions without building a large technical team internally.
-            </p>
-            <p className="partners-hero__desc">
-              Van Tech Systems provides the technology and delivery infrastructure. You
-              focus on relationships, sales, strategy and growth.
-            </p>
+            <h1 className="partners-hero__title">{t('hero.title')}</h1>
+            <p className="partners-hero__desc">{t('hero.desc1')}</p>
+            <p className="partners-hero__desc">{t('hero.desc2')}</p>
             <div className="partners-hero__actions">
               <a href="/contact" className="btn btn-outline">
-                Become VTS Partner
+                {t('hero.ctaPrimary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
               <a href="#tiers" className="btn btn-outline">
-                Explore Pricing Partner
+                {t('hero.ctaSecondary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
             </div>
@@ -793,14 +708,14 @@ export default function PartnersPage() {
               <Icon svg={mdiHandshakeSvg} className="partners-tiers__badge-icon" />
             </div>
             <h2 className="section-title partners-tiers__title">
-              <span>One Technology Partner.</span>
-              <span>Multiple Ways to Grow.</span>
+              <span>{t('tiers.titleLine1')}</span>
+              <span>{t('tiers.titleLine2')}</span>
             </h2>
           </div>
 
           <div className="partners-tiers__grid">
             {tiers.map((tier) => (
-              <TierCard tier={tier} key={tier.title} />
+              <TierCard tier={tier} key={tier.id} />
             ))}
           </div>
         </div>
@@ -811,16 +726,16 @@ export default function PartnersPage() {
         <div className="container">
           <div className={`section-head ${pipelineHead.className}`} ref={pipelineHead.ref}>
             <h2 className="section-title partners-pipeline__title">
-              <span>You Win the Client.</span>
-              <span>We Help Deliver the Technology.</span>
+              <span>{t('pipeline.titleLine1')}</span>
+              <span>{t('pipeline.titleLine2')}</span>
             </h2>
           </div>
 
           <div className="partners-pipeline__track">
-            {pipelineStages.map((stage, i) => (
+            {pipelineStages.slice(0, pipelineStageCount).map((stage, i) => (
               <PipelineStep
                 stage={stage}
-                isLast={i === pipelineStages.length - 1}
+                isLast={i === pipelineStageCount - 1}
                 isActive={i === pipelineActiveIndex}
                 onEnter={() => setPipelineActiveIndex(i)}
                 onLeave={() => setPipelineActiveIndex(0)}
@@ -835,28 +750,28 @@ export default function PartnersPage() {
       <section className="partners-catalog section">
         <div className="container">
           <div className={`section-head ${catalogHead.className}`} ref={catalogHead.ref}>
-            <span className="eyebrow-pill partners-catalog__badge">What partners can sell</span>
+            <span className="eyebrow-pill partners-catalog__badge">{t('catalog.badge')}</span>
             <h2 className="section-title partners-catalog__title">
-              <span>Expand Your Service Catalog Without</span>
-              <span>Expanding Your Engineering Team.</span>
+              <span>{t('catalog.titleLine1')}</span>
+              <span>{t('catalog.titleLine2')}</span>
             </h2>
           </div>
 
           <div className="partners-catalog__grid-top">
             {catalogTop.map((cat) => (
-              <CatalogTopCard cat={cat} key={cat.title} />
+              <CatalogTopCard cat={cat} key={cat.slug} />
             ))}
           </div>
 
           <div className="partners-catalog__grid-bottom">
             {catalogBottom.map((cat) => (
-              <CatalogBottomCard cat={cat} key={cat.title} />
+              <CatalogBottomCard cat={cat} key={cat.slug} />
             ))}
           </div>
 
           <div className="partners-catalog__cta">
             <a href="/contact" className="btn btn-outline-gradient">
-              Get Started
+              {t('catalog.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -868,13 +783,11 @@ export default function PartnersPage() {
         <div className="container partners-brand__row">
           <div className={brandCopy.className} ref={brandCopy.ref}>
             <h2 className="partners-brand__title">
-              <span>Your Brand in Front.</span>
-              <span>Our Technology</span>
-              <span>Behind It.</span>
+              <span>{t('brand.titleLine1')}</span>
+              <span>{t('brand.titleLine2')}</span>
+              <span>{t('brand.titleLine3')}</span>
             </h2>
-            <p className="partners-brand__desc">
-              Keep your client relationship while gaining access to a broader technology delivery capability.
-            </p>
+            <p className="partners-brand__desc">{t('brand.desc')}</p>
           </div>
 
           <div className={`partners-brand-layers ${brandGraphic.className}`} ref={brandGraphic.ref}>
@@ -891,12 +804,10 @@ export default function PartnersPage() {
           <div className="partners-intel__row first-row-copy">
             <div className={intelLeft.className} ref={intelLeft.ref}>
               <h2 className="partners-intel__col-title partners-intel__col-title--visibility">
-                <span>Visibility Across</span>
-                <span>Every Delivery Stage</span>
+                <span>{t('intel.visibility.titleLine1')}</span>
+                <span>{t('intel.visibility.titleLine2')}</span>
               </h2>
-              <p className="partners-intel__col-desc partners-intel__col-desc--visibility">
-                Partners see delivery progress, stage status and upcoming milestones for the projects they bring to Van Tech Systems.
-              </p>
+              <p className="partners-intel__col-desc partners-intel__col-desc--visibility">{t('intel.visibility.desc')}</p>
             </div>
             <div className="partners-intel__decor">
               <span className="partners-intel__decor-ring partners-intel__decor-ring--1" />
@@ -960,24 +871,21 @@ export default function PartnersPage() {
               </div>
 
               <div className="partners-ai-flow">
-                <span className={`partners-ai-flow__box ${aiFlowBox1.className}`} ref={aiFlowBox1.ref}>Client Business</span>
+                <span className={`partners-ai-flow__box ${aiFlowBox1.className}`} ref={aiFlowBox1.ref}>{t('intel.aiEngine.flow.clientBusiness')}</span>
                 <span className="partners-ai-flow__connector" />
                 <span className={`partners-ai-flow__box ${aiFlowBox2.className}`} ref={aiFlowBox2.ref}>VTS AI Engine</span>
                 <span className="partners-ai-flow__connector" />
-                <span className={`partners-ai-flow__box ${aiFlowBox3.className}`} ref={aiFlowBox3.ref}>Customer Interactions</span>
+                <span className={`partners-ai-flow__box ${aiFlowBox3.className}`} ref={aiFlowBox3.ref}>{t('intel.aiEngine.flow.customerInteractions')}</span>
               </div>
             </div>
 
             <div className={intelRight.className} ref={intelRight.ref}>
               <h2 className="partners-intel__col-title partners-intel__col-title--ai">
-                <span>One AI Engine.</span>
-                <span>Many Client</span>
-                <span>Touchpoints.</span>
+                <span>{t('intel.aiEngine.titleLine1')}</span>
+                <span>{t('intel.aiEngine.titleLine2')}</span>
+                <span>{t('intel.aiEngine.titleLine3')}</span>
               </h2>
-              <p className="partners-intel__col-desc partners-intel__col-desc--ai">
-                AI systems are assembled from the channels and data a client actually uses. Integrations shown are conceptual examples
-                and are confirmed during scoping.
-              </p>
+              <p className="partners-intel__col-desc partners-intel__col-desc--ai">{t('intel.aiEngine.desc')}</p>
             </div>
           </div>
         </div>
@@ -992,14 +900,14 @@ export default function PartnersPage() {
               <Icon svg={plansCoinSvg} className="partners-tiers__badge-icon" />
             </div>
             <h2 className="section-title partners-plans__title">
-              <span>Choose the Partnership That</span>
-              <span>Fits Your Business</span>
+              <span>{t('plans.titleLine1')}</span>
+              <span>{t('plans.titleLine2')}</span>
             </h2>
           </div>
 
           <div className="partners-plans__grid">
             {plans.map((plan) => (
-              <PartnerPlanCard plan={plan} key={plan.name} />
+              <PartnerPlanCard plan={plan} key={plan.id} />
             ))}
           </div>
         </div>
@@ -1009,17 +917,17 @@ export default function PartnersPage() {
       <section className="partners-compare section">
         <div className="container">
           <div className={`section-head ${compareHead.className}`} ref={compareHead.ref}>
-            <h2 className="section-title">Compare partnership levels</h2>
+            <h2 className="section-title">{t('compare.title')}</h2>
           </div>
 
           <div className={`partners-compare__table-wrap ${compareTableReveal.className}`} ref={compareTableReveal.ref}>
             <table className="partners-compare__table">
               <thead>
                 <tr>
-                  <th>Plans</th>
-                  <th>Connect</th>
-                  <th>Pro Partner</th>
-                  <th>White Label</th>
+                  <th>{t('compare.headers.plans')}</th>
+                  <th>{t('compare.headers.connect')}</th>
+                  <th>{t('compare.headers.pro')}</th>
+                  <th>{t('compare.headers.white')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -1047,8 +955,8 @@ export default function PartnersPage() {
       <section className="partners-fulfillment section">
         <div className="container">
           <div className={`section-head ${fulfillmentHead.className}`} ref={fulfillmentHead.ref}>
-            <span className="eyebrow-pill partners-fulfillment__badge">Service partner rates</span>
-            <h2 className="section-title">Partner Fulfillment Pricing</h2>
+            <span className="eyebrow-pill partners-fulfillment__badge">{t('fulfillment.badge')}</span>
+            <h2 className="section-title">{t('fulfillment.title')}</h2>
           </div>
 
           <div className="pricing__grid">
@@ -1058,15 +966,12 @@ export default function PartnersPage() {
                 isActive={i === fulfillmentActiveIndex}
                 onEnter={() => setFulfillmentActiveIndex(i)}
                 onLeave={() => setFulfillmentActiveIndex(0)}
-                key={svc.title}
+                key={svc.id}
               />
             ))}
           </div>
 
-          <p className="partners-fulfillment__note">
-            Final partner pricing is determined after technical scoping. Third-party software, infrastructure, messaging, telephony,
-            AI usage, hosting, licensing and other external costs may be billed separately where applicable.
-          </p>
+          <p className="partners-fulfillment__note">{t('fulfillment.note')}</p>
         </div>
       </section>
 
@@ -1074,7 +979,7 @@ export default function PartnersPage() {
       <section className="partners-calculator section">
         <div className="container">
           <div className={`section-head ${calculatorHead.className}`} ref={calculatorHead.ref}>
-            <h2 className="section-title">Partner Margin Calculator</h2>
+            <h2 className="section-title">{t('calculator.title')}</h2>
           </div>
 
           <MarginCalculator />
@@ -1085,11 +990,11 @@ export default function PartnersPage() {
       <section className="partners-verticals section">
         <div className="container">
           <div className={`section-head ${verticalsHead.className}`} ref={verticalsHead.ref}>
-            <span className="eyebrow-pill partners-verticals__badge">Industries</span>
+            <span className="eyebrow-pill partners-verticals__badge">{t('verticals.badge')}</span>
             <h2 className="section-title partners-verticals__title">
-              <span>Built for Businesses</span>
-              <span>That Want to Sell More</span>
-              <span>Than They Build.</span>
+              <span>{t('verticals.titleLine1')}</span>
+              <span>{t('verticals.titleLine2')}</span>
+              <span>{t('verticals.titleLine3')}</span>
             </h2>
           </div>
           <div className="partners-verticals__glow-wrap">
@@ -1119,7 +1024,7 @@ export default function PartnersPage() {
 
           <div className="partners-verticals__cta">
             <a href="/contact" className="btn btn-outline-gradient">
-              Get Started
+              {t('verticals.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

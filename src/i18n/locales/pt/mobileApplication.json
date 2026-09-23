@@ -1,0 +1,181 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "O seu negócio. Nas mãos deles.",
+    "desc": "Aplicações móveis prontas para produção, para clientes e equipas internas, apoiadas pelas APIs, autenticação e infraestrutura de nuvem que as mantêm a funcionar.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "disappoint": {
+    "title": "Uma aplicação móvel não é um site mais pequeno",
+    "desc": "As ferramentas padrão funcionam até o seu processo se afastar das premissas do produto. A partir daí, as soluções de contorno passam a ser a operação.",
+    "problems": [
+      "Está a ser usado um site responsivo onde se espera uma aplicação.",
+      "Não existe um backend que suporte contas e dados reais.",
+      "As notificações e as sessões não são fiáveis.",
+      "Os requisitos de submissão nas lojas são descobertos tarde demais."
+    ]
+  },
+  "solution": {
+    "title": "A aplicação e o sistema por trás dela",
+    "desc": "Concebemos a experiência móvel para a forma como será efetivamente utilizada e construímos o backend junto com ela: contas, dados, notificações, pagamentos e uma área de administração para a sua equipa."
+  },
+  "build": {
+    "heading": "O que construímos",
+    "cards": [
+      {
+        "title": "Aplicações para clientes",
+        "desc": "Contas, atividade, reservas, pagamentos e notificações."
+      },
+      {
+        "title": "Aplicações empresariais",
+        "desc": "Ferramentas de campo e internas para equipas que trabalham fora do escritório."
+      },
+      {
+        "title": "Aplicações complementares",
+        "desc": "Acesso móvel a uma plataforma ou portal existente."
+      },
+      {
+        "title": "Serviços de backend",
+        "desc": "APIs, dados e autenticação que suportam a aplicação."
+      },
+      {
+        "title": "Painel de administração",
+        "desc": "Uma interface web para gerir utilizadores, conteúdo e operações."
+      },
+      {
+        "title": "Preparação para lançamento",
+        "desc": "Pipelines de build, preparação para as lojas e controlo de versões."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "iOS e Android",
+      "Autenticação",
+      "Notificações push",
+      "Pagamentos na aplicação",
+      "Fluxos tolerantes ao modo offline",
+      "Gestão de multimédia"
+    ],
+    "row2": [
+      "Deep linking",
+      "Integração de API",
+      "Análise de dados",
+      "Suporte para publicação nas lojas"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Envolvimento do cliente",
+        "desc": "Uma aplicação que mantém os clientes informados e a realizar transações."
+      },
+      {
+        "title": "Operações de campo",
+        "desc": "Equipas a capturar e atualizar informação no local."
+      },
+      {
+        "title": "Reservas e serviços",
+        "desc": "Agendamento, lembretes e pagamento num só lugar."
+      },
+      {
+        "title": "Fidelização e contas",
+        "desc": "Perfis, histórico e comunicação personalizada."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitetura do MVP",
+    "desc": "Mesmo um primeiro lançamento é um sistema completo. Mantemo-lo pequeno, mas estruturado — para que a segunda versão seja uma extensão, e não uma reconstrução.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Mobile",
+        "tags": [["iOS", "Android"], ["Cache offline"], ["Push"]]
+      },
+      {
+        "number": "02",
+        "title": "API",
+        "tags": [["Endpoints"], ["Validação", "Controlo de versões"]]
+      },
+      {
+        "number": "03",
+        "title": "Backend",
+        "tags": [["Lógica de negócio", "Base de dados"], ["Armazenamento", "Pagamentos"]]
+      },
+      {
+        "number": "04",
+        "title": "Plataforma",
+        "tags": [["Autenticação"], ["Análise de dados", "Monitorização"], ["Lançamentos"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Processo de desenvolvimento",
+    "cards": [
+      {
+        "title": "Descoberta",
+        "desc": "Utilizadores, plataformas, jornadas principais e restrições técnicas."
+      },
+      {
+        "title": "Design",
+        "desc": "Design de interface móvel e protótipos dos principais fluxos."
+      },
+      {
+        "title": "Arquitetura",
+        "desc": "Backend, modelo de dados, autenticação e notificações."
+      },
+      {
+        "title": "Construção",
+        "desc": "Desenvolvimento da aplicação e do backend com versões de teste instaláveis."
+      },
+      {
+        "title": "Teste",
+        "desc": "Testes em dispositivos, verificações de desempenho e QA da versão candidata."
+      },
+      {
+        "title": "Lançamento",
+        "desc": "Apoio à submissão nas lojas, monitorização e correções pós-lançamento."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações possíveis",
+    "row1": [
+      { "label": "Pagamentos" },
+      { "label": "Serviços push" },
+      { "label": "Fornecedores de identidade" },
+      { "label": "Análise de dados" }
+    ],
+    "row2": [
+      { "label": "CRM" },
+      { "label": "Armazenamento" },
+      { "label": "APIs internas" }
+    ]
+  },
+  "why": {
+    "heading": "Porquê a Van Tech Systems",
+    "cards": [
+      {
+        "title": "Backend incluído",
+        "desc": "Construímos o sistema do qual a aplicação depende, não apenas os ecrãs."
+      },
+      {
+        "title": "Concebido para uso real",
+        "desc": "Sessões, notificações e erros são tratados como funcionalidades do produto."
+      },
+      {
+        "title": "Pronto para lançamento",
+        "desc": "Os requisitos das lojas são planeados desde a construção, e não descobertos no final."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de 7500 $/mês",
+    "desc": "Os preços iniciais são referências de planeamento. O preço final depende do âmbito, arquitetura, integrações e requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

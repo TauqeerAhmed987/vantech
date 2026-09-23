@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ecommerce-development.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -41,169 +42,75 @@ import whyIconMeasurable from '../../assets/images/ecommerce-development/figma/w
 
 import pricingGlowOrb from '../../assets/images/ecommerce-development/figma/pricing-glow-orb.png';
 
-const problems = [
-  'Support answers the same order questions every day.',
-  'Carts are abandoned with no structured recovery.',
-  'Product discovery does not match how customers search.',
-  'Order, payment and fulfilment data live in separate places.',
-];
-
-const buildCards = [
-  {
-    icon: buildIconStorefront,
-    title: 'Storefront',
-    desc: 'A fast, responsive buying experience designed around your catalogue.',
-    descWidth: 310,
-  },
-  {
-    icon: buildIconAssistant,
-    title: 'Commerce Assistant',
-    desc: 'AI answers for order, product and policy questions.',
-    descWidth: 281,
-  },
-  {
-    icon: buildIconCheckout,
-    title: 'Checkout and Payments',
-    desc: 'Payment flows, subscriptions and order confirmation.',
-    descWidth: 330,
-  },
-  {
-    icon: buildIconRecovery,
-    title: 'Recovery and Lifecycle',
-    desc: 'Cart recovery and lifecycle messaging based on real behaviour.',
-    descWidth: 321,
-  },
-  {
-    icon: buildIconPostpurchase,
-    title: 'Post-purchase',
-    desc: 'Order status, shipping updates and returns communication.',
-    descWidth: 298,
-  },
-  {
-    icon: buildIconOperations,
-    title: 'Operations',
-    desc: 'Admin tooling and reporting for the team running the store.',
-    descWidth: 293,
-  },
-];
-
-const capabilityRow1 = [
-  'Catalogue and merchandising',
-  'Checkout',
-  'Payments and subscriptions',
-  'Order management',
-  'Shipping updates',
-];
-
-const capabilityRow2 = [
-  'Customer support automation',
-  'Cart recovery',
-  'Product discovery',
-  'Lifecycle messaging',
-  'Commerce analytics',
-];
-
-const useCases = [
-  {
-    title: 'Direct-to-consumer brands',
-    desc: 'A storefront with automated post-purchase communication.',
-  },
-  {
-    title: 'Subscription Commerce',
-    desc: 'Recurring billing with account and plan management.',
-  },
-  {
-    title: 'Catalogue-heavy stores',
-    desc: 'Search and discovery designed for large product sets.',
-  },
-  {
-    title: 'Service commerce',
-    desc: 'Bookable services sold and managed online.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Experience', tags: [['Storefront', 'Search'], ['Checkout'], ['Account']] },
-  { number: '02', title: 'Commerce', tags: [['Catalogue'], ['Orders', 'Payments'], ['Subscriptions']] },
-  { number: '03', title: 'Operations', tags: [['Fulfilment'], ['Support', 'Notifications']] },
-  { number: '04', title: 'Intelligence', tags: [['Assistant'], ['Recovery', 'Analytics'], ['Recommendations']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDiscover,
-    title: 'Discover',
-    desc: 'Catalogue, customer journeys and operational constraints.',
-    descWidth: 232,
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Storefront and checkout experience across devices.',
-    descWidth: 227,
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Store, payments, order flow and integrations.',
-    descWidth: 277,
-  },
-  {
-    icon: processIconAutomate,
-    title: 'Automate',
-    desc: 'Support, recovery and lifecycle messaging.',
-    descWidth: 264,
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Payment testing, responsive QA and performance review.',
-    descWidth: 218,
-  },
-  {
-    icon: processIconLaunch,
-    title: 'Launch',
-    desc: 'Deployment, analytics and post-launch monitoring.',
-    descWidth: 257,
-  },
-];
-
-const integrations = [
-  { icon: paymentsSvg, label: 'Payment providers' },
-  { icon: shippingFastSvg, label: 'Shipping' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: messageCircleDetailSvg, label: 'Messaging' },
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: analyticsSvg, label: 'Analytics' },
-  { icon: warehouseSvg, label: 'Inventory' },
-  { icon: accountingSvg, label: 'Accounting' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconOperations,
-    title: 'Built for operations',
-    desc: 'We design the work behind the order, not only the storefront.',
-    descWidth: 395,
-  },
-  {
-    icon: whyIconAutomation,
-    title: 'Automation where it repeats',
-    desc: 'AI is applied to the questions and journeys that recur.',
-    descWidth: 358,
-  },
-  {
-    icon: whyIconMeasurable,
-    title: 'Measurable',
-    desc: 'Analytics are instrumented as part of the build.',
-    descWidth: 315,
-  },
-];
-
-const integrationsRow1 = integrations.slice(0, 5);
-const integrationsRow2 = integrations.slice(5);
+interface CardText {
+  title: string;
+  desc: string;
+}
 
 export default function EcommerceDevelopmentPage() {
+  const { t } = useTranslation('ecommerceDevelopment');
+
+  const problems = t('leak.problems', { returnObjects: true }) as string[];
+
+  const buildIcons = [
+    buildIconStorefront,
+    buildIconAssistant,
+    buildIconCheckout,
+    buildIconRecovery,
+    buildIconPostpurchase,
+    buildIconOperations,
+  ];
+  const buildDescWidths = [310, 281, 330, 321, 298, 293];
+  const buildCards = (t('build.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: buildIcons[i],
+    descWidth: buildDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('useCases.items', { returnObjects: true }) as CardText[];
+
+  const timelineSteps = t('architecture.timeline', { returnObjects: true }) as {
+    number: string;
+    title: string;
+    tags: string[][];
+  }[];
+
+  const processIcons = [
+    processIconDiscover,
+    processIconDesign,
+    processIconBuild,
+    processIconAutomate,
+    processIconTest,
+    processIconLaunch,
+  ];
+  const processDescWidths = [232, 227, 277, 264, 218, 257];
+  const processCards = (t('process.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+    descWidth: processDescWidths[i],
+  }));
+
+  const integrationsRow1Icons = [paymentsSvg, shippingFastSvg, emailSvg, messageCircleDetailSvg, funnelSvg];
+  const integrationsRow1 = (
+    t('integrations.row1', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow1Icons[i] }));
+
+  const integrationsRow2Icons = [analyticsSvg, warehouseSvg, accountingSvg];
+  const integrationsRow2 = (
+    t('integrations.row2', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow2Icons[i] }));
+
+  const whyIcons = [whyIconOperations, whyIconAutomation, whyIconMeasurable];
+  const whyDescWidths = [395, 358, 315];
+  const whyCards = (t('why.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+    descWidth: whyDescWidths[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');

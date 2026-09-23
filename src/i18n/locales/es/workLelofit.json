@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariales", "Servicios financieros"],
+    "titleLines": ["Lelofit"],
+    "description": "Una plataforma de consultoría y servicios financieros con posicionamiento de servicios, ofertas de asesoría y captación de consultas calificadas.",
+    "screenshotAlt": "Captura de pantalla de la plataforma Lelofit"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "Aplicaciones web" },
+    { "label": "Capacidades", "value": "Desarrollo web • Experiencia móvil • Diseño UI/UX" },
+    { "label": "Estado", "value": "En vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "Lelofit necesitaba un producto rápido y centrado en móvil para descubrir programas de entrenamiento y suscribirse a coaching. Entregamos una experiencia responsiva con exploración de programas, comparación de planes e inscripción simplificada.",
+    "challengeDesc": "Los programas de entrenamiento y los planes de coaching se descubrían casi por completo en móvil, donde un diseño lento pensado primero para escritorio perdía usuarios antes de que llegaran a los precios.",
+    "builtDesc": "Entregamos una experiencia rápida centrada en móvil con exploración de programas, comparación de planes en paralelo y un proceso de inscripción simplificado que elimina pasos entre el interés y la suscripción."
+  },
+  "sidebar": {
+    "serviceTags": ["Desarrollo web", "Experiencia móvil", "Diseño UI/UX"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Descubrimiento de programas centrado en móvil" },
+      { "title": "Vista de comparación de planes" },
+      { "title": "Inscripción a la suscripción simplificada" },
+      { "title": "Contenido sobre entrenadores y metodología" },
+      { "title": "Implementación centrada en el rendimiento" }
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Explorar", "Reservar", "Entrenar"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista conceptual", "del sistema"],
+    "pills": ["Miembro", "Experiencia pública", "Lógica de reservas", "Operaciones"]
+  },
+  "outcomes": [
+    "El descubrimiento de programas funciona correctamente en móviles",
+    "Las diferencias entre planes se entienden de un vistazo",
+    "La inscripción es un proceso corto, no un maratón de formularios"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace de tarjeta público o un código QR."
+    },
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, marca y servicios de crecimiento."
+    },
+    {
+      "tag": "Servicios profesionales",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+    }
+  ]
+}

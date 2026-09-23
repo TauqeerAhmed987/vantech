@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Servicios",
+    "title": "Software Creado En Torno<br/>Al Funcionamiento De Su Empresa.",
+    "desc": "Para organizaciones que han superado las hojas de cálculo, las herramientas desconectadas, los flujos de trabajo manuales, el SaaS genérico y los procesos heredados.",
+    "ctaPrimary": "Obtener el presupuesto de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "disappoint": {
+    "title": "Superando Las Herramientas Con Las Que Empezó",
+    "desc": "Los sistemas que sostuvieron a una empresa durante su primera etapa suelen convertirse en la razón por la que no puede avanzar más rápido en la siguiente.",
+    "problems": [
+      "Las operaciones esenciales dependen de hojas de cálculo que nadie puede modificar con seguridad.",
+      "Los equipos vuelven a introducir la misma información en varias herramientas.",
+      "Los informes requieren un ensamblaje manual antes de cada reunión.",
+      "El software genérico no puede reflejar cómo funciona realmente el negocio."
+    ]
+  },
+  "solution": {
+    "title": "Una Plataforma Diseñada En Torno A Su Operación",
+    "desc": "Estudiamos cómo funciona la organización —sus entidades, documentos, aprobaciones e informes— y construimos una plataforma que lo expresa directamente, conectando con los sistemas que vale la pena conservar y automatizando los pasos que no necesitan una persona."
+  },
+  "build": {
+    "heading": "Lo que construimos",
+    "cards": [
+      {
+        "title": "Plataformas operativas",
+        "desc": "El sistema central sobre el que funciona su organización a diario."
+      },
+      {
+        "title": "Equipos y permisos",
+        "desc": "Roles, asignaciones y responsabilidad entre departamentos."
+      },
+      {
+        "title": "Flujos documentales",
+        "desc": "Generación, aprobación, almacenamiento y recuperación con registro de auditoría."
+      },
+      {
+        "title": "Datos e informes",
+        "desc": "Una única fuente de verdad con paneles construidos sobre ella."
+      },
+      {
+        "title": "Operaciones financieras",
+        "desc": "Presupuestos, estado de facturación y flujos de informes financieros."
+      },
+      {
+        "title": "Integraciones",
+        "desc": "Conexiones con las herramientas que siguen siendo parte de la operación."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Modelado de procesos de negocio",
+      "Arquitectura de datos a medida",
+      "Automatización de flujos de trabajo",
+      "Gestión documental",
+      "Permisos basados en roles"
+    ],
+    "row2": [
+      "Informes y paneles",
+      "Registros de auditoría",
+      "IA donde encaja",
+      "Integraciones de sistemas",
+      "Revisión de seguridad"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Operaciones multidepartamentales",
+        "desc": "Una única plataforma que coordina el trabajo entre equipos."
+      },
+      {
+        "title": "Convertir un servicio en producto",
+        "desc": "Transformar un servicio prestado en ingresos recurrentes de software."
+      },
+      {
+        "title": "De herramienta interna a producto",
+        "desc": "Ampliar un sistema interno que funciona para clientes externos."
+      },
+      {
+        "title": "Modernización de plataforma",
+        "desc": "Reconstruir un producto obsoleto sobre una arquitectura mantenible."
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitectura de la plataforma",
+    "desc": "A medida no significa improvisado. La plataforma se construye sobre una arquitectura documentada que su equipo puede mantener y ampliar.",
+    "steps": [
+      {
+        "title": "Inquilinos",
+        "tags": [["Organizaciones"], ["Miembros"], ["Roles"], ["Invitaciones"]]
+      },
+      {
+        "title": "Plataforma",
+        "tags": [["Autenticación"], ["Políticas de aislamiento"], ["API"], ["Webhooks"]]
+      },
+      {
+        "title": "Comercial",
+        "tags": [["Planes"], ["Suscripciones"], ["Pagos"], ["Uso"]]
+      },
+      {
+        "title": "Datos",
+        "tags": [["Base de datos"], ["Almacenamiento", "Analítica"], ["Registro de auditoría"]]
+      },
+      {
+        "title": "Operaciones",
+        "tags": [["Consola de administración"], ["Monitorización"], ["Implementación"], ["Herramientas de soporte"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Proceso de desarrollo",
+    "cards": [
+      {
+        "title": "Descubrir",
+        "desc": "Departamentos, procesos, documentos y necesidades de informes."
+      },
+      {
+        "title": "Diseñar la arquitectura",
+        "desc": "Modelo de datos, permisos, integraciones e infraestructura."
+      },
+      {
+        "title": "Diseñar",
+        "desc": "Interfaces para cada rol que utilizará la plataforma."
+      },
+      {
+        "title": "Construir",
+        "desc": "Desarrollo módulo a módulo, con revisión en cada etapa."
+      },
+      {
+        "title": "Probar",
+        "desc": "Pruebas de procesos, permisos, seguridad y rendimiento."
+      },
+      {
+        "title": "Adoptar",
+        "desc": "Migración, formación, puesta en marcha y mejora continua."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integraciones potenciales",
+    "row1": [
+      { "label": "Contabilidad" },
+      { "label": "CRM" },
+      { "label": "Pagos" },
+      { "label": "Correo electrónico" },
+      { "label": "Almacenamiento" }
+    ],
+    "row2": [
+      { "label": "Proveedores de identidad" },
+      { "label": "Herramientas de informes" },
+      { "label": "API internas" }
+    ]
+  },
+  "why": {
+    "heading": "Por qué Van Tech Systems",
+    "cards": [
+      {
+        "title": "Construido a partir de su proceso",
+        "desc": "La plataforma refleja su operación en lugar de las suposiciones de un proveedor."
+      },
+      {
+        "title": "Arquitectura documentada",
+        "desc": "La estructura, las decisiones y el modelo de datos quedan documentados."
+      },
+      {
+        "title": "Margen para evolucionar",
+        "desc": "Nuevos departamentos, módulos e integraciones encajan en la misma base."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Solicitar un presupuesto a medida",
+    "desc": "Los precios de partida son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener el presupuesto de mi proyecto"
+  }
+}

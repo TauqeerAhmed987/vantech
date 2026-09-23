@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './auto-pilot.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -43,150 +44,63 @@ import whyIconGrounded from '../../assets/images/auto-pilot/figma/why-icon-groun
 import whyIconMeasured from '../../assets/images/auto-pilot/figma/why-icon-measured.png';
 import whyIconScoped from '../../assets/images/auto-pilot/figma/why-icon-scoped.png';
 
-const problems = [
-  'Nobody notices when a workflow silently fails.',
-  'Integrations break after a platform update.',
-  'Processes change but the automation does not.',
-  'Internal teams have no capacity to maintain it.',
-];
-
-const includedCards = [
-  {
-    icon: includedIconConnectedSystems,
-    title: 'Connected Systems',
-    desc: 'One automation layer across the tools your operations depend on.',
-    descWidth: 317,
-  },
-  {
-    icon: includedIconAiHandling,
-    title: 'AI handling',
-    desc: 'Qualification, reception and response where it adds real value.',
-    descWidth: 313,
-  },
-  {
-    icon: includedIconMonitoring,
-    title: 'Monitoring',
-    desc: 'Continuous checks with alerting when something stops working.',
-    descWidth: 319,
-  },
-  {
-    icon: includedIconMaintenance,
-    title: 'Maintenance',
-    desc: 'Fixes and adjustments when platforms or processes change.',
-    descWidth: 345,
-  },
-  {
-    icon: includedIconOptimization,
-    title: 'Optimization',
-    desc: 'Ongoing refinement of logic, timing and routing.',
-  },
-  {
-    icon: includedIconEvaluation,
-    title: 'Evaluation',
-    desc: 'Test sets and review cycles that track answer quality over time.',
-    descWidth: 313,
-  },
-];
-
-const capabilityRow1 = [
-  'Managed workflows',
-  'AI reception',
-  'Lead capture',
-  'CRM synchronization',
-  'Automated follow-up',
-  'Scheduling',
-];
-
-const capabilityRow2 = ['Messaging', 'Operational reporting', 'Monitoring and alerting', 'Continuous improvement'];
-
-const useCases = [
-  {
-    title: 'Teams without internal ops engineering',
-    desc: 'Automation maintained by an external technology team.',
-  },
-  {
-    title: 'High-volume inbound',
-    desc: 'Consistent handling of enquiries as volume grows.',
-  },
-  {
-    title: 'Multi-tool operations',
-    desc: 'A single layer keeping separate systems in step.',
-  },
-  {
-    title: 'Post-project continuity',
-    desc: 'Ongoing ownership after an automation build.',
-  },
-];
-
-const hubColumns = [
-  { number: '01', title: 'Inputs', tags: [['Website', 'Phone'], ['Email', 'Forms'], ['Messaging']] },
-  { number: '02', title: 'Autopilot layer', tags: [['Routing', 'AI handling'], ['Workflows']] },
-  { number: '03', title: 'Systems', tags: [['CRM', 'Calendars'], ['Support', 'Databases']] },
-  { number: '04', title: 'Management', tags: [['Monitoring', 'Alerting'], ['Optimization', 'Reporting']] },
-];
-
-const processCards = [
-  {
-    icon: processIconAssess,
-    title: 'Assess',
-    desc: 'Review current operations, tools and volumes.',
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Define the automation layer and the reporting you need.',
-  },
-  {
-    icon: processIconDeploy,
-    title: 'Deploy',
-    desc: 'Implement workflows and connect the systems involved.',
-  },
-  {
-    icon: processIconOperate,
-    title: 'Operate',
-    desc: 'Monitor and maintain everything to keep operations running smoothly. Respond quickly whenever an issue or request needs attention.',
-  },
-  {
-    icon: processIconOptimize,
-    title: 'Optimize',
-    desc: 'Review performance regularly to ensure everything works effectively. Refine the logic based on results and changing requirements.',
-  },
-];
-
-const integrationsRow1 = [
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: phoneSvg, label: 'Telephony' },
-  { icon: whatsappSvg, label: 'WhatsApp' },
-  { icon: smsSvg, label: 'SMS' },
-  { icon: emailSvg, label: 'Email' },
-];
-
-const integrationsRow2 = [
-  { icon: calendarSvg, label: 'Calendars' },
-  { icon: formSvg, label: 'Forms' },
-  { icon: personSupportSvg, label: 'Support desks' },
-  { icon: databaseSvg, label: 'Databases' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconGrounded,
-    title: 'Grounded and traceable',
-    desc: 'Answers reference the sources they came from.',
-  },
-  {
-    icon: whyIconMeasured,
-    title: 'Measured, not assumed',
-    desc: 'Quality is evaluated against real questions before rollout.',
-  },
-  {
-    icon: whyIconScoped,
-    title: 'Scoped access',
-    desc: 'Permissions decide what the system can retrieve and for whom.',
-  },
-];
+interface CardText {
+  title: string;
+  desc: string;
+}
 
 export default function AutoPilotPage() {
+  const { t } = useTranslation('autoPilot');
+
+  const problems = t('problem.items', { returnObjects: true }) as string[];
+
+  const includedIcons = [
+    includedIconConnectedSystems,
+    includedIconAiHandling,
+    includedIconMonitoring,
+    includedIconMaintenance,
+    includedIconOptimization,
+    includedIconEvaluation,
+  ];
+  const includedDescWidths = [317, 313, 319, 345, undefined, 313];
+  const includedCards = (t('included.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: includedIcons[i],
+    descWidth: includedDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('useCases.items', { returnObjects: true }) as CardText[];
+
+  const hubNumbers = ['01', '02', '03', '04'];
+  const hubColumns = (
+    t('hub.columns', { returnObjects: true }) as { title: string; tags: string[][] }[]
+  ).map((col, i) => ({ ...col, number: hubNumbers[i] }));
+
+  const processIcons = [processIconAssess, processIconDesign, processIconDeploy, processIconOperate, processIconOptimize];
+  const processCards = (t('process.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+  }));
+
+  const integrationsRow1Icons = [funnelSvg, phoneSvg, whatsappSvg, smsSvg, emailSvg];
+  const integrationsRow1 = (
+    t('integrations.row1', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow1Icons[i] }));
+
+  const integrationsRow2Icons = [calendarSvg, formSvg, personSupportSvg, databaseSvg];
+  const integrationsRow2 = (
+    t('integrations.row2', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow2Icons[i] }));
+
+  const whyIcons = [whyIconGrounded, whyIconMeasured, whyIconScoped];
+  const whyCards = (t('why.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -234,21 +148,17 @@ export default function AutoPilotPage() {
             <div className={`autopilot-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="autopilot-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                Services
+                {t('hero.badge')}
               </span>
-              <h1 className="autopilot-hero__title">Your Operations, Running on Autopilot.</h1>
-              <p className="autopilot-hero__desc">
-                Managed automation infrastructure that combines AI, connected systems and ongoing
-                optimization — operated and maintained as a service instead of handed over and
-                forgotten.
-              </p>
+              <h1 className="autopilot-hero__title">{t('hero.title')}</h1>
+              <p className="autopilot-hero__desc">{t('hero.desc')}</p>
               <div className="autopilot-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#included" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -267,11 +177,8 @@ export default function AutoPilotPage() {
       <section className="autopilot-problem section">
         <div className="container autopilot-problem__row">
           <div className={`autopilot-problem__copy ${problemHead.className}`} ref={problemHead.ref}>
-            <h2 className="autopilot-h1-lg">Automation Decays Without An Owner</h2>
-            <p className="autopilot-p-lg">
-              Workflows break when tools change, volumes grow or processes evolve. Without someone
-              responsible for them, automation quietly stops working.
-            </p>
+            <h2 className="autopilot-h1-lg">{t('problem.title')}</h2>
+            <p className="autopilot-p-lg">{t('problem.desc')}</p>
           </div>
 
           <ul className={`autopilot-problem__list ${problemList.className}`} ref={problemList.ref}>
@@ -296,12 +203,8 @@ export default function AutoPilotPage() {
           </div>
 
           <div className={`autopilot-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="autopilot-solution__title">Operated Automation Infrastructure</h2>
-            <p className="autopilot-solution__desc">
-              Autopilot is a managed engagement: we run the automation layer connecting your
-              capture, CRM, follow-up, scheduling, messaging and reporting, monitor it
-              continuously, and improve it as your operations change.
-            </p>
+            <h2 className="autopilot-solution__title">{t('solution.title')}</h2>
+            <p className="autopilot-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -309,7 +212,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-included section" id="included">
         <div className="container">
           <div className={`section-head ${includedHead.className}`} ref={includedHead.ref}>
-            <h2 className="autopilot-h2">What is included</h2>
+            <h2 className="autopilot-h2">{t('included.title')}</h2>
           </div>
 
           <div className={`autopilot-included__grid ${includedGrid.className}`} ref={includedGrid.ref}>
@@ -330,7 +233,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-capabilities section" id="capabilities">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="autopilot-h2">Capabilities</h2>
+            <h2 className="autopilot-h2">{t('capabilities.title')}</h2>
           </div>
 
           <div className={`autopilot-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -361,7 +264,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="autopilot-h2">Use Cases</h2>
+            <h2 className="autopilot-h2">{t('useCases.title')}</h2>
           </div>
 
           <div className={`autopilot-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -379,11 +282,8 @@ export default function AutoPilotPage() {
       <section className="autopilot-hub section">
         <div className="container">
           <div className={`section-head ${hubHead.className}`} ref={hubHead.ref}>
-            <h2 className="autopilot-h1-lg autopilot-h1-lg--center">The Operations Hub</h2>
-            <p className="autopilot-section-copy">
-              Autopilot sits between your channels and your systems, coordinating the work and
-              reporting on it.
-            </p>
+            <h2 className="autopilot-h1-lg autopilot-h1-lg--center">{t('hub.title')}</h2>
+            <p className="autopilot-section-copy">{t('hub.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }}>
@@ -416,7 +316,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-process section" id="process">
         <div className="container">
           <div className={`section-head ${processHead.className}`} ref={processHead.ref}>
-            <h2 className="autopilot-h2">How The Engagement Works</h2>
+            <h2 className="autopilot-h2">{t('process.title')}</h2>
           </div>
 
           <div className="autopilot-process__rows">
@@ -449,7 +349,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="autopilot-h1-lg autopilot-h1-lg--center">Potential Integrations</h2>
+            <h2 className="autopilot-h1-lg autopilot-h1-lg--center">{t('integrations.title')}</h2>
           </div>
 
           <div className={`autopilot-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -494,7 +394,7 @@ export default function AutoPilotPage() {
       <section className="autopilot-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="autopilot-h2">Why Van Tech Systems</h2>
+            <h2 className="autopilot-h2">{t('why.title')}</h2>
           </div>
 
           <div className={`autopilot-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -514,14 +414,11 @@ export default function AutoPilotPage() {
           <div className="autopilot-pricing-cta__card">
             <img src={pricingGlowOrb} alt="" className="autopilot-pricing-cta__glow" loading="lazy" />
             <div className="autopilot-pricing-cta__copy">
-              <h2 className="autopilot-pricing-cta__title">Starting at $1,500/month</h2>
-              <p className="autopilot-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="autopilot-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="autopilot-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

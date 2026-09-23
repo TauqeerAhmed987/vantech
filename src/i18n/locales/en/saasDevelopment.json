@@ -1,0 +1,97 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Build Software People Pay to Use.",
+    "desc": "Multi-tenant platforms with the parts that make software sellable: isolation between customers, authentication, roles, subscriptions, administration and analytics.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "The Hard Parts Of <span class=\"accent\">SaaS</span> Are Not The Features",
+    "desc": "Off-the-shelf tools work until your process differs from the product's assumptions. Then the workarounds become the operation.",
+    "problems": [
+      "Tenant data separation was not designed at the start.",
+      "Roles and permissions do not match how customers organize teams.",
+      "Billing, trials and plan changes are handled manually.",
+      "There is no admin surface to support customers."
+    ]
+  },
+  "solution": {
+    "title": "A Platform Designed To Be Sold",
+    "desc": "We architect tenancy, identity and billing first, then build the product on top. Organizations, invitations, roles, plans, usage and administration are part of the platform rather than later additions."
+  },
+  "build": {
+    "title": "What we build",
+    "cards": [
+      { "title": "Multi-tenant core", "desc": "Organizations, membership and enforced data isolation." },
+      { "title": "Identity", "desc": "Sign-up, invitations, roles and permissions per organization." },
+      { "title": "Billing", "desc": "Plans, trials, upgrades and subscription lifecycle." },
+      { "title": "Product surface", "desc": "The application your customers use every day." },
+      { "title": "Admin console", "desc": "Internal tooling to support accounts and investigate issues." },
+      { "title": "Platform Services", "desc": "APIs, webhooks, email and storage for the product." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "row1": ["Multi-tenant architecture", "Tenant isolation", "Authentication", "Role-based access control", "Subscriptions and payments"],
+    "row2": ["Usage tracking", "Admin console", "Public API", "Transactional email", "Product analytics"]
+  },
+  "usecases": {
+    "title": "Use Cases",
+    "items": [
+      { "title": "New SaaS product", "desc": "A platform built for paying customers from the first release." },
+      { "title": "Productizing a service", "desc": "Turning a delivered service into recurring software revenue." },
+      { "title": "Internal tool to product", "desc": "Extending a working internal system for external customers." },
+      { "title": "Platform modernization", "desc": "Rebuilding an ageing product on a maintainable architecture." }
+    ]
+  },
+  "architecture": {
+    "title": "SaaS architecture",
+    "desc": "Tenant isolation is enforced at the data layer, not only in the interface.",
+    "timeline": [
+      { "title": "Tenants", "tags": [["Organizations"], ["Members"], ["Roles"], ["Invitations"]] },
+      { "title": "Platform", "tags": [["Authentication"], ["Isolation policies"], ["API"], ["Webhooks"]] },
+      { "title": "Commercial", "tags": [["Plans"], ["Subscriptions"], ["Payments"], ["Usage"]] },
+      { "title": "Data", "tags": [["Database"], ["Storage", "Analytics"], ["Audit log"]] },
+      { "title": "Operations", "tags": [["Admin console"], ["Monitoring"], ["Deployment"], ["Support tooling"]] }
+    ]
+  },
+  "process2": {
+    "title": "Development Process",
+    "steps": [
+      { "title": "Define", "desc": "Product scope, customer model and commercial structure." },
+      { "title": "Architect", "desc": "Tenancy, identity, permissions, billing and data design." },
+      { "title": "Design", "desc": "Product interface and onboarding for new organizations." },
+      { "title": "Build", "desc": "Platform and product development in reviewable increments." },
+      { "title": "Test", "desc": "Isolation testing, permission testing, billing and security review." },
+      { "title": "Launch", "desc": "Deployment, monitoring, admin tooling and iteration plan." }
+    ]
+  },
+  "integrations": {
+    "title": "Potential Integrations",
+    "row1": [
+      { "label": "Payment providers" },
+      { "label": "Identity providers" },
+      { "label": "Email" },
+      { "label": "Analytics" }
+    ],
+    "row2": [
+      { "label": "Support tools" },
+      { "label": "Webhooks" },
+      { "label": "Internal APIs" }
+    ]
+  },
+  "why": {
+    "title": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Tenancy first", "desc": "Isolation and permissions are designed before features." },
+      { "title": "Commercially complete", "desc": "Plans, billing and administration are part of the build." },
+      { "title": "Operable", "desc": "You get the tooling required to support real customers." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $7,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

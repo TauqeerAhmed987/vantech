@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Suas operações, funcionando no piloto automático.",
+    "desc": "Infraestrutura de automação gerenciada que combina IA, sistemas conectados e otimização contínua — operada e mantida como um serviço, em vez de entregue e esquecida.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "problem": {
+    "title": "A automação se deteriora sem um responsável",
+    "desc": "Os fluxos de trabalho quebram quando as ferramentas mudam, o volume cresce ou os processos evoluem. Sem alguém responsável por eles, a automação simplesmente para de funcionar.",
+    "items": [
+      "Ninguém percebe quando um fluxo de trabalho falha silenciosamente.",
+      "As integrações quebram após uma atualização de plataforma.",
+      "Os processos mudam, mas a automação não.",
+      "As equipes internas não têm capacidade para mantê-la."
+    ]
+  },
+  "solution": {
+    "title": "Infraestrutura de automação operada",
+    "desc": "Autopilot é um serviço gerenciado: operamos a camada de automação que conecta sua captação, CRM, follow-up, agendamento, mensagens e relatórios, monitoramos continuamente e a aprimoramos à medida que suas operações mudam."
+  },
+  "included": {
+    "title": "O que está incluído",
+    "cards": [
+      { "title": "Sistemas conectados", "desc": "Uma única camada de automação que une as ferramentas das quais suas operações dependem." },
+      { "title": "Atendimento com IA", "desc": "Qualificação, recepção e resposta onde realmente agregam valor." },
+      { "title": "Monitoramento", "desc": "Verificações contínuas com alertas quando algo para de funcionar." },
+      { "title": "Manutenção", "desc": "Correções e ajustes quando plataformas ou processos mudam." },
+      { "title": "Otimização", "desc": "Refinamento contínuo da lógica, dos tempos e do roteamento." },
+      { "title": "Avaliação", "desc": "Conjuntos de teste e ciclos de revisão que acompanham a qualidade das respostas ao longo do tempo." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacidades",
+    "row1": [
+      "Fluxos de trabalho gerenciados",
+      "Recepção com IA",
+      "Captação de leads",
+      "Sincronização com o CRM",
+      "Follow-up automatizado",
+      "Agendamento"
+    ],
+    "row2": ["Mensagens", "Relatórios operacionais", "Monitoramento e alertas", "Melhoria contínua"]
+  },
+  "useCases": {
+    "title": "Casos de uso",
+    "items": [
+      { "title": "Equipes sem engenharia de operações interna", "desc": "Automação mantida por uma equipe de tecnologia externa." },
+      { "title": "Alto volume de entrada", "desc": "Tratamento consistente das solicitações à medida que o volume cresce." },
+      { "title": "Operações com múltiplas ferramentas", "desc": "Uma única camada que mantém sistemas separados sincronizados." },
+      { "title": "Continuidade pós-projeto", "desc": "Responsabilidade contínua após a implementação da automação." }
+    ]
+  },
+  "hub": {
+    "title": "O hub de operações",
+    "desc": "O Autopilot fica entre seus canais e seus sistemas, coordenando o trabalho e reportando sobre ele.",
+    "columns": [
+      { "title": "Entradas", "tags": [["Site", "Telefone"], ["E-mail", "Formulários"], ["Mensagens"]] },
+      { "title": "Camada Autopilot", "tags": [["Roteamento", "Atendimento com IA"], ["Fluxos de trabalho"]] },
+      { "title": "Sistemas", "tags": [["CRM", "Calendários"], ["Suporte", "Bancos de dados"]] },
+      { "title": "Gestão", "tags": [["Monitoramento", "Alertas"], ["Otimização", "Relatórios"]] }
+    ]
+  },
+  "process": {
+    "title": "Como funciona o serviço",
+    "cards": [
+      { "title": "Avaliar", "desc": "Revisar as operações, ferramentas e volumes atuais." },
+      { "title": "Projetar", "desc": "Definir a camada de automação e os relatórios de que você precisa." },
+      { "title": "Implantar", "desc": "Implementar os fluxos de trabalho e conectar os sistemas envolvidos." },
+      { "title": "Operar", "desc": "Monitorar e manter tudo para que as operações funcionem sem interrupções. Responder rapidamente sempre que um problema ou solicitação exigir atenção." },
+      { "title": "Otimizar", "desc": "Revisar o desempenho regularmente para garantir que tudo funcione com eficácia. Refinar a lógica com base nos resultados e nas necessidades em constante mudança." }
+    ]
+  },
+  "integrations": {
+    "title": "Integrações possíveis",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Telefonia" },
+      { "label": "WhatsApp" },
+      { "label": "SMS" },
+      { "label": "E-mail" }
+    ],
+    "row2": [
+      { "label": "Calendários" },
+      { "label": "Formulários" },
+      { "label": "Centrais de suporte" },
+      { "label": "Bancos de dados" }
+    ]
+  },
+  "why": {
+    "title": "Por que a Van Tech Systems",
+    "cards": [
+      { "title": "Fundamentado e rastreável", "desc": "As respostas fazem referência às fontes de onde vieram." },
+      { "title": "Medido, não presumido", "desc": "A qualidade é avaliada em relação a perguntas reais antes da implantação." },
+      { "title": "Acesso restrito", "desc": "As permissões determinam o que o sistema pode acessar e para quem." }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de $1,500/mês",
+    "desc": "Os preços iniciais são referências de planejamento. O preço final depende do escopo, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

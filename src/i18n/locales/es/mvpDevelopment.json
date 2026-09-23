@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "Desarrollo de MVP",
+    "title": "Tu idea.<br/>Lista para el lanzamiento.",
+    "desc": "Convierte una idea en un producto digital funcional con estrategia de producto, arquitectura, diseño, desarrollo, pruebas y despliegue gestionados por un solo equipo tecnológico.",
+    "ctaPrimary": "Obtener una estimación de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "disappoint": {
+    "title": "Por qué la mayoría de las primeras versiones se estancan",
+    "desc": "Las herramientas listas para usar funcionan hasta que tu proceso se aparta de los supuestos del producto. Entonces las soluciones improvisadas se convierten en la operación.",
+    "problems": [
+      "El alcance crece más rápido de lo que el producto puede construirse.",
+      "Los prototipos se descartan porque nunca fueron diseñados con una arquitectura real.",
+      "El diseño, el desarrollo y la infraestructura los gestionan proveedores desconectados entre sí.",
+      "No hay una definición clara de lo que la primera versión debe demostrar."
+    ]
+  },
+  "solution": {
+    "title": "Una primera versión sobre la que construir",
+    "desc": "Empezamos definiendo lo que tu primera versión debe demostrar y luego la diseñamos como un producto real: un esquema de base de datos, autenticación, una aplicación funcional y una vía de despliegue. El desarrollo es deliberadamente enfocado, pero nada es un prototipo desechable: la misma base sostiene la siguiente versión."
+  },
+  "build": {
+    "title": "Qué construimos",
+    "cards": [
+      { "title": "Definición del producto", "desc": "Los flujos de usuario principales, el modelo de datos y el alcance de la primera versión." },
+      { "title": "Diseño del producto", "desc": "Diseño de interfaz y prototipos para los flujos más importantes." },
+      { "title": "Aplicación", "desc": "Frontend, backend, autenticación y lógica de negocio en una sola base de código." },
+      { "title": "Fundamento de datos", "desc": "Un esquema diseñado para el producto que quieres hacer crecer, no solo para una demostración." },
+      { "title": "Configuración de lanzamiento", "desc": "Despliegue, entornos, monitorización y analítica básica." },
+      { "title": "Plan de iteración", "desc": "Un backlog priorizado según lo que la versión realmente revela." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacidades",
+    "row1": ["Definición del alcance", "Diseño UX y UI", "Prototipos interactivos", "Arquitectura de base de datos", "Autenticación", "Pagos"],
+    "row2": ["Herramientas de administración", "Instrumentación analítica", "QA y pruebas", "Despliegue"]
+  },
+  "usecases": {
+    "title": "Casos de uso",
+    "items": [
+      { "title": "Fundador validando una idea", "desc": "Un producto enfocado que demuestra demanda antes de una inversión mayor." },
+      { "title": "Empresa lanzando una nueva línea", "desc": "Un producto independiente construido junto a las operaciones existentes." },
+      { "title": "Reemplazar un servicio manual", "desc": "Convertir un proceso de hojas de cálculo y correo electrónico en una aplicación real." },
+      { "title": "Presentar a inversores o socios", "desc": "Un producto funcional en lugar de una presentación." }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitectura del MVP",
+    "desc": "Incluso una primera versión es un sistema completo. La mantenemos pequeña, pero estructurada, para que la segunda versión sea una extensión, no una reconstrucción.",
+    "steps": [
+      { "title": "Interfaz", "tags": [["Aplicación web", "Interfaz responsiva"], ["Incorporación"]] },
+      { "title": "Aplicación", "tags": [["Lógica de negocio", "API"], ["Autenticación", "Roles"]] },
+      { "title": "Datos", "tags": [["Base de datos", "Almacenamiento de archivos"], ["Eventos"]] },
+      { "title": "Operaciones", "tags": [["Despliegue"], ["Monitorización", "Analítica"]] }
+    ]
+  },
+  "process": {
+    "title": "Proceso de desarrollo",
+    "cards": [
+      { "title": "Descubrir", "desc": "Requisitos, usuarios, restricciones y el objetivo de la primera versión." },
+      { "title": "Definir", "desc": "Alcance, modelo de datos y criterios de éxito acordados antes de empezar el desarrollo." },
+      { "title": "Diseñar", "desc": "Flujos y diseño de interfaz para la experiencia principal del producto." },
+      { "title": "Construir", "desc": "Desarrollo de la aplicación en incrementos revisables." },
+      { "title": "Probar", "desc": "QA funcional, revisión de seguridad y pruebas responsive." },
+      { "title": "Lanzar", "desc": "Despliegue, traspaso y un plan para la siguiente iteración." }
+    ]
+  },
+  "integrations": {
+    "title": "Integraciones posibles",
+    "row1": ["Pagos", "Correo electrónico", "Proveedores de autenticación", "CRM"],
+    "row2": ["Almacenamiento", "Webhooks"]
+  },
+  "why": {
+    "title": "Por qué Van Tech Systems",
+    "cards": [
+      { "title": "Definido antes de construirse", "desc": "Acordamos qué debe demostrar la primera versión antes de comenzar el desarrollo." },
+      { "title": "Diseñado para continuar", "desc": "La base sostiene la siguiente versión en lugar de bloquearla." },
+      { "title": "Un solo equipo tecnológico", "desc": "Diseño, desarrollo, datos y despliegue bajo una sola arquitectura." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Desde $2,500/month",
+    "desc": "Los precios iniciales son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener una estimación de mi proyecto"
+  }
+}

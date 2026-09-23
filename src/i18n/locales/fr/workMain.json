@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Sélection de projets",
+    "titleLine1": "Une technologie conçue pour",
+    "titleLine2": "de vraies entreprises.",
+    "desc": "Découvrez des systèmes d'IA, des plateformes SaaS, des applications web, des logiciels métier et des expériences numériques conçus et développés par Van Tech Systems.",
+    "subdesc": "De la stratégie produit et de l'architecture au développement, à l'automatisation et au déploiement en production.",
+    "startAProject": "Démarrer un projet",
+    "ourWork": "Nos réalisations"
+  },
+  "filterTabs": {
+    "all": "Tout",
+    "ai": "IA",
+    "saas": "SaaS",
+    "webApplications": "Applications web",
+    "businessPlatforms": "Plateformes métier",
+    "insurance": "Assurance",
+    "ecommerce": "E-commerce"
+  },
+  "viewCaseStudy": "Voir l'étude de cas",
+  "viewLiveSite": "Voir le site en ligne",
+  "items": {
+    "onetap": {
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent coordonnées, liens et page de réservation via un lien de carte public ou un QR code."
+    },
+    "pmb": {
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création, l'image de marque et les services de croissance."
+    },
+    "buketi": {
+      "title": "Buketi Financial & Consulting",
+      "desc": "Une plateforme de cabinet financier et de conseil avec positionnement des services, offres de conseil et capture de demandes qualifiées."
+    },
+    "mightyOak": {
+      "title": "Mighty Oak Legacy",
+      "desc": "Une plateforme numérique construite autour de l'éducation financière, du mentorat, du développement du leadership et de l'accompagnement de l'héritage familial."
+    },
+    "solidRock": {
+      "title": "Solid Rock Leadership Development",
+      "desc": "Une plateforme de leadership et d'éducation financière présentant des programmes, des audiences et un parcours de réservation de consultation."
+    },
+    "vanTravel": {
+      "title": "Van Travel Business",
+      "desc": "Une plateforme métier pour le voyage et l'immigration couvrant les forfaits, la collecte de documents et les demandes clients."
+    },
+    "aiFna": {
+      "title": "AI FNA",
+      "desc": "Un outil d'analyse des besoins financiers assisté par IA qui transforme les données clients en recommandations prêtes pour les conseillers."
+    },
+    "powerMindset": {
+      "title": "Power Mindset Breakthrough",
+      "desc": "Une plateforme de coaching et de développement personnel avec programmes, réservation et diffusion de contenu."
+    },
+    "lelofit": {
+      "title": "Lelofit",
+      "desc": "Une expérience de fitness et de coaching avec découverte de programmes, plans et inscription des membres."
+    },
+    "allAccessTrip": {
+      "title": "All Access Trip",
+      "desc": "Une plateforme de réservation de voyages et d'itinéraires pour des voyages, groupes et expériences sur mesure."
+    }
+  }
+}

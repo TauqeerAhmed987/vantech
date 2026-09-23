@@ -1,10 +1,13 @@
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import './work-case-study.css';
 import Icon from '../Icon';
 import FAQ from '../FAQ';
 import Testimonials from '../Testimonials';
 import CTA from '../CTA';
 import { useReveal } from '../../hooks/useReveal';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 
 import arrowRightSvg from '../../assets/icons/boxicons-arrow-right-stroke.svg?raw';
 import caseStudyArrowSvg from '../../assets/icons/at-icons-arrow-right.svg?raw';
@@ -110,6 +113,8 @@ export default function WorkCaseStudyTemplate({
   /** Extra class on the page root — lets one case study page carry its own CSS overrides without affecting the shared template. */
   pageClassName?: string;
 }) {
+  const { t, i18n } = useTranslation('workCaseStudy');
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const heroLeft = useReveal('left');
   const heroRight = useReveal('right');
   const heroMockReveal = useReveal('up');
@@ -123,12 +128,10 @@ export default function WorkCaseStudyTemplate({
   const closingReveal = useReveal('up');
 
   const liveUrlLabel =
-    data.liveUrlLabel ?? (data.liveUrl === '#' ? 'Coming soon' : stripProtocol(data.liveUrl));
+    data.liveUrlLabel ?? (data.liveUrl === '#' ? t('comingSoon') : stripProtocol(data.liveUrl));
   const bannerImage = data.banner?.image ?? defaultBannerWide;
-  const closingTitle = data.closing?.title ?? "Let's build what comes next.";
-  const closingDesc =
-    data.closing?.desc ??
-    'Whether you need an AI employee, a SaaS platform, a mobile application, or a custom business system, Van Tech Systems can help turn your idea into production-ready technology.';
+  const closingTitle = data.closing?.title ?? t('closing.title');
+  const closingDesc = data.closing?.desc ?? t('closing.desc');
 
   return (
     <main
@@ -162,11 +165,11 @@ export default function WorkCaseStudyTemplate({
             <p className="wvt-hero__desc">{data.hero.description}</p>
             <div className="wvt-hero__actions">
               <a href={data.liveUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
-                View Live Site
+                {t('viewLiveSite')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
-              <a href="/contact" className="btn btn-outline">
-                Start a similar project
+              <a href={localizePath('/contact', currentLang)} className="btn btn-outline">
+                {t('startSimilarProject')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
             </div>
@@ -215,25 +218,25 @@ export default function WorkCaseStudyTemplate({
         <div className={`container wvt-detail__row ${overviewReveal.className}`} ref={overviewReveal.ref}>
           <div className="wvt-detail__col">
             <div className="wvt-detail-item">
-              <span className="wvt-eyebrow-number">01 — Overview</span>
+              <span className="wvt-eyebrow-number">01 — {t('sections.overview')}</span>
               <p className="wvt-detail-item__desc">{data.detail.overviewDesc}</p>
               <span className="wvt-detail-item__divider" />
             </div>
 
             <div className="wvt-detail-item">
-              <span className="wvt-eyebrow-number">02 — The challenge</span>
+              <span className="wvt-eyebrow-number">02 — {t('sections.challenge')}</span>
               <p className="wvt-detail-item__desc">{data.detail.challengeDesc}</p>
               <span className="wvt-detail-item__divider" />
             </div>
 
             <div className="wvt-detail-item">
-              <span className="wvt-eyebrow-number">03 — What we built</span>
+              <span className="wvt-eyebrow-number">03 — {t('sections.whatWeBuilt')}</span>
               <p className="wvt-detail-item__desc">{data.detail.builtDesc}</p>
               <span className="wvt-detail-item__divider" />
             </div>
 
             <div className={`wvt-capabilities ${capabilitiesReveal.className}`} ref={capabilitiesReveal.ref}>
-              <span className="wvt-eyebrow-number">04 — Core capabilities</span>
+              <span className="wvt-eyebrow-number">04 — {t('sections.coreCapabilities')}</span>
               <p className="wvt-section-desc">{data.capabilities.desc}</p>
 
               <div className="wvt-capabilities__grid">
@@ -247,7 +250,7 @@ export default function WorkCaseStudyTemplate({
             </div>
 
             <div className={`wvt-flow ${flowReveal.className}`} ref={flowReveal.ref}>
-              <span className="wvt-eyebrow-number">05 — {data.flow.heading ?? 'Services'}</span>
+              <span className="wvt-eyebrow-number">05 — {data.flow.heading ?? t('sections.services')}</span>
               <div className="wvt-flow__steps">
                 {data.flow.steps.map((step, i) => (
                   <div className="wvt-flow__step-wrap" key={step}>
@@ -261,7 +264,7 @@ export default function WorkCaseStudyTemplate({
 
             <div className={`wvt-approach ${approachReveal.className}`} ref={approachReveal.ref}>
               <span className="wvt-approach__divider" />
-              <span className="wvt-eyebrow-number">06 — System approach</span>
+              <span className="wvt-eyebrow-number">06 — {t('sections.systemApproach')}</span>
 
               <div className="wvt-diagram">
                 <div className="wvt-diagram__badge">
@@ -294,7 +297,7 @@ export default function WorkCaseStudyTemplate({
             </div>
 
             <div className={`wvt-outcome ${outcomeReveal.className}`} ref={outcomeReveal.ref}>
-              <span className="wvt-eyebrow-number">07 — Outcome</span>
+              <span className="wvt-eyebrow-number">07 — {t('sections.outcome')}</span>
               <ul className="wvt-outcome__list">
                 {data.outcomes.map((item, i) => (
                   <li key={`${item}-${i}`}>
@@ -308,7 +311,7 @@ export default function WorkCaseStudyTemplate({
 
           <aside className="wvt-sidebar">
             <div className="wvt-sidebar-card">
-              <span className="wvt-sidebar-card__title">Technology &amp; services</span>
+              <span className="wvt-sidebar-card__title">{t('sidebar.techAndServices')}</span>
               <div className="wvt-tags">
                 {data.sidebar.techTags.map((tag) => (
                   <span className="wvt-tag" key={tag}>
@@ -319,7 +322,7 @@ export default function WorkCaseStudyTemplate({
             </div>
 
             <div className="wvt-sidebar-card">
-              <span className="wvt-sidebar-card__title">Services</span>
+              <span className="wvt-sidebar-card__title">{t('sidebar.services')}</span>
               <div className="wvt-tags">
                 {data.sidebar.serviceTags.map((tag) => (
                   <span className="wvt-tag" key={tag}>
@@ -335,7 +338,7 @@ export default function WorkCaseStudyTemplate({
               rel="noreferrer"
               className="wvt-sidebar-card wvt-sidebar-card--link"
             >
-              <span className="wvt-sidebar-card__title">Explore the live product</span>
+              <span className="wvt-sidebar-card__title">{t('sidebar.exploreLiveProduct')}</span>
               <span className="wvt-sidebar-card__link">
                 {liveUrlLabel}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
@@ -355,9 +358,9 @@ export default function WorkCaseStudyTemplate({
 
       <section className="wvt-related section">
         <div className={`container ${relatedReveal.className}`} ref={relatedReveal.ref}>
-          <h2 className="wvt-related__title">Related work</h2>
+          <h2 className="wvt-related__title">{t('relatedWork')}</h2>
 
-          <div className="wvt-related__grid">
+          {/* <div className="wvt-related__grid link">
             {data.relatedWork.map((item) => (
               <div className="wvt-related-card" key={item.title}>
                 <div className="wvt-related-card__image">
@@ -367,8 +370,8 @@ export default function WorkCaseStudyTemplate({
                 <h3 className="wvt-related-card__title">{item.title}</h3>
                 <p className="wvt-related-card__desc">{item.desc}</p>
                 {item.href && (
-                  <a href={item.href} className="wvt-related-card__link">
-                    View Work
+                  <a href={localizePath(item.href, currentLang)} className="wvt-related-card__link">
+                    {t('viewWork')}
                     <span className="wvt-related-card__link-icon">
                       <Icon svg={caseStudyArrowSvg} />
                     </span>
@@ -376,11 +379,59 @@ export default function WorkCaseStudyTemplate({
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
+          <div className="wvt-related__grid">
+              {data.relatedWork.map((item) => {
+                const href = item.href ? localizePath(item.href, currentLang) : undefined;
+                const handleCardClick = () => {
+                  if (href) {
+                    window.location.href = href;
+                  }
+                };
+                return (
+                  <div
+                    className={`wvt-related-card${href ? ' wvt-related-card--clickable' : ''}`}
+                    key={item.title}
+                    role={href ? 'link' : undefined}
+                    tabIndex={href ? 0 : undefined}
+                    onClick={href ? handleCardClick : undefined}
+                    onKeyDown={
+                      href
+                        ? (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              handleCardClick();
+                            }
+                          }
+                        : undefined
+                    }
+                  >
+                    <div className="wvt-related-card__image">
+                      <img src={item.image} alt={item.title} loading="lazy" />
+                    </div>
+                    <span className="wvt-related-card__tag">{item.tag}</span>
+                    <h3 className="wvt-related-card__title">{item.title}</h3>
+                    <p className="wvt-related-card__desc">{item.desc}</p>
+                    {/* {href && (
+                      <a
+                        href={href}
+                        className="wvt-related-card__link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {t('viewWork')}
+                        <span className="wvt-related-card__link-icon">
+                          <Icon svg={caseStudyArrowSvg} />
+                        </span>
+                      </a>
+                    )} */}
+                  </div>
+                );
+              })}
+            </div>
 
           <div className="wvt-related__cta">
-            <a href="/#services" className="btn btn-outline">
-              Explore all services
+            <a href={`${localizePath('/', currentLang)}#services`} className="btn btn-outline">
+              {t('exploreAllServices')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -401,8 +452,8 @@ export default function WorkCaseStudyTemplate({
             <div className="wvt-closing__content">
               <h2 className="wvt-closing__title">{closingTitle}</h2>
               <p className="wvt-closing__desc">{closingDesc}</p>
-              <a href="/contact" className="btn btn-primary">
-                Start a Project
+              <a href={localizePath('/contact', currentLang)} className="btn btn-primary">
+                {t('closing.startAProject')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
             </div>

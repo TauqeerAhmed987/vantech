@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Custom Software. Built Around Your Business.",
+    "desc": "We do not force your business into generic software. We design applications around your workflows, users, operations and growth plans.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "When Generic Software Becomes The Constraint",
+    "desc": "Off-the-shelf tools work until your process differs from the product's assumptions. Then the workarounds become the operation.",
+    "problems": [
+      "Critical processes run in spreadsheets beside the official system.",
+      "Data is duplicated across tools that do not agree.",
+      "Permissions are too coarse for how the team actually works.",
+      "License costs grow while the fit gets worse."
+    ]
+  },
+  "solution": {
+    "title": "An Application Shaped By Your Operation",
+    "desc": "We model your entities, roles and workflows first, then build the application around them: a real data layer, granular permissions, the screens your team needs, and integrations with the systems you keep."
+  },
+  "build": {
+    "heading": "What we build",
+    "cards": [
+      { "title": "CRM Platforms", "desc": "Pipelines and customer records designed around your sales process." },
+      { "title": "Booking Platforms", "desc": "Availability, scheduling and confirmation workflows." },
+      { "title": "Client portals", "desc": "Secure external access to documents, status and communication." },
+      { "title": "Internal Tools", "desc": "Admin interfaces that replace manual spreadsheet work." },
+      { "title": "Operations Systems", "desc": "The day-to-day tooling your team runs the business on." },
+      { "title": "Workflow Systems", "desc": "Multi-step approvals, assignments and status tracking." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "Data modelling",
+      "Role-based access control",
+      "Workflow engines",
+      "Document handling",
+      "Reporting and dashboards",
+      "Audit trails"
+    ],
+    "row2": ["Notifications", "API development", "Third-party integrations", "Deployment and monitoring"]
+  },
+  "usecases": {
+    "heading": "Use Cases",
+    "items": [
+      { "title": "Replacing spreadsheets", "desc": "A single source of truth with permissions and history." },
+      { "title": "Consolidating tools", "desc": "One system where several disconnected ones used to be." },
+      { "title": "Serving clients online", "desc": "A portal that reduces status emails and phone calls." },
+      { "title": "Scaling a manual process", "desc": "Structured workflows that survive higher volume." }
+    ]
+  },
+  "architecture": {
+    "title": "Application Architecture",
+    "desc": "Even a first release is a full system. We keep it small, but structured — so the second version is an extension, not a rebuild.",
+    "timeline": [
+      { "title": "Frontend", "tags": [["Responsive UI"], ["Dashboards"], ["Forms"], ["Reporting"]] },
+      { "title": "API", "tags": [["Endpoints"], ["Validation"], ["Rate limits"]] },
+      { "title": "Business logic", "tags": [["Workflows", "Rules"], ["Automation", "Automation"]] },
+      { "title": "Operations", "tags": [["Deployment"], ["Monitoring", "Analytics"]] },
+      { "title": "Platform", "tags": [["Authentication"], ["Monitoring"], ["Deployment", "Integrations"]] }
+    ]
+  },
+  "process2": {
+    "heading": "Development Process",
+    "cards": [
+      { "title": "Discover", "desc": "Users, roles, workflows and the systems already in place." },
+      { "title": "Architect", "desc": "Data model, permissions, integrations and infrastructure." },
+      { "title": "Design", "desc": "Interface design for the roles that will use it daily." },
+      { "title": "Build", "desc": "Iterative development with review at each increment." },
+      { "title": "Test", "desc": "Functional QA, permission testing and security review." },
+      { "title": "Launch", "desc": "Deployment, data migration where needed, training and handover." }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": ["CRM", "Accounting", "Payments", "Email", "Calendars"],
+    "row2": ["Storage", "Identity providers", "Internal APIs"]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Modelled on your operation", "desc": "The data structure reflects how your business actually works." },
+      { "title": "Permissions taken seriously", "desc": "Access control is designed with the application, not bolted on." },
+      { "title": "Built to extend", "desc": "New modules and integrations fit the existing architecture." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $5,000/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Un logiciel conçu autour<br/>du fonctionnement de votre entreprise.",
+    "desc": "Pour les organisations qui ont dépassé les tableurs, les outils déconnectés, les processus manuels, les SaaS génériques et les systèmes hérités.",
+    "ctaPrimary": "Obtenir mon estimation de projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "disappoint": {
+    "title": "Dépasser Les Outils Avec Lesquels Vous Avez Commencé",
+    "desc": "Les systèmes qui ont porté une entreprise durant sa première phase deviennent souvent la raison pour laquelle elle ne peut pas avancer plus vite dans la suivante.",
+    "problems": [
+      "Les opérations essentielles dépendent de tableurs que personne ne peut modifier en toute sécurité.",
+      "Les équipes ressaisissent les mêmes informations dans plusieurs outils.",
+      "Le reporting nécessite un assemblage manuel avant chaque réunion.",
+      "Les logiciels génériques ne peuvent pas traduire le fonctionnement réel de l'entreprise."
+    ]
+  },
+  "solution": {
+    "title": "Une Plateforme Unique Conçue Autour De Votre Activité",
+    "desc": "Nous étudions le fonctionnement de l'organisation — ses entités, documents, validations et reporting — et construisons une plateforme qui l'exprime directement, en se connectant aux systèmes à conserver et en automatisant les étapes qui n'ont pas besoin d'intervention humaine."
+  },
+  "build": {
+    "heading": "Ce que nous construisons",
+    "cards": [
+      {
+        "title": "Plateformes opérationnelles",
+        "desc": "Le système central sur lequel votre organisation fonctionne au quotidien."
+      },
+      {
+        "title": "Équipes et permissions",
+        "desc": "Rôles, affectations et responsabilités à travers les départements."
+      },
+      {
+        "title": "Flux documentaires",
+        "desc": "Génération, validation, stockage et récupération avec piste d'audit."
+      },
+      {
+        "title": "Données et reporting",
+        "desc": "Une source unique de vérité avec des tableaux de bord construits dessus."
+      },
+      {
+        "title": "Opérations financières",
+        "desc": "Devis, statut de facturation et flux de reporting financier."
+      },
+      {
+        "title": "Intégrations",
+        "desc": "Connexions vers les outils qui restent partie intégrante de l'activité."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacités",
+    "row1": [
+      "Modélisation des processus métier",
+      "Architecture de données sur mesure",
+      "Automatisation des flux de travail",
+      "Gestion documentaire",
+      "Permissions basées sur les rôles"
+    ],
+    "row2": [
+      "Reporting et tableaux de bord",
+      "Pistes d'audit",
+      "IA là où elle est pertinente",
+      "Intégrations système",
+      "Revue de sécurité"
+    ]
+  },
+  "useCases": {
+    "heading": "Cas d'usage",
+    "items": [
+      {
+        "title": "Opérations multi-départements",
+        "desc": "Une plateforme unique coordonnant le travail entre les équipes."
+      },
+      {
+        "title": "Transformer un service en produit",
+        "desc": "Transformer un service livré en revenu logiciel récurrent."
+      },
+      {
+        "title": "D'outil interne à produit",
+        "desc": "Étendre un système interne fonctionnel à des clients externes."
+      },
+      {
+        "title": "Modernisation de plateforme",
+        "desc": "Reconstruire un produit vieillissant sur une architecture maintenable."
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture de la plateforme",
+    "desc": "Sur mesure ne signifie pas improvisé. La plateforme repose sur une architecture documentée que votre équipe peut maintenir et faire évoluer.",
+    "steps": [
+      {
+        "title": "Locataires",
+        "tags": [["Organisations"], ["Membres"], ["Rôles"], ["Invitations"]]
+      },
+      {
+        "title": "Plateforme",
+        "tags": [["Authentification"], ["Politiques d'isolation"], ["API"], ["Webhooks"]]
+      },
+      {
+        "title": "Commercial",
+        "tags": [["Forfaits"], ["Abonnements"], ["Paiements"], ["Utilisation"]]
+      },
+      {
+        "title": "Données",
+        "tags": [["Base de données"], ["Stockage", "Analytique"], ["Journal d'audit"]]
+      },
+      {
+        "title": "Opérations",
+        "tags": [["Console d'administration"], ["Supervision"], ["Déploiement"], ["Outils de support"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Processus de développement",
+    "cards": [
+      {
+        "title": "Découvrir",
+        "desc": "Départements, processus, documents et besoins de reporting."
+      },
+      {
+        "title": "Concevoir l'architecture",
+        "desc": "Modèle de données, permissions, intégrations et infrastructure."
+      },
+      {
+        "title": "Concevoir",
+        "desc": "Des interfaces pour chaque rôle qui utilisera la plateforme."
+      },
+      {
+        "title": "Construire",
+        "desc": "Un développement module par module, avec revue à chaque étape."
+      },
+      {
+        "title": "Tester",
+        "desc": "Tests des processus, des permissions, de la sécurité et des performances."
+      },
+      {
+        "title": "Adopter",
+        "desc": "Migration, formation, déploiement et amélioration continue."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Intégrations potentielles",
+    "row1": [
+      { "label": "Comptabilité" },
+      { "label": "CRM" },
+      { "label": "Paiements" },
+      { "label": "Email" },
+      { "label": "Stockage" }
+    ],
+    "row2": [
+      { "label": "Fournisseurs d'identité" },
+      { "label": "Outils de reporting" },
+      { "label": "API internes" }
+    ]
+  },
+  "why": {
+    "heading": "Pourquoi Van Tech Systems",
+    "cards": [
+      {
+        "title": "Construit à partir de votre processus",
+        "desc": "La plateforme reflète votre activité plutôt que les suppositions d'un éditeur."
+      },
+      {
+        "title": "Architecture documentée",
+        "desc": "La structure, les décisions et le modèle de données sont consignés par écrit."
+      },
+      {
+        "title": "Une marge d'évolution",
+        "desc": "Nouveaux départements, modules et intégrations s'intègrent à la même fondation."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Obtenir un devis personnalisé",
+    "desc": "Les tarifs de départ sont des repères de planification. Le prix final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir mon estimation de projet"
+  }
+}

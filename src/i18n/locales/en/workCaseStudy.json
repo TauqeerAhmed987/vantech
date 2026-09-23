@@ -1,0 +1,27 @@
+{
+  "viewLiveSite": "View Live Site",
+  "startSimilarProject": "Start a similar project",
+  "comingSoon": "Coming soon",
+  "sections": {
+    "overview": "Overview",
+    "challenge": "The challenge",
+    "whatWeBuilt": "What we built",
+    "coreCapabilities": "Core capabilities",
+    "services": "Services",
+    "systemApproach": "System approach",
+    "outcome": "Outcome"
+  },
+  "sidebar": {
+    "techAndServices": "Technology & services",
+    "services": "Services",
+    "exploreLiveProduct": "Explore the live product"
+  },
+  "relatedWork": "Related work",
+  "viewWork": "View Work",
+  "exploreAllServices": "Explore all services",
+  "closing": {
+    "title": "Let’s build what comes next.",
+    "desc": "Whether you need an AI employee, a SaaS platform, a mobile application, or a custom business system, Van Tech Systems can help turn your idea into production-ready technology.",
+    "startAProject": "Start a Project"
+  }
+}

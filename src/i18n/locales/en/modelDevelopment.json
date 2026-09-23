@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Your Data.<br/>Intelligent Systems.",
+    "desc": "Retrieval, knowledge and reasoning systems built on your own documents, records and business rules — so AI answers reflect how your organization actually works.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "Generic Models Do Not Know Your Business",
+    "desc": "A capable model with no access to your documents, records and rules will produce confident answers that do not match your operations.",
+    "problems": [
+      "Knowledge is scattered across documents, systems and people.",
+      "Answers cannot be traced back to a source.",
+      "Sensitive information has no defined boundary.",
+      "There is no way to measure whether output quality is improving."
+    ]
+  },
+  "solution": {
+    "title": "A knowledge layer you control",
+    "desc": "We build the layer between your data and the model: ingestion, structuring, retrieval, permissions and evaluation. The result is a system whose answers are grounded in your sources and can be measured, corrected and extended."
+  },
+  "build": {
+    "heading": "What we build",
+    "cards": [
+      { "title": "Data Ingestion", "desc": "Pipelines that collect documents and records into a usable form." },
+      { "title": "Knowledge Structuring", "desc": "Chunking, metadata and indexing designed for retrieval quality." },
+      { "title": "Retrieval (RAG)", "desc": "Grounded responses that cite the underlying source." },
+      { "title": "Business Reasoning", "desc": "Your rules and constraints applied to model output." },
+      { "title": "Access Boundaries", "desc": "Permissions that determine who can retrieve what." },
+      { "title": "Evaluation", "desc": "Test sets and review cycles that track answer quality over time." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "Document ingestion",
+      "Embeddings and indexing",
+      "Retrieval-augmented generation",
+      "Structured extraction",
+      "Semantic search"
+    ],
+    "row2": [
+      "Business rule enforcement",
+      "Model integration",
+      "Evaluation harnesses",
+      "Access control",
+      "Monitoring"
+    ]
+  },
+  "usecases": {
+    "heading": "Use Cases",
+    "items": [
+      { "title": "Internal knowledge assistant", "desc": "Staff answers drawn from approved internal documentation." },
+      { "title": "Document understanding", "desc": "Structured data extracted from contracts, forms and reports." },
+      { "title": "Domain search", "desc": "Semantic search across a large private content set." },
+      { "title": "Grounded agents", "desc": "A knowledge foundation that other AI systems build on." }
+    ]
+  },
+  "architecture": {
+    "heading": "How it works",
+    "desc": "We integrate and orchestrate existing foundation models around your data. We do not train foundation models from scratch.",
+    "timeline": [
+      { "title": "Sources", "tags": [["Documents", "APIs"], ["Databases"], ["Business rules"]] },
+      { "title": "Knowledge layer", "tags": [["Ingestion", "Chunking"], ["Embeddings", "Index"]] },
+      { "title": "Reasoning", "tags": [["Retrieval", "Model"], ["Constraints", "Citations"]] },
+      { "title": "Consumers", "tags": [["Agents", "Search"], ["Assistants", "Automation"], ["Analytics"]] },
+      { "title": "Assurance", "tags": [["Evaluation", "Permissions"], ["Monitoring"]] }
+    ]
+  },
+  "process": {
+    "heading": "Development process",
+    "cards": [
+      { "title": "Assess", "desc": "Review the data available, its quality and its constraints." },
+      { "title": "Architect", "desc": "Design ingestion, indexing, retrieval and access boundaries." },
+      { "title": "Build", "desc": "Implement the pipeline and the retrieval and reasoning layer." },
+      { "title": "Evaluate", "desc": "Measure output against a defined test set with real questions." },
+      { "title": "Integrate", "desc": "Expose the layer to the agents, search or applications that use it." },
+      { "title": "Improve", "desc": "Refine retrieval, prompts and rules as usage grows." }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": ["Databases", "Document storage", "Vector indexes", "Model providers"],
+    "row2": ["Internal APIs", "Analytics"]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Grounded and traceable", "desc": "Answers reference the sources they came from." },
+      { "title": "Measured, not assumed", "desc": "Quality is evaluated against real questions before rollout." },
+      { "title": "Scoped access", "desc": "Permissions decide what the system can retrieve and for whom." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $1,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

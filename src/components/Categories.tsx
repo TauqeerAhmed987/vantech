@@ -1,37 +1,18 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useReveal } from '../hooks/useReveal';
 
-const categories = [
-  {
-    number: '01',
-    title: 'AI Systems',
-    twoCols: true,
-    items: ['AI Agents', 'AI Employees', 'Automation', 'Voice AI', 'Conversational AI', 'Custom AI'],
-  },
-  {
-    number: '02',
-    title: 'Digital Products',
-    items: ['MVPs', 'SaaS', 'Web Applications', 'Mobile Applications'],
-  },
-  {
-    number: '03',
-    title: 'Business Platforms',
-    items: ['CRM', 'Client Portals', 'Workflow Systems', 'Operations Software'],
-  },
-  {
-    number: '04',
-    title: 'Digital Commerce',
-    items: ['Ecommerce', 'Payments', 'Subscriptions', 'AI Commerce'],
-  },
-];
+type CategoryItem = { number: string; title: string; items: string[] };
 
 function CategoryCard({
   cat,
+  twoCols,
   isActive,
   onEnter,
   onLeave,
 }: {
-  cat: (typeof categories)[number];
+  cat: CategoryItem;
+  twoCols: boolean;
   isActive: boolean;
   onEnter: () => void;
   onLeave: () => void;
@@ -48,7 +29,7 @@ function CategoryCard({
       <div className="category-card__glow" />
       <span className="category-card__number">{cat.number}</span>
       <h3 className="category-card__title">{cat.title}</h3>
-      <ul className={`category-card__list${cat.twoCols ? ' category-card__list--cols' : ''}`}>
+      <ul className={`category-card__list${twoCols ? ' category-card__list--cols' : ''}`}>
         {cat.items.map((item) => (
           <li key={item}>
             <span className="category-card__dot" />
@@ -61,6 +42,8 @@ function CategoryCard({
 }
 
 export default function Categories() {
+  const { t } = useTranslation('home');
+  const categories = t('categories.items', { returnObjects: true }) as CategoryItem[];
   const [activeIndex, setActiveIndex] = useState(0);
   const head = useReveal('up');
 
@@ -68,12 +51,9 @@ export default function Categories() {
     <section className="categories section" id="services">
       <div className="container">
         <div className={`section-head ${head.className}`} ref={head.ref}>
-          <span className="eyebrow-pill">What we build</span>
-          <h2 className="section-title">Four categories. One engineering standard.</h2>
-          <p className="section-subtitle">
-            Every engagement is scoped, architected and delivered by the same team —
-            from a first MVP to a multi-tenant platform.
-          </p>
+          <span className="eyebrow-pill">{t('categories.eyebrow')}</span>
+          <h2 className="section-title">{t('categories.title')}</h2>
+          <p className="section-subtitle">{t('categories.subtitle')}</p>
         </div>
 
         <div className="categories__grid">
@@ -81,6 +61,7 @@ export default function Categories() {
             <CategoryCard
               key={cat.number}
               cat={cat}
+              twoCols={i === 0}
               isActive={i === activeIndex}
               onEnter={() => setActiveIndex(i)}
               onLeave={() => setActiveIndex(0)}

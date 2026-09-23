@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "eyebrow": "Sobre Van Tech Systems",
+    "title": "Una empresa de ingeniería para negocios que necesitan sistemas, no presentaciones.",
+    "desc": "Diseñamos, desarrollamos y operamos software inteligente: agentes de IA y automatización que asumen una carga de trabajo real, además de aplicaciones y plataformas que se mantienen fácilmente mucho después del lanzamiento. Todo lo que entregamos está arquitectado por los mismos ingenieros que lo definen.",
+    "startAProject": "Iniciar un proyecto",
+    "ourWork": "Nuestro trabajo"
+  },
+  "process": {
+    "title": "Un modelo de entrega diseñado en torno a decisiones, no entregables.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Descubrimiento",
+        "desc": "Mapeamos el proceso real, los sistemas ya existentes, los datos disponibles y las restricciones relevantes. El resultado es un alcance escrito con los supuestos explicitados."
+      },
+      {
+        "number": "02",
+        "title": "Arquitectura",
+        "desc": "El modelo de datos, los límites de integración, el modelo de seguridad y las decisiones de infraestructura se definen y documentan antes de la implementación. En esta etapa, los cambios son más baratos."
+      },
+      {
+        "number": "03",
+        "title": "Desarrollo",
+        "desc": "Ciclos de entrega cortos con software funcional revisado continuamente. Las verificaciones automatizadas, la revisión de código y la separación de entornos son estándar, no complementos."
+      },
+      {
+        "number": "04",
+        "title": "Integración",
+        "desc": "Conexión con los sistemas que ya hacen funcionar el negocio — CRM, facturación, correo electrónico, telefonía, bases de datos internas y APIs de terceros — con manejo de errores incorporado desde el diseño."
+      },
+      {
+        "number": "05",
+        "title": "Implementación",
+        "descLine1": "Lanzamiento a producción con monitoreo, copias de seguridad, control de acceso y una",
+        "descLine2": "vía de reversión. No consideramos completo un lanzamiento hasta que sea observable."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Tecnología creada para ser propia, no alquilada",
+    "cards": [
+      "Van Tech Systems es una empresa tecnológica centrada en IA, ingeniería de software y automatización. Trabajamos con fundadores que lanzan productos, empresas establecidas que reemplazan operaciones manuales y agencias que necesitan un socio técnico serio detrás de su marca.",
+      "Nuestro trabajo se ubica en uno de tres casos: un producto que necesita existir, un proceso que no debería ser manual, o un sistema que ha superado la forma en que fue creado originalmente. En cada caso, el entregable es el mismo — un sistema funcional con una arquitectura clara, decisiones documentadas e infraestructura controlada por el cliente.",
+      "Estamos deliberadamente liderados por la ingeniería. La definición del alcance la realizan quienes construirán la solución. Las estimaciones provienen de la experiencia de entrega, no de objetivos comerciales. Cuando una solicitud se resolvería mejor con una construcción más pequeña, un cambio de configuración o una herramienta existente, lo decimos antes de que exista un contrato."
+    ]
+  },
+  "layers": {
+    "title": "Lo que construimos, capa por capa",
+    "items": [
+      {
+        "number": "01",
+        "title": "Capa de experiencia",
+        "desc": "Las pantallas, paneles y puntos de contacto que tu equipo y tus clientes realmente usan.",
+        "tags": ["Aplicaciones web", "Aplicaciones móviles", "Portales de clientes", "Paneles internos", "Comercio electrónico"]
+      },
+      {
+        "number": "02",
+        "title": "Capa de inteligencia",
+        "desc": "Agentes y modelos de IA definidos en torno a una decisión real, no agregados solo por agregar.",
+        "tags": ["Agentes de IA", "Asistentes de voz y chat", "Procesamiento de documentos", "Desarrollo de modelos", "Apoyo a la decisión"]
+      },
+      {
+        "number": "03",
+        "title": "Capa de automatización",
+        "desc": "Los flujos de trabajo que asumen una carga real sin necesitar a una persona en cada paso.",
+        "tags": ["Orquestación de flujos de trabajo", "Enrutamiento de leads", "Programación", "Reportes", "Alertas"]
+      },
+      {
+        "number": "04",
+        "title": "Capa de plataforma",
+        "desc": "El núcleo de la aplicación: autenticación, facturación y las APIs de las que depende todo lo demás.",
+        "tags": ["APIs", "SaaS multiinquilino", "Autenticación y RBAC", "Facturación", "Integraciones"]
+      },
+      {
+        "number": "05",
+        "title": "Capa de base",
+        "desc": "Alojamiento, seguridad y observabilidad diseñados para seguir siendo confiables a medida que crece el uso.",
+        "tags": ["Modelado de datos", "Infraestructura en la nube", "Seguridad", "Observabilidad", "CI/CD"]
+      }
+    ]
+  },
+  "principles": {
+    "eyebrow": "Principios de ingeniería",
+    "title": "Las decisiones que tomamos siempre de la misma manera",
+    "diagram": {
+      "businessGoal": "Objetivo de negocio",
+      "existingSystems": "Sistemas existentes",
+      "realData": "Datos reales",
+      "constraints": "Restricciones",
+      "architectureDecisionLine1": "Decisión de",
+      "architectureDecisionLine2": "arquitectura",
+      "documentedModel": "Modelo documentado",
+      "workingSystem": "Sistema funcional",
+      "ownedInfrastructure": "Infraestructura propia"
+    },
+    "items": [
+      {
+        "title": "Arquitectura antes que implementación",
+        "desc": "El modelo de datos y los límites de integración se deciden primero. Los sistemas fallan lentamente cuando se omite este paso, y el costo aparece meses después."
+      },
+      {
+        "title": "Automatización con un límite humano",
+        "desc": "Los sistemas automatizados gestionan el camino predecible. La ambigüedad, las excepciones y todo lo que tenga consecuencias comerciales o legales se dirigen a una persona por diseño."
+      },
+      {
+        "title": "IA aplicada donde vale la pena",
+        "desc": "La IA se usa solo donde supera demostrablemente a una solución más simple — nunca se incluye solo porque esté de moda."
+      },
+      {
+        "title": "La seguridad como estado predeterminado",
+        "desc": "El acceso de mínimo privilegio, la autorización a nivel de fila, los secretos cifrados y las acciones administrativas auditadas forman parte de la base construida, no de un proyecto de refuerzo posterior."
+      },
+      {
+        "title": "Sin cajas negras",
+        "desc": "Los clientes reciben el código, la infraestructura, la documentación y las credenciales. Terminar una colaboración nunca debería significar perder un sistema."
+      },
+      {
+        "title": "Alcance honesto",
+        "desc": "Preferimos perder un trato antes que aceptar un cronograma que sabemos irreal. Las estimaciones reflejan la experiencia de entrega, incluidas las partes que suelen salir mal."
+      }
+    ]
+  },
+  "ai": {
+    "title": "La IA útil es un problema de ingeniería, no una demo.",
+    "desc1": "Una demo convincente toma una tarde. Un sistema de IA en producción que responde con precisión, se niega a inventar hechos, respeta los permisos, escala de forma clara y puede auditarse después es un proyecto de ingeniería con un modelo de datos detrás.",
+    "desc2": "Esa es la distinción con la que trabajamos. Nuestros sistemas de IA se basan en el contenido y los datos propios del cliente, se limitan a acciones definidas, se registran de principio a fin y se supervisan después del lanzamiento — porque un sistema de IA que no puede inspeccionarse no puede confiársele a los clientes.",
+    "points": [
+      "Basado en tu contenido y datos en lugar de generación abierta",
+      "Límites de herramientas explícitos: un agente solo puede hacer aquello para lo que se le ha dado permiso",
+      "Vías de escalamiento humano para todo lo sensible, ambiguo o comercialmente significativo",
+      "Registro completo de conversaciones y acciones para poder revisar y mejorar el comportamiento",
+      "Ajuste continuo basado en el uso real en lugar de suposiciones"
+    ]
+  },
+  "risk": {
+    "eyebrow": "Estándares y gobernanza",
+    "title": "Cómo gestionamos los datos, el acceso y la responsabilidad",
+    "cards": [
+      {
+        "title": "Gestión de datos",
+        "desc": "Solo recopilamos los datos que un proyecto requiere, mantenemos los datos de producción fuera de los entornos de desarrollo cuando es posible, y eliminamos el acceso cuando un proyecto finaliza."
+      },
+      {
+        "title": "Control de acceso",
+        "desc": "Acceso basado en roles con mínimo privilegio en aplicaciones, bases de datos e infraestructura. Las acciones administrativas quedan registradas."
+      },
+      {
+        "title": "Confidencialidad",
+        "desc": "El trabajo del cliente es confidencial por defecto. No publicamos nada sobre un proyecto sin autorización escrita, y trabajamos bajo NDA cuando se solicita."
+      },
+      {
+        "title": "Propiedad y entrega",
+        "desc": "Los entregables, repositorios e infraestructura son propiedad del cliente, con documentación suficiente para que otro ingeniero competente pueda continuar el trabajo."
+      },
+      {
+        "title": "Uso responsable de la IA",
+        "desc": "Los sistemas de IA que construimos revelan que son automatizados, evitan afirmaciones fabricadas y dirigen todo lo consecuente hacia una persona. Nuestra propia política está publicada en detalle."
+      }
+    ],
+    "note": "Hay políticas detalladas disponibles en nuestro centro legal, incluyendo privacidad, términos, cookies, accesibilidad y uso de IA."
+  },
+  "work": {
+    "title": "Tres formas de trabajar con nosotros",
+    "cards": [
+      {
+        "number": "01",
+        "title": "Proyectos directos",
+        "desc": "Proyectos de producto, plataforma, automatización o IA definidos y entregados de principio a fin, desde el descubrimiento hasta la implementación, con soporte continuo opcional."
+      },
+      {
+        "number": "02",
+        "title": "Ingeniería continua",
+        "desc": "Una capacidad de ingeniería contratada para negocios que necesitan iteración continua, monitoreo y entrega de hoja de ruta sin contratar un equipo interno."
+      },
+      {
+        "number": "03",
+        "title": "Alianzas con agencias",
+        "desc": "Entrega de marca blanca para agencias, consultoras y empresas de TI que venden tecnología y necesitan un departamento de ingeniería silencioso y confiable detrás de su marca."
+      }
+    ]
+  }
+}

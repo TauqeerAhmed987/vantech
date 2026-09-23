@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariais", "Serviços financeiros"],
+    "titleLines": ["Lelofit"],
+    "description": "Uma plataforma de consultoria e serviços financeiros com posicionamento de serviços, ofertas de assessoria e captação de contatos qualificados.",
+    "screenshotAlt": "Captura de tela da plataforma Lelofit"
+  },
+  "stats": [
+    { "label": "Tipo de projeto", "value": "Aplicações web" },
+    { "label": "Capacidades", "value": "Desenvolvimento web • Experiência mobile • Design UI/UX" },
+    { "label": "Status", "value": "No ar" }
+  ],
+  "detail": {
+    "overviewDesc": "A Lelofit precisava de um produto rápido e mobile-first para descobrir programas de treino e assinar coaching. Entregamos uma experiência responsiva com navegação de programas, comparação de planos e cadastro simplificado.",
+    "challengeDesc": "Os programas de treino e os planos de coaching eram descobertos quase inteiramente no celular, onde um layout lento e pensado primeiro para desktop perdia usuários antes de chegarem aos preços.",
+    "builtDesc": "Entregamos uma experiência rápida e mobile-first com navegação de programas, comparação de planos lado a lado e um caminho de cadastro simplificado que remove etapas entre o interesse e a assinatura."
+  },
+  "sidebar": {
+    "serviceTags": ["Desenvolvimento web", "Experiência mobile", "Design UI/UX"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Descoberta de programas mobile-first" },
+      { "title": "Visão de comparação de planos" },
+      { "title": "Cadastro de assinatura simplificado" },
+      { "title": "Conteúdo sobre treinadores e metodologia" },
+      { "title": "Implementação focada em desempenho" }
+    ]
+  },
+  "flow": {
+    "heading": "Fluxo de negócio",
+    "steps": ["Explorar", "Reservar", "Treinar"],
+    "caption": "Visão conceitual do sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Visão conceitual", "do sistema"],
+    "pills": ["Membro", "Experiência pública", "Lógica de reservas", "Operações"]
+  },
+  "outcomes": [
+    "A descoberta de programas funciona corretamente em celulares",
+    "As diferenças entre planos são compreendidas rapidamente",
+    "O cadastro é um caminho curto, não uma maratona de formulários"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento por meio de um link de cartão público ou código QR."
+    },
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria de negócios, constituição de empresas, branding e serviços de crescimento."
+    },
+    {
+      "tag": "Serviços profissionais",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, agendamento e entrega de conteúdo."
+    }
+  ]
+}

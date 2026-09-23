@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import WorkCaseStudyTemplate, {
   type WorkCaseStudyData,
+  type WorkCaseStudyStat,
+  type WorkCaseStudyCapability,
+  type WorkCaseStudyRelatedItem,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 
 import browserMockup from '../../assets/images/work-van-travel/figma/browser-mockup.png';
@@ -7,80 +11,61 @@ import relatedWork1 from '../../assets/images/work-van-travel/figma/related-work
 import relatedWork2 from '../../assets/images/work-van-travel/figma/related-work-2.png';
 import relatedWork3 from '../../assets/images/work-van-travel/figma/related-work-3.png';
 
-const data: WorkCaseStudyData = {
-  hero: {
-    badges: ['Web Applications', 'Travel & Immigration'],
-    badgesMerged: true,
-    titleLines: ['Van Travel', 'Business'],
-    description:
-      'A travel and immigration business platform covering packages, document intake and client enquiries.',
-    screenshot: browserMockup,
-    screenshotAlt: 'Van Travel Business platform screenshot',
-  },
-  liveUrl: 'https://vantravelbusiness.com/',
-  stats: [
-    { label: 'Project type', value: 'Web Applications' },
-    { label: 'Capabilities', value: 'Web Development • Automation' },
-    { label: 'Industry', value: 'Travel & Immigration' },
-    { label: 'Status', value: 'Live' },
-  ],
-  detail: {
-    overviewDesc:
-      'Van Travel Business runs travel and immigration services that depend on structured client intake. We built a platform combining service catalogues, document-aware enquiry flows and an operations view for follow-up.',
-    challengeDesc:
-      'Van Travel Business runs travel and immigration services that depend on structured client intake. We built a platform combining service catalogues, document-aware enquiry flows and an operations view for follow-up.',
-    builtDesc:
-      'We combined a structured service catalogue with document-aware enquiry flows and an operations view, so each case opens with its requirements and evidence already captured.',
-  },
-  sidebar: {
-    techTags: ['React', 'Type Script', 'Supabase', 'Tailwind CSS'],
-    serviceTags: ['Web Development', 'Automation'],
-  },
-  capabilities: {
-    desc: 'We combined a structured service catalogue with document-aware enquiry flows and an operations view, so each case opens with its requirements and evidence already captured.',
-    items: [
-      { number: '01', title: 'Service and package catalogue' },
-      { number: '02', title: 'Document-aware enquiry intake' },
-      { number: '03', title: 'Operations view for case follow-up' },
-      { number: '04', title: 'Automated enquiry confirmations' },
-      { number: '05', title: 'Multi-device client experience' },
-    ],
-  },
-  flow: {
-    steps: ['Explore', 'Enquire', 'Follow-up'],
-    caption: 'Conceptual system view',
-  },
-  diagram: {
-    badgeLines: ['Conceptual', 'system view'],
-    pills: ['Traveller', 'Public experience', 'Enquiry logic', 'Operations'],
-  },
-  outcomes: [
-    'Cases start with the required details captured',
-    'Less back-and-forth before an assessment',
-    'Follow-up is tracked in one place',
-  ],
-  relatedWork: [
-    {
-      image: relatedWork1,
-      tag: 'Professional Services',
-      title: 'Solid Rock Leadership Development',
-      desc: 'A leadership and financial education platform presenting programs, audiences and a consultation booking journey.',
-    },
-    {
-      image: relatedWork2,
-      tag: 'SaaS',
-      title: 'OneTap Digital Card',
-      desc: 'A leadership and financial education platform presenting programs, audiences and a consultation booking journey.',
-    },
-    {
-      image: relatedWork3,
-      tag: 'Professional Services',
-      title: 'The PMB Consulting',
-      desc: 'A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.',
-    },
-  ],
-};
-
 export default function WorkVanTravelPage() {
-  return <WorkCaseStudyTemplate data={data} />;
+  const { t } = useTranslation('workVanTravel');
+
+  const stats = t('stats', { returnObjects: true }) as WorkCaseStudyStat[];
+  const capabilityItems = t('capabilities.items', { returnObjects: true }) as Pick<
+    WorkCaseStudyCapability,
+    'title'
+  >[];
+  const relatedWorkText = t('relatedWork', { returnObjects: true }) as Pick<
+    WorkCaseStudyRelatedItem,
+    'tag' | 'title' | 'desc'
+  >[];
+
+  const data: WorkCaseStudyData = {
+    hero: {
+      badges: t('hero.badges', { returnObjects: true }) as string[],
+      badgesMerged: true,
+      titleLines: t('hero.titleLines', { returnObjects: true }) as string[],
+      description: t('hero.description'),
+      screenshot: browserMockup,
+      screenshotAlt: t('hero.screenshotAlt'),
+    },
+    liveUrl: 'https://vantravelbusiness.com/',
+    stats,
+    detail: {
+      overviewDesc: t('detail.overviewDesc'),
+      challengeDesc: t('detail.challengeDesc'),
+      builtDesc: t('detail.builtDesc'),
+    },
+    sidebar: {
+      techTags: ['React', 'Type Script', 'Supabase', 'Tailwind CSS'],
+      serviceTags: t('sidebar.serviceTags', { returnObjects: true }) as string[],
+    },
+    capabilities: {
+      desc: t('capabilities.desc'),
+      items: capabilityItems.map((item, index) => ({
+        number: String(index + 1).padStart(2, '0'),
+        title: item.title,
+      })),
+    },
+    flow: {
+      steps: t('flow.steps', { returnObjects: true }) as string[],
+      caption: t('flow.caption'),
+    },
+    diagram: {
+      badgeLines: t('diagram.badgeLines', { returnObjects: true }) as string[],
+      pills: t('diagram.pills', { returnObjects: true }) as string[],
+    },
+    outcomes: t('outcomes', { returnObjects: true }) as string[],
+    relatedWork: [
+      { image: relatedWork1, ...relatedWorkText[0] },
+      { image: relatedWork2, ...relatedWorkText[1] },
+      { image: relatedWork3, ...relatedWorkText[2] },
+    ],
+  };
+
+  return <WorkCaseStudyTemplate data={data} pageClassName="wvt-page--solid-rock four-boxfull" />;
 }

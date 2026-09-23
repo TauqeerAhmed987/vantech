@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "badges": ["Services professionnels"],
+    "titleLines": ["Power Mindset", "Breakthrough"],
+    "description": "Une plateforme d'entreprise de voyage et d'immigration couvrant les forfaits, la collecte de documents et les demandes des clients.",
+    "screenshotAlt": "Capture d'écran de la plateforme Power Mindset Breakthrough"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Services professionnels" },
+    { "label": "Capacités", "value": "Développement web • Conception UI/UX" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "Power Mindset Breakthrough propose des programmes de coaching à grande échelle. Nous avons conçu une plateforme qui présente la méthodologie, gère la réservation des séances et distribue le contenu du programme aux clients inscrits.",
+    "challengeDesc": "La prestation du coaching était répartie entre des outils de planification, des e-mails et des partages de fichiers, ce qui limitait le nombre de clients que le programme pouvait servir sans ajouter de tâches administratives.",
+    "builtDesc": "Nous avons créé une plateforme unique qui présente la méthodologie, gère la réservation des séances et distribue le contenu du programme aux clients inscrits, avec un accès lié à l'inscription."
+  },
+  "sidebar": {
+    "serviceTags": ["Développement web", "Automatisation"]
+  },
+  "capabilities": {
+    "items": [
+      { "title": "Présentation de la méthodologie et du programme" },
+      { "title": "Réservation de séances selon les disponibilités" },
+      { "title": "Diffusion du contenu du programme aux clients inscrits" },
+      { "title": "Contrôle d'accès basé sur l'inscription" },
+      { "title": "Confirmations de réservation automatisées" }
+    ]
+  },
+  "flow": {
+    "steps": ["Découvrir", "Choisir", "Réserver"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue conceptuelle", "du système"],
+    "pills": ["Visiteur", "Contenu du programme", "Parcours de réservation", "Opérations du coach"]
+  },
+  "outcomes": [
+    "La réservation et la diffusion du contenu se trouvent au même endroit",
+    "La gestion administrative n'augmente plus proportionnellement au nombre de clients",
+    "Les clients bénéficient d'une expérience de programme cohérente"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Services professionnels",
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création, l'image de marque et les services de croissance."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Une plateforme de leadership et d'éducation financière présentant des programmes, des publics et un parcours de réservation de consultation."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, leurs liens et une page de réservation via un lien de carte public ou un code QR."
+    }
+  ]
+}

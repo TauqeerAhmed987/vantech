@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["Plateformes d'entreprise", "Planification successorale et patrimoniale"],
+    "titleLines": ["Mighty Oak", "Legacy"],
+    "description": "Une plateforme numérique conçue autour de l'éducation financière, du mentorat, du développement du leadership et de l'accompagnement en transmission familiale.",
+    "screenshotAlt": "Capture d'écran de la plateforme Mighty Oak Legacy"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Plateformes d'entreprise" },
+    { "label": "Compétences", "value": "Développement Web • Design UI/UX" },
+    { "label": "Secteur", "value": "Planification successorale et patrimoniale" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "Mighty Oak Legacy accompagne les particuliers, les familles et les futurs leaders grâce à l'éducation financière, au mentorat, à une opportunité d'affaires et à des conseils pratiques. La plateforme rassemble ses thèmes éducatifs, son parcours de leadership et la prise de rendez-vous en une expérience sereine et digne de confiance.",
+    "challengeDesc": "L'activité de l'organisation couvre l'éducation, le mentorat, le leadership et une opportunité d'affaires — quatre intentions très différentes pour un visiteur. Présentées comme une simple liste de services indifférenciée, aucune ne ressortait clairement, et il n'existait aucun parcours structuré menant de l'intérêt à un premier échange.",
+    "builtDesc": "Nous avons construit l'expérience autour de ce que l'organisation propose réellement — éducation financière, sensibilisation à la protection familiale, opportunité d'affaires et transmission de patrimoine — avec une section valeurs, un parcours simple en quatre étapes, des ateliers et une FAQ. La prise de rendez-vous et un formulaire d'inscription à l'opportunité d'affaires offrent à chaque public sa propre étape suivante."
+  },
+  "sidebar": {
+    "serviceTags": ["Développement Web", "Automatisation"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Sections de services axées sur l'éducation" },
+      { "title": "Contenu sur la transmission familiale et la sensibilisation à la protection" },
+      { "title": "Parcours dédié à l'opportunité d'affaires avec son propre formulaire d'inscription" },
+      { "title": "Accompagnement en mentorat et développement personnel" },
+      { "title": "Présentation des ateliers communautaires" },
+      { "title": "Intégration de la prise de rendez-vous" },
+      { "title": "Parcours en quatre étapes : Connecter, Apprendre, Grandir, Bâtir un héritage" },
+      { "title": "FAQ et ressources éducatives" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux d'activité",
+    "steps": ["Connecter", "Apprendre", "Grandir", "Bâtir un héritage"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue conceptuelle", "du système"],
+    "pills": ["Visiteur", "Contenu éducatif", "Inscription et rendez-vous", "Suivi par l'équipe"]
+  },
+  "outcomes": [
+    "Création d'une expérience numérique centralisée pour les publics de l'éducation, du mentorat et du leadership",
+    "Une étape suivante distincte pour chaque public, au lieu d'un formulaire de contact générique unique",
+    "Présentation de l'éducation financière sans la positionner comme un conseil en investissement personnalisé"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Plateformes d'entreprise",
+      "title": "Buketi Financial & Consulting",
+      "desc": "Une plateforme pour un cabinet financier et de conseil avec positionnement des services, offres de conseil et capture de demandes qualifiées."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, liens et page de réservation via un lien de carte public ou un code QR."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Une plateforme de coaching et de développement personnel avec programmes, réservation et diffusion de contenu."
+    }
+  ]
+}

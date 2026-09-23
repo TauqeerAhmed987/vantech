@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badges": ["Plateformes d'entreprise", "Services financiers"],
+    "titleLines": ["Lelofit"],
+    "description": "Une plateforme de cabinet financier et de conseil avec positionnement des services, offres de conseil et collecte de demandes qualifiées.",
+    "screenshotAlt": "Capture d'écran de la plateforme Lelofit"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Applications web" },
+    { "label": "Capacités", "value": "Développement web • Expérience mobile • Design UI/UX" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "Lelofit avait besoin d'un produit rapide et pensé mobile en premier pour découvrir des programmes d'entraînement et s'abonner à un coaching. Nous avons livré une expérience responsive avec navigation des programmes, comparaison des formules et inscription simplifiée.",
+    "challengeDesc": "Les programmes d'entraînement et les formules de coaching étaient découverts presque exclusivement sur mobile, où une mise en page lente pensée pour le bureau faisait perdre des utilisateurs avant même d'atteindre les tarifs.",
+    "builtDesc": "Nous avons livré une expérience rapide pensée mobile en premier, avec navigation des programmes, comparaison des formules côte à côte et un parcours d'inscription simplifié qui supprime les étapes entre l'intérêt et l'abonnement."
+  },
+  "sidebar": {
+    "serviceTags": ["Développement web", "Expérience mobile", "Design UI/UX"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Découverte de programmes pensée mobile en premier" },
+      { "title": "Vue de comparaison des formules" },
+      { "title": "Inscription à l'abonnement simplifiée" },
+      { "title": "Contenu sur les coachs et la méthodologie" },
+      { "title": "Implémentation axée sur la performance" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux métier",
+    "steps": ["Parcourir", "Réserver", "S'entraîner"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue conceptuelle", "du système"],
+    "pills": ["Membre", "Expérience publique", "Logique de réservation", "Opérations"]
+  },
+  "outcomes": [
+    "La découverte des programmes fonctionne correctement sur mobile",
+    "Les différences entre formules sont compréhensibles en un coup d'œil",
+    "L'inscription est un parcours court, pas un marathon de formulaires"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, liens et une page de réservation via un lien de carte public ou un code QR."
+    },
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'affaires, la création d'entreprise, l'image de marque et les services de croissance."
+    },
+    {
+      "tag": "Services professionnels",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Une plateforme de coaching et de développement personnel avec des programmes, des réservations et de la diffusion de contenu."
+    }
+  ]
+}

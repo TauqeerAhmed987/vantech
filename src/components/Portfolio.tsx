@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import vanTravelBusiness from '../assets/images/portfolio/van-travel-business.png';
 import powerMindset from '../assets/images/portfolio/power-mindset.png';
 import aiFna from '../assets/images/portfolio/ai-fna.png';
@@ -7,34 +8,16 @@ import Icon from './Icon';
 import { useReveal } from '../hooks/useReveal';
 import arrowRightSvg from '../assets/icons/at-icons-arrow-right.svg?raw';
 
-const platforms = [
-  {
-    number: '01',
-    title: 'Van Travel Business',
-    desc: 'A travel and immigration business platform covering packages, document intake and client enquiries.',
-    image: vanTravelBusiness,
-  },
-  {
-    number: '02',
-    title: 'Power Mindset Breakthrough',
-    desc: 'A coaching and personal development platform with programmes, booking and content delivery.',
-    image: powerMindset,
-  },
-  {
-    number: '03',
-    title: 'AI FNA',
-    desc: 'An AI-assisted financial needs analysis tool that turns client data into advisor-ready recommendations.',
-    image: aiFna,
-  },
-  {
-    number: '04',
-    title: 'OneTap Digital Card',
-    desc: 'A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code.',
-    image: oneTapDigitalCard,
-  },
-];
+const images = [vanTravelBusiness, powerMindset, aiFna, oneTapDigitalCard];
+
+type PortfolioItem = { number: string; title: string; desc: string };
 
 export default function Portfolio() {
+  const { t } = useTranslation('home');
+  const platforms = (t('portfolio.items', { returnObjects: true }) as PortfolioItem[]).map((p, i) => ({
+    ...p,
+    image: images[i],
+  }));
   const [activeIndex, setActiveIndex] = useState(0);
   const active = platforms[activeIndex];
   const head = useReveal('up');
@@ -45,8 +28,8 @@ export default function Portfolio() {
     <section className="portfolio section" id="work">
       <div className="container container--wide">
         <div className={`section-head ${head.className}`} ref={head.ref}>
-          <span className="eyebrow-pill">Our Work</span>
-          <h2 className="section-title">Platforms We&rsquo;ve Built</h2>
+          <span className="eyebrow-pill">{t('portfolio.eyebrow')}</span>
+          <h2 className="section-title">{t('portfolio.title')}</h2>
         </div>
 
         <div className="portfolio__row">
@@ -94,7 +77,7 @@ export default function Portfolio() {
             </ul>
 
             <a href="#work" className="btn btn-outline-gradient portfolio__view-btn">
-              View Work
+              {t('portfolio.viewWork')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

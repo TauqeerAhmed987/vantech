@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Your Operations, Running on Autopilot.",
+    "desc": "Managed automation infrastructure that combines AI, connected systems and ongoing optimization — operated and maintained as a service instead of handed over and forgotten.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "problem": {
+    "title": "Automation Decays Without An Owner",
+    "desc": "Workflows break when tools change, volumes grow or processes evolve. Without someone responsible for them, automation quietly stops working.",
+    "items": [
+      "Nobody notices when a workflow silently fails.",
+      "Integrations break after a platform update.",
+      "Processes change but the automation does not.",
+      "Internal teams have no capacity to maintain it."
+    ]
+  },
+  "solution": {
+    "title": "Operated Automation Infrastructure",
+    "desc": "Autopilot is a managed engagement: we run the automation layer connecting your capture, CRM, follow-up, scheduling, messaging and reporting, monitor it continuously, and improve it as your operations change."
+  },
+  "included": {
+    "title": "What is included",
+    "cards": [
+      { "title": "Connected Systems", "desc": "One automation layer across the tools your operations depend on." },
+      { "title": "AI handling", "desc": "Qualification, reception and response where it adds real value." },
+      { "title": "Monitoring", "desc": "Continuous checks with alerting when something stops working." },
+      { "title": "Maintenance", "desc": "Fixes and adjustments when platforms or processes change." },
+      { "title": "Optimization", "desc": "Ongoing refinement of logic, timing and routing." },
+      { "title": "Evaluation", "desc": "Test sets and review cycles that track answer quality over time." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "row1": [
+      "Managed workflows",
+      "AI reception",
+      "Lead capture",
+      "CRM synchronization",
+      "Automated follow-up",
+      "Scheduling"
+    ],
+    "row2": ["Messaging", "Operational reporting", "Monitoring and alerting", "Continuous improvement"]
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "items": [
+      { "title": "Teams without internal ops engineering", "desc": "Automation maintained by an external technology team." },
+      { "title": "High-volume inbound", "desc": "Consistent handling of enquiries as volume grows." },
+      { "title": "Multi-tool operations", "desc": "A single layer keeping separate systems in step." },
+      { "title": "Post-project continuity", "desc": "Ongoing ownership after an automation build." }
+    ]
+  },
+  "hub": {
+    "title": "The Operations Hub",
+    "desc": "Autopilot sits between your channels and your systems, coordinating the work and reporting on it.",
+    "columns": [
+      { "title": "Inputs", "tags": [["Website", "Phone"], ["Email", "Forms"], ["Messaging"]] },
+      { "title": "Autopilot layer", "tags": [["Routing", "AI handling"], ["Workflows"]] },
+      { "title": "Systems", "tags": [["CRM", "Calendars"], ["Support", "Databases"]] },
+      { "title": "Management", "tags": [["Monitoring", "Alerting"], ["Optimization", "Reporting"]] }
+    ]
+  },
+  "process": {
+    "title": "How The Engagement Works",
+    "cards": [
+      { "title": "Assess", "desc": "Review current operations, tools and volumes." },
+      { "title": "Design", "desc": "Define the automation layer and the reporting you need." },
+      { "title": "Deploy", "desc": "Implement workflows and connect the systems involved." },
+      { "title": "Operate", "desc": "Monitor and maintain everything to keep operations running smoothly. Respond quickly whenever an issue or request needs attention." },
+      { "title": "Optimize", "desc": "Review performance regularly to ensure everything works effectively. Refine the logic based on results and changing requirements." }
+    ]
+  },
+  "integrations": {
+    "title": "Potential Integrations",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Telephony" },
+      { "label": "WhatsApp" },
+      { "label": "SMS" },
+      { "label": "Email" }
+    ],
+    "row2": [
+      { "label": "Calendars" },
+      { "label": "Forms" },
+      { "label": "Support desks" },
+      { "label": "Databases" }
+    ]
+  },
+  "why": {
+    "title": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Grounded and traceable", "desc": "Answers reference the sources they came from." },
+      { "title": "Measured, not assumed", "desc": "Quality is evaluated against real questions before rollout." },
+      { "title": "Scoped access", "desc": "Permissions decide what the system can retrieve and for whom." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $1,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

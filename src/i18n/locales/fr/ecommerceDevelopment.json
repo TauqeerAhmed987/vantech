@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Un commerce qui fonctionne plus intelligemment.",
+    "desc": "Boutiques en ligne, paiements et expériences post-achat connectés à l'automatisation et à l'IA — pour que les clients obtiennent des réponses et que votre équipe cesse de traiter manuellement les mêmes demandes.",
+    "ctaPrimary": "Obtenir une estimation de mon projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "leak": {
+    "title": "Là où les opérations <span class=\"accent\">commerce</span> fuient",
+    "desc": "La plupart des boutiques ne perdent pas d'argent sur la vitrine. Elles en perdent dans les paniers abandonnés, les questions de support répétées et le travail post-achat manuel.",
+    "problems": [
+      "Le support répond chaque jour aux mêmes questions sur les commandes.",
+      "Les paniers sont abandonnés sans processus de récupération structuré.",
+      "La découverte produit ne correspond pas à la façon dont les clients recherchent.",
+      "Les données de commande, de paiement et de traitement logistique vivent dans des systèmes séparés."
+    ]
+  },
+  "solution": {
+    "title": "Le commerce connecté de bout en bout",
+    "desc": "Nous construisons la boutique et la couche opérationnelle qui la sous-tend : paiements, flux de commande, mises à jour de traitement, messagerie client et analytique — avec une assistance IA pour les questions et parcours qui se répètent."
+  },
+  "build": {
+    "heading": "Ce que nous construisons",
+    "cards": [
+      {
+        "title": "Boutique en ligne",
+        "desc": "Une expérience d'achat rapide et responsive conçue autour de votre catalogue."
+      },
+      {
+        "title": "Assistant commerce",
+        "desc": "Des réponses par IA aux questions sur les commandes, les produits et les politiques."
+      },
+      {
+        "title": "Paiement et transactions",
+        "desc": "Parcours de paiement, abonnements et confirmation de commande."
+      },
+      {
+        "title": "Récupération et cycle de vie",
+        "desc": "Récupération de panier et messagerie de cycle de vie basées sur le comportement réel."
+      },
+      {
+        "title": "Après-achat",
+        "desc": "Statut de commande, suivi de livraison et gestion des retours."
+      },
+      {
+        "title": "Opérations",
+        "desc": "Outils d'administration et reporting pour l'équipe qui gère la boutique."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Fonctionnalités",
+    "row1": [
+      "Catalogue et merchandising",
+      "Paiement",
+      "Paiements et abonnements",
+      "Gestion des commandes",
+      "Suivi des livraisons"
+    ],
+    "row2": [
+      "Automatisation du support client",
+      "Récupération de panier",
+      "Découverte produit",
+      "Messagerie de cycle de vie",
+      "Analytique commerce"
+    ]
+  },
+  "useCases": {
+    "heading": "Cas d'usage",
+    "items": [
+      {
+        "title": "Marques en vente directe",
+        "desc": "Une boutique avec une communication post-achat automatisée."
+      },
+      {
+        "title": "Commerce par abonnement",
+        "desc": "Facturation récurrente avec gestion des comptes et des forfaits."
+      },
+      {
+        "title": "Boutiques à catalogue étendu",
+        "desc": "Recherche et découverte conçues pour de grands catalogues de produits."
+      },
+      {
+        "title": "Commerce de services",
+        "desc": "Services réservables vendus et gérés en ligne."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Architecture du MVP",
+    "desc": "Même une première version est un système complet. Nous la gardons compacte, mais structurée — pour que la seconde version soit une extension, pas une refonte.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Expérience",
+        "tags": [["Boutique", "Recherche"], ["Paiement"], ["Compte"]]
+      },
+      {
+        "number": "02",
+        "title": "Commerce",
+        "tags": [["Catalogue"], ["Commandes", "Paiements"], ["Abonnements"]]
+      },
+      {
+        "number": "03",
+        "title": "Opérations",
+        "tags": [["Traitement des commandes"], ["Support", "Notifications"]]
+      },
+      {
+        "number": "04",
+        "title": "Intelligence",
+        "tags": [["Assistant"], ["Récupération", "Analytique"], ["Recommandations"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Processus de développement",
+    "cards": [
+      {
+        "title": "Découverte",
+        "desc": "Catalogue, parcours clients et contraintes opérationnelles."
+      },
+      {
+        "title": "Conception",
+        "desc": "Expérience de boutique et de paiement sur tous les appareils."
+      },
+      {
+        "title": "Développement",
+        "desc": "Boutique, paiements, flux de commande et intégrations."
+      },
+      {
+        "title": "Automatisation",
+        "desc": "Support, récupération et messagerie de cycle de vie."
+      },
+      {
+        "title": "Test",
+        "desc": "Tests de paiement, QA responsive et revue des performances."
+      },
+      {
+        "title": "Lancement",
+        "desc": "Déploiement, analytique et supervision post-lancement."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Intégrations possibles",
+    "row1": [
+      { "label": "Fournisseurs de paiement" },
+      { "label": "Livraison" },
+      { "label": "E-mail" },
+      { "label": "Messagerie" },
+      { "label": "CRM" }
+    ],
+    "row2": [
+      { "label": "Analytique" },
+      { "label": "Inventaire" },
+      { "label": "Comptabilité" }
+    ]
+  },
+  "why": {
+    "heading": "Pourquoi Van Tech Systems",
+    "cards": [
+      {
+        "title": "Conçu pour les opérations",
+        "desc": "Nous concevons le travail derrière la commande, pas seulement la boutique."
+      },
+      {
+        "title": "Automatisation là où elle se répète",
+        "desc": "L'IA est appliquée aux questions et parcours qui reviennent."
+      },
+      {
+        "title": "Mesurable",
+        "desc": "L'analytique est intégrée dès la construction."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de $3,500/month",
+    "desc": "Les prix de départ sont des repères de planification. Le tarif final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir une estimation de mon projet"
+  }
+}

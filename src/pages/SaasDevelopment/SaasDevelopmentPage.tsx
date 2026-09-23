@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './saas-development.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -42,163 +43,74 @@ import whyIconOperable from '../../assets/images/saas-development/figma/why-icon
 
 import pricingGlowOrb from '../../assets/images/saas-development/figma/pricing-glow-orb.png';
 
-const problems = [
-  'Tenant data separation was not designed at the start.',
-  'Roles and permissions do not match how customers organize teams.',
-  'Billing, trials and plan changes are handled manually.',
-  'There is no admin surface to support customers.',
-];
-
-const buildCards = [
-  {
-    icon: buildIconMultitenant,
-    title: 'Multi-tenant core',
-    desc: 'Organizations, membership and enforced data isolation.',
-    descWidth: 271,
-  },
-  {
-    icon: buildIconIdentity,
-    title: 'Identity',
-    desc: 'Sign-up, invitations, roles and permissions per organization.',
-    descWidth: 351,
-  },
-  {
-    icon: buildIconBilling,
-    title: 'Billing',
-    desc: 'Plans, trials, upgrades and subscription lifecycle.',
-    descWidth: 327,
-  },
-  {
-    icon: buildIconProduct,
-    title: 'Product surface',
-    desc: 'The application your customers use every day.',
-    descWidth: 297,
-  },
-  {
-    icon: buildIconAdmin,
-    title: 'Admin console',
-    desc: 'Internal tooling to support accounts and investigate issues.',
-    descWidth: 334,
-  },
-  {
-    icon: buildIconPlatform,
-    title: 'Platform Services',
-    desc: 'APIs, webhooks, email and storage for the product.',
-    descWidth: 289,
-  },
-];
-
-const capabilityRow1 = [
-  'Multi-tenant architecture',
-  'Tenant isolation',
-  'Authentication',
-  'Role-based access control',
-  'Subscriptions and payments',
-];
-
-const capabilityRow2 = ['Usage tracking', 'Admin console', 'Public API', 'Transactional email', 'Product analytics'];
-
-const useCases = [
-  {
-    title: 'New SaaS product',
-    desc: 'A platform built for paying customers from the first release.',
-  },
-  {
-    title: 'Productizing a service',
-    desc: 'Turning a delivered service into recurring software revenue.',
-  },
-  {
-    title: 'Internal tool to product',
-    desc: 'Extending a working internal system for external customers.',
-  },
-  {
-    title: 'Platform modernization',
-    desc: 'Rebuilding an ageing product on a maintainable architecture.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Tenants', tags: [['Organizations'], ['Members'], ['Roles'], ['Invitations']] },
-  { number: '02', title: 'Platform', tags: [['Authentication'], ['Isolation policies'], ['API'], ['Webhooks']] },
-  { number: '03', title: 'Commercial', tags: [['Plans'], ['Subscriptions'], ['Payments'], ['Usage']] },
-  { number: '04', title: 'Data', tags: [['Database'], ['Storage', 'Analytics'], ['Audit log']] },
-  { number: '05', title: 'Operations', tags: [['Admin console'], ['Monitoring'], ['Deployment'], ['Support tooling']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDefine,
-    title: 'Define',
-    desc: 'Product scope, customer model and commercial structure.',
-    descWidth: 247,
-  },
-  {
-    icon: processIconArchitect,
-    title: 'Architect',
-    desc: 'Tenancy, identity, permissions, billing and data design.',
-    descWidth: 243,
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Product interface and onboarding for new organizations.',
-    descWidth: 200,
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Platform and product development in reviewable increments.',
-    descWidth: 222,
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Isolation testing, permission testing, billing and security review.',
-    descWidth: 224,
-  },
-  {
-    icon: processIconLaunch,
-    title: 'Launch',
-    desc: 'Deployment, monitoring, admin tooling and iteration plan.',
-    descWidth: 254,
-  },
-];
-
-const integrations = [
-  { icon: paymentsSvg, label: 'Payment providers' },
-  { icon: identityPlatformSvg, label: 'Identity providers' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: analyticsSvg, label: 'Analytics' },
-  { icon: toolsSvg, label: 'Support tools' },
-  { icon: webhooksSvg, label: 'Webhooks' },
-  { icon: restApiSvg, label: 'Internal APIs' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconTenancy,
-    title: 'Tenancy first',
-    desc: 'Isolation and permissions are designed before features.',
-    descWidth: 366,
-  },
-  {
-    icon: whyIconBilling,
-    title: 'Commercially complete',
-    desc: 'Plans, billing and administration are part of the build.',
-    descWidth: 354,
-  },
-  {
-    icon: whyIconOperable,
-    title: 'Operable',
-    desc: 'You get the tooling required to support real customers.',
-    descWidth: 351,
-  },
-];
-
-const integrationsRow1 = integrations.slice(0, 4);
-const integrationsRow2 = integrations.slice(4);
+interface CardText {
+  title: string;
+  desc: string;
+}
 
 export default function SaasDevelopmentPage() {
+  const { t } = useTranslation('saasDevelopment');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildIcons = [
+    buildIconMultitenant,
+    buildIconIdentity,
+    buildIconBilling,
+    buildIconProduct,
+    buildIconAdmin,
+    buildIconPlatform,
+  ];
+  const buildDescWidths = [271, 351, 327, 297, 334, 289];
+  const buildCards = (t('build.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: buildIcons[i],
+    descWidth: buildDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('usecases.items', { returnObjects: true }) as CardText[];
+
+  const timelineNumbers = ['01', '02', '03', '04', '05'];
+  const timelineSteps = (
+    t('architecture.timeline', { returnObjects: true }) as { title: string; tags: string[][] }[]
+  ).map((step, i) => ({ ...step, number: timelineNumbers[i] }));
+
+  const processIcons = [
+    processIconDefine,
+    processIconArchitect,
+    processIconDesign,
+    processIconBuild,
+    processIconTest,
+    processIconLaunch,
+  ];
+  const processDescWidths = [247, 243, 200, 222, 224, 254];
+  const processCards = (t('process2.steps', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+    descWidth: processDescWidths[i],
+  }));
+
+  const integrationsRow1Icons = [paymentsSvg, identityPlatformSvg, emailSvg, analyticsSvg];
+  const integrationsRow1 = (
+    t('integrations.row1', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow1Icons[i] }));
+
+  const integrationsRow2Icons = [toolsSvg, webhooksSvg, restApiSvg];
+  const integrationsRow2 = (
+    t('integrations.row2', { returnObjects: true }) as { label: string }[]
+  ).map((item, i) => ({ ...item, icon: integrationsRow2Icons[i] }));
+
+  const whyIcons = [whyIconTenancy, whyIconBilling, whyIconOperable];
+  const whyDescWidths = [366, 354, 351];
+  const whyCards = (t('why.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+    descWidth: whyDescWidths[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -246,21 +158,17 @@ export default function SaasDevelopmentPage() {
             <div className={`saas-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="saas-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                Services
+                {t('hero.badge')}
               </span>
-              <h1 className="saas-hero__title">Build Software People Pay to Use.</h1>
-              <p className="saas-hero__desc">
-                Multi-tenant platforms with the parts that make software sellable: isolation
-                between customers, authentication, roles, subscriptions, administration and
-                analytics.
-              </p>
+              <h1 className="saas-hero__title">{t('hero.title')}</h1>
+              <p className="saas-hero__desc">{t('hero.desc')}</p>
               <div className="saas-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#what-we-build" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -276,13 +184,8 @@ export default function SaasDevelopmentPage() {
       <section className="saas-disappoint section">
         <div className="container saas-disappoint__row">
           <div className={`saas-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="saas-h1-lg">
-              The Hard Parts Of <span className="accent">SaaS</span> Are Not The Features
-            </h2>
-            <p className="saas-p-lg">
-              Off-the-shelf tools work until your process differs from the product&apos;s
-              assumptions. Then the workarounds become the operation.
-            </p>
+            <h2 className="saas-h1-lg" dangerouslySetInnerHTML={{ __html: t('disappoint.title') }} />
+            <p className="saas-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`saas-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -307,12 +210,8 @@ export default function SaasDevelopmentPage() {
           </div>
 
           <div className={`saas-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="saas-solution__title">A Platform Designed To Be Sold</h2>
-            <p className="saas-solution__desc">
-              We architect tenancy, identity and billing first, then build the product on top.
-              Organizations, invitations, roles, plans, usage and administration are part of the
-              platform rather than later additions.
-            </p>
+            <h2 className="saas-solution__title">{t('solution.title')}</h2>
+            <p className="saas-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -320,7 +219,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-build section" id="what-we-build">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="saas-h2">What we build</h2>
+            <h2 className="saas-h2">{t('build.title')}</h2>
           </div>
 
           <div className={`saas-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -341,7 +240,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="saas-h2">Capabilities</h2>
+            <h2 className="saas-h2">{t('capabilities.title')}</h2>
           </div>
 
           <div className={`saas-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -372,7 +271,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="saas-h2">Use Cases</h2>
+            <h2 className="saas-h2">{t('usecases.title')}</h2>
           </div>
 
           <div className={`saas-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -390,10 +289,8 @@ export default function SaasDevelopmentPage() {
       <section className="saas-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="saas-h1-lg saas-h1-lg--center">SaaS architecture</h2>
-            <p className="saas-section-copy">
-              Tenant isolation is enforced at the data layer, not only in the interface.
-            </p>
+            <h2 className="saas-h1-lg saas-h1-lg--center">{t('architecture.title')}</h2>
+            <p className="saas-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }}>
@@ -426,7 +323,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-process2 section">
         <div className="container">
           <div className={`section-head ${process2Head.className}`} ref={process2Head.ref}>
-            <h2 className="saas-h2">Development Process</h2>
+            <h2 className="saas-h2">{t('process2.title')}</h2>
           </div>
 
           <div className={`saas-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -446,7 +343,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="saas-h1-lg saas-h1-lg--center">Potential Integrations</h2>
+            <h2 className="saas-h1-lg saas-h1-lg--center">{t('integrations.title')}</h2>
           </div>
 
           <div className={`saas-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -491,7 +388,7 @@ export default function SaasDevelopmentPage() {
       <section className="saas-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="saas-h2">Why Van Tech Systems</h2>
+            <h2 className="saas-h2">{t('why.title')}</h2>
           </div>
 
           <div className={`saas-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -511,14 +408,11 @@ export default function SaasDevelopmentPage() {
           <div className="saas-pricing-cta__card">
             <img src={pricingGlowOrb} alt="" className="saas-pricing-cta__glow" loading="lazy" />
             <div className="saas-pricing-cta__copy">
-              <h2 className="saas-pricing-cta__title">Starting at $7,500/month</h2>
-              <p className="saas-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="saas-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="saas-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

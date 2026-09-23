@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './mobile-application.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -42,160 +43,79 @@ import whyIconRelease from '../../assets/images/mobile-application/figma/why-ico
 
 import pricingGlowOrb from '../../assets/images/mobile-application/figma/pricing-glow-orb.png';
 
-const problems = [
-  'A responsive website is being used where an app is expected.',
-  'No backend exists to support real accounts and data.',
-  'Notifications and sessions are unreliable.',
-  'Store submission requirements are discovered late.',
+const buildIcons = [
+  buildIconCustomer,
+  buildIconBusiness,
+  buildIconCompanion,
+  buildIconBackend,
+  buildIconAdmin,
+  buildIconRelease,
 ];
+const buildDescWidths = [327, 343, 312, 342, 289, 310];
 
-const buildCards = [
-  {
-    icon: buildIconCustomer,
-    title: 'Customer Apps',
-    desc: 'Accounts, activity, bookings, payments and notifications.',
-    descWidth: 327,
-  },
-  {
-    icon: buildIconBusiness,
-    title: 'Business Apps',
-    desc: 'Field and internal tools for teams working away from a desk.',
-    descWidth: 343,
-  },
-  {
-    icon: buildIconCompanion,
-    title: 'Companion Apps',
-    desc: 'Mobile access to an existing platform or portal.',
-    descWidth: 312,
-  },
-  {
-    icon: buildIconBackend,
-    title: 'Backend Services',
-    desc: 'APIs, data and authentication supporting the app.',
-    descWidth: 342,
-  },
-  {
-    icon: buildIconAdmin,
-    title: 'Admin dashboard',
-    desc: 'A web surface for managing users, content and operations.',
-    descWidth: 289,
-  },
-  {
-    icon: buildIconRelease,
-    title: 'Release Setup',
-    desc: 'Build pipelines, store preparation and versioning.',
-    descWidth: 310,
-  },
+const processIcons = [
+  processIconDiscover,
+  processIconDesign,
+  processIconArchitect,
+  processIconBuild,
+  processIconTest,
+  processIconLaunch,
 ];
+const processDescWidths = [253, 208, 195, 217, 229, 216];
 
-const capabilityRow1 = [
-  'iOS and Android',
-  'Authentication',
-  'Push notifications',
-  'In-app payments',
-  'Offline-tolerant flows',
-  'Media handling',
-];
+const integrationsIconsRow1 = [paymentsSvg, pushSvg, identityPlatformSvg, analyticsSvg];
+const integrationsIconsRow2 = [funnelSvg, databaseSvg, restApiSvg];
 
-const capabilityRow2 = ['Deep linking', 'API integration', 'Analytics', 'Store release support'];
+const whyIcons = [whyIconBackend, whyIconDesigned, whyIconRelease];
 
-const useCases = [
-  {
-    title: 'Customer Engagement',
-    desc: 'An app that keeps customers informed and transacting.',
-  },
-  {
-    title: 'Field Operations',
-    desc: 'Teams capturing and updating information on site.',
-  },
-  {
-    title: 'Booking and Services',
-    desc: 'Scheduling, reminders and payment in one place.',
-  },
-  {
-    title: 'Loyalty and Accounts',
-    desc: 'Profiles, history and personalized communication.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Mobile', tags: [['iOS', 'Android'], ['Offline cache'], ['Push']] },
-  { number: '02', title: 'API', tags: [['Endpoints'], ['Validation', 'Versioning']] },
-  { number: '03', title: 'Backend', tags: [['Business logic', 'Database'], ['Storage', 'Payments']] },
-  { number: '04', title: 'Platform', tags: [['Authentication'], ['Analytics', 'Monitoring'], ['Releases']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDiscover,
-    title: 'Discover',
-    desc: 'Users, platforms, core journeys and technical constraints.',
-    descWidth: 253,
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Mobile interface design and prototypes for the main flows.',
-    descWidth: 208,
-  },
-  {
-    icon: processIconArchitect,
-    title: 'Architect',
-    desc: 'Backend, data model, authentication and notifications.',
-    descWidth: 195,
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'App and backend development with test builds you can install.',
-    descWidth: 217,
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Device testing, performance checks and release candidate QA.',
-    descWidth: 229,
-  },
-  {
-    icon: processIconLaunch,
-    title: 'Release',
-    desc: 'Store submission support, monitoring and post-launch fixes.',
-    descWidth: 216,
-  },
-];
-
-const integrationsRow1 = [
-  { icon: paymentsSvg, label: 'Payments' },
-  { icon: pushSvg, label: 'Push services' },
-  { icon: identityPlatformSvg, label: 'Identity providers' },
-  { icon: analyticsSvg, label: 'Analytics' },
-];
-
-const integrationsRow2 = [
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: databaseSvg, label: 'Storage' },
-  { icon: restApiSvg, label: 'Internal APIs' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconBackend,
-    title: 'Backend included',
-    desc: 'We build the system the app depends on, not just the screens.',
-  },
-  {
-    icon: whyIconDesigned,
-    title: 'Designed for real use',
-    desc: 'Sessions, notifications and errors are treated as product features.',
-  },
-  {
-    icon: whyIconRelease,
-    title: 'Release-ready',
-    desc: 'Store requirements are planned into the build, not discovered at the end.',
-  },
-];
+type TitledDesc = { title: string; desc: string };
+type IntegrationLabel = { label: string };
+type TimelineStep = { number: string; title: string; tags: string[][] };
 
 export default function MobileApplicationPage() {
+  const { t } = useTranslation('mobileApplication');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildCardsData = t('build.cards', { returnObjects: true }) as TitledDesc[];
+  const buildCards = buildCardsData.map((card, i) => ({
+    ...card,
+    icon: buildIcons[i],
+    descWidth: buildDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('useCases.items', { returnObjects: true }) as TitledDesc[];
+
+  const timelineSteps = t('architecture.timeline', { returnObjects: true }) as TimelineStep[];
+
+  const processCardsData = t('process.cards', { returnObjects: true }) as TitledDesc[];
+  const processCards = processCardsData.map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+    descWidth: processDescWidths[i],
+  }));
+
+  const integrationsRow1Data = t('integrations.row1', { returnObjects: true }) as IntegrationLabel[];
+  const integrationsRow1 = integrationsRow1Data.map((item, i) => ({
+    ...item,
+    icon: integrationsIconsRow1[i],
+  }));
+
+  const integrationsRow2Data = t('integrations.row2', { returnObjects: true }) as IntegrationLabel[];
+  const integrationsRow2 = integrationsRow2Data.map((item, i) => ({
+    ...item,
+    icon: integrationsIconsRow2[i],
+  }));
+
+  const whyCardsData = t('why.cards', { returnObjects: true }) as TitledDesc[];
+  const whyCards = whyCardsData.map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -243,21 +163,17 @@ export default function MobileApplicationPage() {
             <div className={`mobileapp-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="mobileapp-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                Services
+                {t('hero.badge')}
               </span>
-              <h1 className="mobileapp-hero__title">Your Business. In Their Hands.</h1>
-              <p className="mobileapp-hero__desc">
-                Production-ready mobile applications for customers and internal teams,
-                backed by the APIs, authentication and cloud infrastructure that keep
-                them running.
-              </p>
+              <h1 className="mobileapp-hero__title">{t('hero.title')}</h1>
+              <p className="mobileapp-hero__desc">{t('hero.desc')}</p>
               <div className="mobileapp-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#app-types" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -288,11 +204,8 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-disappoint section">
         <div className="container mobileapp-disappoint__row">
           <div className={`mobileapp-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="mobileapp-h1-lg">A Mobile App Is Not A Smaller Website</h2>
-            <p className="mobileapp-p-lg">
-              Off-the-shelf tools work until your process differs from the product&apos;s
-              assumptions. Then the workarounds become the operation.
-            </p>
+            <h2 className="mobileapp-h1-lg">{t('disappoint.title')}</h2>
+            <p className="mobileapp-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`mobileapp-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -316,12 +229,8 @@ export default function MobileApplicationPage() {
           </div>
 
           <div className={`mobileapp-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="mobileapp-solution__title">The App And The System Behind It</h2>
-            <p className="mobileapp-solution__desc">
-              We design the mobile experience for how it will actually be used, and
-              build the backend with it: accounts, data, notifications, payments and an
-              admin surface for your team.
-            </p>
+            <h2 className="mobileapp-solution__title">{t('solution.title')}</h2>
+            <p className="mobileapp-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -329,7 +238,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-build section" id="app-types">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="mobileapp-h2">What We Build</h2>
+            <h2 className="mobileapp-h2">{t('build.heading')}</h2>
           </div>
 
           <div className={`mobileapp-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -350,7 +259,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="mobileapp-h2">Capabilities</h2>
+            <h2 className="mobileapp-h2">{t('capabilities.heading')}</h2>
           </div>
 
           <div className={`mobileapp-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -381,7 +290,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="mobileapp-h2">Use Cases</h2>
+            <h2 className="mobileapp-h2">{t('useCases.heading')}</h2>
           </div>
 
           <div className={`mobileapp-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -399,11 +308,8 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="mobileapp-h1-lg mobileapp-h1-lg--center">MVP architecture</h2>
-            <p className="mobileapp-section-copy">
-              Even a first release is a full system. We keep it small, but structured —
-              so the second version is an extension, not a rebuild.
-            </p>
+            <h2 className="mobileapp-h1-lg mobileapp-h1-lg--center">{t('architecture.heading')}</h2>
+            <p className="mobileapp-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }}>
@@ -436,7 +342,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-process2 section">
         <div className="container">
           <div className={`section-head ${process2Head.className}`} ref={process2Head.ref}>
-            <h2 className="mobileapp-h2">Development Process</h2>
+            <h2 className="mobileapp-h2">{t('process.heading')}</h2>
           </div>
 
           <div className={`mobileapp-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -456,7 +362,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="mobileapp-h1-lg mobileapp-h1-lg--center">Potential Integrations</h2>
+            <h2 className="mobileapp-h1-lg mobileapp-h1-lg--center">{t('integrations.heading')}</h2>
           </div>
 
           <div className={`mobileapp-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -501,7 +407,7 @@ export default function MobileApplicationPage() {
       <section className="mobileapp-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="mobileapp-h2">Why Van Tech Systems</h2>
+            <h2 className="mobileapp-h2">{t('why.heading')}</h2>
           </div>
 
           <div className={`mobileapp-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -521,14 +427,11 @@ export default function MobileApplicationPage() {
           <div className="mobileapp-pricing-cta__card">
             <img src={pricingGlowOrb} alt="" className="mobileapp-pricing-cta__glow" loading="lazy" />
             <div className="mobileapp-pricing-cta__copy">
-              <h2 className="mobileapp-pricing-cta__title">Starting at $7,500/month</h2>
-              <p className="mobileapp-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="mobileapp-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="mobileapp-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Software personalizado. Construído em torno do seu negócio.",
+    "desc": "Não forçamos o seu negócio a se adaptar a um software genérico. Projetamos aplicações em torno dos seus fluxos de trabalho, usuários, operações e planos de crescimento.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "disappoint": {
+    "title": "Quando o software genérico se torna a limitação",
+    "desc": "As ferramentas prontas funcionam enquanto o seu processo corresponde às premissas do produto. Depois, as soluções improvisadas se tornam a operação.",
+    "problems": [
+      "Processos críticos são executados em planilhas ao lado do sistema oficial.",
+      "Os dados são duplicados entre ferramentas que não coincidem entre si.",
+      "As permissões são genéricas demais para a forma como a equipe realmente trabalha.",
+      "Os custos de licenciamento aumentam enquanto a adequação piora."
+    ]
+  },
+  "solution": {
+    "title": "Uma aplicação moldada pela sua operação",
+    "desc": "Primeiro modelamos suas entidades, papéis e fluxos de trabalho, depois construímos a aplicação em torno deles: uma camada de dados real, permissões granulares, as telas de que a sua equipe precisa e integrações com os sistemas que você mantém."
+  },
+  "build": {
+    "heading": "O que construímos",
+    "cards": [
+      { "title": "Plataformas de CRM", "desc": "Funis e cadastros de clientes desenhados em torno do seu processo de vendas." },
+      { "title": "Plataformas de reservas", "desc": "Disponibilidade, agendamento e fluxos de confirmação." },
+      { "title": "Portais de clientes", "desc": "Acesso externo seguro a documentos, status e comunicação." },
+      { "title": "Ferramentas internas", "desc": "Interfaces administrativas que substituem o trabalho manual em planilhas." },
+      { "title": "Sistemas de operações", "desc": "As ferramentas do dia a dia com as quais a sua equipe conduz o negócio." },
+      { "title": "Sistemas de fluxo de trabalho", "desc": "Aprovações, atribuições e acompanhamento de status em várias etapas." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Modelagem de dados",
+      "Controle de acesso baseado em papéis",
+      "Motores de fluxo de trabalho",
+      "Gestão de documentos",
+      "Relatórios e painéis",
+      "Trilhas de auditoria"
+    ],
+    "row2": ["Notificações", "Desenvolvimento de API", "Integrações de terceiros", "Implantação e monitoramento"]
+  },
+  "usecases": {
+    "heading": "Casos de uso",
+    "items": [
+      { "title": "Substituir planilhas", "desc": "Uma única fonte de verdade, com permissões e histórico." },
+      { "title": "Consolidar ferramentas", "desc": "Um único sistema onde antes havia várias ferramentas desconectadas." },
+      { "title": "Atender clientes on-line", "desc": "Um portal que reduz e-mails de status e ligações telefônicas." },
+      { "title": "Escalar um processo manual", "desc": "Fluxos de trabalho estruturados que sustentam um volume maior." }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitetura da aplicação",
+    "desc": "Mesmo um primeiro lançamento é um sistema completo. Nós o mantemos enxuto, mas estruturado — para que a segunda versão seja uma extensão, e não uma reconstrução.",
+    "timeline": [
+      { "title": "Frontend", "tags": [["Interface responsiva"], ["Painéis"], ["Formulários"], ["Relatórios"]] },
+      { "title": "API", "tags": [["Endpoints"], ["Validação"], ["Limites de requisição"]] },
+      { "title": "Lógica de negócio", "tags": [["Fluxos de trabalho", "Regras"], ["Automação", "Automação"]] },
+      { "title": "Operações", "tags": [["Implantação"], ["Monitoramento", "Análise"]] },
+      { "title": "Plataforma", "tags": [["Autenticação"], ["Monitoramento"], ["Implantação", "Integrações"]] }
+    ]
+  },
+  "process2": {
+    "heading": "Processo de desenvolvimento",
+    "cards": [
+      { "title": "Descoberta", "desc": "Usuários, papéis, fluxos de trabalho e os sistemas já existentes." },
+      { "title": "Arquitetura", "desc": "Modelo de dados, permissões, integrações e infraestrutura." },
+      { "title": "Design", "desc": "Design de interface para os papéis que a utilizarão diariamente." },
+      { "title": "Construção", "desc": "Desenvolvimento iterativo com revisão a cada incremento." },
+      { "title": "Testes", "desc": "QA funcional, testes de permissão e revisão de segurança." },
+      { "title": "Lançamento", "desc": "Implantação, migração de dados quando necessário, treinamento e transição." }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações possíveis",
+    "row1": ["CRM", "Contabilidade", "Pagamentos", "E-mail", "Calendários"],
+    "row2": ["Armazenamento", "Provedores de identidade", "APIs internas"]
+  },
+  "why": {
+    "heading": "Por que a Van Tech Systems",
+    "cards": [
+      { "title": "Modelada de acordo com a sua operação", "desc": "A estrutura de dados reflete como o seu negócio realmente funciona." },
+      { "title": "Permissões levadas a sério", "desc": "O controle de acesso é projetado junto com a aplicação, não adicionado depois." },
+      { "title": "Construída para crescer", "desc": "Novos módulos e integrações se encaixam na arquitetura existente." }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de US$ 5.000/mês",
+    "desc": "Os preços iniciais são referências de planejamento. O preço final depende do escopo, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

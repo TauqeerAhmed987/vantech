@@ -1,0 +1,77 @@
+{
+  "hero": { "updated": "Dernière mise à jour : 18 août 2026" },
+  "sections": {
+    "whoWeAre": {
+      "title": "1. Qui nous sommes",
+      "body": "Van Tech Systems conçoit et construit des systèmes d'IA, de logiciels et d'automatisation. Cette politique couvre les données personnelles traitées via notre site web, notre formulaire de découverte de projet, notre assistant IA et la relation commerciale qui peut en découler. Pour les données que nous traitons pour le compte d'un client lors de la livraison d'un projet, le client est le responsable du traitement et nous agissons en tant que sous-traitant selon les termes de l'accord applicable."
+    },
+    "dataWeCollect": {
+      "title": "2. Données que nous collectons",
+      "items": [
+        "Coordonnées que vous fournissez : nom, adresse e-mail, numéro de téléphone, nom de l'entreprise et fonction.",
+        "Informations sur le projet : descriptions, exigences, indications de budget et de calendrier, et tout fichier que vous choisissez de joindre.",
+        "Données de conversation : messages échangés avec notre assistant IA, et détails de rendez-vous lorsque vous réservez un appel.",
+        "Données techniques : métadonnées de requête dérivées de l'IP, type de navigateur, source de référence et pages consultées, utilisées pour sécuriser le service et comprendre quel contenu est utile.",
+        "Données de collaboration client : informations nécessaires pour livrer le travail contracté, y compris les détails d'accès aux systèmes partagés dans le cadre de l'accord."
+      ]
+    },
+    "whyWeProcess": {
+      "title": "3. Pourquoi nous les traitons",
+      "items": [
+        "<strong>Répondre aux demandes et préparer des propositions</strong> — étapes entreprises à votre demande avant un contrat.",
+        "<strong>Livrer et soutenir le travail contracté</strong> — exécution d'un contrat.",
+        "<strong>Sécuriser nos systèmes et prévenir les abus</strong> — intérêt légitime.",
+        "<strong>Améliorer notre contenu et nos services</strong> — intérêt légitime.",
+        "<strong>Envoyer des mises à jour opérationnelles et, si vous y avez consenti, occasionnelles</strong> — consentement ou intérêt légitime."
+      ]
+    },
+    "automatedAssessment": {
+      "title": "4. Évaluation automatisée des demandes",
+      "body": "Les demandes de projet peuvent être résumées et hiérarchisées par un système automatisé afin que notre équipe puisse répondre plus rapidement et plus précisément. Le résultat est utilisé uniquement en interne et est toujours examiné par une personne avant qu'une décision vous concernant ne soit prise. Aucune demande n'est rejetée uniquement par des moyens automatisés, et vous pouvez demander un examen humain de tout ce que nous vous envoyons."
+    },
+    "aiConversations": {
+      "title": "5. Conversations avec l'assistant IA",
+      "body": "Les conversations avec l'assistant de notre site sont stockées afin que nous puissions maintenir le contexte, contrôler la qualité et améliorer les réponses. Ne partagez pas de mots de passe, de détails de paiement ou de données personnelles sensibles dans le chat. Vous pouvez demander la suppression d'une conversation à tout moment en nous contactant avec la date approximative et l'adresse e-mail utilisée."
+    },
+    "sharing": {
+      "title": "6. Partage et sous-traitants",
+      "body": "Nous ne vendons pas de données personnelles. Nous ne les partageons qu'avec des prestataires de services qui nous aident à fonctionner : hébergement cloud et infrastructure de base de données, envoi d'e-mails transactionnels, et fournisseurs de modèles IA utilisés pour alimenter les fonctionnalités d'assistant et d'évaluation. Chaque prestataire est contractuellement tenu de traiter les données uniquement selon nos instructions et d'appliquer des mesures de sécurité appropriées."
+    },
+    "internationalTransfers": {
+      "title": "7. Transferts internationaux",
+      "body": "Notre infrastructure et nos prestataires peuvent traiter des données en dehors de votre pays de résidence. Le cas échéant, ces transferts s'appuient sur des garanties reconnues telles que des clauses contractuelles types ou une décision d'adéquation."
+    },
+    "retention": {
+      "title": "8. Conservation",
+      "items": [
+        "Registres de demandes : conservés pendant qu'une relation commerciale est envisagée, puis pour une période limitée à des fins d'archivage, sauf si vous demandez leur suppression.",
+        "Données de projet client : conservées pendant la durée de la collaboration et toute période de support convenue, puis supprimées ou restituées conformément à l'accord.",
+        "Conversations avec l'assistant : conservées à des fins de qualité et d'amélioration, et supprimées sur demande.",
+        "Journaux d'envoi d'e-mails : conservés pendant une période limitée pour diagnostiquer les problèmes de livraison."
+      ]
+    },
+    "security": {
+      "title": "9. Sécurité",
+      "body": "Nous appliquons un accès à moindre privilège, une autorisation au niveau des lignes sur les enregistrements stockés, un transport chiffré, un stockage chiffré des secrets et une journalisation des actions administratives. L'accès aux environnements clients est limité aux ingénieurs affectés à cette collaboration et révoqué à la fin de celle-ci. Aucun système n'est absolument sûr. En cas de violation affectant vos données, nous vous en informerons et, si nécessaire, informerons l'autorité compétente sans retard injustifié."
+    },
+    "yourRights": {
+      "title": "10. Vos droits",
+      "items": [
+        "Accéder à une copie des données personnelles que nous détenons à votre sujet.",
+        "Corriger des données inexactes ou incomplètes.",
+        "Demander la suppression des données que nous n'avons plus besoin de conserver.",
+        "Vous opposer à certains traitements fondés sur l'intérêt légitime, ou en demander la restriction.",
+        "Retirer votre consentement à tout moment lorsque le traitement repose sur le consentement.",
+        "Demander une copie portable des données que vous nous avez fournies."
+      ]
+    },
+    "children": {
+      "title": "11. Enfants",
+      "body": "Nos services s'adressent aux entreprises. Nous ne collectons pas sciemment de données personnelles auprès d'enfants. Si vous pensez qu'un enfant nous a fourni des données, contactez-nous et nous les supprimerons."
+    },
+    "changesContact": {
+      "title": "12. Modifications et contact",
+      "bodyPrefix": "Nous mettons à jour cette politique lorsque notre traitement évolue. La date en haut de la page reflète la version actuelle. Pour exercer un droit ou poser une question, contactez-nous à"
+    }
+  }
+}

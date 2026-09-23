@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "updated": "Última actualización: 18 de agosto de 2026"
+  },
+  "sections": {
+    "commitment": {
+      "title": "1. Nuestro compromiso",
+      "body": "Creamos software en el que las personas confían para funcionar, por lo que la accesibilidad se trata como un requisito de ingeniería y no como un acabado final. Buscamos cumplir con el nivel AA de las WCAG 2.1 en todo este sitio web y aplicar el mismo estándar a los productos que creamos para los clientes."
+    },
+    "implement": {
+      "title": "2. Qué implementamos",
+      "items": [
+        "Estructura HTML semántica con un único encabezado principal por página y un orden lógico de encabezados.",
+        "Total operabilidad con teclado, con indicadores de foco visibles en los elementos interactivos.",
+        "Objetivos de contraste de color cumplidos tanto en el tema claro como en el oscuro.",
+        "Alternativas de texto para imágenes significativas, y elementos decorativos ocultos a la tecnología de asistencia.",
+        "Campos de formulario etiquetados con mensajes de error anunciados, no solo mostrados en color.",
+        "Diseños adaptables que siguen siendo utilizables cuando se amplía el texto o la ventana es pequeña.",
+        "Soporte de movimiento reducido para usuarios que han solicitado menos animación a nivel del sistema."
+      ]
+    },
+    "limitations": {
+      "title": "3. Limitaciones conocidas",
+      "intro": "Esta es una lista honesta, no una afirmación de perfección:",
+      "items": [
+        "Los diagramas técnicos complejos transmiten la estructura visualmente; cada uno tiene una explicación de texto cerca, pero los propios diagramas están simplificados para lectores de pantalla.",
+        "Algunas tablas de datos se desplazan horizontalmente en pantallas muy pequeñas.",
+        "La interacción por voz en el asistente de IA depende del soporte de voz del navegador y no está disponible en todos los navegadores."
+      ]
+    },
+    "assessment": {
+      "title": "4. Enfoque de evaluación",
+      "body": "Realizamos pruebas con navegación por teclado, herramientas de inspección de accesibilidad del navegador y verificaciones automatizadas durante el desarrollo. Actualmente no contamos con certificación de un auditor externo, y lo decimos claramente en lugar de sugerir que se ha realizado una auditoría formal."
+    },
+    "reporting": {
+      "title": "5. Reportar una barrera",
+      "bodyPrefix": "Si alguna parte de este sitio te impide hacer algo, avísanos en",
+      "bodySuffix": "Describe la página y qué sucedió. Nuestro objetivo es confirmar la recepción de los reportes de accesibilidad dentro de cinco días hábiles y proporcionar la información que necesitas en un formato alternativo mientras solucionamos el problema."
+    }
+  }
+}

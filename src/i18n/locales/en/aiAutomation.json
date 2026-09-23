@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "eyebrow": "Services",
+    "title": "Your Operations.<br/>Automated.",
+    "desc": "Connect the systems your business already uses and remove the repetitive manual steps between them — capture, qualification, updates, follow-up, scheduling and reporting.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "friction": {
+    "title": "Where operational time disappears",
+    "desc": "Most teams do not lose time on the work itself. They lose it moving information between tools, re-typing the same details and remembering to follow up.",
+    "points": [
+      "Leads sit unqualified while someone finds time to review them.",
+      "The same data is entered into several systems by hand.",
+      "Follow-up depends on individuals remembering.",
+      "Reporting is assembled manually from separate tools."
+    ]
+  },
+  "solution": {
+    "title": "Workflows that run without supervision",
+    "desc": "We map the process as it actually happens, then rebuild it as connected workflows: information is captured once, qualified, routed to the right system, and followed up automatically — with a clear log of what ran and what needs a person."
+  },
+  "build": {
+    "heading": "What we Automate",
+    "cards": [
+      {
+        "title": "Lead Capture & Routing",
+        "desc": "Forms, inbound messages and enquiries routed by rules or AI."
+      },
+      {
+        "title": "Qualification",
+        "desc": "Structured scoring and summarization before a human reads anything."
+      },
+      {
+        "title": "CRM Operations",
+        "desc": "Records created and updated automatically from real activity."
+      },
+      {
+        "title": "Follow-up Sequences",
+        "desc": "Timed, conditional messaging across email and messaging channels."
+      },
+      {
+        "title": "Scheduling",
+        "desc": "Booking, reminders and rescheduling handled inside the workflow."
+      },
+      {
+        "title": "Reporting",
+        "desc": "Operational metrics compiled continuously instead of monthly."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "Process mapping",
+      "Rule-based routing",
+      "AI qualification",
+      "Data enrichment",
+      "Conditional sequences",
+      "Error handling and retries"
+    ],
+    "row2": [
+      "Run logging",
+      "Human handoff",
+      "Notifications",
+      "Operational dashboards"
+    ]
+  },
+  "usecases": {
+    "heading": "Use Cases",
+    "items": [
+      {
+        "title": "Inbound lead handling",
+        "desc": "Every enquiry qualified, logged and answered without delay."
+      },
+      {
+        "title": "Back-office operations",
+        "desc": "Recurring internal processes executed on a schedule."
+      },
+      {
+        "title": "Client onboarding",
+        "desc": "Documents, accounts and tasks created from a single trigger."
+      },
+      {
+        "title": "Reporting",
+        "desc": "Operational data collected and summarized automatically."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Workflow architecture",
+    "desc": "Automation is only useful when it is observable. Every workflow we build records what ran, what failed and what a person still needs to decide.",
+    "timeline": [
+      {
+        "title": "Triggers",
+        "tags": [["Forms", "Schedules"], ["Webhooks"], ["Inbound messages"]]
+      },
+      {
+        "title": "Logic",
+        "tags": [["Rules", "AI qualification"], ["Branching", "Validation"]]
+      },
+      {
+        "title": "Actions",
+        "tags": [["CRM updates", "Messaging"], ["Scheduling", "Documents"]]
+      },
+      {
+        "title": "Oversight",
+        "tags": [["Run logs", "Retries"], ["Alerts", "Human handoff"]]
+      }
+    ]
+  },
+  "process2": {
+    "heading": "Implementation process",
+    "cards": [
+      {
+        "title": "Map",
+        "desc": "Document the process as it runs today, including exceptions."
+      },
+      {
+        "title": "Design",
+        "desc": "Define triggers, decision logic and where a human stays in the loop."
+      },
+      {
+        "title": "Connect",
+        "desc": "Establish access to the systems involved and validate the data flow."
+      },
+      {
+        "title": "Build",
+        "desc": "Implement workflows with logging, validation and error handling."
+      },
+      {
+        "title": "Test",
+        "desc": "Run against real scenarios, including the ones that normally break."
+      },
+      {
+        "title": "Operate",
+        "desc": "Monitor, tune and extend as the process changes."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": ["CRM", "Email", "Messaging", "Calendars", "Forms"],
+    "row2": ["Databases", "Spreadsheets", "Webhooks", "Payments"]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      {
+        "title": "Built around the real process",
+        "desc": "We automate the workflow you actually run, including its exceptions."
+      },
+      {
+        "title": "Observable by design",
+        "desc": "Every run is logged, so failures surface instead of hiding."
+      },
+      {
+        "title": "Observable by design",
+        "desc": "Every run is logged, so failures surface instead of hiding."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $1,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

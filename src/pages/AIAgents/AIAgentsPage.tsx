@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ai-agents.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -42,162 +43,75 @@ import sparkle3d from '../../assets/images/ai-agents/figma/sparkle-3d.png';
 import solutionIllustration from '../../assets/images/ai-agents/figma/agents-solution__graphic.png';
 import pricingGlowOrb from '../../assets/images/ai-agents/figma/pricing-glow-orb.png';
 
-const problems = [
-  'Answers are generic because the assistant has no business knowledge.',
-  'The assistant can talk, but cannot actually do anything.',
-  'There is no defined handover when a request exceeds its scope.',
-  'Nobody can see what it said or why.',
+// Icon/image references only — text content comes from the `aiAgents` i18n
+// namespace and is combined with these parallel arrays inside the component.
+const buildIcons = [
+  buildIconReceptionRouting,
+  buildIconSales,
+  buildIconSupport,
+  buildIconScheduling,
+  buildIconOperations,
+  buildIconEscalation,
 ];
+const buildDescWidths = [310, 345, 324, 306, 342, 335];
 
-const buildCards = [
-  {
-    icon: buildIconReceptionRouting,
-    title: 'Reception & Routing',
-    desc: 'Answers are generic because the assistant has no business knowledge.',
-    descWidth: 310,
-  },
-  {
-    icon: buildIconSales,
-    title: 'Sales Agents',
-    desc: 'Qualification, information and handover to your team.',
-    descWidth: 345,
-  },
-  {
-    icon: buildIconSupport,
-    title: 'Support Agents',
-    desc: 'Answers grounded in your documented knowledge.',
-    descWidth: 324,
-  },
-  {
-    icon: buildIconScheduling,
-    title: 'Scheduling Agents',
-    desc: 'Availability, booking and confirmation inside the conversation.',
-    descWidth: 306,
-  },
-  {
-    icon: buildIconOperations,
-    title: 'Operations Agents',
-    desc: 'Internal agents that retrieve information & update records.',
-    descWidth: 342,
-  },
-  {
-    icon: buildIconEscalation,
-    title: 'Escalation design',
-    desc: 'Defined thresholds where a human takes over with full context.',
-    descWidth: 335,
-  },
+const timelineNumbers = ['01', '02', '03', '04', '05'];
+
+const processIcons = [
+  processIconDefineRole,
+  processIconAssembleKnowledge,
+  processIconConnectActions,
+  processIconBuild,
+  processIconReview,
+  processIconOperate,
 ];
+const processDescWidths = [253, 264, 242, 253, 253, 253];
 
-const capabilityRow1 = [
-  'Intent understanding',
-  'Knowledge grounding',
-  'Multi-channel conversations',
-  'Permitted actions',
-  'Record lookup and updates',
-  'Scheduling',
-];
+const integrationsIcons1 = [funnelSvg, calendarSvg, organizationSvg, phoneSvg, whatsappSvg];
+const integrationsIcons2 = [smsSvg, emailSvg, restApiSvg];
 
-const capabilityRow2 = ['Conversation logging', 'Human escalation', 'Tone and policy control', 'Behaviour review'];
+const whyIcons = [whyIconBoundedDesign, whyIconGroundedKnowledge, whyIconEscalationProduct];
 
-const useCases = [
-  {
-    title: 'Front-desk coverage',
-    desc: 'Enquiries answered outside working hours with proper handover.',
-  },
-  {
-    title: 'Qualification',
-    desc: 'Structured information collected before your team engages.',
-  },
-  {
-    title: 'Customer support',
-    desc: 'Repeated questions answered from documented knowledge.',
-  },
-  {
-    title: 'Internal assistants',
-    desc: 'Staff-facing agents that find information across systems.',
-  },
-];
-
-const timelineSteps = [
-  { number: '01', title: 'Channels', tags: [['Chat', 'Voice'], ['SMS', 'Email'], ['Messaging']] },
-  { number: '02', title: 'Reasoning', tags: [['Intent', 'Policy'], ['Conversation state']] },
-  { number: '03', title: 'Knowledge', tags: [['Documents', 'FAQs'], ['Records'], ['Business rules']] },
-  { number: '04', title: 'Actions', tags: [['Lookups', 'Updates'], ['Scheduling'], ['Notifications']] },
-  { number: '05', title: 'Oversight', tags: [['Transcripts', 'Escalation'], ['Review']] },
-];
-
-const processCards = [
-  {
-    icon: processIconDefineRole,
-    title: 'Define the role',
-    desc: 'Responsibilities, tone, boundaries and escalation rules.',
-    descWidth: 253,
-  },
-  {
-    icon: processIconAssembleKnowledge,
-    title: 'Assemble knowledge',
-    desc: 'Collect and structure the information the agent may rely on.',
-    descWidth: 264,
-  },
-  {
-    icon: processIconConnectActions,
-    title: 'Connect actions',
-    desc: 'Give the agent bounded access to the systems it needs.',
-    descWidth: 242,
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Implement the agent, its guardrails and its logging.',
-    descWidth: 253,
-  },
-  {
-    icon: processIconReview,
-    title: 'Review',
-    desc: 'Test against real scenarios and refine from transcripts.',
-    descWidth: 253,
-  },
-  {
-    icon: processIconOperate,
-    title: 'Operate',
-    desc: 'Monitor conversations and extend capabilities over time.',
-    descWidth: 253,
-  },
-];
-
-const integrationsRow1 = [
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: calendarSvg, label: 'Calendars' },
-  { icon: organizationSvg, label: 'Knowledge base' },
-  { icon: phoneSvg, label: 'Telephony' },
-  { icon: whatsappSvg, label: 'WhatsApp' },
-];
-
-const integrationsRow2 = [
-  { icon: smsSvg, label: 'SMS' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: restApiSvg, label: 'Internal APIs' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconBoundedDesign,
-    title: 'Bounded by design',
-    desc: 'Agents act only within permissions you approve.',
-  },
-  {
-    icon: whyIconGroundedKnowledge,
-    title: 'Grounded in your knowledge',
-    desc: 'Answers come from your content, not from guesswork.',
-  },
-  {
-    icon: whyIconEscalationProduct,
-    title: 'Escalation is part of the product',
-    desc: 'Handover to a person is designed, not an afterthought.',
-  },
-];
+type TitleDesc = { title: string; desc: string };
 
 export default function AIAgentsPage() {
+  const { t } = useTranslation('aiAgents');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildCards = (t('build.cards', { returnObjects: true }) as TitleDesc[]).map((card, i) => ({
+    ...card,
+    icon: buildIcons[i],
+    descWidth: buildDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('usecases.items', { returnObjects: true }) as TitleDesc[];
+
+  const timelineSteps = (
+    t('architecture.timeline', { returnObjects: true }) as { title: string; tags: string[][] }[]
+  ).map((step, i) => ({ ...step, number: timelineNumbers[i] }));
+
+  const processCards = (t('process2.steps', { returnObjects: true }) as TitleDesc[]).map((card, i) => ({
+    ...card,
+    icon: processIcons[i],
+    descWidth: processDescWidths[i],
+  }));
+
+  const integrationsRow1 = (t('integrations.row1', { returnObjects: true }) as { label: string }[]).map(
+    (item, i) => ({ ...item, icon: integrationsIcons1[i] })
+  );
+  const integrationsRow2 = (t('integrations.row2', { returnObjects: true }) as { label: string }[]).map(
+    (item, i) => ({ ...item, icon: integrationsIcons2[i] })
+  );
+
+  const whyCards = (t('why.cards', { returnObjects: true }) as TitleDesc[]).map((card, i) => ({
+    ...card,
+    icon: whyIcons[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -248,21 +162,17 @@ export default function AIAgentsPage() {
           <div className={`agents-hero__content ${hero.className}`} ref={hero.ref}>
             <span className="agents-hero__badge">
               <Icon svg={servicesStarSvg} />
-              Services
+              {t('hero.badge')}
             </span>
-            <h1 className="agents-hero__title">AI Agents That Actually Work.</h1>
-            <p className="agents-hero__desc">
-              Agents built around a defined role, real business knowledge and permitted
-              actions — with a clear escalation path to your team when a request needs a
-              person.
-            </p>
+            <h1 className="agents-hero__title">{t('hero.title')}</h1>
+            <p className="agents-hero__desc">{t('hero.desc')}</p>
             <div className="agents-hero__actions">
               <a href="#contact" className="btn btn-primary">
-                Get my project estimate
+                {t('hero.ctaPrimary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
               <a href="#agent-types" className="btn btn-outline">
-                Explore all services
+                {t('hero.ctaSecondary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
             </div>
@@ -285,13 +195,8 @@ export default function AIAgentsPage() {
       <section className="agents-disappoint section">
         <div className="container agents-disappoint__row">
           <div className={`agents-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="agents-h1-lg">
-              Why Most <span className="accent">AI</span> Deployments Disappoint
-            </h2>
-            <p className="agents-p-lg">
-              A general-purpose chatbot with no knowledge, no permissions and no
-              escalation path creates work instead of removing it.
-            </p>
+            <h2 className="agents-h1-lg" dangerouslySetInnerHTML={{ __html: t('disappoint.title') }} />
+            <p className="agents-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`agents-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -312,13 +217,8 @@ export default function AIAgentsPage() {
           </div>
 
           <div className={`agents-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="agents-solution__title">Agents with a role, knowledge and permissions</h2>
-            <p className="agents-solution__desc">
-              We define what each agent is responsible for, connect it to your knowledge
-              and systems, and give it a bounded set of actions it is allowed to
-              perform. Conversations are logged, escalation is explicit, and behaviour
-              is reviewed against real transcripts.
-            </p>
+            <h2 className="agents-solution__title">{t('solution.title')}</h2>
+            <p className="agents-solution__desc">{t('solution.desc')}</p>
           </div>
         </div>
       </section>
@@ -326,7 +226,7 @@ export default function AIAgentsPage() {
       <section className="agents-build section" id="agent-types">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="agents-h2">What We Build</h2>
+            <h2 className="agents-h2">{t('build.title')}</h2>
           </div>
 
           <div className={`agents-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -349,7 +249,7 @@ export default function AIAgentsPage() {
       <section className="agents-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="agents-h2">Capabilities</h2>
+            <h2 className="agents-h2">{t('capabilities.title')}</h2>
           </div>
 
           <div className={`agents-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -380,7 +280,7 @@ export default function AIAgentsPage() {
       <section className="agents-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="agents-h2">Use Cases</h2>
+            <h2 className="agents-h2">{t('usecases.title')}</h2>
           </div>
 
           <div className={`agents-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -398,11 +298,8 @@ export default function AIAgentsPage() {
       <section className="agents-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="agents-h1-lg agents-h1-lg--center">Agent architecture</h2>
-            <p className="agents-section-copy">
-              An agent is a system, not a prompt: knowledge, tools, permissions, memory
-              and escalation are designed together.
-            </p>
+            <h2 className="agents-h1-lg agents-h1-lg--center">{t('architecture.title')}</h2>
+            <p className="agents-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }} ref={architectureDivider.ref}>
@@ -435,11 +332,8 @@ export default function AIAgentsPage() {
       <section className="agents-process2 section">
         <div className="container">
           <div className={`section-head ${process2Head.className}`} ref={process2Head.ref}>
-            <h2 className="agents-h2">Agent architecture</h2>
-            <p className="agents-section-copy">
-              An agent is a system, not a prompt: knowledge, tools, permissions, memory
-              and escalation are designed together.
-            </p>
+            <h2 className="agents-h2">{t('process2.title')}</h2>
+            <p className="agents-section-copy">{t('process2.desc')}</p>
           </div>
 
           <div className={`agents-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -461,7 +355,7 @@ export default function AIAgentsPage() {
       <section className="agents-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="agents-h1-lg agents-h1-lg--center">Potential Integrations</h2>
+            <h2 className="agents-h1-lg agents-h1-lg--center">{t('integrations.title')}</h2>
           </div>
 
           <div className={`agents-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -506,7 +400,7 @@ export default function AIAgentsPage() {
       <section className="agents-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="agents-h2">Why Van Tech Systems</h2>
+            <h2 className="agents-h2">{t('why.title')}</h2>
           </div>
 
           <div className={`agents-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -526,14 +420,11 @@ export default function AIAgentsPage() {
           <div className={`agents-pricing-cta__card ${pricingCta.className}`} ref={pricingCta.ref}>
             <img src={pricingGlowOrb} alt="" className="agents-pricing-cta__glow" loading="lazy" />
             <div className="agents-pricing-cta__copy">
-              <h2 className="agents-pricing-cta__title">Starting at $1,500/month</h2>
-              <p className="agents-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="agents-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="agents-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

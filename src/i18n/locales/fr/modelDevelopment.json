@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Vos données.<br/>Des systèmes intelligents.",
+    "desc": "Des systèmes de récupération, de connaissance et de raisonnement construits à partir de vos propres documents, dossiers et règles métier — pour que les réponses de l'IA reflètent le fonctionnement réel de votre organisation.",
+    "ctaPrimary": "Obtenir mon devis de projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "disappoint": {
+    "title": "Les modèles génériques ne connaissent pas votre activité",
+    "desc": "Un modèle performant sans accès à vos documents, dossiers et règles produira des réponses assurées qui ne correspondent pas à vos opérations.",
+    "problems": [
+      "Les connaissances sont dispersées entre documents, systèmes et personnes.",
+      "Les réponses ne peuvent pas être retracées jusqu'à leur source.",
+      "Les informations sensibles n'ont aucune limite définie.",
+      "Il n'existe aucun moyen de mesurer si la qualité des résultats s'améliore."
+    ]
+  },
+  "solution": {
+    "title": "Une couche de connaissance que vous maîtrisez",
+    "desc": "Nous construisons la couche entre vos données et le modèle : ingestion, structuration, récupération, permissions et évaluation. Le résultat est un système dont les réponses sont ancrées dans vos sources et peuvent être mesurées, corrigées et étendues."
+  },
+  "build": {
+    "heading": "Ce que nous construisons",
+    "cards": [
+      { "title": "Ingestion des données", "desc": "Des pipelines qui rassemblent documents et dossiers dans un format exploitable." },
+      { "title": "Structuration des connaissances", "desc": "Découpage, métadonnées et indexation conçus pour la qualité de récupération." },
+      { "title": "Récupération (RAG)", "desc": "Des réponses ancrées qui citent la source sous-jacente." },
+      { "title": "Raisonnement métier", "desc": "Vos règles et contraintes appliquées aux résultats du modèle." },
+      { "title": "Limites d'accès", "desc": "Des permissions qui déterminent qui peut récupérer quoi." },
+      { "title": "Évaluation", "desc": "Des jeux de tests et des cycles de revue qui suivent la qualité des réponses dans le temps." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacités",
+    "row1": [
+      "Ingestion de documents",
+      "Embeddings et indexation",
+      "Génération augmentée par récupération",
+      "Extraction structurée",
+      "Recherche sémantique"
+    ],
+    "row2": [
+      "Application des règles métier",
+      "Intégration de modèles",
+      "Bancs d'essai d'évaluation",
+      "Contrôle d'accès",
+      "Supervision"
+    ]
+  },
+  "usecases": {
+    "heading": "Cas d'usage",
+    "items": [
+      { "title": "Assistant de connaissance interne", "desc": "Des réponses pour le personnel tirées de la documentation interne approuvée." },
+      { "title": "Compréhension de documents", "desc": "Des données structurées extraites de contrats, formulaires et rapports." },
+      { "title": "Recherche par domaine", "desc": "Recherche sémantique dans un vaste ensemble de contenu privé." },
+      { "title": "Agents ancrés", "desc": "Une base de connaissances sur laquelle s'appuient d'autres systèmes d'IA." }
+    ]
+  },
+  "architecture": {
+    "heading": "Comment ça marche",
+    "desc": "Nous intégrons et orchestrons des modèles de fondation existants autour de vos données. Nous n'entraînons pas de modèles de fondation depuis zéro.",
+    "timeline": [
+      { "title": "Sources", "tags": [["Documents", "APIs"], ["Bases de données"], ["Règles métier"]] },
+      { "title": "Couche de connaissance", "tags": [["Ingestion", "Découpage"], ["Embeddings", "Index"]] },
+      { "title": "Raisonnement", "tags": [["Récupération", "Modèle"], ["Contraintes", "Citations"]] },
+      { "title": "Consommateurs", "tags": [["Agents", "Recherche"], ["Assistants", "Automatisation"], ["Analytique"]] },
+      { "title": "Assurance", "tags": [["Évaluation", "Permissions"], ["Supervision"]] }
+    ]
+  },
+  "process": {
+    "heading": "Processus de développement",
+    "cards": [
+      { "title": "Analyser", "desc": "Examiner les données disponibles, leur qualité et leurs contraintes." },
+      { "title": "Concevoir", "desc": "Concevoir l'ingestion, l'indexation, la récupération et les limites d'accès." },
+      { "title": "Construire", "desc": "Mettre en œuvre le pipeline ainsi que la couche de récupération et de raisonnement." },
+      { "title": "Évaluer", "desc": "Mesurer les résultats par rapport à un ensemble de tests défini avec de vraies questions." },
+      { "title": "Intégrer", "desc": "Exposer la couche aux agents, à la recherche ou aux applications qui l'utilisent." },
+      { "title": "Améliorer", "desc": "Affiner la récupération, les prompts et les règles à mesure que l'usage augmente." }
+    ]
+  },
+  "integrations": {
+    "heading": "Intégrations potentielles",
+    "row1": ["Bases de données", "Stockage de documents", "Index vectoriels", "Fournisseurs de modèles"],
+    "row2": ["APIs internes", "Analytique"]
+  },
+  "why": {
+    "heading": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "Ancré et traçable", "desc": "Les réponses font référence aux sources dont elles proviennent." },
+      { "title": "Mesuré, non supposé", "desc": "La qualité est évaluée sur de vraies questions avant le déploiement." },
+      { "title": "Accès délimité", "desc": "Les permissions déterminent ce que le système peut récupérer et pour qui." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de $1,500/month",
+    "desc": "Les prix de départ sont des repères de planification. Le prix final dépend de la portée, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir mon devis de projet"
+  }
+}

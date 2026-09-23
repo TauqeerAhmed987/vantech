@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Servicios",
+    "title": "Comercio que trabaja de forma más inteligente.",
+    "desc": "Tiendas online, pagos y experiencias posventa conectadas a la automatización y la IA, para que los clientes obtengan respuestas y tu equipo deje de gestionar manualmente las mismas solicitudes.",
+    "ctaPrimary": "Obtener el presupuesto de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "leak": {
+    "title": "Dónde se escapan las operaciones de <span class=\"accent\">comercio</span>",
+    "desc": "La mayoría de las tiendas no pierden dinero en el escaparate. Lo pierden en carritos abandonados, preguntas de soporte repetidas y trabajo posventa manual.",
+    "problems": [
+      "El soporte responde cada día a las mismas preguntas sobre pedidos.",
+      "Los carritos se abandonan sin un proceso de recuperación estructurado.",
+      "El descubrimiento de productos no coincide con la forma en que buscan los clientes.",
+      "Los datos de pedidos, pagos y logística viven en lugares separados."
+    ]
+  },
+  "solution": {
+    "title": "Comercio conectado de principio a fin",
+    "desc": "Construimos la tienda y la capa operativa que hay detrás: pagos, flujo de pedidos, actualizaciones logísticas, mensajería con clientes y analítica, con asistencia de IA para las preguntas y recorridos que se repiten."
+  },
+  "build": {
+    "heading": "Qué construimos",
+    "cards": [
+      {
+        "title": "Tienda online",
+        "desc": "Una experiencia de compra rápida y responsive diseñada en torno a tu catálogo."
+      },
+      {
+        "title": "Asistente de comercio",
+        "desc": "Respuestas con IA a preguntas sobre pedidos, productos y políticas."
+      },
+      {
+        "title": "Pago y transacciones",
+        "desc": "Flujos de pago, suscripciones y confirmación de pedidos."
+      },
+      {
+        "title": "Recuperación y ciclo de vida",
+        "desc": "Recuperación de carritos y mensajería de ciclo de vida basadas en el comportamiento real."
+      },
+      {
+        "title": "Posventa",
+        "desc": "Estado del pedido, actualizaciones de envío y gestión de devoluciones."
+      },
+      {
+        "title": "Operaciones",
+        "desc": "Herramientas de administración e informes para el equipo que gestiona la tienda."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Catálogo y merchandising",
+      "Proceso de pago",
+      "Pagos y suscripciones",
+      "Gestión de pedidos",
+      "Actualizaciones de envío"
+    ],
+    "row2": [
+      "Automatización de atención al cliente",
+      "Recuperación de carritos",
+      "Descubrimiento de productos",
+      "Mensajería de ciclo de vida",
+      "Analítica de comercio"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Marcas de venta directa al consumidor",
+        "desc": "Una tienda con comunicación posventa automatizada."
+      },
+      {
+        "title": "Comercio por suscripción",
+        "desc": "Facturación recurrente con gestión de cuentas y planes."
+      },
+      {
+        "title": "Tiendas con catálogos extensos",
+        "desc": "Búsqueda y descubrimiento diseñados para grandes catálogos de productos."
+      },
+      {
+        "title": "Comercio de servicios",
+        "desc": "Servicios reservables vendidos y gestionados en línea."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitectura del MVP",
+    "desc": "Incluso un primer lanzamiento es un sistema completo. Lo mantenemos reducido, pero estructurado, para que la segunda versión sea una ampliación y no una reconstrucción.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Experiencia",
+        "tags": [["Tienda", "Búsqueda"], ["Proceso de pago"], ["Cuenta"]]
+      },
+      {
+        "number": "02",
+        "title": "Comercio",
+        "tags": [["Catálogo"], ["Pedidos", "Pagos"], ["Suscripciones"]]
+      },
+      {
+        "number": "03",
+        "title": "Operaciones",
+        "tags": [["Logística"], ["Soporte", "Notificaciones"]]
+      },
+      {
+        "number": "04",
+        "title": "Inteligencia",
+        "tags": [["Asistente"], ["Recuperación", "Analítica"], ["Recomendaciones"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Proceso de desarrollo",
+    "cards": [
+      {
+        "title": "Descubrimiento",
+        "desc": "Catálogo, recorridos de clientes y limitaciones operativas."
+      },
+      {
+        "title": "Diseño",
+        "desc": "Experiencia de tienda y pago en todos los dispositivos."
+      },
+      {
+        "title": "Desarrollo",
+        "desc": "Tienda, pagos, flujo de pedidos e integraciones."
+      },
+      {
+        "title": "Automatización",
+        "desc": "Soporte, recuperación y mensajería de ciclo de vida."
+      },
+      {
+        "title": "Pruebas",
+        "desc": "Pruebas de pago, QA responsive y revisión de rendimiento."
+      },
+      {
+        "title": "Lanzamiento",
+        "desc": "Despliegue, analítica y monitorización posterior al lanzamiento."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integraciones potenciales",
+    "row1": [
+      { "label": "Proveedores de pago" },
+      { "label": "Envíos" },
+      { "label": "Correo electrónico" },
+      { "label": "Mensajería" },
+      { "label": "CRM" }
+    ],
+    "row2": [
+      { "label": "Analítica" },
+      { "label": "Inventario" },
+      { "label": "Contabilidad" }
+    ]
+  },
+  "why": {
+    "heading": "Por qué Van Tech Systems",
+    "cards": [
+      {
+        "title": "Diseñado para las operaciones",
+        "desc": "Diseñamos el trabajo que hay detrás del pedido, no solo la tienda."
+      },
+      {
+        "title": "Automatización donde se repite",
+        "desc": "La IA se aplica a las preguntas y recorridos que se repiten."
+      },
+      {
+        "title": "Medible",
+        "desc": "La analítica se integra como parte de la construcción."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Desde $3,500/month",
+    "desc": "Los precios de partida son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener el presupuesto de mi proyecto"
+  }
+}

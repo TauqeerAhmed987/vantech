@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Seus dados.<br/>Sistemas inteligentes.",
+    "desc": "Sistemas de recuperação, conhecimento e raciocínio construídos sobre seus próprios documentos, registros e regras de negócio, para que as respostas da IA reflitam como sua organização realmente funciona.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "disappoint": {
+    "title": "Modelos genéricos não conhecem seu negócio",
+    "desc": "Um modelo capaz sem acesso aos seus documentos, registros e regras produzirá respostas confiantes que não correspondem às suas operações.",
+    "problems": [
+      "O conhecimento está disperso entre documentos, sistemas e pessoas.",
+      "As respostas não podem ser rastreadas até a fonte.",
+      "As informações sensíveis não têm um limite definido.",
+      "Não há como medir se a qualidade das respostas está melhorando."
+    ]
+  },
+  "solution": {
+    "title": "Uma camada de conhecimento que você controla",
+    "desc": "Construímos a camada entre seus dados e o modelo: ingestão, estruturação, recuperação, permissões e avaliação. O resultado é um sistema cujas respostas são fundamentadas em suas fontes e podem ser medidas, corrigidas e ampliadas."
+  },
+  "build": {
+    "heading": "O que construímos",
+    "cards": [
+      { "title": "Ingestão de dados", "desc": "Pipelines que reúnem documentos e registros em um formato utilizável." },
+      { "title": "Estruturação do conhecimento", "desc": "Fragmentação, metadados e indexação projetados para a qualidade da recuperação." },
+      { "title": "Recuperação (RAG)", "desc": "Respostas fundamentadas que citam a fonte original." },
+      { "title": "Raciocínio de negócio", "desc": "Suas regras e restrições aplicadas ao resultado do modelo." },
+      { "title": "Limites de acesso", "desc": "Permissões que determinam quem pode recuperar o quê." },
+      { "title": "Avaliação", "desc": "Conjuntos de teste e ciclos de revisão que acompanham a qualidade das respostas ao longo do tempo." }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Ingestão de documentos",
+      "Embeddings e indexação",
+      "Geração aumentada por recuperação",
+      "Extração estruturada",
+      "Busca semântica"
+    ],
+    "row2": [
+      "Aplicação de regras de negócio",
+      "Integração de modelos",
+      "Estruturas de avaliação",
+      "Controle de acesso",
+      "Monitoramento"
+    ]
+  },
+  "usecases": {
+    "heading": "Casos de uso",
+    "items": [
+      { "title": "Assistente de conhecimento interno", "desc": "Respostas para a equipe extraídas da documentação interna aprovada." },
+      { "title": "Compreensão de documentos", "desc": "Dados estruturados extraídos de contratos, formulários e relatórios." },
+      { "title": "Busca por domínio", "desc": "Busca semântica em um grande conjunto de conteúdo privado." },
+      { "title": "Agentes fundamentados", "desc": "Uma base de conhecimento sobre a qual outros sistemas de IA são construídos." }
+    ]
+  },
+  "architecture": {
+    "heading": "Como funciona",
+    "desc": "Integramos e orquestramos modelos de fundação existentes em torno dos seus dados. Não treinamos modelos de fundação do zero.",
+    "timeline": [
+      { "title": "Fontes", "tags": [["Documentos", "APIs"], ["Bancos de dados"], ["Regras de negócio"]] },
+      { "title": "Camada de conhecimento", "tags": [["Ingestão", "Fragmentação"], ["Embeddings", "Índice"]] },
+      { "title": "Raciocínio", "tags": [["Recuperação", "Modelo"], ["Restrições", "Citações"]] },
+      { "title": "Consumidores", "tags": [["Agentes", "Busca"], ["Assistentes", "Automação"], ["Análise"]] },
+      { "title": "Garantia", "tags": [["Avaliação", "Permissões"], ["Monitoramento"]] }
+    ]
+  },
+  "process": {
+    "heading": "Processo de desenvolvimento",
+    "cards": [
+      { "title": "Avaliar", "desc": "Revisar os dados disponíveis, sua qualidade e suas restrições." },
+      { "title": "Arquitetar", "desc": "Projetar a ingestão, indexação, recuperação e limites de acesso." },
+      { "title": "Construir", "desc": "Implementar o pipeline e a camada de recuperação e raciocínio." },
+      { "title": "Medir", "desc": "Medir os resultados em relação a um conjunto de testes definido com perguntas reais." },
+      { "title": "Integrar", "desc": "Expor a camada aos agentes, à busca ou às aplicações que a utilizam." },
+      { "title": "Aprimorar", "desc": "Refinar a recuperação, os prompts e as regras à medida que o uso cresce." }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações potenciais",
+    "row1": ["Bancos de dados", "Armazenamento de documentos", "Índices vetoriais", "Provedores de modelos"],
+    "row2": ["APIs internas", "Análise"]
+  },
+  "why": {
+    "heading": "Por que a Van Tech Systems",
+    "cards": [
+      { "title": "Fundamentado e rastreável", "desc": "As respostas fazem referência às fontes de onde vieram." },
+      { "title": "Medido, não presumido", "desc": "A qualidade é avaliada com base em perguntas reais antes do lançamento." },
+      { "title": "Acesso delimitado", "desc": "As permissões determinam o que o sistema pode recuperar e para quem." }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de $1,500/month",
+    "desc": "Os preços iniciais são referências de planejamento. O preço final depende do escopo, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

@@ -1,26 +1,28 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useReveal } from '../hooks/useReveal';
 
-const plans = [
-  { category: 'AI', title: 'AI Receptionist', price: '$1,500', note: 'Ongoing from $249/mo' },
-  { category: 'AI', title: 'AI Automation System', price: '$2,500' },
-  { category: 'Web', title: 'Professional Business Website', price: '$1,500' },
-  { category: 'Web', title: 'Advanced Business Website', price: '$3,500' },
-  { category: 'Software', title: 'Custom Web Application', price: '$5,000' },
-  { category: 'Software', title: 'SaaS MVP', price: '$7,500' },
-  { category: 'Software', title: 'Advanced SaaS Platform', customQuote: true, note: 'Custom scope.' },
-  { category: 'AI', title: 'Custom AI Agent', price: '$3,500' },
-  { category: 'AI', title: 'RAG / Business Knowledge AI', price: '$5,000' },
-  { category: 'Software', title: 'CRM / Operations Platform', price: '$6,500' },
-];
+type PlanItem = {
+  category: 'ai' | 'web' | 'software';
+  title: string;
+  price?: string;
+  note?: string;
+  customQuote?: boolean;
+};
 
 function PlanCard({
   plan,
+  categoryLabel,
+  startingAtLabel,
+  customQuoteLabel,
   isActive,
   onEnter,
   onLeave,
 }: {
-  plan: (typeof plans)[number];
+  plan: PlanItem;
+  categoryLabel: string;
+  startingAtLabel: string;
+  customQuoteLabel: string;
   isActive: boolean;
   onEnter: () => void;
   onLeave: () => void;
@@ -35,18 +37,18 @@ function PlanCard({
       onMouseLeave={onLeave}
     >
       <div className="plan-card__glow" />
-      <span className="plan-card__category">{plan.category}</span>
+      <span className="plan-card__category">{categoryLabel}</span>
       <h3 className="plan-card__title">{plan.title}</h3>
 
       <div className="plan-card__footer">
         {plan.customQuote ? (
           <>
-            <span className="plan-card__price gradient-text">Custom Quote</span>
+            <span className="plan-card__price gradient-text">{customQuoteLabel}</span>
             {plan.note && <span className="plan-card__note">{plan.note}</span>}
           </>
         ) : (
           <>
-            <span className="plan-card__label">Starting at</span>
+            <span className="plan-card__label">{startingAtLabel}</span>
             <div className="plan-card__price-row">
               <span className="plan-card__price gradient-text">{plan.price}</span>
               {plan.note && <span className="plan-card__note">{plan.note}</span>}
@@ -59,6 +61,8 @@ function PlanCard({
 }
 
 export default function Pricing() {
+  const { t } = useTranslation('home');
+  const plans = t('pricing.plans', { returnObjects: true }) as PlanItem[];
   const [activeIndex, setActiveIndex] = useState(0);
   const head = useReveal('up');
 
@@ -66,8 +70,8 @@ export default function Pricing() {
     <section className="pricing section" id="pricing">
       <div className="container">
         <div className={`section-head ${head.className}`} ref={head.ref}>
-          <span className="eyebrow-pill">Pricing</span>
-          <h2 className="section-title">Simple Pricing. Serious Software.</h2>
+          <span className="eyebrow-pill">{t('pricing.eyebrow')}</span>
+          <h2 className="section-title">{t('pricing.title')}</h2>
         </div>
 
         <div className="pricing__grid">
@@ -75,6 +79,9 @@ export default function Pricing() {
             <PlanCard
               key={plan.title}
               plan={plan}
+              categoryLabel={t(`pricing.categories.${plan.category}`)}
+              startingAtLabel={t('pricing.startingAt')}
+              customQuoteLabel={t('pricing.customQuote')}
               isActive={i === activeIndex}
               onEnter={() => setActiveIndex(i)}
               onLeave={() => setActiveIndex(0)}
@@ -82,10 +89,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="pricing__note">
-          Starting prices are planning benchmarks. Final pricing depends on scope,
-          architecture, integrations, timeline and technical requirements.
-        </p>
+        <p className="pricing__note">{t('pricing.note')}</p>
       </div>
     </section>
   );

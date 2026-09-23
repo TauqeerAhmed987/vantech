@@ -1,29 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import OrbSphere from './OrbSphere';
 import { useReveal } from '../hooks/useReveal';
 
-const steps = [
-  {
-    number: '01',
-    title: 'Discovery Call',
-    desc: 'A focused conversation to understand your goals, challenges, and the right solution for your business.',
-    direction: 'left',
-  },
-  {
-    number: '02',
-    title: 'Fixed Scope + Timeline',
-    desc: 'We define the scope, timeline, deliverables, and cost upfront—so everyone knows exactly what to expect.',
-    direction: 'up',
-  },
-  {
-    number: '03',
-    title: 'Build + Launch',
-    desc: 'We design, develop, test, and launch your solution. Once complete, everything is handed over to you.',
-    direction: 'right',
-  },
-] as const;
+const directions = ['left', 'up', 'right'] as const;
 
-function StepCard({ step }: { step: (typeof steps)[number] }) {
-  const reveal = useReveal(step.direction);
+type StepItem = { number: string; title: string; desc: string };
+
+function StepCard({ step, direction }: { step: StepItem; direction: (typeof directions)[number] }) {
+  const reveal = useReveal(direction);
 
   return (
     <div className={`step-card ${reveal.className}`} ref={reveal.ref}>
@@ -38,19 +22,21 @@ function StepCard({ step }: { step: (typeof steps)[number] }) {
 }
 
 export default function Steps() {
+  const { t } = useTranslation('home');
+  const steps = t('steps.items', { returnObjects: true }) as StepItem[];
   const head = useReveal('up');
 
   return (
     <section className="steps section">
       <div className="container">
         <div className={`section-head ${head.className}`} ref={head.ref}>
-          <span className="eyebrow-pill">What we build</span>
-          <h2 className="section-title">Three Simple Steps. One Clear Price.</h2>
+          <span className="eyebrow-pill">{t('steps.eyebrow')}</span>
+          <h2 className="section-title">{t('steps.title')}</h2>
         </div>
 
         <div className="steps__grid">
-          {steps.map((step) => (
-            <StepCard key={step.number} step={step} />
+          {steps.map((step, i) => (
+            <StepCard key={step.number} step={step} direction={directions[i]} />
           ))}
         </div>
       </div>

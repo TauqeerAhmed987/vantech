@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": "Trabalhos selecionados",
+    "titleLine1": "Tecnologia construída para",
+    "titleLine2": "negócios reais.",
+    "desc": "Explore sistemas de IA, plataformas SaaS, aplicações web, software empresarial e experiências digitais projetadas e desenvolvidas pela Van Tech Systems.",
+    "subdesc": "Da estratégia de produto e arquitetura ao desenvolvimento, automação e implantação em produção.",
+    "startAProject": "Iniciar um projeto",
+    "ourWork": "Nosso trabalho"
+  },
+  "filterTabs": {
+    "all": "Todos",
+    "ai": "IA",
+    "saas": "SaaS",
+    "webApplications": "Aplicações web",
+    "businessPlatforms": "Plataformas empresariais",
+    "insurance": "Seguros",
+    "ecommerce": "E-commerce"
+  },
+  "viewCaseStudy": "Ver estudo de caso",
+  "viewLiveSite": "Ver site ao vivo",
+  "items": {
+    "onetap": {
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento por meio de um link público ou código QR."
+    },
+    "pmb": {
+      "title": "The PMB Consulting",
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento."
+    },
+    "buketi": {
+      "title": "Buketi Financial & Consulting",
+      "desc": "Uma plataforma de consultoria financeira com posicionamento de serviços, ofertas de consultoria e captação de consultas qualificadas."
+    },
+    "mightyOak": {
+      "title": "Mighty Oak Legacy",
+      "desc": "Uma plataforma digital construída em torno de educação financeira, mentoria, desenvolvimento de liderança e orientação de legado familiar."
+    },
+    "solidRock": {
+      "title": "Solid Rock Leadership Development",
+      "desc": "Uma plataforma de liderança e educação financeira apresentando programas, públicos e uma jornada de agendamento de consultoria."
+    },
+    "vanTravel": {
+      "title": "Van Travel Business",
+      "desc": "Uma plataforma empresarial de viagens e imigração que abrange pacotes, coleta de documentos e consultas de clientes."
+    },
+    "aiFna": {
+      "title": "AI FNA",
+      "desc": "Uma ferramenta de análise de necessidades financeiras assistida por IA que transforma dados de clientes em recomendações prontas para consultores."
+    },
+    "powerMindset": {
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, agendamento e entrega de conteúdo."
+    },
+    "lelofit": {
+      "title": "Lelofit",
+      "desc": "Uma experiência de fitness e coaching com descoberta de programas, planos e inscrição de membros."
+    },
+    "allAccessTrip": {
+      "title": "All Access Trip",
+      "desc": "Uma plataforma de reserva de viagens e itinerários para viagens, grupos e experiências personalizadas."
+    }
+  }
+}

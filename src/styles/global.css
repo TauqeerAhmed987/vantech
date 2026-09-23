@@ -33,7 +33,10 @@
   font-style: normal;
   font-display: swap;
 }
-
+body main.wvt-page.four-boxfull .wvt-stats {
+  width: 100%;
+  max-width: 100%;
+}
 :root {
   --font-heading: 'General Sans', 'Inter', sans-serif;
   --font-body: 'General Sans', 'Inter', sans-serif;
@@ -486,6 +489,10 @@ h1, h2, h3, h4, p {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-text-muted);
+}
+
+.navbar__langs li {
+  cursor: pointer;
 }
 
 .navbar__langs .is-active {
@@ -1838,7 +1845,8 @@ a.navbar__cta--mobile {
   flex-direction: column;
   flex-shrink: 0;
   width: 348px;
-  height: 348px;
+  min-height: 348px;
+  height: auto;
   padding: 30px 33px;
   border-radius: 38px;
   background: rgba(3, 1, 0, 0.4);
@@ -1874,6 +1882,20 @@ a.navbar__cta--mobile {
   font-size: 23px;
   line-height: 1.2;
   color: var(--color-white);
+}
+
+/* Translations run longer than the English original — a smaller size plus
+   a hard line cap (with an ellipsis for anything past it) keeps every card
+   the same height instead of letting long quotes push past the box. */
+.testimonial-card__quote--fr,
+.testimonial-card__quote--es,
+.testimonial-card__quote--pt {
+  flex: none;
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
 }
 
 .testimonial-card__author {
@@ -1924,6 +1946,15 @@ a.navbar__cta--mobile {
   font-size: 90px;
   line-height: 1.2;
   color: var(--color-white);
+}
+
+/* French headline words run longer than the English original, so the base
+   size wraps mid-word at every tier below. Scoped to this language only —
+   see CTA.tsx, which adds cta__title--<lang>. */
+.cta__title--fr,
+.cta__title--es,
+.cta__title--pt {
+  font-size: 64px;
 }
 
 .cta__orb {
@@ -3219,11 +3250,19 @@ a.navbar__cta--mobile {
   }
   .testimonial-card {
     width: 18.125vw;
-    height: 18.125vw;
+    min-height: 18.125vw;
+    height: auto;
     padding: 1.563vw 1.719vw;
     border-radius: 1.979vw;
     backdrop-filter: blur(0.729vw);
     box-shadow: inset 0 0 0.104vw rgba(255, 255, 255, 0.5);
+  }
+  .testimonial-card__quote--fr,
+  .testimonial-card__quote--es,
+  .testimonial-card__quote--pt {
+    flex: none;
+    font-size: 0.834vw;
+    -webkit-line-clamp: 6;
   }
   .testimonial-card::before {
     padding: 0.052vw;
@@ -3258,6 +3297,11 @@ a.navbar__cta--mobile {
   }
   .cta__title {
     font-size: 4.688vw;
+  }
+  .cta__title--fr,
+  .cta__title--es,
+  .cta__title--pt {
+    font-size: 3.333vw;
   }
   .cta__orb {
     top: 7.813vw;
@@ -4270,7 +4314,8 @@ a.navbar__cta--mobile {
 
   .testimonial-card {
     width: 290px;
-    height: 290px;
+    min-height: 290px;
+    height: auto;
     padding: 22px;
     border-radius: 28px;
   }
@@ -4283,6 +4328,14 @@ a.navbar__cta--mobile {
     margin-top: 10px;
     font-size: 16px;
     line-height: 1.4;
+  }
+
+  .testimonial-card__quote--fr,
+  .testimonial-card__quote--es,
+  .testimonial-card__quote--pt {
+    flex: none;
+    font-size: 12px;
+    -webkit-line-clamp: 7;
   }
 
   .testimonial-card__author {
@@ -4312,6 +4365,12 @@ a.navbar__cta--mobile {
 
   .cta__title br {
     display: none;
+  }
+
+  .cta__title--fr,
+  .cta__title--es,
+  .cta__title--pt {
+    font-size: 28px;
   }
 
   .cta__copy {
@@ -4474,6 +4533,12 @@ a.navbar__cta--mobile {
     font-size: 44px;
   }
 
+  .home-page .cta__title--fr,
+  .home-page .cta__title--es,
+  .home-page .cta__title--pt {
+    font-size: 31px;
+  }
+
   .home-page .cta__desc {
     font-size: 15px;
     width: 80%;
@@ -4634,12 +4699,20 @@ a.navbar__cta--mobile {
   }
   .testimonial-card {
     width: 300px;
-    height: 260px;
+    min-height: 260px;
+    height: auto;
     padding: 20px;
     border-radius: 20px;
   }
   .testimonial-card::before {
     border-radius: 20px;
+  }
+  .testimonial-card__quote--fr,
+  .testimonial-card__quote--es,
+  .testimonial-card__quote--pt {
+    flex: none;
+    font-size: 11px;
+    -webkit-line-clamp: 6;
   }
   .cta__desc {
     margin: 30px 0;
@@ -4660,6 +4733,12 @@ a.navbar__cta--mobile {
 
   .cta__title {
     font-size: 32px;
+  }
+
+  .cta__title--fr,
+  .cta__title--es,
+  .cta__title--pt {
+    font-size: 23px;
   }
 
   /* ---------- Footer ---------- */
@@ -4723,6 +4802,12 @@ a.navbar__cta--mobile {
 
   .home-page .cta__title {
     font-size: 40px;
+  }
+
+  .home-page .cta__title--fr,
+  .home-page .cta__title--es,
+  .home-page .cta__title--pt {
+    font-size: 28px;
   }
 
   .home-page .footer-brand__contact-value {
@@ -4822,7 +4907,7 @@ a.navbar__cta--mobile {
     font-size: 30px;
   }
   .hero__desc {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 20px;
   }
   .hero__actions {
@@ -4965,10 +5050,22 @@ a.navbar__cta--mobile {
     font-size: 14px;
   }
 
+  .testimonial-card__quote--fr,
+  .testimonial-card__quote--es,
+  .testimonial-card__quote--pt {
+    font-size: 12px;
+  }
+
   /* ---------- CTA ---------- */
 
   .cta__title {
     font-size: 30px;
+  }
+
+  .cta__title--fr,
+  .cta__title--es,
+  .cta__title--pt {
+    font-size: 21px;
   }
 
   .cta__desc {
@@ -5275,6 +5372,12 @@ a.navbar__cta--mobile {
     margin: 0 auto;
   }
 
+  .home-page .cta__title--fr,
+  .home-page .cta__title--es,
+  .home-page .cta__title--pt {
+    font-size: 26px;
+  }
+
   .home-page .cta__desc {
     font-size: 14px;
     width: 100%;
@@ -5366,7 +5469,7 @@ a.navbar__cta--mobile {
   }
 
   .hero__desc {
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 20px;
   }
 
@@ -5417,6 +5520,12 @@ a.navbar__cta--mobile {
     font-size: 26px;
     width: 80%;
     margin: 0 auto;
+  }
+
+  .home-page .cta__title--fr,
+  .home-page .cta__title--es,
+  .home-page .cta__title--pt {
+    font-size: 18px;
   }
 
   .home-page .cta__desc {

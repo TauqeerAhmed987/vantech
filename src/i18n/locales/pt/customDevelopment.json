@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Serviços",
+    "title": "Software Criado Em Torno<br/>De Como O Seu Negócio Funciona.",
+    "desc": "Para organizações que já ultrapassaram as planilhas, ferramentas desconectadas, fluxos de trabalho manuais, SaaS genérico e processos legados.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "disappoint": {
+    "title": "Superando As Ferramentas Com Que Você Começou",
+    "desc": "Os sistemas que sustentaram um negócio na sua primeira fase muitas vezes se tornam o motivo pelo qual ele não consegue avançar mais rápido na fase seguinte.",
+    "problems": [
+      "As operações essenciais dependem de planilhas que ninguém pode alterar com segurança.",
+      "As equipas reintroduzem a mesma informação em várias ferramentas.",
+      "Os relatórios exigem montagem manual antes de cada reunião.",
+      "O software genérico não consegue traduzir como o negócio realmente funciona."
+    ]
+  },
+  "solution": {
+    "title": "Uma Plataforma Única Desenhada Em Torno Da Sua Operação",
+    "desc": "Estudamos como a organização funciona — as suas entidades, documentos, aprovações e relatórios — e construímos uma plataforma que a expressa diretamente, ligando-se aos sistemas que vale a pena manter e automatizando as etapas que não precisam de uma pessoa."
+  },
+  "build": {
+    "heading": "O que construímos",
+    "cards": [
+      {
+        "title": "Plataformas operacionais",
+        "desc": "O sistema central em que a sua organização funciona diariamente."
+      },
+      {
+        "title": "Equipas e permissões",
+        "desc": "Funções, atribuições e responsabilidade entre departamentos."
+      },
+      {
+        "title": "Fluxos de documentos",
+        "desc": "Geração, aprovação, armazenamento e recuperação com registo de auditoria."
+      },
+      {
+        "title": "Dados e relatórios",
+        "desc": "Uma única fonte de verdade com painéis construídos sobre ela."
+      },
+      {
+        "title": "Operações financeiras",
+        "desc": "Orçamentos, estado de faturação e fluxos de relatórios financeiros."
+      },
+      {
+        "title": "Integrações",
+        "desc": "Ligações às ferramentas que continuam a fazer parte da operação."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Modelação de processos de negócio",
+      "Arquitetura de dados personalizada",
+      "Automação de fluxos de trabalho",
+      "Gestão documental",
+      "Permissões baseadas em funções"
+    ],
+    "row2": [
+      "Relatórios e painéis",
+      "Registos de auditoria",
+      "IA onde faz sentido",
+      "Integrações de sistemas",
+      "Revisão de segurança"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Operações multidepartamentais",
+        "desc": "Uma única plataforma a coordenar o trabalho entre equipas."
+      },
+      {
+        "title": "Transformar um serviço em produto",
+        "desc": "Transformar um serviço prestado em receita recorrente de software."
+      },
+      {
+        "title": "De ferramenta interna a produto",
+        "desc": "Expandir um sistema interno funcional para clientes externos."
+      },
+      {
+        "title": "Modernização de plataforma",
+        "desc": "Reconstruir um produto envelhecido numa arquitetura sustentável."
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitetura da plataforma",
+    "desc": "Personalizado não significa improvisado. A plataforma é construída sobre uma arquitetura documentada que a sua equipa pode manter e expandir.",
+    "steps": [
+      {
+        "title": "Inquilinos",
+        "tags": [["Organizações"], ["Membros"], ["Funções"], ["Convites"]]
+      },
+      {
+        "title": "Plataforma",
+        "tags": [["Autenticação"], ["Políticas de isolamento"], ["API"], ["Webhooks"]]
+      },
+      {
+        "title": "Comercial",
+        "tags": [["Planos"], ["Subscrições"], ["Pagamentos"], ["Utilização"]]
+      },
+      {
+        "title": "Dados",
+        "tags": [["Base de dados"], ["Armazenamento", "Análise"], ["Registo de auditoria"]]
+      },
+      {
+        "title": "Operações",
+        "tags": [["Consola de administração"], ["Monitorização"], ["Implementação"], ["Ferramentas de suporte"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Processo de desenvolvimento",
+    "cards": [
+      {
+        "title": "Descobrir",
+        "desc": "Departamentos, processos, documentos e requisitos de relatórios."
+      },
+      {
+        "title": "Definir a arquitetura",
+        "desc": "Modelo de dados, permissões, integrações e infraestrutura."
+      },
+      {
+        "title": "Desenhar",
+        "desc": "Interfaces para cada função que utilizará a plataforma."
+      },
+      {
+        "title": "Construir",
+        "desc": "Desenvolvimento módulo a módulo, com revisão em cada etapa."
+      },
+      {
+        "title": "Testar",
+        "desc": "Testes de processos, permissões, segurança e desempenho."
+      },
+      {
+        "title": "Adotar",
+        "desc": "Migração, formação, lançamento e melhoria contínua."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações potenciais",
+    "row1": [
+      { "label": "Contabilidade" },
+      { "label": "CRM" },
+      { "label": "Pagamentos" },
+      { "label": "Email" },
+      { "label": "Armazenamento" }
+    ],
+    "row2": [
+      { "label": "Fornecedores de identidade" },
+      { "label": "Ferramentas de relatórios" },
+      { "label": "APIs internas" }
+    ]
+  },
+  "why": {
+    "heading": "Porquê a Van Tech Systems",
+    "cards": [
+      {
+        "title": "Construído a partir do seu processo",
+        "desc": "A plataforma reflete a sua operação, em vez das suposições de um fornecedor."
+      },
+      {
+        "title": "Arquitetura documentada",
+        "desc": "A estrutura, as decisões e o modelo de dados ficam registados por escrito."
+      },
+      {
+        "title": "Margem para evoluir",
+        "desc": "Novos departamentos, módulos e integrações encaixam na mesma base."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Peça um orçamento personalizado",
+    "desc": "Os preços iniciais são referências de planeamento. O preço final depende do âmbito, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

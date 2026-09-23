@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import type { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ai-automation.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -86,156 +87,94 @@ const orbitBadges = [
   { svg: workflowSvg, angle: -2.92, radius: 216, size: 78 },
 ];
 
-const frictionPoints = [
-  { number: '01', text: 'Leads sit unqualified while someone finds time to review them.' },
-  { number: '02', text: 'The same data is entered into several systems by hand.' },
-  { number: '03', text: 'Follow-up depends on individuals remembering.' },
-  { number: '04', text: 'Reporting is assembled manually from separate tools.' },
+// Icon/layout-only companions for the translated text arrays built inside the
+// component (translations live in src/i18n/locales/*/aiAutomation.json and
+// are combined with these by index, since icons and pixel widths are not
+// translatable content).
+const buildCardIcons = [
+  buildIconLeadCapture,
+  buildIconQualification,
+  buildIconCrmOperations,
+  buildIconFollowup,
+  buildIconScheduling,
+  buildIconReporting,
 ];
 
-const offeringCards = [
-  {
-    icon: buildIconLeadCapture,
-    title: 'Lead Capture & Routing',
-    desc: 'Forms, inbound messages and enquiries routed by rules or AI.',
-    descWidth: 335,
-  },
-  {
-    icon: buildIconQualification,
-    title: 'Qualification',
-    desc: 'Structured scoring and summarization before a human reads anything.',
-    descWidth: 325,
-  },
-  {
-    icon: buildIconCrmOperations,
-    title: 'CRM Operations',
-    desc: 'Records created and updated automatically from real activity.',
-    descWidth: 261,
-  },
-  {
-    icon: buildIconFollowup,
-    title: 'Follow-up Sequences',
-    desc: 'Timed, conditional messaging across email and messaging channels.',
-    descWidth: 314,
-  },
-  {
-    icon: buildIconScheduling,
-    title: 'Scheduling',
-    desc: 'Booking, reminders and rescheduling handled inside the workflow.',
-    descWidth: 309,
-  },
-  {
-    icon: buildIconReporting,
-    title: 'Reporting',
-    desc: 'Operational metrics compiled continuously instead of monthly.',
-    descWidth: 359,
-  },
+const buildCardDescWidths = [335, 325, 261, 314, 309, 359];
+
+const processCardIcons = [
+  processIconMap,
+  processIconDesign,
+  processIconConnect,
+  processIconBuild,
+  processIconTest,
+  processIconOperate,
 ];
 
-const capabilityRow1 = [
-  'Process mapping',
-  'Rule-based routing',
-  'AI qualification',
-  'Data enrichment',
-  'Conditional sequences',
-  'Error handling and retries',
-];
+const integrationsRow1Icons = [funnelSvg, emailSvg, messageFilledSvg, calendarSvg, formFilledSvg];
 
-const capabilityRow2 = ['Run logging', 'Human handoff', 'Notifications', 'Operational dashboards'];
+const integrationsRow2Icons = [databaseSvg, spreadsheetsSvg, webhookSvg, paymentsSvg];
 
-const useCases = [
-  {
-    title: 'Inbound lead handling',
-    desc: 'Every enquiry qualified, logged and answered without delay.',
-  },
-  {
-    title: 'Back-office operations',
-    desc: 'Recurring internal processes executed on a schedule.',
-  },
-  {
-    title: 'Client onboarding',
-    desc: 'Documents, accounts and tasks created from a single trigger.',
-  },
-  {
-    title: 'Reporting',
-    desc: 'Operational data collected and summarized automatically.',
-  },
-];
+const whyCardIcons = [whyIconWorkflow, whyIconDesign, whyIconProduct];
 
-const timelineSteps = [
-  { number: '01', title: 'Triggers', tags: [['Forms', 'Schedules'], ['Webhooks'], ['Inbound messages']] },
-  { number: '02', title: 'Logic', tags: [['Rules', 'AI qualification'], ['Branching', 'Validation']] },
-  { number: '03', title: 'Actions', tags: [['CRM updates', 'Messaging'], ['Scheduling', 'Documents']] },
-  { number: '04', title: 'Oversight', tags: [['Run logs', 'Retries'], ['Alerts', 'Human handoff']] },
-];
-
-const processCards = [
-  {
-    icon: processIconMap,
-    title: 'Map',
-    desc: 'Document the process as it runs today, including exceptions.',
-  },
-  {
-    icon: processIconDesign,
-    title: 'Design',
-    desc: 'Define triggers, decision logic and where a human stays in the loop.',
-  },
-  {
-    icon: processIconConnect,
-    title: 'Connect',
-    desc: 'Establish access to the systems involved and validate the data flow.',
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Implement workflows with logging, validation and error handling.',
-  },
-  {
-    icon: processIconTest,
-    title: 'Test',
-    desc: 'Run against real scenarios, including the ones that normally break.',
-  },
-  {
-    icon: processIconOperate,
-    title: 'Operate',
-    desc: 'Monitor, tune and extend as the process changes.',
-  },
-];
-
-const integrationsRow1 = [
-  { icon: funnelSvg, label: 'CRM' },
-  { icon: emailSvg, label: 'Email' },
-  { icon: messageFilledSvg, label: 'Messaging' },
-  { icon: calendarSvg, label: 'Calendars' },
-  { icon: formFilledSvg, label: 'Forms' },
-];
-
-const integrationsRow2 = [
-  { icon: databaseSvg, label: 'Databases' },
-  { icon: spreadsheetsSvg, label: 'Spreadsheets' },
-  { icon: webhookSvg, label: 'Webhooks' },
-  { icon: paymentsSvg, label: 'Payments' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconWorkflow,
-    title: 'Built around the real process',
-    desc: 'We automate the workflow you actually run, including its exceptions.',
-  },
-  {
-    icon: whyIconDesign,
-    title: 'Observable by design',
-    desc: 'Every run is logged, so failures surface instead of hiding.',
-  },
-  {
-    icon: whyIconProduct,
-    title: 'Observable by design',
-    desc: 'Every run is logged, so failures surface instead of hiding.',
-  },
-];
+type CardText = { title: string; desc: string };
+type TimelineText = { title: string; tags: string[][] };
 
 export default function AIAutomationPage() {
+  const { t } = useTranslation('aiAutomation');
+
+  const frictionTexts = t('friction.points', { returnObjects: true }) as string[];
+  const frictionPoints = frictionTexts.map((text, i) => ({
+    number: String(i + 1).padStart(2, '0'),
+    text,
+  }));
+
+  const buildCardTexts = t('build.cards', { returnObjects: true }) as CardText[];
+  const offeringCards = buildCardTexts.map((card, i) => ({
+    icon: buildCardIcons[i],
+    title: card.title,
+    desc: card.desc,
+    descWidth: buildCardDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('usecases.items', { returnObjects: true }) as CardText[];
+
+  const timelineTexts = t('architecture.timeline', { returnObjects: true }) as TimelineText[];
+  const timelineSteps = timelineTexts.map((step, i) => ({
+    number: String(i + 1).padStart(2, '0'),
+    title: step.title,
+    tags: step.tags,
+  }));
+
+  const processCardTexts = t('process2.cards', { returnObjects: true }) as CardText[];
+  const processCards = processCardTexts.map((card, i) => ({
+    icon: processCardIcons[i],
+    title: card.title,
+    desc: card.desc,
+  }));
+
+  const integrationsRow1Labels = t('integrations.row1', { returnObjects: true }) as string[];
+  const integrationsRow1 = integrationsRow1Labels.map((label, i) => ({
+    icon: integrationsRow1Icons[i],
+    label,
+  }));
+
+  const integrationsRow2Labels = t('integrations.row2', { returnObjects: true }) as string[];
+  const integrationsRow2 = integrationsRow2Labels.map((label, i) => ({
+    icon: integrationsRow2Icons[i],
+    label,
+  }));
+
+  const whyCardTexts = t('why.cards', { returnObjects: true }) as CardText[];
+  const whyCards = whyCardTexts.map((card, i) => ({
+    icon: whyCardIcons[i],
+    title: card.title,
+    desc: card.desc,
+  }));
+
   const copy = useReveal('left');
   const graphic = useReveal('right');
   const operations = useReveal('left');
@@ -266,20 +205,15 @@ export default function AIAutomationPage() {
           <div className={`ai-automation-hero__copy ${copy.className}`} ref={copy.ref}>
             <span className="ai-automation-hero__eyebrow">
               <Icon svg={servicesStarSvg} />
-              Services
+              {t('hero.eyebrow')}
             </span>
 
-            <h1 className="ai-automation-hero__title">
-              Your Operations.
-              <br />
-              Automated.
-            </h1>
+            <h1
+              className="ai-automation-hero__title"
+              dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+            />
 
-            <p className="ai-automation-hero__desc">
-              Connect the systems your business already uses and remove the repetitive
-              manual steps between them — capture, qualification, updates, follow-up,
-              scheduling and reporting.
-            </p>
+            <p className="ai-automation-hero__desc">{t('hero.desc')}</p>
 
             <div className="ai-automation-hero__actions">
               <a
@@ -288,11 +222,11 @@ export default function AIAutomationPage() {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Get my project estimate
+                {t('hero.ctaPrimary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
               <a href="/#services" className="btn btn-outline">
-                Explore all services
+                {t('hero.ctaSecondary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
             </div>
@@ -342,12 +276,8 @@ export default function AIAutomationPage() {
         <img src={bottomSphere} alt="" className="ai-automation-friction__sphere" loading="lazy" />
         <div className="container ai-automation-friction__row">
           <div className={`ai-automation-friction__copy ${operations.className}`} ref={operations.ref}>
-            <h2 className="ai-automation-friction__title">Where operational time disappears</h2>
-            <p className="ai-automation-friction__desc">
-              Most teams do not lose time on the work itself. They lose it moving
-              information between tools, re-typing the same details and remembering to
-              follow up.
-            </p>
+            <h2 className="ai-automation-friction__title">{t('friction.title')}</h2>
+            <p className="ai-automation-friction__desc">{t('friction.desc')}</p>
           </div>
 
           <div
@@ -367,13 +297,8 @@ export default function AIAutomationPage() {
       <section className="ai-automation-solution section">
         <div className="container ai-automation-solution__row">
           <div className={`ai-automation-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="ai-automation-solution__title">Workflows that run without supervision</h2>
-            <p className="ai-automation-solution__desc">
-              We map the process as it actually happens, then rebuild it as connected
-              workflows: information is captured once, qualified, routed to the right
-              system, and followed up automatically — with a clear log of what ran and
-              what needs a person.
-            </p>
+            <h2 className="ai-automation-solution__title">{t('solution.title')}</h2>
+            <p className="ai-automation-solution__desc">{t('solution.desc')}</p>
           </div>
 
           <div className={`ai-automation-solution__graphic ${solutionGraphic.className}`} ref={solutionGraphic.ref}>
@@ -396,7 +321,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-build section" id="what-we-automate">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="ai-automation-h2">What we Automate</h2>
+            <h2 className="ai-automation-h2">{t('build.heading')}</h2>
           </div>
 
           <div className={`ai-automation-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -419,7 +344,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="ai-automation-h2">Capabilities</h2>
+            <h2 className="ai-automation-h2">{t('capabilities.heading')}</h2>
           </div>
 
           <div className={`ai-automation-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -450,7 +375,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="ai-automation-h2">Use Cases</h2>
+            <h2 className="ai-automation-h2">{t('usecases.heading')}</h2>
           </div>
 
           <div className={`ai-automation-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -468,11 +393,8 @@ export default function AIAutomationPage() {
       <section className="ai-automation-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="ai-automation-h1-lg ai-automation-h1-lg--center">Workflow architecture</h2>
-            <p className="ai-automation-section-copy">
-              Automation is only useful when it is observable. Every workflow we build
-              records what ran, what failed and what a person still needs to decide.
-            </p>
+            <h2 className="ai-automation-h1-lg ai-automation-h1-lg--center">{t('architecture.heading')}</h2>
+            <p className="ai-automation-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }} ref={architectureDivider.ref}>
@@ -505,7 +427,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-process2 section">
         <div className="container">
           <div className={`section-head ${process2Head.className}`} ref={process2Head.ref}>
-            <h2 className="ai-automation-h2">Implementation process</h2>
+            <h2 className="ai-automation-h2">{t('process2.heading')}</h2>
           </div>
 
           <div className={`ai-automation-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -525,7 +447,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="ai-automation-h1-lg ai-automation-h1-lg--center">Potential Integrations</h2>
+            <h2 className="ai-automation-h1-lg ai-automation-h1-lg--center">{t('integrations.heading')}</h2>
           </div>
 
           <div className={`ai-automation-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -570,7 +492,7 @@ export default function AIAutomationPage() {
       <section className="ai-automation-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="ai-automation-h2">Why Van Tech Systems</h2>
+            <h2 className="ai-automation-h2">{t('why.heading')}</h2>
           </div>
 
           <div className={`ai-automation-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -590,11 +512,8 @@ export default function AIAutomationPage() {
           <div className={`ai-automation-pricing-cta__card ${pricingCta.className}`} ref={pricingCta.ref}>
             <img src={pricingGlowOrb} alt="" className="ai-automation-pricing-cta__glow" loading="lazy" />
             <div className="ai-automation-pricing-cta__copy">
-              <h2 className="ai-automation-pricing-cta__title">Starting at $1,500/month</h2>
-              <p className="ai-automation-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="ai-automation-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="ai-automation-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a
               href="https://vantechsystems.tech/start-a-project"
@@ -602,7 +521,7 @@ export default function AIAutomationPage() {
               rel="noreferrer"
               className="btn btn-primary"
             >
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

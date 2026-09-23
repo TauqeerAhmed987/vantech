@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "eyebrow": "Serviços",
+    "title": "Suas operações.<br/>Automatizadas.",
+    "desc": "Conecte os sistemas que sua empresa já utiliza e elimine as etapas manuais repetitivas entre eles — captação, qualificação, atualizações, follow-up, agendamento e relatórios.",
+    "ctaPrimary": "Obter o orçamento do meu projeto",
+    "ctaSecondary": "Explorar todos os serviços"
+  },
+  "friction": {
+    "title": "Onde o tempo operacional desaparece",
+    "desc": "A maioria das equipes não perde tempo com o trabalho em si. Elas perdem tempo movendo informações entre ferramentas, redigitando os mesmos dados e lembrando de fazer o follow-up.",
+    "points": [
+      "Os leads ficam sem qualificação enquanto alguém encontra tempo para analisá-los.",
+      "Os mesmos dados são inseridos manualmente em vários sistemas.",
+      "O follow-up depende de as pessoas se lembrarem de fazê-lo.",
+      "Os relatórios são montados manualmente a partir de ferramentas separadas."
+    ]
+  },
+  "solution": {
+    "title": "Fluxos de trabalho que funcionam sem supervisão",
+    "desc": "Mapeamos o processo como ele realmente acontece e o reconstruímos como fluxos de trabalho conectados: a informação é capturada uma única vez, qualificada, encaminhada ao sistema certo e acompanhada automaticamente — com um registro claro do que foi executado e do que ainda precisa de uma pessoa."
+  },
+  "build": {
+    "heading": "O que automatizamos",
+    "cards": [
+      {
+        "title": "Captação e roteamento de leads",
+        "desc": "Formulários, mensagens recebidas e solicitações roteados por regras ou IA."
+      },
+      {
+        "title": "Qualificação",
+        "desc": "Pontuação estruturada e resumo antes que qualquer pessoa precise ler algo."
+      },
+      {
+        "title": "Operações de CRM",
+        "desc": "Registros criados e atualizados automaticamente a partir da atividade real."
+      },
+      {
+        "title": "Sequências de follow-up",
+        "desc": "Mensagens programadas e condicionais em canais de e-mail e mensagens."
+      },
+      {
+        "title": "Agendamento",
+        "desc": "Reservas, lembretes e reagendamentos tratados dentro do fluxo de trabalho."
+      },
+      {
+        "title": "Relatórios",
+        "desc": "Métricas operacionais compiladas continuamente em vez de mensalmente."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "Mapeamento de processos",
+      "Roteamento baseado em regras",
+      "Qualificação por IA",
+      "Enriquecimento de dados",
+      "Sequências condicionais",
+      "Tratamento de erros e novas tentativas"
+    ],
+    "row2": [
+      "Registro de execuções",
+      "Transferência para humano",
+      "Notificações",
+      "Painéis operacionais"
+    ]
+  },
+  "usecases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Gestão de leads recebidos",
+        "desc": "Cada solicitação qualificada, registrada e respondida sem demora."
+      },
+      {
+        "title": "Operações de back-office",
+        "desc": "Processos internos recorrentes executados de acordo com uma agenda."
+      },
+      {
+        "title": "Integração de clientes",
+        "desc": "Documentos, contas e tarefas criados a partir de um único gatilho."
+      },
+      {
+        "title": "Relatórios",
+        "desc": "Dados operacionais coletados e resumidos automaticamente."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitetura do fluxo de trabalho",
+    "desc": "A automação só é útil quando é observável. Cada fluxo de trabalho que construímos registra o que foi executado, o que falhou e o que ainda precisa da decisão de uma pessoa.",
+    "timeline": [
+      {
+        "title": "Gatilhos",
+        "tags": [["Formulários", "Agendamentos"], ["Webhooks"], ["Mensagens recebidas"]]
+      },
+      {
+        "title": "Lógica",
+        "tags": [["Regras", "Qualificação por IA"], ["Ramificações", "Validação"]]
+      },
+      {
+        "title": "Ações",
+        "tags": [["Atualizações de CRM", "Mensagens"], ["Agendamento", "Documentos"]]
+      },
+      {
+        "title": "Supervisão",
+        "tags": [["Registros de execução", "Novas tentativas"], ["Alertas", "Transferência para humano"]]
+      }
+    ]
+  },
+  "process2": {
+    "heading": "Processo de implementação",
+    "cards": [
+      {
+        "title": "Mapear",
+        "desc": "Documentar o processo como ele funciona hoje, incluindo as exceções."
+      },
+      {
+        "title": "Desenhar",
+        "desc": "Definir gatilhos, lógica de decisão e onde uma pessoa permanece envolvida."
+      },
+      {
+        "title": "Conectar",
+        "desc": "Estabelecer o acesso aos sistemas envolvidos e validar o fluxo de dados."
+      },
+      {
+        "title": "Construir",
+        "desc": "Implementar os fluxos de trabalho com registro, validação e tratamento de erros."
+      },
+      {
+        "title": "Testar",
+        "desc": "Executar diante de cenários reais, incluindo os que normalmente falham."
+      },
+      {
+        "title": "Operar",
+        "desc": "Monitorar, ajustar e expandir conforme o processo muda."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integrações possíveis",
+    "row1": ["CRM", "E-mail", "Mensagens", "Calendários", "Formulários"],
+    "row2": ["Bancos de dados", "Planilhas", "Webhooks", "Pagamentos"]
+  },
+  "why": {
+    "heading": "Por que a Van Tech Systems",
+    "cards": [
+      {
+        "title": "Construído em torno do processo real",
+        "desc": "Automatizamos o fluxo de trabalho que você realmente executa, incluindo suas exceções."
+      },
+      {
+        "title": "Observável por design",
+        "desc": "Cada execução é registrada, para que as falhas apareçam em vez de ficarem escondidas."
+      },
+      {
+        "title": "Observável por design",
+        "desc": "Cada execução é registrada, para que as falhas apareçam em vez de ficarem escondidas."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "A partir de US$ 1.500/mês",
+    "desc": "Os preços iniciais são referências de planejamento. O preço final depende do escopo, da arquitetura, das integrações e dos requisitos técnicos.",
+    "cta": "Obter o orçamento do meu projeto"
+  }
+}

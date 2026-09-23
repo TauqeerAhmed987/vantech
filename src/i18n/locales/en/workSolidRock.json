@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["Professional Services", "Training & Development"],
+    "titleLines": ["Solid Rock Leadership", "Development"],
+    "description": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey.",
+    "screenshotAlt": "Solid Rock Leadership Development platform screenshot"
+  },
+  "stats": [
+    { "label": "Project type", "value": "financial Services" },
+    { "label": "Capabilities", "value": "Web Development • UI/UX Design • Automation" },
+    { "label": "Industry", "value": "Training & Development" },
+    { "label": "Status", "value": "Live" }
+  ],
+  "detail": {
+    "overviewDesc": "Solid Rock Leadership Development & Financial Solutions supports individuals and families through simplified financial education and leadership development. The platform presents its core services, the audiences it serves, its founder story, a partnership opportunity track, and a direct route to booking a free consultation.",
+    "challengeDesc": "The practice serves distinct audiences — healthcare professionals, families and prospective partners — across six different services. Without a structured information architecture, visitors could not tell which program applied to them or how to begin.",
+    "builtDesc": "We structured the platform around its six core services, a Who We Serve section for audience self-selection, a founder narrative for credibility, an opportunity track for prospective partners, and editorial media and blog areas — all leading to a single, low-friction consultation booking step."
+  },
+  "sidebar": {
+    "serviceTags": ["Web Development", "UI/UX Design", "Automation"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Six core service presentations" },
+      { "title": "Who We Serve audience segmentation" },
+      { "title": "Founder and credibility narrative" },
+      { "title": "Founder and credibility narrative" },
+      { "title": "Partnership opportunity track" },
+      { "title": "Blog and media sections" },
+      { "title": "Free consultation booking journey" },
+      { "title": "Values and FAQ sections" }
+    ]
+  },
+  "flow": {
+    "heading": "Business workflow",
+    "steps": ["Explore", "Self-select", "Book", "Guidance"],
+    "caption": "Conceptual system view"
+  },
+  "diagram": {
+    "badgeLines": ["Conceptual", "system view"],
+    "pills": ["Visitor", "Program content", "Booking journey", "Advisor follow-up"]
+  },
+  "outcomes": [
+    "Created a structured platform for leadership and financial education programs",
+    "Allowed distinct audiences to self-select the right program",
+    "Connected every section to a single consultation booking step"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Ai",
+      "title": "The PMB Consulting",
+      "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services."
+    },
+    {
+      "tag": "Professional Services",
+      "title": "Power Mindset Breakthrough",
+      "desc": "A coaching and personal development platform with programmes, booking and content delivery."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code."
+    }
+  ]
+}

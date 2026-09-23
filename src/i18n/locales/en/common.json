@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "services": "Services",
+    "aiAgents": "AI Agents",
+    "aiAutomations": "AI Automations",
+    "modelDevelopment": "Model Development",
+    "autopilot": "Autopilot",
+    "mvpDevelopment": "MVP Development",
+    "webApplications": "Web Applications",
+    "mobileApplications": "Mobile Applications",
+    "saasDevelopment": "SaaS Development",
+    "customSoftware": "Custom Software",
+    "ecommerce": "Ecommerce",
+    "partnerProgram": "Partner Program",
+    "work": "Work",
+    "powerMindsetBreakthrough": "Power Mindset Breakthrough",
+    "vanTravelBusiness": "Van Travel Business",
+    "vanTravelBusinessTwo": "Van Travel Business Two",
+    "onetapDigitalCard": "OneTap Digital Card",
+    "pmbConsulting": "The PMB Consulting",
+    "mightyOakLegacy": "Mighty Oak Legacy",
+    "solidRockLeadership": "Solid Rock Leadership",
+    "buketiFinancial": "Buketi Financial & Consulting",
+    "lelofit": "Lelofit",
+    "allAccessTrip": "All Access Trip",
+    "faq": "Faq",
+    "contact": "Contact"
+  },
+  "startAProject": "Start a Project",
+  "footer": {
+    "tagline": "AI • Software • Automation",
+    "desc": "We build intelligent software, AI systems, and digital products for ambitious businesses.",
+    "callUs": "Call us",
+    "mailUs": "Mail us",
+    "company": "Company",
+    "services": "Services",
+    "legal": "Legal",
+    "legalCenter": "Legal center",
+    "cookies": "Cookies",
+    "accessibility": "Accessibility",
+    "aiUsage": "AI usage",
+    "copyright": "© 2026 Van Tech Systems. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfServices": "Terms of Services"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "sidebarBack": "Legal center",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "accessibilityStatement": "Accessibility Statement",
+    "aiUsagePolicy": "AI Usage Policy"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently <br/>asked <br/>questions",
+    "intro": "Got any Questions?",
+    "desc": "Let us know! Reach out and our team will get right back to you.",
+    "contactUs": "Contact us",
+    "items": [
+      {
+        "q": "How does an engagement start?",
+        "a": "Through the guided project discovery. You share goals, scope and constraints, and we respond with a scoped technical direction."
+      },
+      {
+        "q": "Do you only build AI products?",
+        "a": "No — we build full software products, and add AI where it genuinely improves the outcome, not by default."
+      },
+      {
+        "q": "How is pricing determined?",
+        "a": "Pricing depends on scope, integrations and timeline. The figures above are planning benchmarks, not final quotes."
+      },
+      {
+        "q": "Can you work with our existing systems?",
+        "a": "Yes, we regularly integrate with existing CRMs, databases and third-party tools rather than replacing them outright."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "You get the full handover plus an optional support arrangement for monitoring, fixes and future iterations."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Client Say",
+    "items": [
+      {
+        "quote": "Van Tech Systems transformed our manual processes into intelligent workflows, saving our team time and improving customer response speed.",
+        "name": "Daniel Carter",
+        "role": "Operations Director"
+      },
+      {
+        "quote": "The team understood our business and delivered a scalable platform that feels polished, reliable, and built for long-term growth.",
+        "name": "Sophia Bennett",
+        "role": "Founder & CEO"
+      },
+      {
+        "quote": "Our AI automation now handles repetitive tasks seamlessly, giving our staff more time to focus on customers and priorities.",
+        "name": "Michael Reed",
+        "role": "Head of Customer Experience"
+      },
+      {
+        "quote": "From strategy to launch, Van Tech Systems made the development process clear, collaborative, and surprisingly efficient for our team.",
+        "name": "Olivia Grant",
+        "role": "Product Manager"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start Your <br/>AI Journey <br/>Today",
+    "desc": "Whether you need an AI employee, a SaaS platform, a mobile application, or a custom business system, Van Tech Systems can help turn your idea into production-ready technology.",
+    "banner": "Book your free AI session today."
+  }
+}

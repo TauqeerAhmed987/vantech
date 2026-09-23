@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import Icon from './Icon';
 import { useReveal } from '../hooks/useReveal';
 import arrowRightSvg from '../assets/icons/boxicons-arrow-right-stroke.svg?raw';
@@ -28,16 +29,13 @@ const intelligenceBubbles = [
   { svg: coinSvg, x: 478, y: 446 },
 ];
 
-const pills = [
-  { svg: voiceAiFillSvg, label: 'Voice AI', x: 476, y: 115 },
-  { svg: crmSvg, label: 'CRM', x: 79, y: 115 },
-  { svg: paymentSvg, label: 'Payments', x: 463, y: 386 },
-  { svg: dataSvg, label: 'RAG / Data', x: 79, y: 386 },
-  { svg: emailSvg, label: 'Email', x: 496, y: 250 },
-  { svg: messagesSvg, label: 'Messages', x: 79, y: 250 },
-];
-
-function DashboardMockup() {
+function DashboardMockup({
+  pills,
+  searchLabel,
+}: {
+  pills: { svg: string; label: string; x: number; y: number }[];
+  searchLabel: string;
+}) {
   return (
     <div className="dashboard-mock">
       <Icon svg={dashboardLinesSvg} className="dashboard-mock__lines" />
@@ -46,7 +44,7 @@ function DashboardMockup() {
         <span style={{ background: '#a78139' }} />
         <span style={{ background: '#399167' }} />
       </div>
-      <div className="dashboard-mock__searchbar">Explore Agencies Services</div>
+      <div className="dashboard-mock__searchbar">{searchLabel}</div>
       <div className="dashboard-mock__divider" />
       <div className="dashboard-mock__center">
         <OrbSphere spin src={dashboardOrb} />
@@ -66,24 +64,31 @@ function DashboardMockup() {
 }
 
 export default function Solutions() {
+  const { t } = useTranslation('home');
   const copy1 = useReveal('left');
   const graphic1 = useReveal('right');
   const graphic2 = useReveal('left');
   const copy2 = useReveal('right');
+
+  const pills = [
+    { svg: voiceAiFillSvg, label: t('solutions.pills.voiceAi'), x: 476, y: 115 },
+    { svg: crmSvg, label: t('solutions.pills.crm'), x: 79, y: 115 },
+    { svg: paymentSvg, label: t('solutions.pills.payments'), x: 463, y: 386 },
+    { svg: dataSvg, label: t('solutions.pills.ragData'), x: 79, y: 386 },
+    { svg: emailSvg, label: t('solutions.pills.email'), x: 496, y: 250 },
+    { svg: messagesSvg, label: t('solutions.pills.messages'), x: 79, y: 250 },
+  ];
 
   return (
     <>
       <section className="solutions section">
         <div className="container solutions__row">
           <div className={`solutions__copy ${copy1.className}`} ref={copy1.ref}>
-            <span className="eyebrow-pill">AI & Automation</span>
-            <h2 className="solutions__title">One intelligence layer across every channel.</h2>
-            <p className="solutions__desc">
-              Capture demand wherever it arrives, qualify it with AI, and push
-              structured outcomes into the systems your team already uses.
-            </p>
+            <span className="eyebrow-pill">{t('solutions.channel.eyebrow')}</span>
+            <h2 className="solutions__title">{t('solutions.channel.title')}</h2>
+            <p className="solutions__desc">{t('solutions.channel.desc')}</p>
             <a href="#services" className="btn btn-outline-gradient">
-              Explore All Services
+              {t('solutions.channel.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -112,19 +117,15 @@ export default function Solutions() {
       <section className="solutions section solutions--reverse" id="agencies">
         <div className="container solutions__row solutions__row--reverse">
           <div className={`solutions__graphic ${graphic2.className}`} ref={graphic2.ref}>
-            <DashboardMockup />
+            <DashboardMockup pills={pills} searchLabel={t('solutions.dashboardSearch')} />
           </div>
 
           <div className={`solutions__copy ${copy2.className}`} ref={copy2.ref}>
-            <span className="eyebrow-pill">For Agencies</span>
-            <h2 className="solutions__title">AI Solutions Built for Agencies</h2>
-            <p className="solutions__desc">
-              Expand your services, deliver more value to your clients, and grow
-              recurring revenue with white-label AI, automation, and development
-              solutions.
-            </p>
+            <span className="eyebrow-pill">{t('solutions.agencies.eyebrow')}</span>
+            <h2 className="solutions__title">{t('solutions.agencies.title')}</h2>
+            <p className="solutions__desc">{t('solutions.agencies.desc')}</p>
             <a href="#contact" className="btn btn-outline-gradient">
-              Explore Agencies Services
+              {t('solutions.agencies.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

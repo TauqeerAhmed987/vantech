@@ -1,0 +1,181 @@
+{
+  "hero": {
+    "badge": "Servicios",
+    "title": "Tu negocio. En sus manos.",
+    "desc": "Aplicaciones móviles listas para producción para clientes y equipos internos, respaldadas por las API, la autenticación y la infraestructura en la nube que las mantienen funcionando.",
+    "ctaPrimary": "Obtener el presupuesto de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "disappoint": {
+    "title": "Una aplicación móvil no es una versión pequeña de un sitio web",
+    "desc": "Las herramientas estándar funcionan hasta que tu proceso se aparta de los supuestos del producto. Entonces, las soluciones improvisadas se convierten en la operación.",
+    "problems": [
+      "Se utiliza un sitio web responsive donde se espera una aplicación.",
+      "No existe un backend que dé soporte a cuentas y datos reales.",
+      "Las notificaciones y las sesiones no son fiables.",
+      "Los requisitos de publicación en las tiendas se descubren demasiado tarde."
+    ]
+  },
+  "solution": {
+    "title": "La aplicación y el sistema que hay detrás",
+    "desc": "Diseñamos la experiencia móvil pensando en cómo se usará realmente, y construimos el backend junto con ella: cuentas, datos, notificaciones, pagos y un panel de administración para tu equipo."
+  },
+  "build": {
+    "heading": "Qué construimos",
+    "cards": [
+      {
+        "title": "Aplicaciones para clientes",
+        "desc": "Cuentas, actividad, reservas, pagos y notificaciones."
+      },
+      {
+        "title": "Aplicaciones empresariales",
+        "desc": "Herramientas de campo e internas para equipos que trabajan fuera de la oficina."
+      },
+      {
+        "title": "Aplicaciones complementarias",
+        "desc": "Acceso móvil a una plataforma o portal existente."
+      },
+      {
+        "title": "Servicios backend",
+        "desc": "API, datos y autenticación que dan soporte a la aplicación."
+      },
+      {
+        "title": "Panel de administración",
+        "desc": "Una interfaz web para gestionar usuarios, contenido y operaciones."
+      },
+      {
+        "title": "Preparación para el lanzamiento",
+        "desc": "Pipelines de compilación, preparación de tiendas y control de versiones."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacidades",
+    "row1": [
+      "iOS y Android",
+      "Autenticación",
+      "Notificaciones push",
+      "Pagos integrados en la app",
+      "Flujos tolerantes al modo sin conexión",
+      "Gestión de contenido multimedia"
+    ],
+    "row2": [
+      "Enlaces profundos",
+      "Integración de API",
+      "Analítica",
+      "Soporte para publicación en tiendas"
+    ]
+  },
+  "useCases": {
+    "heading": "Casos de uso",
+    "items": [
+      {
+        "title": "Interacción con clientes",
+        "desc": "Una aplicación que mantiene a los clientes informados y realizando transacciones."
+      },
+      {
+        "title": "Operaciones de campo",
+        "desc": "Equipos que capturan y actualizan información en el lugar."
+      },
+      {
+        "title": "Reservas y servicios",
+        "desc": "Programación, recordatorios y pago en un solo lugar."
+      },
+      {
+        "title": "Fidelización y cuentas",
+        "desc": "Perfiles, historial y comunicación personalizada."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Arquitectura del MVP",
+    "desc": "Incluso un primer lanzamiento es un sistema completo. Lo mantenemos reducido, pero estructurado, para que la segunda versión sea una ampliación y no una reconstrucción.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Móvil",
+        "tags": [["iOS", "Android"], ["Caché sin conexión"], ["Push"]]
+      },
+      {
+        "number": "02",
+        "title": "API",
+        "tags": [["Endpoints"], ["Validación", "Control de versiones"]]
+      },
+      {
+        "number": "03",
+        "title": "Backend",
+        "tags": [["Lógica de negocio", "Base de datos"], ["Almacenamiento", "Pagos"]]
+      },
+      {
+        "number": "04",
+        "title": "Plataforma",
+        "tags": [["Autenticación"], ["Analítica", "Monitorización"], ["Publicaciones"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Proceso de desarrollo",
+    "cards": [
+      {
+        "title": "Descubrimiento",
+        "desc": "Usuarios, plataformas, recorridos clave y limitaciones técnicas."
+      },
+      {
+        "title": "Diseño",
+        "desc": "Diseño de interfaz móvil y prototipos de los flujos principales."
+      },
+      {
+        "title": "Arquitectura",
+        "desc": "Backend, modelo de datos, autenticación y notificaciones."
+      },
+      {
+        "title": "Desarrollo",
+        "desc": "Desarrollo de la aplicación y el backend con versiones de prueba instalables."
+      },
+      {
+        "title": "Pruebas",
+        "desc": "Pruebas en dispositivos, comprobaciones de rendimiento y QA de la versión candidata."
+      },
+      {
+        "title": "Lanzamiento",
+        "desc": "Soporte para la publicación en tiendas, monitorización y correcciones posteriores al lanzamiento."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Integraciones potenciales",
+    "row1": [
+      { "label": "Pagos" },
+      { "label": "Servicios push" },
+      { "label": "Proveedores de identidad" },
+      { "label": "Analítica" }
+    ],
+    "row2": [
+      { "label": "CRM" },
+      { "label": "Almacenamiento" },
+      { "label": "API internas" }
+    ]
+  },
+  "why": {
+    "heading": "Por qué Van Tech Systems",
+    "cards": [
+      {
+        "title": "Backend incluido",
+        "desc": "Construimos el sistema del que depende la aplicación, no solo las pantallas."
+      },
+      {
+        "title": "Diseñado para un uso real",
+        "desc": "Las sesiones, notificaciones y errores se tratan como características del producto."
+      },
+      {
+        "title": "Listo para el lanzamiento",
+        "desc": "Los requisitos de las tiendas se planifican desde la construcción, no se descubren al final."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Desde 7500 $/mes",
+    "desc": "Los precios de partida son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener el presupuesto de mi proyecto"
+  }
+}

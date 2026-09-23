@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Des agents IA qui fonctionnent vraiment.",
+    "desc": "Des agents conçus autour d'un rôle défini, d'une vraie connaissance métier et d'actions autorisées — avec un chemin d'escalade clair vers votre équipe lorsqu'une demande nécessite une personne.",
+    "ctaPrimary": "Obtenir mon devis de projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "disappoint": {
+    "title": "Pourquoi la plupart des déploiements <span class=\"accent\">IA</span> déçoivent",
+    "desc": "Un chatbot généraliste sans connaissance, sans permissions et sans chemin d'escalade crée du travail au lieu d'en supprimer.",
+    "problems": [
+      "Les réponses sont génériques car l'assistant n'a aucune connaissance métier.",
+      "L'assistant peut parler, mais ne peut rien faire concrètement.",
+      "Il n'existe aucune transmission définie lorsqu'une demande dépasse son périmètre.",
+      "Personne ne peut voir ce qu'il a dit ni pourquoi."
+    ]
+  },
+  "solution": {
+    "title": "Des agents dotés d'un rôle, d'une connaissance et de permissions",
+    "desc": "Nous définissons la responsabilité de chaque agent, le connectons à vos connaissances et systèmes, et lui accordons un ensemble limité d'actions qu'il est autorisé à effectuer. Les conversations sont enregistrées, l'escalade est explicite, et le comportement est revu à partir de transcriptions réelles."
+  },
+  "build": {
+    "title": "Ce que nous construisons",
+    "cards": [
+      { "title": "Accueil & routage", "desc": "Les réponses sont génériques car l'assistant n'a aucune connaissance métier." },
+      { "title": "Agents commerciaux", "desc": "Qualification, information et transmission à votre équipe." },
+      { "title": "Agents support", "desc": "Des réponses fondées sur vos connaissances documentées." },
+      { "title": "Agents de planification", "desc": "Disponibilité, réservation et confirmation directement dans la conversation." },
+      { "title": "Agents opérationnels", "desc": "Des agents internes qui récupèrent des informations et mettent à jour les registres." },
+      { "title": "Conception de l'escalade", "desc": "Des seuils définis où un humain prend le relais avec tout le contexte." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacités",
+    "row1": [
+      "Compréhension de l'intention",
+      "Ancrage dans la connaissance",
+      "Conversations multicanales",
+      "Actions autorisées",
+      "Consultation et mise à jour des registres",
+      "Planification"
+    ],
+    "row2": ["Journalisation des conversations", "Escalade humaine", "Contrôle du ton et de la politique", "Revue du comportement"]
+  },
+  "usecases": {
+    "title": "Cas d'usage",
+    "items": [
+      { "title": "Couverture de l'accueil", "desc": "Les demandes trouvent réponse en dehors des heures ouvrées, avec une transmission adaptée." },
+      { "title": "Qualification", "desc": "Des informations structurées sont recueillies avant l'intervention de votre équipe." },
+      { "title": "Support client", "desc": "Les questions récurrentes trouvent réponse dans la connaissance documentée." },
+      { "title": "Assistants internes", "desc": "Des agents destinés au personnel qui retrouvent l'information à travers vos systèmes." }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture de l'agent",
+    "desc": "Un agent est un système, pas un simple prompt : connaissance, outils, permissions, mémoire et escalade sont conçus ensemble.",
+    "timeline": [
+      { "title": "Canaux", "tags": [["Chat", "Voix"], ["SMS", "E-mail"], ["Messagerie"]] },
+      { "title": "Raisonnement", "tags": [["Intention", "Politique"], ["État de la conversation"]] },
+      { "title": "Connaissance", "tags": [["Documents", "FAQ"], ["Registres"], ["Règles métier"]] },
+      { "title": "Actions", "tags": [["Consultations", "Mises à jour"], ["Planification"], ["Notifications"]] },
+      { "title": "Supervision", "tags": [["Transcriptions", "Escalade"], ["Revue"]] }
+    ]
+  },
+  "process2": {
+    "title": "Architecture de l'agent",
+    "desc": "Un agent est un système, pas un simple prompt : connaissance, outils, permissions, mémoire et escalade sont conçus ensemble.",
+    "steps": [
+      { "title": "Définir le rôle", "desc": "Responsabilités, ton, limites et règles d'escalade." },
+      { "title": "Rassembler la connaissance", "desc": "Collecter et structurer les informations sur lesquelles l'agent peut s'appuyer." },
+      { "title": "Connecter les actions", "desc": "Donner à l'agent un accès limité aux systèmes dont il a besoin." },
+      { "title": "Construire", "desc": "Mettre en œuvre l'agent, ses garde-fous et sa journalisation." },
+      { "title": "Revoir", "desc": "Tester face à des scénarios réels et affiner à partir des transcriptions." },
+      { "title": "Exploiter", "desc": "Surveiller les conversations et étendre les capacités au fil du temps." }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations potentielles",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Calendriers" },
+      { "label": "Base de connaissances" },
+      { "label": "Téléphonie" },
+      { "label": "WhatsApp" }
+    ],
+    "row2": [{ "label": "SMS" }, { "label": "E-mail" }, { "label": "API internes" }]
+  },
+  "why": {
+    "title": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "Cadré par conception", "desc": "Les agents n'agissent que dans les permissions que vous approuvez." },
+      { "title": "Ancré dans votre connaissance", "desc": "Les réponses viennent de votre contenu, pas de suppositions." },
+      { "title": "L'escalade fait partie du produit", "desc": "La transmission à une personne est conçue, pas improvisée." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de $1,500/mois",
+    "desc": "Les tarifs de départ sont des repères de planification. Le prix final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir mon devis de projet"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Vos opérations, pilotées en mode automatique.",
+    "desc": "Une infrastructure d'automatisation gérée qui combine l'IA, des systèmes connectés et une optimisation continue — exploitée et maintenue comme un service, plutôt que livrée puis abandonnée.",
+    "ctaPrimary": "Obtenir mon estimation de projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "problem": {
+    "title": "L'automatisation se dégrade sans propriétaire",
+    "desc": "Les workflows se cassent quand les outils changent, que les volumes augmentent ou que les processus évoluent. Sans personne pour en être responsable, l'automatisation cesse discrètement de fonctionner.",
+    "items": [
+      "Personne ne remarque qu'un workflow échoue silencieusement.",
+      "Les intégrations se cassent après une mise à jour de plateforme.",
+      "Les processus changent, mais pas l'automatisation.",
+      "Les équipes internes n'ont pas la capacité de la maintenir."
+    ]
+  },
+  "solution": {
+    "title": "Une infrastructure d'automatisation opérée",
+    "desc": "Autopilot est un engagement géré : nous exploitons la couche d'automatisation qui relie votre captation, votre CRM, vos relances, votre planification, votre messagerie et vos rapports, nous la surveillons en continu et nous l'améliorons à mesure que vos opérations évoluent."
+  },
+  "included": {
+    "title": "Ce qui est inclus",
+    "cards": [
+      { "title": "Systèmes connectés", "desc": "Une seule couche d'automatisation reliant les outils dont dépendent vos opérations." },
+      { "title": "Traitement par IA", "desc": "Qualification, réception et réponse là où cela apporte une réelle valeur." },
+      { "title": "Surveillance", "desc": "Des vérifications continues avec alertes dès qu'un élément cesse de fonctionner." },
+      { "title": "Maintenance", "desc": "Corrections et ajustements lorsque les plateformes ou les processus changent." },
+      { "title": "Optimisation", "desc": "Un affinage continu de la logique, du minutage et du routage." },
+      { "title": "Évaluation", "desc": "Des jeux de tests et des cycles de revue qui suivent la qualité des réponses dans le temps." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacités",
+    "row1": [
+      "Workflows gérés",
+      "Réception par IA",
+      "Capture de prospects",
+      "Synchronisation CRM",
+      "Relances automatisées",
+      "Planification"
+    ],
+    "row2": ["Messagerie", "Rapports opérationnels", "Surveillance et alertes", "Amélioration continue"]
+  },
+  "useCases": {
+    "title": "Cas d'usage",
+    "items": [
+      { "title": "Équipes sans ingénierie des opérations en interne", "desc": "Automatisation maintenue par une équipe technologique externe." },
+      { "title": "Flux entrant à fort volume", "desc": "Un traitement constant des demandes à mesure que le volume augmente." },
+      { "title": "Opérations multi-outils", "desc": "Une seule couche qui garde des systèmes distincts synchronisés." },
+      { "title": "Continuité après projet", "desc": "Une prise en charge continue après la mise en place de l'automatisation." }
+    ]
+  },
+  "hub": {
+    "title": "Le hub des opérations",
+    "desc": "Autopilot se situe entre vos canaux et vos systèmes, en coordonnant le travail et en en rendant compte.",
+    "columns": [
+      { "title": "Entrées", "tags": [["Site web", "Téléphone"], ["E-mail", "Formulaires"], ["Messagerie"]] },
+      { "title": "Couche Autopilot", "tags": [["Routage", "Traitement par IA"], ["Workflows"]] },
+      { "title": "Systèmes", "tags": [["CRM", "Calendriers"], ["Support", "Bases de données"]] },
+      { "title": "Gestion", "tags": [["Surveillance", "Alertes"], ["Optimisation", "Rapports"]] }
+    ]
+  },
+  "process": {
+    "title": "Comment se déroule la mission",
+    "cards": [
+      { "title": "Évaluer", "desc": "Examiner les opérations, les outils et les volumes actuels." },
+      { "title": "Concevoir", "desc": "Définir la couche d'automatisation et les rapports dont vous avez besoin." },
+      { "title": "Déployer", "desc": "Mettre en œuvre les workflows et connecter les systèmes concernés." },
+      { "title": "Exploiter", "desc": "Surveiller et maintenir l'ensemble pour que les opérations tournent sans accroc. Réagir rapidement dès qu'un problème ou une demande requiert de l'attention." },
+      { "title": "Optimiser", "desc": "Examiner régulièrement la performance pour s'assurer que tout fonctionne efficacement. Affiner la logique en fonction des résultats et de l'évolution des besoins." }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations possibles",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Téléphonie" },
+      { "label": "WhatsApp" },
+      { "label": "SMS" },
+      { "label": "E-mail" }
+    ],
+    "row2": [
+      { "label": "Calendriers" },
+      { "label": "Formulaires" },
+      { "label": "Services d'assistance" },
+      { "label": "Bases de données" }
+    ]
+  },
+  "why": {
+    "title": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "Fondé sur des sources et traçable", "desc": "Les réponses font référence aux sources dont elles proviennent." },
+      { "title": "Mesuré, jamais présumé", "desc": "La qualité est évaluée sur des questions réelles avant la mise en production." },
+      { "title": "Accès restreint", "desc": "Les autorisations déterminent ce que le système peut consulter, et pour qui." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de 1 500 $/mois",
+    "desc": "Les prix de départ sont des repères de planification. Le tarif final dépend de la portée, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir mon estimation de projet"
+  }
+}

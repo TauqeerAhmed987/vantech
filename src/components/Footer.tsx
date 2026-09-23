@@ -1,41 +1,52 @@
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import footerBg from '../assets/images/footer-bg.webp';
 import footerDecor from '../assets/images/footer-top-start.png';
 import logo from '../assets/images/logo.webp';
 import { useReveal } from '../hooks/useReveal';
+import { type SupportedLanguage } from '../i18n/i18n';
+import { localizePath, stripLocale } from '../i18n/localizedPath';
 
-const companyLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About us', href: '/about' },
-  { label: 'Partners Program', href: '/partners' },
-  { label: 'Work', href: '#work' },
-  { label: 'FAQs', href: '#faq' },
-  { label: 'Contact', href: '/contact' },
-];
-const servicesLinksA = [
-  { label: 'AI Agents', href: '/ai-agents' },
-  { label: 'AI Automations', href: '/ai-automation' },
-  { label: 'Model Development', href: '/model-development' },
-  { label: 'Autopilot', href: '/auto-pilot' },
-  { label: 'MVP Development', href: '/mvp-development' },
-];
-const servicesLinksB = [
-  { label: 'Web Applications', href: '/web-applications' },
-  { label: 'Mobile Applications', href: '/mobile-application' },
-  { label: 'SaaS Development', href: '/saas-development' },
-  { label: 'Custom Software', href: '/custom-development' },
-  { label: 'Ecommerce', href: '/ecommerce-development' },
-];
-const legalLinks = [
-  { label: 'Legal center', href: '/legal' },
-  { label: 'Cookies', href: '/cookie-policy' },
-  { label: 'Accessibility', href: '/accessibility' },
-  { label: 'AI usage', href: '/ai-usage' },
-];
+function useFooterLinks() {
+  const { t } = useTranslation();
+  const companyLinks = [
+    { label: t('nav.home'), href: '#home' },
+    { label: t('nav.aboutUs'), href: '/about' },
+    { label: t('nav.partnerProgram'), href: '/partners' },
+    { label: t('nav.work'), href: '#work' },
+    { label: t('nav.faq'), href: '#faq' },
+    { label: t('nav.contact'), href: '/contact' },
+  ];
+  const servicesLinksA = [
+    { label: t('nav.aiAgents'), href: '/ai-agents' },
+    { label: t('nav.aiAutomations'), href: '/ai-automation' },
+    { label: t('nav.modelDevelopment'), href: '/model-development' },
+    { label: t('nav.autopilot'), href: '/auto-pilot' },
+    { label: t('nav.mvpDevelopment'), href: '/mvp-development' },
+  ];
+  const servicesLinksB = [
+    { label: t('nav.webApplications'), href: '/web-applications' },
+    { label: t('nav.mobileApplications'), href: '/mobile-application' },
+    { label: t('nav.saasDevelopment'), href: '/saas-development' },
+    { label: t('nav.customSoftware'), href: '/custom-development' },
+    { label: t('nav.ecommerce'), href: '/ecommerce-development' },
+  ];
+  const legalLinks = [
+    { label: t('footer.legalCenter'), href: '/legal' },
+    { label: t('footer.cookies'), href: '/cookie-policy' },
+    { label: t('footer.accessibility'), href: '/accessibility' },
+    { label: t('footer.aiUsage'), href: '/ai-usage' },
+  ];
+  return { companyLinks, servicesLinksA, servicesLinksB, legalLinks };
+}
 
 export default function Footer() {
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
+  const basePath = stripLocale(location.pathname);
+  const isHome = basePath === '/';
+  const { companyLinks, servicesLinksA, servicesLinksB, legalLinks } = useFooterLinks();
   const brand = useReveal('left');
   const companyCol = useReveal('right');
   const servicesCol = useReveal('right');
@@ -52,22 +63,19 @@ export default function Footer() {
           <div className="footer-card__top">
             <div className={`footer-brand ${brand.className}`} ref={brand.ref}>
               <img src={logo} alt="Van Tech Systems" className="footer-brand__logo" />
-              <p className="footer-brand__tagline">AI &bull; Software &bull; Automation</p>
-              <p className="footer-brand__desc">
-                We build intelligent software, AI systems, and digital products for
-                ambitious businesses.
-              </p>
+              <p className="footer-brand__tagline">{t('footer.tagline')}</p>
+              <p className="footer-brand__desc">{t('footer.desc')}</p>
               <div className="footer-brand__contact">
                 <div>
                   <span className="footer-brand__contact-label">
-                    <span className="footer-brand__bracket">[</span> Call us{' '}
+                    <span className="footer-brand__bracket">[</span> {t('footer.callUs')}{' '}
                     <span className="footer-brand__bracket">]</span>
                   </span>
                   <a href="tel:+19034763762" className="footer-brand__contact-value">+1-903-4763762</a>
                 </div>
                 <div>
                   <span className="footer-brand__contact-label">
-                    <span className="footer-brand__bracket">[</span> Mail us{' '}
+                    <span className="footer-brand__bracket">[</span> {t('footer.mailUs')}{' '}
                     <span className="footer-brand__bracket">]</span>
                   </span>
                   <a href="mailto:hello@vantechsystems.tech" className="footer-brand__contact-value">hello@vantechsystems.tech</a>
@@ -76,10 +84,14 @@ export default function Footer() {
             </div>
 
             <div className={`footer-links ${companyCol.className}`} ref={companyCol.ref}>
-              <h4 className="footer-links__title gradient-text">Company</h4>
+              <h4 className="footer-links__title gradient-text">{t('footer.company')}</h4>
               <ul>
                 {companyLinks.map((l) => {
-                  const href = l.href.startsWith('#') && !isHome ? `/${l.href}` : l.href;
+                  const href = l.href.startsWith('#')
+                    ? !isHome
+                      ? `${localizePath('/', currentLang)}${l.href}`
+                      : l.href
+                    : localizePath(l.href, currentLang);
                   return (
                     <li key={l.label}>
                       <a href={href}>{l.label}</a>
@@ -93,19 +105,19 @@ export default function Footer() {
               className={`footer-links footer-links--services ${servicesCol.className}`}
               ref={servicesCol.ref}
             >
-              <h4 className="footer-links__title gradient-text">Services</h4>
+              <h4 className="footer-links__title gradient-text">{t('footer.services')}</h4>
               <div className="footer-links__columns">
                 <ul>
                   {servicesLinksA.map((l) => (
                     <li key={l.label}>
-                      <a href={l.href}>{l.label}</a>
+                      <a href={localizePath(l.href, currentLang)}>{l.label}</a>
                     </li>
                   ))}
                 </ul>
                 <ul>
                   {servicesLinksB.map((l) => (
                     <li key={l.label}>
-                      <a href={l.href}>{l.label}</a>
+                      <a href={localizePath(l.href, currentLang)}>{l.label}</a>
                     </li>
                   ))}
                 </ul>
@@ -113,11 +125,11 @@ export default function Footer() {
             </div>
 
             <div className={`footer-links ${legalCol.className}`} ref={legalCol.ref}>
-              <h4 className="footer-links__title gradient-text">Legal</h4>
+              <h4 className="footer-links__title gradient-text">{t('footer.legal')}</h4>
               <ul>
                 {legalLinks.map((l) => (
                   <li key={l.label}>
-                    <a href={l.href}>{l.label}</a>
+                    <a href={localizePath(l.href, currentLang)}>{l.label}</a>
                   </li>
                 ))}
               </ul>
@@ -125,10 +137,10 @@ export default function Footer() {
           </div>
 
           <div className="footer-card__bottom">
-            <p>&copy; 2026 Van Tech Systems. All rights reserved.</p>
+            <p>{t('footer.copyright')}</p>
             <div className="footer-card__bottom-links">
-              <a href="/privacy-policy">Privacy Policy</a>
-              <a href="/terms-of-service">Terms of Services</a>
+              <a href={localizePath('/privacy-policy', currentLang)}>{t('footer.privacyPolicy')}</a>
+              <a href={localizePath('/terms-of-service', currentLang)}>{t('footer.termsOfServices')}</a>
             </div>
           </div>
         </div>

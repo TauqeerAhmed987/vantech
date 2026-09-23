@@ -1,0 +1,50 @@
+{
+  "hero": { "updated": "Última atualização: 18 de agosto de 2026" },
+  "sections": {
+    "acceptance": {
+      "title": "1. Aceitação",
+      "body": "Ao usar este site, você aceita estes termos. Se não os aceitar, não use o site. As colaborações em projetos são regidas por um acordo assinado separado, que prevalece sobre estes termos em caso de conflito."
+    },
+    "permittedUse": {
+      "title": "2. Uso permitido",
+      "items": [
+        "Você pode navegar, ler e compartilhar nosso conteúdo para fins lícitos.",
+        "Você não pode tentar interromper ou sobrecarregar o serviço, contornar controles de acesso ou acessar dados aos quais não está autorizado.",
+        "Você não pode enviar informações falsas, arquivos maliciosos ou spam automatizado por meio dos nossos formulários ou assistente de IA.",
+        "Você não pode extrair ou reutilizar nosso conteúdo em grande escala para treinar modelos comerciais sem autorização por escrito."
+      ]
+    },
+    "enquiries": {
+      "title": "3. Consultas não são contratos",
+      "body": "Enviar uma consulta de projeto, receber uma estimativa ou falar com nosso assistente de IA não cria um acordo vinculante. O trabalho só começa sob um acordo de colaboração por escrito ou uma proposta aceita e assinada por ambas as partes."
+    },
+    "pricing": {
+      "title": "4. Informações de preços",
+      "body": "Os preços e faixas publicados neste site são pontos de partida indicativos destinados a ajudá-lo a planejar. O preço final depende do escopo, complexidade, integrações, qualidade dos dados, requisitos de conformidade e cronograma, e só é confirmado por escrito."
+    },
+    "ip": {
+      "title": "5. Propriedade intelectual",
+      "body": "O conteúdo do site, ativos de marca, ilustrações e produtos proprietários, incluindo o Van AI, permanecem propriedade da Van Tech Systems. A propriedade dos entregáveis produzidos durante uma colaboração é definida no acordo aplicável. Nossa posição padrão é que os clientes são donos do código e da infraestrutura que construímos para eles, enquanto ferramentas, bibliotecas e frameworks internos pré-existentes permanecem nossos e são licenciados para uso dentro do sistema entregue."
+    },
+    "thirdParty": {
+      "title": "6. Serviços de terceiros",
+      "body": "Os sistemas que construímos frequentemente dependem de plataformas e APIs de terceiros. Sua disponibilidade, preços e termos estão fora do nosso controle, e não somos responsáveis por mudanças feitas por esses provedores."
+    },
+    "aiFeatures": {
+      "title": "7. Recursos de IA neste site",
+      "body": "Nosso assistente de IA fornece informações gerais e pode ser impreciso ou incompleto. Não é aconselhamento profissional, e nada do que ele diz constitui um compromisso da nossa parte. Verifique qualquer informação importante com nossa equipe antes de agir com base nela."
+    },
+    "warranties": {
+      "title": "8. Garantias e responsabilidade",
+      "body": "Este site e seu conteúdo são fornecidos como estão, sem garantias de qualquer tipo. Na máxima extensão permitida por lei, a Van Tech Systems não é responsável por perdas indiretas, incidentais ou consequenciais, nem por perda de lucros, receita ou dados decorrentes do uso deste site ou da confiança em seu conteúdo. Nada nestes termos exclui responsabilidade que não possa ser legalmente excluída."
+    },
+    "changes": {
+      "title": "9. Alterações",
+      "body": "Podemos atualizar estes termos. O uso continuado do site após uma atualização constitui aceitação dos termos revisados."
+    },
+    "contact": {
+      "title": "10. Contato",
+      "bodyPrefix": "Perguntas sobre estes termos podem ser enviadas para"
+    }
+  }
+}

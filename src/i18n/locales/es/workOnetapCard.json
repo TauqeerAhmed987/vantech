@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["SaaS", "Redes profesionales"],
+    "titleLines": ["OneTap", "Digital Card"],
+    "description": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace público de tarjeta o un código QR.",
+    "screenshotAlt": "Captura de pantalla de la plataforma OneTap Digital Card"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "SaaS" },
+    { "label": "Capacidades", "value": "Ingeniería de producto • Diseño UI/UX • Software a medida" },
+    { "label": "Industria", "value": "Redes profesionales" },
+    { "label": "Estado", "value": "En vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "OneTap Digital Card es un producto de networking digital propiedad de Van Tech Systems y operado por la misma. Los profesionales crean una tarjeta con su foto, datos de contacto y enlaces personalizados, y luego la comparten mediante un enlace público o un código QR único, sin necesidad de aplicación en ninguno de los dos extremos. Un portal de clientes reúne en un solo lugar la gestión de la tarjeta, la captación de contactos y las analíticas de interacción.",
+    "challengeDesc": "Las tarjetas de presentación en papel quedan desactualizadas en cuanto cambia un dato, y no dicen nada a su propietario sobre lo que ocurrió después de entregarlas. El producto debía funcionar al instante en cualquier teléfono sin instalar ninguna aplicación, compartirse de forma fiable tanto mediante un enlace como mediante un código QR, y ofrecer al propietario de la tarjeta un lugar donde gestionarlo todo después.",
+    "builtDesc": "Diseñamos y desarrollamos el producto completo: un creador de tarjetas, un renderizador de tarjeta pública servido desde enlaces cortos compartibles, generación de códigos QR, captación de contactos y un portal de clientes donde los propietarios gestionan su tarjeta, enlaces, contactos y analíticas. Se pueden vincular enlaces de reservas como Calendly para que un escaneo lleve directamente a una conversación programada."
+  },
+  "sidebar": {
+    "serviceTags": ["Ingeniería de producto", "Diseño UI/UX", "Software a medida"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "number": "01", "title": "Creador de tarjeta digital con foto, datos de contacto y marca" },
+      { "number": "02", "title": "Código QR único por tarjeta para compartir impreso o en pantalla" },
+      { "number": "03", "title": "Enlace de tarjeta público que funciona sin aplicación" },
+      { "number": "04", "title": "Enlaces personalizados ilimitados a portafolio, redes sociales y productos" },
+      { "number": "05", "title": "Integración de reservas para programar citas desde la tarjeta" },
+      { "number": "06", "title": "Captación de contactos en la tarjeta pública" },
+      { "number": "07", "title": "Analíticas de vistas, escaneos, clics en enlaces y contactos" },
+      { "number": "08", "title": "Portal de clientes para gestionar tarjeta, contactos e integraciones" }
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Crear", "Compartir", "Conectar", "Captar", "Dar seguimiento"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista conceptual", "del sistema"],
+    "pills": ["Enlace de tarjeta público", "Servicio de tarjeta y perfil", "Almacén de contactos y analíticas", "Portal de clientes"]
+  },
+  "outcomes": [
+    "Creamos un único producto donde la identidad profesional, los enlaces y las reservas conviven",
+    "Sustituimos las tarjetas impresas estáticas por un perfil que puede actualizarse en cualquier momento",
+    "Dimos a los propietarios de tarjetas visibilidad sobre la interacción mediante una vista de analíticas dedicada"
+  ],
+  "relatedWork": [
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+    },
+    {
+      "tag": "Plataformas empresariales",
+      "title": "Mighty Oak Legacy",
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+    },
+    {
+      "tag": "Servicios profesionales",
+      "title": "Solid Rock Leadership Development",
+      "desc": "Una plataforma de liderazgo y educación financiera que presenta programas, audiencias y un recorrido de reserva de consultas."
+    }
+  ]
+}

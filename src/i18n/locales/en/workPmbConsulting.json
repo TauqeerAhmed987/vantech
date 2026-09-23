@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badges": ["Professional Services"],
+    "titleLines": ["The PMB", "Consulting"],
+    "description": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.",
+    "screenshotAlt": "The PMB Consulting platform screenshot"
+  },
+  "stats": [
+    { "label": "Project type", "value": "Professional Services" },
+    { "label": "Capabilities", "value": "Web Development • UI/UX Design • Automation" },
+    { "label": "Industry", "value": "Professional Services" },
+    { "label": "Status", "value": "Live" }
+  ],
+  "detail": {
+    "overviewDesc": "The PMB Consulting is a personal branding and business consulting firm. The site presents its advisory services — mentorship and coaching, business formation, branding, digital presence, growth and financial planning — and gives prospective clients a direct route to a consultation.",
+    "challengeDesc": "The practice offers several distinct advisory services to very different audiences: new entrepreneurs, established professionals and families. A single generic page could not explain those offers clearly or help a visitor identify the engagement that fits their situation.",
+    "builtDesc": "We structured the experience around the firm's service areas, each with its own explanation and positioning, supported by credibility sections covering accreditation, values and client testimonials. A consultation request flow is reachable from every section, and the site supports multilingual visitors."
+  },
+  "sidebar": {
+    "serviceTags": ["Web Development", "UI/UX Design", "Automation"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "number": "01", "title": "Dedicated presentation per advisory service" },
+      { "number": "02", "title": "Business mentorship and coaching section" },
+      { "number": "03", "title": "Business formation and structure guidance" },
+      { "number": "04", "title": "Branding and business identity positioning" },
+      { "number": "05", "title": "Growth and expansion services" },
+      { "number": "06", "title": "Consultation request experience" },
+      { "number": "07", "title": "Multilingual visitor support" }
+    ]
+  },
+  "flow": {
+    "heading": "Business workflow",
+    "steps": ["Discover", "Compare services", "Request"],
+    "caption": "Conceptual system view"
+  },
+  "diagram": {
+    "badgeLines": ["Conceptual", "system view"],
+    "pills": ["Visitor", "Service pages", "Consultation intake", "Practice follow-up"]
+  },
+  "outcomes": [
+    "Created a centralized digital presence for a multi-service consulting practice",
+    "Separated distinct advisory offers so prospects can self-select",
+    "Provided a consistent route from any page to a consultation request"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Professional Services",
+      "title": "Solid Rock Leadership Development",
+      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey."
+    },
+    {
+      "tag": "Professional Services",
+      "title": "Power Mindset Breakthrough",
+      "desc": "A coaching and personal development platform with programmes, booking and content delivery."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code."
+    }
+  ]
+}

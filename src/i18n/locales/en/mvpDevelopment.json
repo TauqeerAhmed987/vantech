@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "MVP Development",
+    "title": "Your Idea.<br/>Built for Launch.",
+    "desc": "Turn an idea into a functional digital product with product strategy, architecture, design, development, testing and deployment handled by one technology team.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "Why Most First Versions Stall",
+    "desc": "Off-the-shelf tools work until your process differs from the product’s assumptions. Then the workarounds become the operation.",
+    "problems": [
+      "Scope grows faster than the product can be built.",
+      "Prototypes are thrown away because they were never architected.",
+      "Design, development and infrastructure are handled by disconnected suppliers.",
+      "No clear definition of what the first release has to prove."
+    ]
+  },
+  "solution": {
+    "title": "A First Release You Can Build On",
+    "desc": "We start by defining what your first version has to prove, then architect it as a real product: a database schema, authentication, a working application, and a deployment path. The build is deliberately focused, but nothing is a throwaway prototype — the same foundation carries the next release."
+  },
+  "build": {
+    "title": "What We Build",
+    "cards": [
+      { "title": "Product Definition", "desc": "Core user flows, data model and the scope of the first release." },
+      { "title": "Product Design", "desc": "Interface design and prototypes for the flows that matter most." },
+      { "title": "Application", "desc": "Frontend, backend, authentication and business logic in one codebase." },
+      { "title": "Data Foundation", "desc": "A schema designed for the product you intend to grow, not just to demo." },
+      { "title": "Launch Setup", "desc": "Deployment, environments, monitoring and basic analytics." },
+      { "title": "Iteration Plan", "desc": "A prioritized backlog based on what the release actually reveals." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "row1": ["Product scoping", "UX and UI design", "Interactive prototypes", "Database architecture", "Authentication", "Payments"],
+    "row2": ["Admin tooling", "Analytics instrumentation", "QA and testing", "Deployment"]
+  },
+  "usecases": {
+    "title": "Use Cases",
+    "items": [
+      { "title": "Founder validating an idea", "desc": "A focused product that proves demand before larger investment." },
+      { "title": "Company launching a new line", "desc": "A separate product built alongside existing operations." },
+      { "title": "Replacing a manual service", "desc": "Turning a spreadsheet-and-email process into a real application." },
+      { "title": "Pitching investors or partners", "desc": "A working product rather than a slide deck." }
+    ]
+  },
+  "architecture": {
+    "title": "MVP architecture",
+    "desc": "Even a first release is a full system. We keep it small, but structured — so the second version is an extension, not a rebuild.",
+    "steps": [
+      { "title": "Interface", "tags": [["Web app", "Responsive UI"], ["Onboarding"]] },
+      { "title": "Application", "tags": [["Business logic", "API"], ["Authentication", "Roles"]] },
+      { "title": "Data", "tags": [["Database", "File storage"], ["Events"]] },
+      { "title": "Operations", "tags": [["Deployment"], ["Monitoring", "Analytics"]] }
+    ]
+  },
+  "process": {
+    "title": "Development Process",
+    "cards": [
+      { "title": "Discover", "desc": "Requirements, users, constraints and the goal of the first release." },
+      { "title": "Define", "desc": "Scope, data model and success criteria agreed before the build starts." },
+      { "title": "Design", "desc": "Flows and interface design for the core product experience." },
+      { "title": "Build", "desc": "Application development in reviewable increments." },
+      { "title": "Test", "desc": "Functional QA, security review and responsive testing." },
+      { "title": "Launch", "desc": "Deployment, handover and a plan for the next iteration." }
+    ]
+  },
+  "integrations": {
+    "title": "Potential Integrations",
+    "row1": ["Payments", "Email", "Auth providers", "CRM"],
+    "row2": ["Storage", "Webhooks"]
+  },
+  "why": {
+    "title": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Scoped before it is built", "desc": "We agree what the first release proves before development starts." },
+      { "title": "Architected to continue", "desc": "The foundation supports the next version instead of blocking it." },
+      { "title": "One technology team", "desc": "Design, development, data and deployment under one architecture." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $2,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "badge": "Servicios",
+    "title": "Agentes de IA que realmente funcionan.",
+    "desc": "Agentes creados alrededor de un rol definido, conocimiento real del negocio y acciones permitidas, con una ruta de escalamiento clara hacia su equipo cuando una solicitud requiere una persona.",
+    "ctaPrimary": "Obtener el presupuesto de mi proyecto",
+    "ctaSecondary": "Explorar todos los servicios"
+  },
+  "disappoint": {
+    "title": "Por qué la mayoría de las implementaciones de <span class=\"accent\">IA</span> decepcionan",
+    "desc": "Un chatbot genérico sin conocimiento, sin permisos y sin ruta de escalamiento genera más trabajo en lugar de eliminarlo.",
+    "problems": [
+      "Las respuestas son genéricas porque el asistente no tiene conocimiento del negocio.",
+      "El asistente puede hablar, pero no puede hacer nada realmente.",
+      "No existe una transferencia definida cuando una solicitud supera su alcance.",
+      "Nadie puede ver qué dijo ni por qué."
+    ]
+  },
+  "solution": {
+    "title": "Agentes con un rol, conocimiento y permisos",
+    "desc": "Definimos de qué es responsable cada agente, lo conectamos a su conocimiento y sistemas, y le otorgamos un conjunto limitado de acciones que puede realizar. Las conversaciones quedan registradas, el escalamiento es explícito y el comportamiento se revisa con transcripciones reales."
+  },
+  "build": {
+    "title": "Qué construimos",
+    "cards": [
+      { "title": "Recepción y enrutamiento", "desc": "Las respuestas son genéricas porque el asistente no tiene conocimiento del negocio." },
+      { "title": "Agentes de ventas", "desc": "Calificación, información y transferencia a su equipo." },
+      { "title": "Agentes de soporte", "desc": "Respuestas basadas en su conocimiento documentado." },
+      { "title": "Agentes de programación", "desc": "Disponibilidad, reserva y confirmación dentro de la conversación." },
+      { "title": "Agentes de operaciones", "desc": "Agentes internos que consultan información y actualizan registros." },
+      { "title": "Diseño de escalamiento", "desc": "Umbrales definidos en los que una persona toma el control con todo el contexto." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacidades",
+    "row1": [
+      "Comprensión de la intención",
+      "Conocimiento fundamentado",
+      "Conversaciones multicanal",
+      "Acciones permitidas",
+      "Consulta y actualización de registros",
+      "Programación"
+    ],
+    "row2": ["Registro de conversaciones", "Escalamiento humano", "Control de tono y política", "Revisión del comportamiento"]
+  },
+  "usecases": {
+    "title": "Casos de uso",
+    "items": [
+      { "title": "Cobertura de recepción", "desc": "Consultas respondidas fuera del horario laboral con una transferencia adecuada." },
+      { "title": "Calificación", "desc": "Información estructurada recopilada antes de que intervenga su equipo." },
+      { "title": "Atención al cliente", "desc": "Preguntas repetidas respondidas a partir del conocimiento documentado." },
+      { "title": "Asistentes internos", "desc": "Agentes para el personal que encuentran información en todos los sistemas." }
+    ]
+  },
+  "architecture": {
+    "title": "Arquitectura del agente",
+    "desc": "Un agente es un sistema, no un simple prompt: el conocimiento, las herramientas, los permisos, la memoria y el escalamiento se diseñan en conjunto.",
+    "timeline": [
+      { "title": "Canales", "tags": [["Chat", "Voz"], ["SMS", "Correo electrónico"], ["Mensajería"]] },
+      { "title": "Razonamiento", "tags": [["Intención", "Política"], ["Estado de la conversación"]] },
+      { "title": "Conocimiento", "tags": [["Documentos", "Preguntas frecuentes"], ["Registros"], ["Reglas de negocio"]] },
+      { "title": "Acciones", "tags": [["Consultas", "Actualizaciones"], ["Programación"], ["Notificaciones"]] },
+      { "title": "Supervisión", "tags": [["Transcripciones", "Escalamiento"], ["Revisión"]] }
+    ]
+  },
+  "process2": {
+    "title": "Arquitectura del agente",
+    "desc": "Un agente es un sistema, no un simple prompt: el conocimiento, las herramientas, los permisos, la memoria y el escalamiento se diseñan en conjunto.",
+    "steps": [
+      { "title": "Definir el rol", "desc": "Responsabilidades, tono, límites y reglas de escalamiento." },
+      { "title": "Reunir el conocimiento", "desc": "Recopilar y estructurar la información en la que el agente puede basarse." },
+      { "title": "Conectar acciones", "desc": "Dar al agente un acceso limitado a los sistemas que necesita." },
+      { "title": "Construir", "desc": "Implementar el agente, sus salvaguardas y su registro." },
+      { "title": "Revisar", "desc": "Probar contra escenarios reales y refinar a partir de las transcripciones." },
+      { "title": "Operar", "desc": "Supervisar las conversaciones y ampliar las capacidades con el tiempo." }
+    ]
+  },
+  "integrations": {
+    "title": "Integraciones potenciales",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Calendarios" },
+      { "label": "Base de conocimiento" },
+      { "label": "Telefonía" },
+      { "label": "WhatsApp" }
+    ],
+    "row2": [{ "label": "SMS" }, { "label": "Correo electrónico" }, { "label": "API internas" }]
+  },
+  "why": {
+    "title": "Por qué Van Tech Systems",
+    "cards": [
+      { "title": "Limitado por diseño", "desc": "Los agentes actúan solo dentro de los permisos que usted aprueba." },
+      { "title": "Fundamentado en su conocimiento", "desc": "Las respuestas provienen de su contenido, no de suposiciones." },
+      { "title": "El escalamiento es parte del producto", "desc": "La transferencia a una persona está diseñada, no es una idea de último momento." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Desde $1,500/mes",
+    "desc": "Los precios iniciales son referencias de planificación. El precio final depende del alcance, la arquitectura, las integraciones y los requisitos técnicos.",
+    "cta": "Obtener el presupuesto de mi proyecto"
+  }
+}

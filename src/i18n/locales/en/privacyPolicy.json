@@ -1,0 +1,77 @@
+{
+  "hero": { "updated": "Last updated: 18 August 2026" },
+  "sections": {
+    "whoWeAre": {
+      "title": "1. Who We Are",
+      "body": "Van Tech Systems designs and builds AI, software and automation systems. This policy covers personal data processed through our website, our project discovery form, our AI assistant and the commercial relationship that may follow. For data we process on behalf of a client while delivering a project, the client is the data controller and we act as a processor under the terms of the applicable agreement."
+    },
+    "dataWeCollect": {
+      "title": "2. Data We Collect",
+      "items": [
+        "Contact details you provide: name, email address, phone number, company name and role.",
+        "Project information: descriptions, requirements, budget and timeline indications, and any files you choose to attach.",
+        "Conversation data: messages exchanged with our AI assistant, and appointment details when you book a call.",
+        "Technical data: IP-derived request metadata, browser type, referring source and pages viewed, used to keep the service secure and to understand which content is useful.",
+        "Client engagement data: information required to deliver contracted work, including systems access details shared under agreement."
+      ]
+    },
+    "whyWeProcess": {
+      "title": "3. Why We Process It",
+      "items": [
+        "<strong>Responding to enquiries and preparing proposals</strong> — steps taken at your request prior to a contract.",
+        "<strong>Delivering and supporting contracted work</strong> — performance of a contract.",
+        "<strong>Securing our systems and preventing abuse</strong> — legitimate interest.",
+        "<strong>Improving our content and services</strong> — legitimate interest.",
+        "<strong>Sending operational and, where opted in, occasional updates</strong> — consent or legitimate interest."
+      ]
+    },
+    "automatedAssessment": {
+      "title": "4. Automated Assessment of Enquiries",
+      "body": "Project enquiries may be summarised and prioritised by an automated system so our team can respond faster and more accurately. The output is used internally only and is always reviewed by a person before any decision affecting you is taken. No enquiry is rejected solely by automated means, and you can ask for a human review of anything we send you."
+    },
+    "aiConversations": {
+      "title": "5. AI Assistant Conversations",
+      "body": "Conversations with our website assistant are stored so we can maintain context, review quality, and improve answers. Do not share passwords, payment details or sensitive personal data in the chat. You may request deletion of a conversation at any time by contacting us with the approximate date and email address used."
+    },
+    "sharing": {
+      "title": "6. Sharing and Processors",
+      "body": "We do not sell personal data. We share it only with service providers who help us operate: cloud hosting and database infrastructure, transactional email delivery, and AI model providers used to power assistant and assessment features. Each provider is bound by contract to process data only on our instructions and to apply appropriate security measures."
+    },
+    "internationalTransfers": {
+      "title": "7. International Transfers",
+      "body": "Our infrastructure and providers may process data outside your country of residence. Where that happens, transfers rely on recognised safeguards such as standard contractual clauses or an adequacy decision."
+    },
+    "retention": {
+      "title": "8. Retention",
+      "items": [
+        "Enquiry records: retained while a commercial relationship is being considered, then for a limited period for record-keeping, unless you ask for deletion.",
+        "Client project data: retained for the duration of the engagement and any agreed support period, then deleted or returned according to the agreement.",
+        "Assistant conversations: retained for quality and improvement purposes and deleted on request.",
+        "Email delivery logs: retained for a limited period to diagnose delivery problems."
+      ]
+    },
+    "security": {
+      "title": "9. Security",
+      "body": "We apply least-privilege access, row-level authorization on stored records, encrypted transport, encrypted secret storage and logging of administrative actions. Access to client environments is restricted to the engineers assigned to that engagement and revoked at the end of it. No system is absolutely secure. If a breach affects your data, we will notify you and, where required, the relevant authority without undue delay."
+    },
+    "yourRights": {
+      "title": "10. Your Rights",
+      "items": [
+        "Access a copy of the personal data we hold about you.",
+        "Correct data that is inaccurate or incomplete.",
+        "Request deletion of data we no longer need to keep.",
+        "Object to or restrict certain processing based on legitimate interest.",
+        "Withdraw consent at any time where processing relies on consent.",
+        "Request a portable copy of data you provided to us."
+      ]
+    },
+    "children": {
+      "title": "11. Children",
+      "body": "Our services are directed at businesses. We do not knowingly collect personal data from children. If you believe a child has provided us with data, contact us and we will delete it."
+    },
+    "changesContact": {
+      "title": "12. Changes and Contact",
+      "bodyPrefix": "We update this policy when our processing changes. The date at the top of the page reflects the current version. To exercise a right or ask a question, contact us at"
+    }
+  }
+}

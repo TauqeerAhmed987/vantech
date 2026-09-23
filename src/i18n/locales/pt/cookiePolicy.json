@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Política de Cookies",
+    "updated": "Última atualização: 18 de agosto de 2026"
+  },
+  "sections": {
+    "approach": {
+      "title": "1. Nossa abordagem",
+      "body": "Usamos o menor conjunto de armazenamento do navegador que permite que o site funcione corretamente. Não operamos redes de publicidade nem pixels de rastreamento entre sites neste site."
+    },
+    "whatWeStore": {
+      "title": "2. O que armazenamos",
+      "items": [
+        "<strong>Armazenamento de sessão essencial</strong> — mantém o login e a proteção de formulários.",
+        "<strong>Preferência de idioma</strong> — lembra o idioma do site que você escolheu.",
+        "<strong>Estado do assistente</strong> — preserva a disponibilidade da conversa com a IA.",
+        "<strong>Contador anônimo de artigos</strong> — usa um identificador aleatório para contagem em um único navegador."
+      ]
+    },
+    "analytics": {
+      "title": "3. Análise",
+      "body": "A contagem de visualizações de artigos é anônima: registra um identificador local aleatório, o artigo e o idioma, sem nome, e-mail ou identificador publicitário associado. Não pode ser usada para identificá-lo."
+    },
+    "thirdParty": {
+      "title": "4. Armazenamento de terceiros",
+      "body": "Nossos provedores de infraestrutura podem definir cookies estritamente necessários para segurança, integridade da sessão e prevenção de abusos. Se você seguir um link para um site externo, a política de cookies desse site se aplica."
+    },
+    "controlling": {
+      "title": "5. Controlando o armazenamento",
+      "items": [
+        "As configurações de privacidade do seu navegador permitem visualizar, bloquear ou excluir cookies armazenados e dados do site a qualquer momento.",
+        "Bloquear o armazenamento essencial pode impedir que partes do site, como formulários ou o assistente de IA, funcionem corretamente.",
+        "Limpar os dados do site redefine sua preferência de idioma e qualquer estado local do assistente."
+      ]
+    },
+    "contact": {
+      "title": "6. Contato",
+      "bodyPrefix": "Para dúvidas sobre o armazenamento do navegador neste site, entre em contato com"
+    }
+  }
+}

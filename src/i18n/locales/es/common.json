@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "aboutUs": "Sobre nosotros",
+    "services": "Servicios",
+    "aiAgents": "Agentes de IA",
+    "aiAutomations": "Automatizaciones de IA",
+    "modelDevelopment": "Desarrollo de modelos",
+    "autopilot": "Piloto automático",
+    "mvpDevelopment": "Desarrollo de MVP",
+    "webApplications": "Aplicaciones web",
+    "mobileApplications": "Aplicaciones móviles",
+    "saasDevelopment": "Desarrollo SaaS",
+    "customSoftware": "Software a medida",
+    "ecommerce": "Comercio electrónico",
+    "partnerProgram": "Programa de socios",
+    "work": "Proyectos",
+    "powerMindsetBreakthrough": "Power Mindset Breakthrough",
+    "vanTravelBusiness": "Van Travel Business",
+    "vanTravelBusinessTwo": "Van Travel Business Two",
+    "onetapDigitalCard": "OneTap Digital Card",
+    "pmbConsulting": "The PMB Consulting",
+    "mightyOakLegacy": "Mighty Oak Legacy",
+    "solidRockLeadership": "Solid Rock Leadership",
+    "buketiFinancial": "Buketi Financial & Consulting",
+    "lelofit": "Lelofit",
+    "allAccessTrip": "All Access Trip",
+    "faq": "FAQ",
+    "contact": "Contacto"
+  },
+  "startAProject": "Iniciar un proyecto",
+  "footer": {
+    "tagline": "IA • Software • Automatización",
+    "desc": "Creamos software inteligente, sistemas de IA y productos digitales para empresas ambiciosas.",
+    "callUs": "Llámanos",
+    "mailUs": "Escríbenos",
+    "company": "Empresa",
+    "services": "Servicios",
+    "legal": "Legal",
+    "legalCenter": "Centro legal",
+    "cookies": "Cookies",
+    "accessibility": "Accesibilidad",
+    "aiUsage": "Uso de IA",
+    "copyright": "© 2026 Van Tech Systems. Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfServices": "Términos de servicio"
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "sidebarBack": "Centro legal",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "cookiePolicy": "Política de cookies",
+    "accessibilityStatement": "Declaración de accesibilidad",
+    "aiUsagePolicy": "Política de uso de IA"
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas <br/>frecuentes",
+    "intro": "¿Tienes alguna pregunta?",
+    "desc": "¡Cuéntanos! Ponte en contacto y nuestro equipo te responderá enseguida.",
+    "contactUs": "Contáctanos",
+    "items": [
+      {
+        "q": "¿Cómo empieza un proyecto?",
+        "a": "A través de un descubrimiento de proyecto guiado. Compartes tus objetivos, alcance y restricciones, y respondemos con una dirección técnica definida."
+      },
+      {
+        "q": "¿Solo desarrollan productos de IA?",
+        "a": "No — desarrollamos productos de software completos y añadimos IA solo cuando realmente mejora el resultado, no por defecto."
+      },
+      {
+        "q": "¿Cómo se determina el precio?",
+        "a": "El precio depende del alcance, las integraciones y el cronograma. Las cifras anteriores son referencias de planificación, no presupuestos finales."
+      },
+      {
+        "q": "¿Pueden trabajar con nuestros sistemas existentes?",
+        "a": "Sí, integramos regularmente CRMs, bases de datos y herramientas de terceros existentes en lugar de reemplazarlos por completo."
+      },
+      {
+        "q": "¿Qué ocurre después del lanzamiento?",
+        "a": "Recibes la entrega completa además de un acuerdo de soporte opcional para monitoreo, correcciones e iteraciones futuras."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "title": "Lo que dicen nuestros clientes",
+    "items": [
+      {
+        "quote": "Van Tech Systems transformó nuestros procesos manuales en flujos de trabajo inteligentes, ahorrando tiempo a nuestro equipo y mejorando la rapidez de respuesta al cliente.",
+        "name": "Daniel Carter",
+        "role": "Director de Operaciones"
+      },
+      {
+        "quote": "El equipo entendió nuestro negocio y entregó una plataforma escalable que se siente pulida, confiable y diseñada para el crecimiento a largo plazo.",
+        "name": "Sophia Bennett",
+        "role": "Fundadora y CEO"
+      },
+      {
+        "quote": "Nuestra automatización de IA ahora maneja tareas repetitivas sin problemas, dando a nuestro personal más tiempo para centrarse en los clientes y las prioridades.",
+        "name": "Michael Reed",
+        "role": "Responsable de Experiencia del Cliente"
+      },
+      {
+        "quote": "De la estrategia al lanzamiento, Van Tech Systems hizo que el proceso de desarrollo fuera claro, colaborativo y sorprendentemente eficiente para nuestro equipo.",
+        "name": "Olivia Grant",
+        "role": "Gerente de Producto"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Comienza tu <br/>viaje con IA <br/>hoy mismo",
+    "desc": "Ya sea que necesites un empleado de IA, una plataforma SaaS, una aplicación móvil o un sistema empresarial a medida, Van Tech Systems puede ayudarte a convertir tu idea en tecnología lista para producción.",
+    "banner": "Reserva hoy tu sesión gratuita de IA."
+  }
+}

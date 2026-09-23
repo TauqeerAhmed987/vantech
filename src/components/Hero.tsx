@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import heroBg from '../assets/images/hero-banner.png';
 import { useReveal } from '../hooks/useReveal';
 import { useCountUp } from '../hooks/useCountUp';
@@ -28,11 +29,11 @@ const orbitIcons = [
 
 const ORBIT_DURATION = '38s';
 
-const stats = [
-  { value: 14, suffix: '', label: 'Portfolio Projects' },
-  { value: 4, suffix: '', label: 'Languages Supported' },
-  { value: 10, suffix: '+', label: 'Technology Services' },
-  { value: 3, suffix: '', label: 'Core Capabilities' },
+const statDefs = [
+  { value: 14, suffix: '', key: 'portfolioProjects' },
+  { value: 4, suffix: '', key: 'languagesSupported' },
+  { value: 10, suffix: '+', key: 'technologyServices' },
+  { value: 3, suffix: '', key: 'coreCapabilities' },
 ];
 
 function Stat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
@@ -50,6 +51,8 @@ function Stat({ value, suffix, label }: { value: number; suffix: string; label: 
 }
 
 export default function Hero() {
+  const { t } = useTranslation('home');
+  const eyebrow = t('hero.eyebrow', { returnObjects: true }) as string[];
   const copy = useReveal('left');
   const graphic = useReveal('right');
   const statsReveal = useReveal('up');
@@ -61,32 +64,22 @@ export default function Hero() {
       <div className="container hero__container">
         <div className={`hero__copy ${copy.className}`} ref={copy.ref}>
           <span className="eyebrow-pill hero__eyebrow">
-            <span>AI</span>
-            <span>Software</span>
-            <span>Automation</span>
+            {eyebrow.map((word) => (
+              <span key={word}>{word}</span>
+            ))}
           </span>
 
-          <h1 className="hero__title">
-            We Build Intelligent{' '}
-            <br />
-            Software for Ambitious{' '}
-            <br />
-            Businesses.
-          </h1>
+          <h1 className="hero__title" dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
 
-          <p className="hero__desc">
-            Van Tech Systems designs and develops AI systems, SaaS platforms, web
-            applications, mobile apps, automation infrastructure, ecommerce solutions
-            and custom software built around real business operations.
-          </p>
+          <p className="hero__desc">{t('hero.desc')}</p>
 
           <div className="hero__actions">
             <a href="#contact" className="btn btn-outline">
-              Start a Project
+              {t('hero.startAProject')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
             <a href="#work" className="btn btn-outline">
-              Our Work
+              {t('hero.ourWork')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -139,11 +132,11 @@ export default function Hero() {
                 <Icon svg={earthSvg} />
               </div>
             </div>
-            <p className="stats-card__title">A measurable engineering footprint.</p>
+            <p className="stats-card__title">{t('hero.statsTitle')}</p>
           </div>
           <div className="stats-card__grid">
-            {stats.map((s) => (
-              <Stat key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
+            {statDefs.map((s) => (
+              <Stat key={s.key} value={s.value} suffix={s.suffix} label={t(`hero.stats.${s.key}`)} />
             ))}
           </div>
         </div>

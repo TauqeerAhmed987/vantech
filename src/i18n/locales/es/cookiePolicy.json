@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "title": "Política de Cookies",
+    "updated": "Última actualización: 18 de agosto de 2026"
+  },
+  "sections": {
+    "approach": {
+      "title": "1. Nuestro enfoque",
+      "body": "Utilizamos el conjunto mínimo de almacenamiento del navegador que permite que el sitio funcione correctamente. No operamos redes publicitarias ni píxeles de seguimiento entre sitios en este sitio web."
+    },
+    "whatWeStore": {
+      "title": "2. Qué almacenamos",
+      "items": [
+        "<strong>Almacenamiento de sesión esencial</strong> — mantiene el inicio de sesión y la protección de formularios.",
+        "<strong>Preferencia de idioma</strong> — recuerda el idioma del sitio que elegiste.",
+        "<strong>Estado del asistente</strong> — preserva la disponibilidad de la conversación con la IA.",
+        "<strong>Contador anónimo de artículos</strong> — usa un identificador aleatorio para el conteo en un solo navegador."
+      ]
+    },
+    "analytics": {
+      "title": "3. Analítica",
+      "body": "El conteo de vistas de artículos es anónimo: registra un identificador local aleatorio, el artículo y el idioma, sin nombre, correo electrónico ni identificador publicitario asociado. No puede usarse para identificarte."
+    },
+    "thirdParty": {
+      "title": "4. Almacenamiento de terceros",
+      "body": "Nuestros proveedores de infraestructura pueden establecer cookies estrictamente necesarias para la seguridad, la integridad de la sesión y la prevención de abusos. Si sigues un enlace a un sitio externo, se aplicará la política de cookies de ese sitio."
+    },
+    "controlling": {
+      "title": "5. Control del almacenamiento",
+      "items": [
+        "La configuración de privacidad de tu navegador te permite ver, bloquear o eliminar las cookies almacenadas y los datos del sitio en cualquier momento.",
+        "Bloquear el almacenamiento esencial puede impedir que partes del sitio, como los formularios o el asistente de IA, funcionen correctamente.",
+        "Borrar los datos del sitio restablece tu preferencia de idioma y cualquier estado local del asistente."
+      ]
+    },
+    "contact": {
+      "title": "6. Contacto",
+      "bodyPrefix": "Para preguntas sobre el almacenamiento del navegador en este sitio, contacta a"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "eyebrow": "À propos de Van Tech Systems",
+    "title": "Une société d'ingénierie pour les entreprises qui ont besoin de systèmes, pas de présentations.",
+    "desc": "Nous concevons, développons et exploitons des logiciels intelligents : des agents IA et de l'automatisation qui prennent en charge une charge de travail réelle, ainsi que des applications et plateformes qui restent maintenables longtemps après leur lancement. Tout ce que nous livrons est architecturé par les mêmes ingénieurs qui en définissent le périmètre.",
+    "startAProject": "Démarrer un projet",
+    "ourWork": "Nos réalisations"
+  },
+  "process": {
+    "title": "Un modèle de livraison conçu autour des décisions, pas des livrables.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Découverte",
+        "desc": "Nous cartographions le processus réel, les systèmes déjà en place, les données existantes et les contraintes importantes. Le résultat est un périmètre écrit avec des hypothèses explicites."
+      },
+      {
+        "number": "02",
+        "title": "Architecture",
+        "desc": "Le modèle de données, les frontières d'intégration, le modèle de sécurité et les choix d'infrastructure sont décidés et documentés avant l'implémentation. Les retouches coûtent le moins cher à ce stade."
+      },
+      {
+        "number": "03",
+        "title": "Développement",
+        "desc": "Des cycles de livraison courts avec un logiciel fonctionnel revu en continu. Les contrôles automatisés, la revue de code et la séparation des environnements sont standards, pas des options."
+      },
+      {
+        "number": "04",
+        "title": "Intégration",
+        "desc": "Connexion aux systèmes qui font déjà tourner l'entreprise — CRM, facturation, e-mail, téléphonie, bases de données internes et API tierces — avec une gestion des erreurs pensée dès la conception."
+      },
+      {
+        "number": "05",
+        "title": "Déploiement",
+        "descLine1": "Mise en production avec supervision, sauvegardes, contrôle d'accès et un",
+        "descLine2": "chemin de retour arrière. Nous ne considérons pas un lancement terminé tant qu'il n'est pas observable."
+      }
+    ]
+  },
+  "tech": {
+    "title": "Une technologie conçue pour être possédée, pas louée",
+    "cards": [
+      "Van Tech Systems est une entreprise technologique spécialisée en IA, ingénierie logicielle et automatisation. Nous travaillons avec des fondateurs qui lancent des produits, des entreprises établies qui remplacent des opérations manuelles, et des agences qui ont besoin d'un partenaire technique sérieux derrière leur marque.",
+      "Notre travail se situe dans l'un de ces trois cas : un produit qui doit exister, un processus qui ne devrait pas être manuel, ou un système qui a dépassé la façon dont il a été conçu à l'origine. Dans chaque cas, le livrable est le même — un système fonctionnel avec une architecture claire, des décisions documentées et une infrastructure contrôlée par le client.",
+      "Nous sommes délibérément pilotés par l'ingénierie. Le cadrage est réalisé par les personnes qui construiront la solution. Les estimations proviennent de l'expérience de livraison plutôt que d'objectifs commerciaux. Lorsqu'une demande serait mieux résolue par une construction plus légère, un changement de configuration ou un outil existant, nous le disons avant qu'un contrat n'existe."
+    ]
+  },
+  "layers": {
+    "title": "Ce que nous construisons, couche par couche",
+    "items": [
+      {
+        "number": "01",
+        "title": "Couche d'expérience",
+        "desc": "Les écrans, tableaux de bord et points de contact que votre équipe et vos clients utilisent réellement.",
+        "tags": ["Applications web", "Applications mobiles", "Portails clients", "Tableaux de bord internes", "E-commerce"]
+      },
+      {
+        "number": "02",
+        "title": "Couche d'intelligence",
+        "desc": "Des agents et modèles IA cadrés autour d'une véritable décision, pas ajoutés pour la forme.",
+        "tags": ["Agents IA", "Assistants vocaux et chat", "Traitement de documents", "Développement de modèles", "Aide à la décision"]
+      },
+      {
+        "number": "03",
+        "title": "Couche d'automatisation",
+        "desc": "Les workflows qui prennent en charge une charge de travail réelle sans intervention humaine à chaque étape.",
+        "tags": ["Orchestration de workflows", "Routage des leads", "Planification", "Reporting", "Alertes"]
+      },
+      {
+        "number": "04",
+        "title": "Couche plateforme",
+        "desc": "Le cœur applicatif : authentification, facturation et les API dont tout le reste dépend.",
+        "tags": ["API", "SaaS multi-tenant", "Authentification et RBAC", "Facturation", "Intégrations"]
+      },
+      {
+        "number": "05",
+        "title": "Couche fondation",
+        "desc": "Hébergement, sécurité et observabilité conçus pour rester fiables à mesure que l'usage augmente.",
+        "tags": ["Modélisation des données", "Infrastructure cloud", "Sécurité", "Observabilité", "CI/CD"]
+      }
+    ]
+  },
+  "principles": {
+    "eyebrow": "Principes d'ingénierie",
+    "title": "Les décisions que nous prenons toujours de la même façon",
+    "diagram": {
+      "businessGoal": "Objectif métier",
+      "existingSystems": "Systèmes existants",
+      "realData": "Données réelles",
+      "constraints": "Contraintes",
+      "architectureDecisionLine1": "Décision",
+      "architectureDecisionLine2": "d'architecture",
+      "documentedModel": "Modèle documenté",
+      "workingSystem": "Système fonctionnel",
+      "ownedInfrastructure": "Infrastructure possédée"
+    },
+    "items": [
+      {
+        "title": "Architecture avant implémentation",
+        "desc": "Le modèle de données et les frontières d'intégration sont décidés en premier. Les systèmes échouent lentement quand cette étape est sautée, et le coût apparaît des mois plus tard."
+      },
+      {
+        "title": "Automatisation avec une limite humaine",
+        "desc": "Les systèmes automatisés gèrent le chemin prévisible. L'ambiguïté, les exceptions et tout ce qui a une conséquence commerciale ou juridique sont, par conception, orientés vers une personne."
+      },
+      {
+        "title": "L'IA appliquée là où elle est rentable",
+        "desc": "L'IA n'est utilisée que là où elle surpasse manifestement une solution plus simple — jamais incluse simplement parce que c'est à la mode."
+      },
+      {
+        "title": "La sécurité comme état par défaut",
+        "desc": "L'accès à moindre privilège, l'autorisation au niveau des lignes, les secrets chiffrés et les actions administratives auditées font partie de la base construite, pas d'un projet de durcissement ultérieur."
+      },
+      {
+        "title": "Pas de boîtes noires",
+        "desc": "Les clients reçoivent le code, l'infrastructure, la documentation et les identifiants. Mettre fin à une collaboration ne devrait jamais signifier perdre un système."
+      },
+      {
+        "title": "Un périmètre honnête",
+        "desc": "Nous préférons perdre un contrat plutôt que d'accepter un calendrier que nous savons irréaliste. Les estimations reflètent l'expérience de livraison, y compris les aspects qui tournent généralement mal."
+      }
+    ]
+  },
+  "ai": {
+    "title": "Une IA utile est un problème d'ingénierie, pas une démo.",
+    "desc1": "Une démo convaincante prend un après-midi. Un système IA en production qui répond avec précision, refuse d'inventer des faits, respecte les permissions, escalade proprement et peut être audité par la suite est un projet d'ingénierie avec un modèle de données derrière.",
+    "desc2": "C'est la distinction sur laquelle nous travaillons. Nos systèmes IA sont ancrés dans le contenu et les données propres du client, limités à des actions définies, journalisés de bout en bout et surveillés après le lancement — car un système IA qui ne peut pas être inspecté ne peut pas être digne de confiance auprès des clients.",
+    "points": [
+      "Ancré dans votre contenu et vos données plutôt qu'une génération ouverte",
+      "Frontières d'outils explicites : un agent ne peut faire que ce pour quoi il a reçu l'autorisation",
+      "Voies d'escalade humaine pour tout ce qui est sensible, ambigu ou commercialement significatif",
+      "Journalisation complète des conversations et actions pour permettre l'examen et l'amélioration du comportement",
+      "Ajustement continu basé sur l'usage réel plutôt que sur des hypothèses"
+    ]
+  },
+  "risk": {
+    "eyebrow": "Normes et gouvernance",
+    "title": "Comment nous gérons les données, l'accès et la responsabilité",
+    "cards": [
+      {
+        "title": "Gestion des données",
+        "desc": "Nous ne collectons que les données nécessaires à une collaboration, conservons les données de production hors des environnements de développement dans la mesure du possible, et supprimons les accès à la fin d'un projet."
+      },
+      {
+        "title": "Contrôle d'accès",
+        "desc": "Accès basé sur les rôles avec moindre privilège sur les applications, bases de données et infrastructures. Les actions administratives sont journalisées."
+      },
+      {
+        "title": "Confidentialité",
+        "desc": "Le travail client est confidentiel par défaut. Nous ne publions rien concernant une collaboration sans autorisation écrite, et nous travaillons sous NDA lorsque cela est demandé."
+      },
+      {
+        "title": "Propriété et transmission",
+        "desc": "Les livrables, dépôts et infrastructures appartiennent au client, avec une documentation suffisante pour qu'un autre ingénieur compétent puisse poursuivre le travail."
+      },
+      {
+        "title": "Utilisation responsable de l'IA",
+        "desc": "Les systèmes IA que nous construisons indiquent qu'ils sont automatisés, évitent les affirmations fabriquées et orientent tout élément conséquent vers un humain. Notre propre politique est publiée en détail."
+      }
+    ],
+    "note": "Des politiques détaillées sont disponibles dans notre centre juridique, notamment sur la confidentialité, les conditions, les cookies, l'accessibilité et l'utilisation de l'IA."
+  },
+  "work": {
+    "title": "Trois façons de travailler avec nous",
+    "cards": [
+      {
+        "number": "01",
+        "title": "Projets directs",
+        "desc": "Des collaborations produit, plateforme, automatisation ou IA cadrées et livrées de bout en bout, de la découverte au déploiement, avec un support continu optionnel."
+      },
+      {
+        "number": "02",
+        "title": "Ingénierie continue",
+        "desc": "Une capacité d'ingénierie dédiée pour les entreprises qui ont besoin d'itérations continues, de supervision et de livraison de feuille de route sans recruter une équipe interne."
+      },
+      {
+        "number": "03",
+        "title": "Partenariats d'agence",
+        "desc": "Livraison en marque blanche pour les agences, cabinets de conseil et entreprises IT qui vendent de la technologie et ont besoin d'un département d'ingénierie discret et fiable derrière leur marque."
+      }
+    ]
+  }
+}

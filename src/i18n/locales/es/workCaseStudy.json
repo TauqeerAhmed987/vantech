@@ -1,0 +1,27 @@
+{
+  "viewLiveSite": "Ver sitio en vivo",
+  "startSimilarProject": "Iniciar un proyecto similar",
+  "comingSoon": "Próximamente",
+  "sections": {
+    "overview": "Resumen",
+    "challenge": "El desafío",
+    "whatWeBuilt": "Lo que construimos",
+    "coreCapabilities": "Capacidades clave",
+    "services": "Servicios",
+    "systemApproach": "Enfoque del sistema",
+    "outcome": "Resultado"
+  },
+  "sidebar": {
+    "techAndServices": "Tecnología y servicios",
+    "services": "Servicios",
+    "exploreLiveProduct": "Explorar el producto en vivo"
+  },
+  "relatedWork": "Trabajos relacionados",
+  "viewWork": "Ver proyecto",
+  "exploreAllServices": "Explorar todos los servicios",
+  "closing": {
+    "title": "Construyamos lo que sigue.",
+    "desc": "Ya sea que necesites un empleado de IA, una plataforma SaaS, una aplicación móvil o un sistema empresarial a medida, Van Tech Systems puede ayudarte a convertir tu idea en tecnología lista para producción.",
+    "startAProject": "Iniciar un proyecto"
+  }
+}

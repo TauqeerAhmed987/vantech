@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "AI Agents That Actually Work.",
+    "desc": "Agents built around a defined role, real business knowledge and permitted actions — with a clear escalation path to your team when a request needs a person.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "Why Most <span class=\"accent\">AI</span> Deployments Disappoint",
+    "desc": "A general-purpose chatbot with no knowledge, no permissions and no escalation path creates work instead of removing it.",
+    "problems": [
+      "Answers are generic because the assistant has no business knowledge.",
+      "The assistant can talk, but cannot actually do anything.",
+      "There is no defined handover when a request exceeds its scope.",
+      "Nobody can see what it said or why."
+    ]
+  },
+  "solution": {
+    "title": "Agents with a role, knowledge and permissions",
+    "desc": "We define what each agent is responsible for, connect it to your knowledge and systems, and give it a bounded set of actions it is allowed to perform. Conversations are logged, escalation is explicit, and behaviour is reviewed against real transcripts."
+  },
+  "build": {
+    "title": "What We Build",
+    "cards": [
+      { "title": "Reception & Routing", "desc": "Answers are generic because the assistant has no business knowledge." },
+      { "title": "Sales Agents", "desc": "Qualification, information and handover to your team." },
+      { "title": "Support Agents", "desc": "Answers grounded in your documented knowledge." },
+      { "title": "Scheduling Agents", "desc": "Availability, booking and confirmation inside the conversation." },
+      { "title": "Operations Agents", "desc": "Internal agents that retrieve information & update records." },
+      { "title": "Escalation design", "desc": "Defined thresholds where a human takes over with full context." }
+    ]
+  },
+  "capabilities": {
+    "title": "Capabilities",
+    "row1": [
+      "Intent understanding",
+      "Knowledge grounding",
+      "Multi-channel conversations",
+      "Permitted actions",
+      "Record lookup and updates",
+      "Scheduling"
+    ],
+    "row2": ["Conversation logging", "Human escalation", "Tone and policy control", "Behaviour review"]
+  },
+  "usecases": {
+    "title": "Use Cases",
+    "items": [
+      { "title": "Front-desk coverage", "desc": "Enquiries answered outside working hours with proper handover." },
+      { "title": "Qualification", "desc": "Structured information collected before your team engages." },
+      { "title": "Customer support", "desc": "Repeated questions answered from documented knowledge." },
+      { "title": "Internal assistants", "desc": "Staff-facing agents that find information across systems." }
+    ]
+  },
+  "architecture": {
+    "title": "Agent architecture",
+    "desc": "An agent is a system, not a prompt: knowledge, tools, permissions, memory and escalation are designed together.",
+    "timeline": [
+      { "title": "Channels", "tags": [["Chat", "Voice"], ["SMS", "Email"], ["Messaging"]] },
+      { "title": "Reasoning", "tags": [["Intent", "Policy"], ["Conversation state"]] },
+      { "title": "Knowledge", "tags": [["Documents", "FAQs"], ["Records"], ["Business rules"]] },
+      { "title": "Actions", "tags": [["Lookups", "Updates"], ["Scheduling"], ["Notifications"]] },
+      { "title": "Oversight", "tags": [["Transcripts", "Escalation"], ["Review"]] }
+    ]
+  },
+  "process2": {
+    "title": "Agent architecture",
+    "desc": "An agent is a system, not a prompt: knowledge, tools, permissions, memory and escalation are designed together.",
+    "steps": [
+      { "title": "Define the role", "desc": "Responsibilities, tone, boundaries and escalation rules." },
+      { "title": "Assemble knowledge", "desc": "Collect and structure the information the agent may rely on." },
+      { "title": "Connect actions", "desc": "Give the agent bounded access to the systems it needs." },
+      { "title": "Build", "desc": "Implement the agent, its guardrails and its logging." },
+      { "title": "Review", "desc": "Test against real scenarios and refine from transcripts." },
+      { "title": "Operate", "desc": "Monitor conversations and extend capabilities over time." }
+    ]
+  },
+  "integrations": {
+    "title": "Potential Integrations",
+    "row1": [
+      { "label": "CRM" },
+      { "label": "Calendars" },
+      { "label": "Knowledge base" },
+      { "label": "Telephony" },
+      { "label": "WhatsApp" }
+    ],
+    "row2": [{ "label": "SMS" }, { "label": "Email" }, { "label": "Internal APIs" }]
+  },
+  "why": {
+    "title": "Why Van Tech Systems",
+    "cards": [
+      { "title": "Bounded by design", "desc": "Agents act only within permissions you approve." },
+      { "title": "Grounded in your knowledge", "desc": "Answers come from your content, not from guesswork." },
+      { "title": "Escalation is part of the product", "desc": "Handover to a person is designed, not an afterthought." }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $1,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

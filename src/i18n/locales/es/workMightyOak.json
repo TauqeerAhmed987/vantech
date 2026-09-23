@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariales", "Planificación patrimonial y sucesoria"],
+    "titleLines": ["Mighty Oak", "Legacy"],
+    "description": "Una plataforma digital construida en torno a la educación financiera, la mentoría, el desarrollo de liderazgo y la orientación sobre el legado familiar.",
+    "screenshotAlt": "Captura de pantalla de la plataforma Mighty Oak Legacy"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "Plataformas empresariales" },
+    { "label": "Capacidades", "value": "Desarrollo web • Diseño UI/UX" },
+    { "label": "Sector", "value": "Planificación patrimonial y sucesoria" },
+    { "label": "Estado", "value": "En vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "Mighty Oak Legacy potencia a personas, familias y líderes emergentes mediante educación financiera, mentoría, una oportunidad de negocio y orientación práctica. La plataforma reúne sus contenidos educativos, su itinerario de liderazgo y la reserva de consultas en una experiencia serena y confiable.",
+    "challengeDesc": "El trabajo de la organización abarca educación, mentoría, liderazgo y una oportunidad de negocio: cuatro intenciones muy distintas para un visitante. Presentadas como una lista de servicios indiferenciada, ninguna se entendía con claridad, y no existía una ruta estructurada desde el interés hasta una primera conversación.",
+    "builtDesc": "Construimos la experiencia en torno a lo que la organización realmente ofrece: educación financiera, concienciación sobre la protección familiar, la oportunidad de negocio y la construcción de un legado, con una sección de valores, un recorrido simple de cuatro pasos, talleres y preguntas frecuentes. La reserva de consultas y un formulario de inscripción a la oportunidad de negocio dan a cada público su propio siguiente paso."
+  },
+  "sidebar": {
+    "serviceTags": ["Desarrollo web", "Automatización"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Secciones de servicio centradas en la educación" },
+      { "title": "Contenido sobre legado familiar y concienciación sobre protección" },
+      { "title": "Itinerario de oportunidad de negocio con su propio formulario de inscripción" },
+      { "title": "Orientación en mentoría y crecimiento personal" },
+      { "title": "Presentación de talleres comunitarios" },
+      { "title": "Integración de reserva de consultas" },
+      { "title": "Recorrido en cuatro pasos: Conectar, Aprender, Crecer, Construir un legado" },
+      { "title": "Preguntas frecuentes y recursos educativos" }
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Conectar", "Aprender", "Crecer", "Construir legado"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista conceptual", "del sistema"],
+    "pills": ["Visitante", "Contenido educativo", "Inscripción y reservas", "Seguimiento del equipo"]
+  },
+  "outcomes": [
+    "Se creó una experiencia digital centralizada para los públicos de educación, mentoría y liderazgo",
+    "Cada público recibió un siguiente paso propio en lugar de un formulario de contacto genérico único",
+    "Se presentó la educación financiera sin plantearla como asesoramiento de inversión personalizado"
+  ],
+  "relatedWork": [
+    {
+      "tag": "Plataformas empresariales",
+      "title": "Buketi Financial & Consulting",
+      "desc": "Una plataforma para una consultora financiera con posicionamiento de servicios, ofertas de asesoría y captación de consultas cualificadas."
+    },
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten sus datos de contacto, enlaces y página de reservas mediante un enlace público de tarjeta o un código QR."
+    },
+    {
+      "tag": "Servicios profesionales",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+    }
+  ]
+}

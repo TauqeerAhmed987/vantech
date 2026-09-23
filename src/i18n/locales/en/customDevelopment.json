@@ -1,0 +1,182 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Software Built Around<br/>How Your Business Works.",
+    "desc": "For organizations that have outgrown spreadsheets, disconnected tools, manual workflows, generic SaaS and legacy processes.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "Outgrowing The Tools You Started With",
+    "desc": "The systems that carried a business through its first phase often become the reason it cannot move faster in the next one.",
+    "problems": [
+      "Core operations depend on spreadsheets nobody can safely change.",
+      "Teams re-enter the same information into several tools.",
+      "Reporting requires manual assembly before every meeting.",
+      "Generic software cannot express how the business actually works."
+    ]
+  },
+  "solution": {
+    "title": "One Platform Designed Around Your Operation",
+    "desc": "We study how the organization runs — its entities, documents, approvals and reporting — and build a platform that expresses it directly, connecting to the systems worth keeping and automating the steps that do not need a person."
+  },
+  "build": {
+    "heading": "What we build",
+    "cards": [
+      {
+        "title": "Operations platforms",
+        "desc": "The core system your organization runs on daily."
+      },
+      {
+        "title": "Team and Permissions",
+        "desc": "Roles, assignments and accountability across departments."
+      },
+      {
+        "title": "Document Workflows",
+        "desc": "Generation, approval, storage and retrieval with an audit trail."
+      },
+      {
+        "title": "Data and Reporting",
+        "desc": "One source of truth with dashboards built on it."
+      },
+      {
+        "title": "Finance Operations",
+        "desc": "Quotes, invoicing status and financial reporting workflows."
+      },
+      {
+        "title": "Integrations",
+        "desc": "Connections to the tools that remain part of the operation."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "Business process modelling",
+      "Custom data architecture",
+      "Workflow automation",
+      "Document management",
+      "Role-based permissions"
+    ],
+    "row2": [
+      "Reporting and dashboards",
+      "Audit trails",
+      "AI where it fits",
+      "System integrations",
+      "Security review"
+    ]
+  },
+  "useCases": {
+    "heading": "Use Cases",
+    "items": [
+      {
+        "title": "Multi-department operations",
+        "desc": "One platform coordinating work across teams."
+      },
+      {
+        "title": "Productizing a service",
+        "desc": "Turning a delivered service into recurring software revenue."
+      },
+      {
+        "title": "Internal tool to product",
+        "desc": "Extending a working internal system for external customers."
+      },
+      {
+        "title": "Platform modernization",
+        "desc": "Rebuilding an ageing product on a maintainable architecture."
+      }
+    ]
+  },
+  "architecture": {
+    "title": "Platform architecture",
+    "desc": "Custom does not mean improvised. The platform is built on a documented architecture your team can maintain and extend.",
+    "steps": [
+      {
+        "title": "Tenants",
+        "tags": [["Organizations"], ["Members"], ["Roles"], ["Invitations"]]
+      },
+      {
+        "title": "Platform",
+        "tags": [["Authentication"], ["Isolation policies"], ["API"], ["Webhooks"]]
+      },
+      {
+        "title": "Commercial",
+        "tags": [["Plans"], ["Subscriptions"], ["Payments"], ["Usage"]]
+      },
+      {
+        "title": "Data",
+        "tags": [["Database"], ["Storage", "Analytics"], ["Audit log"]]
+      },
+      {
+        "title": "Operations",
+        "tags": [["Admin console"], ["Monitoring"], ["Deployment"], ["Support tooling"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Development Process",
+    "cards": [
+      {
+        "title": "Discover",
+        "desc": "Departments, processes, documents and reporting requirements."
+      },
+      {
+        "title": "Architect",
+        "desc": "Data model, permissions, integrations and infrastructure."
+      },
+      {
+        "title": "Design",
+        "desc": "Interfaces for each role that will use the platform."
+      },
+      {
+        "title": "Build",
+        "desc": "Module-by-module development with review at each stage."
+      },
+      {
+        "title": "Test",
+        "desc": "Process testing, permissions, security and performance."
+      },
+      {
+        "title": "Adopt",
+        "desc": "Migration, training, rollout and continued improvement."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": [
+      { "label": "Accounting" },
+      { "label": "CRM" },
+      { "label": "Payments" },
+      { "label": "Email" },
+      { "label": "Storage" }
+    ],
+    "row2": [
+      { "label": "Identity providers" },
+      { "label": "Reporting tools" },
+      { "label": "Internal APIs" }
+    ]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      {
+        "title": "Built from your process",
+        "desc": "The platform reflects your operation instead of a vendor's assumptions."
+      },
+      {
+        "title": "Documented architecture",
+        "desc": "Structure, decisions and data model are written down."
+      },
+      {
+        "title": "Room to evolve",
+        "desc": "New departments, modules and integrations fit the same foundation."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Get a Custom Quote",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badges": ["Plataformas empresariales", "Servicios financieros"],
+    "titleLines": ["Buketi Financial", "& Consulting"],
+    "description": "Una plataforma para una consultora financiera y de asesoramiento con posicionamiento de servicios, ofertas de asesoría y captación de consultas cualificadas.",
+    "screenshotAlt": "Captura de pantalla de la plataforma Buketi Financial & Consulting"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "Plataformas empresariales" },
+    { "label": "Capacidades", "value": "Desarrollo Web • Diseño UI/UX" },
+    { "label": "Sector", "value": "Servicios financieros" },
+    { "label": "Estado", "value": "En línea" }
+  ],
+  "detail": {
+    "overviewDesc": "Buketi Financial & Consulting necesitaba una puerta de entrada digital creíble para sus servicios de asesoría. Diseñamos y desarrollamos una plataforma centrada en la conversión, con páginas de servicio estructuradas, captación de consultas en varios pasos y enrutamiento de leads listo para analítica.",
+    "challengeDesc": "Las consultas de asesoría llegaban sin contexto financiero, por lo que cada prospecto requería una larga llamada de calificación antes de que la consultora supiera si el encargo encajaba.",
+    "builtDesc": "Creamos páginas de servicio estructuradas para cada oferta de asesoría y un flujo de consulta en varios pasos que recoge el objetivo, la situación y el plazo, enrutando cada envío a la consultora como un resumen completo."
+  },
+  "sidebar": {
+    "serviceTags": ["Desarrollo Web", "Diseño UI/UX"]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Páginas de servicios de asesoría estructuradas" },
+      { "title": "Captación de consultas en varios pasos con campos de contexto" },
+      { "title": "Enrutamiento de leads listo para analítica" },
+      { "title": "Secciones de credibilidad y proceso" },
+      { "title": "Diseño responsivo centrado en la conversión" }
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Descubrir", "Consultar", "Consulta inicial"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista", "conceptual del sistema"],
+    "pills": ["Cliente", "Experiencia pública", "Recepción de consultas", "Operaciones de asesores"]
+  },
+  "outcomes": [
+    "Las consultas llegan suficientemente cualificadas para definir el alcance",
+    "Los prospectos eligen por sí mismos la oferta de asesoría adecuada",
+    "Seguimiento coherente en cada consulta"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace de tarjeta público o un código QR."
+    },
+    {
+      "tag": "Ai",
+      "title": "The PMB Consulting",
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+    },
+    {
+      "tag": "Servicios profesionales",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+    }
+  ]
+}

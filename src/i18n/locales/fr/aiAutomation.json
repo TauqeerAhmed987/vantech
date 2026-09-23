@@ -1,0 +1,168 @@
+{
+  "hero": {
+    "eyebrow": "Services",
+    "title": "Vos opérations.<br/>Automatisées.",
+    "desc": "Connectez les systèmes que votre entreprise utilise déjà et supprimez les étapes manuelles répétitives entre eux — capture, qualification, mises à jour, relances, planification et reporting.",
+    "ctaPrimary": "Obtenir une estimation de mon projet",
+    "ctaSecondary": "Découvrir tous les services"
+  },
+  "friction": {
+    "title": "Où le temps opérationnel disparaît",
+    "desc": "La plupart des équipes ne perdent pas de temps sur le travail lui-même. Elles le perdent à faire circuler l'information entre les outils, à ressaisir les mêmes détails et à penser à relancer.",
+    "points": [
+      "Les prospects restent non qualifiés en attendant que quelqu'un trouve le temps de les examiner.",
+      "Les mêmes données sont saisies manuellement dans plusieurs systèmes.",
+      "Les relances dépendent de la mémoire des collaborateurs.",
+      "Le reporting est assemblé manuellement à partir d'outils séparés."
+    ]
+  },
+  "solution": {
+    "title": "Des workflows qui fonctionnent sans supervision",
+    "desc": "Nous cartographions le processus tel qu'il se déroule réellement, puis le reconstruisons sous forme de workflows connectés : l'information est saisie une seule fois, qualifiée, acheminée vers le bon système, puis relancée automatiquement — avec un journal clair de ce qui s'est exécuté et de ce qui nécessite une intervention humaine."
+  },
+  "build": {
+    "heading": "Ce que nous automatisons",
+    "cards": [
+      {
+        "title": "Capture et routage des prospects",
+        "desc": "Formulaires, messages entrants et demandes acheminés selon des règles ou par IA."
+      },
+      {
+        "title": "Qualification",
+        "desc": "Notation structurée et synthèse avant qu'un humain ne lise quoi que ce soit."
+      },
+      {
+        "title": "Opérations CRM",
+        "desc": "Fiches créées et mises à jour automatiquement à partir de l'activité réelle."
+      },
+      {
+        "title": "Séquences de relance",
+        "desc": "Messages programmés et conditionnels sur les canaux d'e-mail et de messagerie."
+      },
+      {
+        "title": "Planification",
+        "desc": "Réservations, rappels et reprogrammations gérés directement dans le workflow."
+      },
+      {
+        "title": "Reporting",
+        "desc": "Indicateurs opérationnels compilés en continu plutôt que mensuellement."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capacités",
+    "row1": [
+      "Cartographie des processus",
+      "Routage basé sur des règles",
+      "Qualification par IA",
+      "Enrichissement des données",
+      "Séquences conditionnelles",
+      "Gestion des erreurs et relances"
+    ],
+    "row2": [
+      "Journalisation des exécutions",
+      "Transfert vers un humain",
+      "Notifications",
+      "Tableaux de bord opérationnels"
+    ]
+  },
+  "usecases": {
+    "heading": "Cas d'usage",
+    "items": [
+      {
+        "title": "Gestion des prospects entrants",
+        "desc": "Chaque demande qualifiée, enregistrée et traitée sans délai."
+      },
+      {
+        "title": "Opérations back-office",
+        "desc": "Processus internes récurrents exécutés selon un calendrier."
+      },
+      {
+        "title": "Intégration des clients",
+        "desc": "Documents, comptes et tâches créés à partir d'un seul déclencheur."
+      },
+      {
+        "title": "Reporting",
+        "desc": "Données opérationnelles collectées et synthétisées automatiquement."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "Architecture du workflow",
+    "desc": "L'automatisation n'est utile que si elle est observable. Chaque workflow que nous construisons enregistre ce qui s'est exécuté, ce qui a échoué et ce qu'une personne doit encore décider.",
+    "timeline": [
+      {
+        "title": "Déclencheurs",
+        "tags": [["Formulaires", "Planifications"], ["Webhooks"], ["Messages entrants"]]
+      },
+      {
+        "title": "Logique",
+        "tags": [["Règles", "Qualification par IA"], ["Branchements", "Validation"]]
+      },
+      {
+        "title": "Actions",
+        "tags": [["Mises à jour CRM", "Messagerie"], ["Planification", "Documents"]]
+      },
+      {
+        "title": "Supervision",
+        "tags": [["Journaux d'exécution", "Relances"], ["Alertes", "Transfert vers un humain"]]
+      }
+    ]
+  },
+  "process2": {
+    "heading": "Processus de mise en œuvre",
+    "cards": [
+      {
+        "title": "Cartographier",
+        "desc": "Documenter le processus tel qu'il fonctionne aujourd'hui, exceptions comprises."
+      },
+      {
+        "title": "Concevoir",
+        "desc": "Définir les déclencheurs, la logique de décision et où un humain reste dans la boucle."
+      },
+      {
+        "title": "Connecter",
+        "desc": "Établir l'accès aux systèmes concernés et valider le flux de données."
+      },
+      {
+        "title": "Construire",
+        "desc": "Mettre en œuvre les workflows avec journalisation, validation et gestion des erreurs."
+      },
+      {
+        "title": "Tester",
+        "desc": "Tester sur des scénarios réels, y compris ceux qui posent habituellement problème."
+      },
+      {
+        "title": "Exploiter",
+        "desc": "Surveiller, ajuster et faire évoluer le processus dans le temps."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Intégrations possibles",
+    "row1": ["CRM", "E-mail", "Messagerie", "Calendriers", "Formulaires"],
+    "row2": ["Bases de données", "Tableurs", "Webhooks", "Paiements"]
+  },
+  "why": {
+    "heading": "Pourquoi Van Tech Systems",
+    "cards": [
+      {
+        "title": "Conçu autour du processus réel",
+        "desc": "Nous automatisons le workflow que vous exécutez réellement, exceptions comprises."
+      },
+      {
+        "title": "Observable par conception",
+        "desc": "Chaque exécution est journalisée, afin que les échecs soient visibles plutôt que dissimulés."
+      },
+      {
+        "title": "Observable par conception",
+        "desc": "Chaque exécution est journalisée, afin que les échecs soient visibles plutôt que dissimulés."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de 1 500 $/mois",
+    "desc": "Les prix de départ sont des repères de planification. Le tarif final dépend du périmètre, de l'architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir une estimation de mon projet"
+  }
+}

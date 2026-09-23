@@ -1,34 +1,16 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Icon from './Icon';
 import { useReveal } from '../hooks/useReveal';
 import arrowRightSvg from '../assets/icons/boxicons-arrow-right-stroke.svg?raw';
 import toggleOpenSvg from '../assets/icons/faq-toggle-open.svg?raw';
 import toggleClosedSvg from '../assets/icons/faq-toggle-closed.svg?raw';
 
-const faqs = [
-  {
-    q: 'How does an engagement start?',
-    a: 'Through the guided project discovery. You share goals, scope and constraints, and we respond with a scoped technical direction.',
-  },
-  {
-    q: 'Do you only build AI products?',
-    a: 'No — we build full software products, and add AI where it genuinely improves the outcome, not by default.',
-  },
-  {
-    q: 'How is pricing determined?',
-    a: 'Pricing depends on scope, integrations and timeline. The figures above are planning benchmarks, not final quotes.',
-  },
-  {
-    q: 'Can you work with our existing systems?',
-    a: 'Yes, we regularly integrate with existing CRMs, databases and third-party tools rather than replacing them outright.',
-  },
-  {
-    q: 'What happens after launch?',
-    a: 'You get the full handover plus an optional support arrangement for monitoring, fixes and future iterations.',
-  },
-];
+type FaqItem = { q: string; a: string };
 
 export default function FAQ() {
+  const { t } = useTranslation();
+  const faqs = t('faq.items', { returnObjects: true }) as FaqItem[];
   const [openIndex, setOpenIndex] = useState(0);
   const intro = useReveal('left');
   const accordion = useReveal('right');
@@ -37,20 +19,12 @@ export default function FAQ() {
     <section className="faq section" id="faq">
       <div className="container faq__row">
         <div className={`faq__intro ${intro.className}`} ref={intro.ref}>
-          <span className="eyebrow-pill">FAQ</span>
-          <h2 className="faq__title">
-            Frequently{' '}
-            <br />
-            asked{' '}
-            <br />
-            questions
-          </h2>
-          <p className="faq__intro-heading">Got any Questions?</p>
-          <p className="faq__intro-desc">
-            Let us know! Reach out and our team will get right back to you.
-          </p>
+          <span className="eyebrow-pill">{t('faq.eyebrow')}</span>
+          <h2 className="faq__title" dangerouslySetInnerHTML={{ __html: t('faq.title') }} />
+          <p className="faq__intro-heading">{t('faq.intro')}</p>
+          <p className="faq__intro-desc">{t('faq.desc')}</p>
           <a href="#contact" className="btn btn-outline-gradient">
-            Contact us
+            {t('faq.contactUs')}
             <Icon svg={arrowRightSvg} className="btn-icon" />
           </a>
         </div>

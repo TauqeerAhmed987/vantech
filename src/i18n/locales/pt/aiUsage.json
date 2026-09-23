@@ -1,0 +1,56 @@
+{
+  "hero": { "updated": "Última atualização: 18 de agosto de 2026" },
+  "sections": {
+    "whyExists": {
+      "title": "1. Por que esta política existe",
+      "body": "Vivemos de construir sistemas de IA, o que torna razoável esperar que sejamos explícitos sobre como os usamos nós mesmos. Esta política abrange os recursos de IA neste site e os padrões que aplicamos ao construir IA para clientes."
+    },
+    "whereUsed": {
+      "title": "2. Onde a IA é usada neste site",
+      "items": [
+        "Um assistente do site que responde perguntas sobre nossos serviços usando nosso próprio conteúdo publicado.",
+        "Resumo e priorização das consultas de projeto recebidas para nossa equipe interna.",
+        "Apoio na redação de conteúdo editorial, que é revisado e editado pela nossa equipe antes da publicação."
+      ]
+    },
+    "disclosure": {
+      "title": "3. Divulgação",
+      "body": "Nosso assistente se identifica como um sistema de IA. Não apresentamos respostas automatizadas como mensagens de um humano nomeado, e não usamos vozes sintéticas ou personas projetadas para serem confundidas com uma pessoa específica."
+    },
+    "grounding": {
+      "title": "4. Fundamentação e precisão",
+      "body": "O assistente responde com base em nosso conteúdo publicado de serviços, produtos e artigos, em vez de gerar afirmações abertas. Quando não sabe algo, ele é projetado para dizer isso e oferecer conectá-lo à equipe. A saída automatizada ainda pode estar errada. Nada do que o assistente diz é uma cotação vinculativa, um compromisso ou aconselhamento profissional."
+    },
+    "oversight": {
+      "title": "5. Supervisão humana",
+      "items": [
+        "Preços, termos contratuais e compromissos de escopo são confirmados por uma pessoa, nunca apenas por um sistema automatizado.",
+        "Conversas sensíveis, ambíguas ou relacionadas a reclamações são escaladas para a equipe.",
+        "Resumos de consultas são sempre lidos por um humano antes do envio de uma resposta."
+      ]
+    },
+    "dataUsed": {
+      "title": "6. Dados usados por nossos recursos de IA",
+      "body": "Conversas do assistente e conteúdo de consultas são processados por provedores terceirizados de modelos de IA sob contrato. Não permitimos que esse conteúdo seja usado para treinar modelos de fundação públicos. Por favor, não insira senhas, dados de pagamento, informações de saúde ou outros dados pessoais sensíveis no assistente."
+    },
+    "standards": {
+      "title": "7. Padrões que aplicamos no trabalho com clientes",
+      "items": [
+        "Fundamentar sistemas de IA no conteúdo e dados próprios e verificados do cliente.",
+        "Restringir agentes a um conjunto explícito de ações permitidas e escopos de dados.",
+        "Registrar conversas e ações executadas para que o comportamento possa ser auditado.",
+        "Projetar um caminho de escalonamento humano antes do lançamento, não após uma falha.",
+        "Testar respostas fabricadas, injeção de prompts e vazamento de permissões como parte da entrega.",
+        "Recusar casos de uso em que decisões automatizadas criariam risco inaceitável para as pessoas afetadas."
+      ]
+    },
+    "limitations": {
+      "title": "8. Limitações que não escondemos",
+      "body": "Sistemas de IA podem errar com confiança, podem degradar quando os modelos subjacentes mudam, e podem ser manipulados por entradas adversárias. Projetamos para essas realidades com fundamentação, restrições, monitoramento e revisão humana, em vez de afirmar que elas não existem."
+    },
+    "contact": {
+      "title": "9. Contato",
+      "bodyPrefix": "Perguntas ou preocupações sobre nosso uso de IA podem ser enviadas para"
+    }
+  }
+}

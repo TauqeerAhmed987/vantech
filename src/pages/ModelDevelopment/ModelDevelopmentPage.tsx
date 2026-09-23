@@ -1,4 +1,5 @@
 import { Fragment, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './model-development.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -45,13 +46,6 @@ import whyIconGrounded from '../../assets/images/model-development/figma/why-ico
 import whyIconMeasured from '../../assets/images/model-development/figma/why-icon-measured.png';
 import whyIconScoped from '../../assets/images/model-development/figma/why-icon-scoped.png';
 
-const problems = [
-  'Knowledge is scattered across documents, systems and people.',
-  'Answers cannot be traced back to a source.',
-  'Sensitive information has no defined boundary.',
-  'There is no way to measure whether output quality is improving.',
-];
-
 // Each icon is its own pre-cropped piece cut from the original solution
 // illustration, positioned (center point, as a percentage of the graphic's
 // box) to match its spot in that image — this lets each one slide in from
@@ -63,153 +57,85 @@ const solutionIcons = [
   { src: solutionIconBottomRight, left: 60.6, top: 83.2, width: 26.9, dir: 'bottom' },
 ];
 
-const buildCards = [
-  {
-    icon: buildIconDataIngestion,
-    title: 'Data Ingestion',
-    desc: 'Pipelines that collect documents and records into a usable form.',
-    descWidth: 310,
-  },
-  {
-    icon: buildIconKnowledgeStructuring,
-    title: 'Knowledge Structuring',
-    desc: 'Chunking, metadata and indexing designed for retrieval quality.',
-    descWidth: 280,
-  },
-  {
-    icon: buildIconRetrieval,
-    title: 'Retrieval (RAG)',
-    desc: 'Grounded responses that cite the underlying source.',
-    descWidth: 282,
-  },
-  {
-    icon: buildIconBusinessReasoning,
-    title: 'Business Reasoning',
-    desc: 'Your rules and constraints applied to model output.',
-    descWidth: 304,
-  },
-  {
-    icon: buildIconAccessBoundaries,
-    title: 'Access Boundaries',
-    desc: 'Permissions that determine who can retrieve what.',
-    descWidth: 305,
-  },
-  {
-    icon: buildIconEvaluation,
-    title: 'Evaluation',
-    desc: 'Test sets and review cycles that track answer quality over time.',
-    descWidth: 313,
-  },
+// Icons/widths for the "What we build" cards, paired by index with the
+// translated title/desc coming from the modelDevelopment.json namespace.
+const buildCardIcons = [
+  buildIconDataIngestion,
+  buildIconKnowledgeStructuring,
+  buildIconRetrieval,
+  buildIconBusinessReasoning,
+  buildIconAccessBoundaries,
+  buildIconEvaluation,
+];
+const buildCardDescWidths = [310, 280, 282, 304, 305, 313];
+
+// Icons for the "Development process" cards, paired by index.
+const processCardIcons = [
+  processIconAssess,
+  processIconArchitect,
+  processIconBuild,
+  processIconEvaluate,
+  processIconIntegrate,
+  processIconImprove,
 ];
 
-const capabilityRow1 = [
-  'Document ingestion',
-  'Embeddings and indexing',
-  'Retrieval-augmented generation',
-  'Structured extraction',
-  'Semantic search',
-];
+// Icons for the integrations pills, paired by index with translated labels.
+const integrationsRow1Icons = [funnelSvg, databaseFilledSvg, listsRoundedSvg, hostGroupSvg];
+const integrationsRow2Icons = [restApiSvg, analyticsSvg];
 
-const capabilityRow2 = [
-  'Business rule enforcement',
-  'Model integration',
-  'Evaluation harnesses',
-  'Access control',
-  'Monitoring',
-];
+// Icons/widths for the "Why Van Tech Systems" cards, paired by index.
+const whyCardIcons = [whyIconGrounded, whyIconMeasured, whyIconScoped];
+const whyCardDescWidths = [313, undefined, undefined];
 
-const useCases = [
-  {
-    title: 'Internal knowledge assistant',
-    desc: 'Staff answers drawn from approved internal documentation.',
-  },
-  {
-    title: 'Document understanding',
-    desc: 'Structured data extracted from contracts, forms and reports.',
-  },
-  {
-    title: 'Domain search',
-    desc: 'Semantic search across a large private content set.',
-  },
-  {
-    title: 'Grounded agents',
-    desc: 'A knowledge foundation that other AI systems build on.',
-  },
-];
+// Non-translatable step numbers for the "How it works" timeline, paired by index.
+const timelineStepNumbers = ['01', '02', '03', '04', '05'];
 
-const timelineSteps = [
-  { number: '01', title: 'Sources', tags: [['Documents', 'APIs'], ['Databases'], ['Business rules']] },
-  { number: '02', title: 'Knowledge layer', tags: [['Ingestion', 'Chunking'], ['Embeddings', 'Index']] },
-  { number: '03', title: 'Reasoning', tags: [['Retrieval', 'Model'], ['Constraints', 'Citations']] },
-  { number: '04', title: 'Consumers', tags: [['Agents', 'Search'], ['Assistants', 'Automation'], ['Analytics']] },
-  { number: '05', title: 'Assurance', tags: [['Evaluation', 'Permissions'], ['Monitoring']] },
-];
-
-const processCards = [
-  {
-    icon: processIconAssess,
-    title: 'Assess',
-    desc: 'Review the data available, its quality and its constraints.',
-  },
-  {
-    icon: processIconArchitect,
-    title: 'Architect',
-    desc: 'Design ingestion, indexing, retrieval and access boundaries.',
-  },
-  {
-    icon: processIconBuild,
-    title: 'Build',
-    desc: 'Implement the pipeline and the retrieval and reasoning layer.',
-  },
-  {
-    icon: processIconEvaluate,
-    title: 'Evaluate',
-    desc: 'Measure output against a defined test set with real questions.',
-  },
-  {
-    icon: processIconIntegrate,
-    title: 'Integrate',
-    desc: 'Expose the layer to the agents, search or applications that use it.',
-  },
-  {
-    icon: processIconImprove,
-    title: 'Improve',
-    desc: 'Refine retrieval, prompts and rules as usage grows.',
-  },
-];
-
-const integrationsRow1 = [
-  { icon: funnelSvg, label: 'Databases' },
-  { icon: databaseFilledSvg, label: 'Document storage' },
-  { icon: listsRoundedSvg, label: 'Vector indexes' },
-  { icon: hostGroupSvg, label: 'Model providers' },
-];
-
-const integrationsRow2 = [
-  { icon: restApiSvg, label: 'Internal APIs' },
-  { icon: analyticsSvg, label: 'Analytics' },
-];
-
-const whyCards = [
-  {
-    icon: whyIconGrounded,
-    title: 'Grounded and traceable',
-    desc: 'Answers reference the sources they came from.',
-    descWidth: 313,
-  },
-  {
-    icon: whyIconMeasured,
-    title: 'Measured, not assumed',
-    desc: 'Quality is evaluated against real questions before rollout.',
-  },
-  {
-    icon: whyIconScoped,
-    title: 'Scoped access',
-    desc: 'Permissions decide what the system can retrieve and for whom.',
-  },
-];
+type CardText = { title: string; desc: string };
+type TimelineStepText = { title: string; tags: string[][] };
 
 export default function ModelDevelopmentPage() {
+  const { t } = useTranslation('modelDevelopment');
+
+  const problems = t('disappoint.problems', { returnObjects: true }) as string[];
+
+  const buildCards = (t('build.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: buildCardIcons[i],
+    descWidth: buildCardDescWidths[i],
+  }));
+
+  const capabilityRow1 = t('capabilities.row1', { returnObjects: true }) as string[];
+  const capabilityRow2 = t('capabilities.row2', { returnObjects: true }) as string[];
+
+  const useCases = t('usecases.items', { returnObjects: true }) as CardText[];
+
+  const timelineSteps = (t('architecture.timeline', { returnObjects: true }) as TimelineStepText[]).map(
+    (step, i) => ({
+      ...step,
+      number: timelineStepNumbers[i],
+    })
+  );
+
+  const processCards = (t('process.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: processCardIcons[i],
+  }));
+
+  const integrationsRow1 = (t('integrations.row1', { returnObjects: true }) as string[]).map((label, i) => ({
+    icon: integrationsRow1Icons[i],
+    label,
+  }));
+  const integrationsRow2 = (t('integrations.row2', { returnObjects: true }) as string[]).map((label, i) => ({
+    icon: integrationsRow2Icons[i],
+    label,
+  }));
+
+  const whyCards = (t('why.cards', { returnObjects: true }) as CardText[]).map((card, i) => ({
+    ...card,
+    icon: whyCardIcons[i],
+    descWidth: whyCardDescWidths[i],
+  }));
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -260,25 +186,20 @@ export default function ModelDevelopmentPage() {
             <div className={`modeldev-hero__content ${hero.className}`} ref={hero.ref}>
               <span className="modeldev-hero__badge">
                 <Icon svg={servicesStarSvg} />
-                Services
+                {t('hero.badge')}
               </span>
-              <h1 className="modeldev-hero__title">
-                Your Data.
-                <br />
-                Intelligent Systems.
-              </h1>
-              <p className="modeldev-hero__desc">
-                Retrieval, knowledge and reasoning systems built on your own documents,
-                records and business rules — so AI answers reflect how your organization
-                actually works.
-              </p>
+              <h1
+                className="modeldev-hero__title"
+                dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+              />
+              <p className="modeldev-hero__desc">{t('hero.desc')}</p>
               <div className="modeldev-hero__actions">
                 <a href="#contact" className="btn btn-primary">
-                  Get my project estimate
+                  {t('hero.ctaPrimary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
                 <a href="#offerings" className="btn btn-outline">
-                  Explore all services
+                  {t('hero.ctaSecondary')}
                   <Icon svg={arrowRightSvg} className="btn-icon" />
                 </a>
               </div>
@@ -296,11 +217,8 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-disappoint section">
         <div className="container modeldev-disappoint__row">
           <div className={`modeldev-disappoint__copy ${disappointHead.className}`} ref={disappointHead.ref}>
-            <h2 className="modeldev-h1-lg">Generic Models Do Not Know Your Business</h2>
-            <p className="modeldev-p-lg">
-              A capable model with no access to your documents, records and rules will
-              produce confident answers that do not match your operations.
-            </p>
+            <h2 className="modeldev-h1-lg">{t('disappoint.title')}</h2>
+            <p className="modeldev-p-lg">{t('disappoint.desc')}</p>
           </div>
 
           <ul className={`modeldev-disappoint__list ${disappointList.className}`} ref={disappointList.ref}>
@@ -317,12 +235,8 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-solution section">
         <div className="container modeldev-solution__row">
           <div className={`modeldev-solution__copy ${solutionCopy.className}`} ref={solutionCopy.ref}>
-            <h2 className="modeldev-solution__title">A knowledge layer you control</h2>
-            <p className="modeldev-solution__desc">
-              We build the layer between your data and the model: ingestion, structuring,
-              retrieval, permissions and evaluation. The result is a system whose answers
-              are grounded in your sources and can be measured, corrected and extended.
-            </p>
+            <h2 className="modeldev-solution__title">{t('solution.title')}</h2>
+            <p className="modeldev-solution__desc">{t('solution.desc')}</p>
           </div>
 
           <div className={`modeldev-solution__graphic ${solutionGraphic.className}`} ref={solutionGraphic.ref}>
@@ -345,7 +259,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-build section" id="offerings">
         <div className="container">
           <div className={`section-head ${buildHead.className}`} ref={buildHead.ref}>
-            <h2 className="modeldev-h2">What we build</h2>
+            <h2 className="modeldev-h2">{t('build.heading')}</h2>
           </div>
 
           <div className={`modeldev-build__grid ${buildGrid.className}`} ref={buildGrid.ref}>
@@ -366,7 +280,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-capabilities section">
         <div className="container">
           <div className={`section-head ${capabilitiesHead.className}`} ref={capabilitiesHead.ref}>
-            <h2 className="modeldev-h2">Capabilities</h2>
+            <h2 className="modeldev-h2">{t('capabilities.heading')}</h2>
           </div>
 
           <div className={`modeldev-capabilities__rows ${capsRows.className}`} ref={capsRows.ref}>
@@ -397,7 +311,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-usecases section">
         <div className="container">
           <div className={`section-head ${usecasesHead.className}`} ref={usecasesHead.ref}>
-            <h2 className="modeldev-h2">Use Cases</h2>
+            <h2 className="modeldev-h2">{t('usecases.heading')}</h2>
           </div>
 
           <div className={`modeldev-usecases__grid ${usecasesGrid.className}`} ref={usecasesGrid.ref}>
@@ -415,11 +329,8 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-architecture section" id="process">
         <div className="container">
           <div className={`section-head ${architectureHead.className}`} ref={architectureHead.ref}>
-            <h2 className="modeldev-h1-lg modeldev-h1-lg--center">How it works</h2>
-            <p className="modeldev-section-copy">
-              We integrate and orchestrate existing foundation models around your data. We
-              do not train foundation models from scratch.
-            </p>
+            <h2 className="modeldev-h1-lg modeldev-h1-lg--center">{t('architecture.heading')}</h2>
+            <p className="modeldev-section-copy">{t('architecture.desc')}</p>
           </div>
 
           <div style={{ position: 'relative' }} ref={architectureDivider.ref}>
@@ -452,7 +363,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-process2 section">
         <div className="container">
           <div className={`section-head ${processHead.className}`} ref={processHead.ref}>
-            <h2 className="modeldev-h2">Development process</h2>
+            <h2 className="modeldev-h2">{t('process.heading')}</h2>
           </div>
 
           <div className={`modeldev-process2__grid ${process2Grid.className}`} ref={process2Grid.ref}>
@@ -472,7 +383,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-integrations section">
         <div className="container">
           <div className={`section-head ${integrationsHead.className}`} ref={integrationsHead.ref}>
-            <h2 className="modeldev-h1-lg modeldev-h1-lg--center">Potential Integrations</h2>
+            <h2 className="modeldev-h1-lg modeldev-h1-lg--center">{t('integrations.heading')}</h2>
           </div>
 
           <div className={`modeldev-integrations__grid ${integrationsGrid.className}`} ref={integrationsGrid.ref}>
@@ -517,7 +428,7 @@ export default function ModelDevelopmentPage() {
       <section className="modeldev-why section">
         <div className="container">
           <div className={`section-head ${whyHead.className}`} ref={whyHead.ref}>
-            <h2 className="modeldev-h2">Why Van Tech Systems</h2>
+            <h2 className="modeldev-h2">{t('why.heading')}</h2>
           </div>
 
           <div className={`modeldev-why__grid ${whyGrid.className}`} ref={whyGrid.ref}>
@@ -537,14 +448,11 @@ export default function ModelDevelopmentPage() {
           <div className={`modeldev-pricing-cta__card ${pricingCta.className}`} ref={pricingCta.ref}>
             <img src={pricingGlowOrb} alt="" className="modeldev-pricing-cta__glow" loading="lazy" />
             <div className="modeldev-pricing-cta__copy">
-              <h2 className="modeldev-pricing-cta__title">Starting at $1,500/month</h2>
-              <p className="modeldev-pricing-cta__desc">
-                Starting prices are planning benchmarks. Final pricing depends on scope,
-                architecture, integrations and technical requirements.
-              </p>
+              <h2 className="modeldev-pricing-cta__title">{t('pricingCta.title')}</h2>
+              <p className="modeldev-pricing-cta__desc">{t('pricingCta.desc')}</p>
             </div>
             <a href="#contact" className="btn btn-primary">
-              Get my project estimate
+              {t('pricingCta.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>

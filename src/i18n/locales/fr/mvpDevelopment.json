@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "Développement MVP",
+    "title": "Votre idée.<br/>Prête pour le lancement.",
+    "desc": "Transformez une idée en produit numérique fonctionnel grâce à la stratégie produit, l’architecture, le design, le développement, les tests et le déploiement, gérés par une seule équipe technologique.",
+    "ctaPrimary": "Obtenir une estimation de mon projet",
+    "ctaSecondary": "Découvrir tous nos services"
+  },
+  "disappoint": {
+    "title": "Pourquoi la plupart des premières versions calent",
+    "desc": "Les outils prêts à l’emploi fonctionnent jusqu’à ce que votre processus s’écarte des hypothèses du produit. Les contournements deviennent alors l’exploitation.",
+    "problems": [
+      "Le périmètre s’élargit plus vite que le produit ne peut être construit.",
+      "Les prototypes sont abandonnés car ils n’ont jamais été architecturés.",
+      "Le design, le développement et l’infrastructure sont gérés par des prestataires déconnectés.",
+      "Aucune définition claire de ce que la première version doit démontrer."
+    ]
+  },
+  "solution": {
+    "title": "Une première version sur laquelle construire",
+    "desc": "Nous commençons par définir ce que votre première version doit démontrer, puis nous l’architecturons comme un véritable produit : un schéma de base de données, une authentification, une application fonctionnelle et un chemin de déploiement. Le développement est volontairement ciblé, mais rien n’est un prototype jetable — la même base porte la version suivante."
+  },
+  "build": {
+    "title": "Ce que nous construisons",
+    "cards": [
+      { "title": "Définition du produit", "desc": "Les parcours utilisateurs clés, le modèle de données et le périmètre de la première version." },
+      { "title": "Design du produit", "desc": "Design d’interface et prototypes pour les parcours les plus importants." },
+      { "title": "Application", "desc": "Frontend, backend, authentification et logique métier dans une seule base de code." },
+      { "title": "Fondation des données", "desc": "Un schéma pensé pour le produit que vous voulez développer, pas seulement pour une démonstration." },
+      { "title": "Mise en place du lancement", "desc": "Déploiement, environnements, supervision et analytique de base." },
+      { "title": "Plan d’itération", "desc": "Un backlog priorisé selon ce que la version révèle réellement." }
+    ]
+  },
+  "capabilities": {
+    "title": "Compétences",
+    "row1": ["Cadrage produit", "Design UX et UI", "Prototypes interactifs", "Architecture de base de données", "Authentification", "Paiements"],
+    "row2": ["Outils d’administration", "Instrumentation analytique", "QA et tests", "Déploiement"]
+  },
+  "usecases": {
+    "title": "Cas d’usage",
+    "items": [
+      { "title": "Fondateur validant une idée", "desc": "Un produit ciblé qui prouve la demande avant un investissement plus important." },
+      { "title": "Entreprise lançant une nouvelle activité", "desc": "Un produit distinct construit en parallèle des opérations existantes." },
+      { "title": "Remplacer un service manuel", "desc": "Transformer un processus tableur-et-e-mail en une véritable application." },
+      { "title": "Convaincre investisseurs ou partenaires", "desc": "Un produit fonctionnel plutôt qu’une présentation." }
+    ]
+  },
+  "architecture": {
+    "title": "Architecture du MVP",
+    "desc": "Même une première version est un système complet. Nous la gardons compacte, mais structurée — pour que la seconde version soit une extension, pas une reconstruction.",
+    "steps": [
+      { "title": "Interface", "tags": [["Application web", "Interface réactive"], ["Intégration"]] },
+      { "title": "Application", "tags": [["Logique métier", "API"], ["Authentification", "Rôles"]] },
+      { "title": "Données", "tags": [["Base de données", "Stockage de fichiers"], ["Événements"]] },
+      { "title": "Opérations", "tags": [["Déploiement"], ["Supervision", "Analytique"]] }
+    ]
+  },
+  "process": {
+    "title": "Processus de développement",
+    "cards": [
+      { "title": "Découvrir", "desc": "Exigences, utilisateurs, contraintes et objectif de la première version." },
+      { "title": "Définir", "desc": "Périmètre, modèle de données et critères de réussite validés avant le début du développement." },
+      { "title": "Concevoir", "desc": "Parcours et design d’interface pour l’expérience produit principale." },
+      { "title": "Construire", "desc": "Développement de l’application par incréments révisables." },
+      { "title": "Tester", "desc": "QA fonctionnelle, revue de sécurité et tests responsive." },
+      { "title": "Lancer", "desc": "Déploiement, transfert et plan pour la prochaine itération." }
+    ]
+  },
+  "integrations": {
+    "title": "Intégrations possibles",
+    "row1": ["Paiements", "E-mail", "Fournisseurs d’authentification", "CRM"],
+    "row2": ["Stockage", "Webhooks"]
+  },
+  "why": {
+    "title": "Pourquoi Van Tech Systems",
+    "cards": [
+      { "title": "Cadré avant d’être construit", "desc": "Nous convenons de ce que la première version doit prouver avant le début du développement." },
+      { "title": "Architecturé pour durer", "desc": "La fondation soutient la version suivante au lieu de la freiner." },
+      { "title": "Une seule équipe technologique", "desc": "Design, développement, données et déploiement sous une seule architecture." }
+    ]
+  },
+  "pricingCta": {
+    "title": "À partir de $2,500/month",
+    "desc": "Les prix de départ sont des repères de planification. Le tarif final dépend du périmètre, de l’architecture, des intégrations et des exigences techniques.",
+    "cta": "Obtenir une estimation de mon projet"
+  }
+}

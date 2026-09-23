@@ -1,0 +1,181 @@
+{
+  "hero": {
+    "badge": "Services",
+    "title": "Your Business. In Their Hands.",
+    "desc": "Production-ready mobile applications for customers and internal teams, backed by the APIs, authentication and cloud infrastructure that keep them running.",
+    "ctaPrimary": "Get my project estimate",
+    "ctaSecondary": "Explore all services"
+  },
+  "disappoint": {
+    "title": "A Mobile App Is Not A Smaller Website",
+    "desc": "Off-the-shelf tools work until your process differs from the product's assumptions. Then the workarounds become the operation.",
+    "problems": [
+      "A responsive website is being used where an app is expected.",
+      "No backend exists to support real accounts and data.",
+      "Notifications and sessions are unreliable.",
+      "Store submission requirements are discovered late."
+    ]
+  },
+  "solution": {
+    "title": "The App And The System Behind It",
+    "desc": "We design the mobile experience for how it will actually be used, and build the backend with it: accounts, data, notifications, payments and an admin surface for your team."
+  },
+  "build": {
+    "heading": "What We Build",
+    "cards": [
+      {
+        "title": "Customer Apps",
+        "desc": "Accounts, activity, bookings, payments and notifications."
+      },
+      {
+        "title": "Business Apps",
+        "desc": "Field and internal tools for teams working away from a desk."
+      },
+      {
+        "title": "Companion Apps",
+        "desc": "Mobile access to an existing platform or portal."
+      },
+      {
+        "title": "Backend Services",
+        "desc": "APIs, data and authentication supporting the app."
+      },
+      {
+        "title": "Admin dashboard",
+        "desc": "A web surface for managing users, content and operations."
+      },
+      {
+        "title": "Release Setup",
+        "desc": "Build pipelines, store preparation and versioning."
+      }
+    ]
+  },
+  "capabilities": {
+    "heading": "Capabilities",
+    "row1": [
+      "iOS and Android",
+      "Authentication",
+      "Push notifications",
+      "In-app payments",
+      "Offline-tolerant flows",
+      "Media handling"
+    ],
+    "row2": [
+      "Deep linking",
+      "API integration",
+      "Analytics",
+      "Store release support"
+    ]
+  },
+  "useCases": {
+    "heading": "Use Cases",
+    "items": [
+      {
+        "title": "Customer Engagement",
+        "desc": "An app that keeps customers informed and transacting."
+      },
+      {
+        "title": "Field Operations",
+        "desc": "Teams capturing and updating information on site."
+      },
+      {
+        "title": "Booking and Services",
+        "desc": "Scheduling, reminders and payment in one place."
+      },
+      {
+        "title": "Loyalty and Accounts",
+        "desc": "Profiles, history and personalized communication."
+      }
+    ]
+  },
+  "architecture": {
+    "heading": "MVP architecture",
+    "desc": "Even a first release is a full system. We keep it small, but structured — so the second version is an extension, not a rebuild.",
+    "timeline": [
+      {
+        "number": "01",
+        "title": "Mobile",
+        "tags": [["iOS", "Android"], ["Offline cache"], ["Push"]]
+      },
+      {
+        "number": "02",
+        "title": "API",
+        "tags": [["Endpoints"], ["Validation", "Versioning"]]
+      },
+      {
+        "number": "03",
+        "title": "Backend",
+        "tags": [["Business logic", "Database"], ["Storage", "Payments"]]
+      },
+      {
+        "number": "04",
+        "title": "Platform",
+        "tags": [["Authentication"], ["Analytics", "Monitoring"], ["Releases"]]
+      }
+    ]
+  },
+  "process": {
+    "heading": "Development Process",
+    "cards": [
+      {
+        "title": "Discover",
+        "desc": "Users, platforms, core journeys and technical constraints."
+      },
+      {
+        "title": "Design",
+        "desc": "Mobile interface design and prototypes for the main flows."
+      },
+      {
+        "title": "Architect",
+        "desc": "Backend, data model, authentication and notifications."
+      },
+      {
+        "title": "Build",
+        "desc": "App and backend development with test builds you can install."
+      },
+      {
+        "title": "Test",
+        "desc": "Device testing, performance checks and release candidate QA."
+      },
+      {
+        "title": "Release",
+        "desc": "Store submission support, monitoring and post-launch fixes."
+      }
+    ]
+  },
+  "integrations": {
+    "heading": "Potential Integrations",
+    "row1": [
+      { "label": "Payments" },
+      { "label": "Push services" },
+      { "label": "Identity providers" },
+      { "label": "Analytics" }
+    ],
+    "row2": [
+      { "label": "CRM" },
+      { "label": "Storage" },
+      { "label": "Internal APIs" }
+    ]
+  },
+  "why": {
+    "heading": "Why Van Tech Systems",
+    "cards": [
+      {
+        "title": "Backend included",
+        "desc": "We build the system the app depends on, not just the screens."
+      },
+      {
+        "title": "Designed for real use",
+        "desc": "Sessions, notifications and errors are treated as product features."
+      },
+      {
+        "title": "Release-ready",
+        "desc": "Store requirements are planned into the build, not discovered at the end."
+      }
+    ]
+  },
+  "pricingCta": {
+    "title": "Starting at $7,500/month",
+    "desc": "Starting prices are planning benchmarks. Final pricing depends on scope, architecture, integrations and technical requirements.",
+    "cta": "Get my project estimate"
+  }
+}

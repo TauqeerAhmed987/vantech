@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './about.css';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
@@ -23,163 +24,13 @@ import ownershipIcon from '../../assets/images/about/Ownership-handover-N.png';
 import responsibleAiIcon from '../../assets/images/about/Responsible-AI-O.png';
 import workGlow from '../../assets/images/about/Three-businesses-rigth-S.webp';
 
-const processSteps = [
-  {
-    number: '01',
-    iconImg: discoveryIcon,
-    title: 'Discovery',
-    desc: 'We map the actual process, the systems already in place, the data that exists and the constraints that matter. The output is a written scope with assumptions made explicit.',
-  },
-  {
-    number: '02',
-    iconImg: architectureIcon,
-    title: 'Architecture',
-    desc: 'Data model, integration boundaries, security model and infrastructure choices are decided and documented before implementation. Rework is cheapest at this stage.',
-  },
-  {
-    number: '03',
-    iconImg: buildIcon,
-    title: 'Build',
-    desc: 'Short delivery cycles with working software reviewed continuously. Automated checks, code review and environment separation are standard, not add-ons.',
-  },
-  {
-    number: '04',
-    iconImg: integrationIcon,
-    title: 'Integration',
-    desc: 'Connecting to the systems that already run the business — CRM, billing, email, telephony, internal databases and third-party APIs — with error handling designed in.',
-  },
-  {
-    number: '05',
-    iconImg: deploymentIcon,
-    title: 'Deployment',
-    desc: (
-    <>
-      Production release with monitoring, backups, access control and a <br />
-      rollback path. We do not consider a launch complete until it is observable.
-    </>
-  ),
-  },
-];
+const processIcons = [discoveryIcon, architectureIcon, buildIcon, integrationIcon, deploymentIcon];
+const riskIcons = [dataHandlingIcon, accessControlIcon, confidentialityIcon, ownershipIcon, responsibleAiIcon];
 
-const techCards = [
-  'Van Tech Systems is a technology company focused on AI, software engineering and automation. We work with founders launching products, established businesses replacing manual operations, and agencies that need a serious technical partner behind their brand.',
-  'Our work sits in one of three places: a product that needs to exist, a process that should not be manual, or a system that has outgrown the way it was originally built. In each case the deliverable is the same — a working system with a clear architecture, documented decisions and infrastructure the client controls.',
-  'We are deliberately engineering-led. Scoping is done by people who will build the thing. Estimates come from delivery experience rather than sales targets. When a request would be better solved with a smaller build, a configuration change or an existing tool, we say so before a contract exists.',
-];
-
-const layers = [
-  {
-    number: '01',
-    title: 'Experience layer',
-    desc: 'The screens, dashboards and touchpoints your team and your customers actually use.',
-    tags: ['Web applications', 'Mobile applications', 'Customer portals', 'Internal dashboards', 'Ecommerce'],
-  },
-  {
-    number: '02',
-    title: 'Intelligence layer',
-    desc: 'AI agents and models scoped to a real decision, not bolted on for the sake of it.',
-    tags: ['AI agents', 'Voice and chat assistants', 'Document processing', 'Model development', 'Decision support'],
-  },
-  {
-    number: '03',
-    title: 'Automation layer',
-    desc: 'The workflows that carry real workload without a person in the loop for every step.',
-    tags: ['Workflow orchestration', 'Lead routing', 'Scheduling', 'Reporting', 'Alerting'],
-  },
-  {
-    number: '04',
-    title: 'Platform layer',
-    desc: 'The application core: authentication, billing and the APIs everything else depends on.',
-    tags: ['APIs', 'Multi-tenant SaaS', 'Authentication and RBAC', 'Billing', 'Integrations'],
-  },
-  {
-    number: '05',
-    title: 'Foundation layer',
-    desc: 'Hosting, security and observability built to stay reliable as usage grows.',
-    tags: ['Data modeling', 'Cloud infrastructure', 'Security', 'Observability', 'CI/CD'],
-  },
-];
-
-const principles = [
-  {
-    title: 'Architecture before implementation',
-    desc: 'The data model and integration boundaries are decided first. Systems fail slowly when this step is skipped, and the cost appears months later.',
-  },
-  {
-    title: 'Automation with a human boundary',
-    desc: 'Automated systems handle the predictable path. Ambiguity, exceptions and anything with commercial or legal consequence route to a person by design.',
-  },
-  {
-    title: 'AI applied where it pays off',
-    desc: 'AI is used only where it demonstrably beats a simpler solution — never included just because it is fashionable to have.',
-  },
-  {
-    title: 'Security as a default state',
-    desc: 'Least-privilege access, row-level authorization, encrypted secrets and audited administrative actions are part of the base build, not a later hardening project.',
-  },
-  {
-    title: 'No black boxes',
-    desc: 'Clients receive the code, the infrastructure, the documentation and the credentials. Ending an engagement should never mean losing a system.',
-  },
-  {
-    title: 'Honest scope',
-    desc: 'We would rather lose a deal than agree to a timeline we know is unrealistic. Estimates reflect delivery experience, including the parts that usually go wrong.',
-  },
-];
-
-const aiPoints = [
-  'Grounded in your content and data rather than open-ended generation',
-  'Explicit tool boundaries: an agent can only do what it has been given permission to do',
-  'Human escalation paths for anything sensitive, ambiguous or commercially significant',
-  'Full conversation and action logging so behavior can be reviewed and improved',
-  'Ongoing tuning informed by real usage instead of assumptions',
-];
-
-const riskCards = [
-  {
-    icon: dataHandlingIcon,
-    title: 'Data Handling',
-    desc: 'We collect only the data an engagement requires, keep production data out of development environments where possible, and remove access when a project ends.',
-  },
-  {
-    icon: accessControlIcon,
-    title: 'Access Control',
-    desc: 'Role-based access with least privilege across applications, databases and infrastructure. Administrative actions are logged.',
-  },
-  {
-    icon: confidentialityIcon,
-    title: 'Confidentiality',
-    desc: 'Client work is confidential by default. We publish nothing about an engagement without written permission, and we work under NDA whenever requested.',
-  },
-  {
-    icon: ownershipIcon,
-    title: 'Ownership & Handover',
-    desc: 'Deliverables, repositories and infrastructure are owned by the client, with documentation sufficient for another competent engineer to continue the work.',
-  },
-  {
-    icon: responsibleAiIcon,
-    title: 'Responsible AI Use',
-    desc: 'AI systems we build disclose that they are automated, avoid fabricated claims, and route anything consequential to a human. Our own policy is published in detail.',
-  },
-];
-
-const workCards = [
-  {
-    number: '01',
-    title: 'Direct Projects',
-    desc: 'Scoped product, platform, automation or AI engagements delivered end to end, from discovery through deployment and optional ongoing support.',
-  },
-  {
-    number: '02',
-    title: 'Ongoing Engineering',
-    desc: 'A retained engineering capability for businesses that need continuous iteration, monitoring and roadmap delivery without hiring an internal team.',
-  },
-  {
-    number: '03',
-    title: 'Agency Partnerships',
-    desc: 'White label delivery for agencies, consultancies and IT companies that sell technology and need a silent, reliable engineering department behind their brand.',
-  },
-];
+type ProcessStep = { number: string; title: string; desc?: string; descLine1?: string; descLine2?: string };
+type TitledDesc = { title: string; desc: string };
+type LayerItem = TitledDesc & { number: string; tags: string[] };
+type NumberedCard = TitledDesc & { number: string };
 
 function TechCard({ text, primary }: { text: string; primary: boolean }) {
   const reveal = useReveal('up');
@@ -195,6 +46,15 @@ function TechCard({ text, primary }: { text: string; primary: boolean }) {
 }
 
 export default function AboutPage() {
+  const { t } = useTranslation('about');
+  const processSteps = t('process.steps', { returnObjects: true }) as ProcessStep[];
+  const techCards = t('tech.cards', { returnObjects: true }) as string[];
+  const layers = t('layers.items', { returnObjects: true }) as LayerItem[];
+  const principles = t('principles.items', { returnObjects: true }) as TitledDesc[];
+  const aiPoints = t('ai.points', { returnObjects: true }) as string[];
+  const riskCards = t('risk.cards', { returnObjects: true }) as TitledDesc[];
+  const workCards = t('work.cards', { returnObjects: true }) as NumberedCard[];
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -236,23 +96,16 @@ export default function AboutPage() {
     <main className="about-page about-banner">
       <section className="about-hero section">
         <div className={`container about-hero__content ${hero.className}`} ref={hero.ref}>
-          <span className="eyebrow-pill">About Van Tech Systems</span>
-          <h1 className="about-hero__title">
-            An engineering company for businesses that need systems, not slideware.
-          </h1>
-          <p className="about-hero__desc">
-            We design, build and operate intelligent software: AI agents and automation
-            that carry real workload, and applications and platforms that stay
-            maintainable long after launch. Everything we ship is architected by the
-            same engineers who scope it.
-          </p>
+          <span className="eyebrow-pill">{t('hero.eyebrow')}</span>
+          <h1 className="about-hero__title">{t('hero.title')}</h1>
+          <p className="about-hero__desc">{t('hero.desc')}</p>
           <div className="about-hero__actions">
             <a href="#contact" className="btn btn-outline">
-              Start a Project
+              {t('hero.startAProject')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
             <a href="/#work" className="btn btn-outline">
-              Our Work
+              {t('hero.ourWork')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
           </div>
@@ -262,9 +115,7 @@ export default function AboutPage() {
       <section className="about-process section">
         <div className="container maix-new-widthadd">
           <div className={`section-head ${processHead.className}`} ref={processHead.ref}>
-            <h2 className="section-title section-title--process">
-              A delivery model designed around decisions, not deliverables.
-            </h2>
+            <h2 className="section-title section-title--process">{t('process.title')}</h2>
           </div>
 
           <div
@@ -281,11 +132,20 @@ export default function AboutPage() {
                   >
                     <div className="about-process-item__lead">
                       <div className="about-process-item__icon about-process-item__icon--img">
-                        <img src={step.iconImg} alt="" className="about-process-item__icon-img" />
+                        <img src={processIcons[i]} alt="" className="about-process-item__icon-img" />
                       </div>
                       <h3 className="about-process-item__title">{step.title}</h3>
                     </div>
-                    <p className="about-process-item__desc">{step.desc}</p>
+                    <p className="about-process-item__desc">
+                      {step.descLine1 ? (
+                        <>
+                          {step.descLine1} <br />
+                          {step.descLine2}
+                        </>
+                      ) : (
+                        step.desc
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -299,7 +159,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={`about-tech__head ${techReveal.className}`} ref={techReveal.ref}>
             <img src={techBadge} alt="" className="about-tech__badge" loading="lazy" />
-            <h2 className="about-title">Technology built to be owned, not rented</h2>
+            <h2 className="about-title">{t('tech.title')}</h2>
           </div>
 
           <div className="about-tech__grid">
@@ -314,7 +174,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={`section-head ${layersHead.className}`} ref={layersHead.ref}>
             <img src={layersBadge} alt="" className="about-tech__badge" loading="lazy" />
-            <h2 className="section-title section-title--layers">What we build, layer by layer</h2>
+            <h2 className="section-title section-title--layers">{t('layers.title')}</h2>
           </div>
 
           <div className={`about-layers-table ${layersGrid.className}`} ref={layersGrid.ref}>
@@ -337,10 +197,8 @@ export default function AboutPage() {
       <section className="about-principles section">
         <div className="container">
           <div className={`section-head ${principlesHead.className}`} ref={principlesHead.ref}>
-            <span className="eyebrow-pill">Engineering principles</span>
-            <h2 className="section-title section-title--principles">
-              The decisions we make the same way every time
-            </h2>
+            <span className="eyebrow-pill">{t('principles.eyebrow')}</span>
+            <h2 className="section-title section-title--principles">{t('principles.title')}</h2>
           </div>
 
           <div
@@ -349,14 +207,14 @@ export default function AboutPage() {
           >
             <div className="about-arch-diagram__panel about-arch-diagram__panel--left">
               <div className="about-arch-diagram__row about-arch-diagram__row--end">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">Business goal</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">{t('principles.diagram.businessGoal')}</span>
               </div>
               <div className="about-arch-diagram__row">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--blue">Existing systems</span>
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">Real data</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--blue">{t('principles.diagram.existingSystems')}</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">{t('principles.diagram.realData')}</span>
               </div>
               <div className="about-arch-diagram__row about-arch-diagram__row--center">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">Constraints</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">{t('principles.diagram.constraints')}</span>
               </div>
             </div>
             <div className="about-arch-diagram__center">
@@ -367,22 +225,22 @@ export default function AboutPage() {
               >
                 <img src={architectureIcon} alt="" />
                 <span>
-                  Architecture
+                  {t('principles.diagram.architectureDecisionLine1')}
                   <br />
-                  Decision
+                  {t('principles.diagram.architectureDecisionLine2')}
                 </span>
               </div>
               <span className="about-arch-diagram__line" />
             </div>
             <div className="about-arch-diagram__panel about-arch-diagram__panel--right">
               <div className="about-arch-diagram__row">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">Documented model</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">{t('principles.diagram.documentedModel')}</span>
               </div>
               <div className="about-arch-diagram__row">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--blue">Working system</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--blue">{t('principles.diagram.workingSystem')}</span>
               </div>
               <div className="about-arch-diagram__row">
-                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">Owned infrastructure</span>
+                <span className="about-arch-diagram__pill about-arch-diagram__pill--orange">{t('principles.diagram.ownedInfrastructure')}</span>
               </div>
             </div>
           </div>
@@ -405,21 +263,9 @@ export default function AboutPage() {
       <section className="about-ai section">
         <div className="container about-row">
           <div className={`about-copy ${aiCopy.className}`} ref={aiCopy.ref}>
-            <h2 className="about-title">
-              Useful AI is an engineering problem, not a demo.
-            </h2>
-            <p className="about-desc">
-              A convincing demo takes an afternoon. A production AI system that
-              answers accurately, refuses to invent facts, respects permissions,
-              escalates cleanly and can be audited afterwards is an engineering
-              project with a data model behind it.
-            </p>
-            <p className="about-desc">
-              That is the distinction we work to. Our AI systems are grounded in
-              the client's own content and data, constrained to defined actions,
-              logged end to end and monitored after launch — because an AI system
-              that cannot be inspected cannot be trusted with customers.
-            </p>
+            <h2 className="about-title">{t('ai.title')}</h2>
+            <p className="about-desc">{t('ai.desc1')}</p>
+            <p className="about-desc">{t('ai.desc2')}</p>
           </div>
 
           <ul className={`about-ai__list ${aiList.className}`} ref={aiList.ref}>
@@ -436,17 +282,15 @@ export default function AboutPage() {
       <section className="about-risk section">
         <div className="container">
           <div className={`section-head ${riskHead.className}`} ref={riskHead.ref}>
-            <span className="eyebrow-pill">Standards and Governance</span>
-            <h2 className="section-title section-title--risk">
-              How we handle data, access and accountability
-            </h2>
+            <span className="eyebrow-pill">{t('risk.eyebrow')}</span>
+            <h2 className="section-title section-title--risk">{t('risk.title')}</h2>
           </div>
 
           <div className={`about-risk__grid ${riskGrid.className}`} ref={riskGrid.ref}>
-            {riskCards.map((card) => (
+            {riskCards.map((card, i) => (
               <div className="about-risk-card" key={card.title}>
                 <div className="about-risk-card__glow" />
-                <img src={card.icon} alt="" className="about-risk-card__icon" loading="lazy" />
+                <img src={riskIcons[i]} alt="" className="about-risk-card__icon" loading="lazy" />
                 <h3 className="about-risk-card__title">{card.title}</h3>
                 <p className="about-risk-card__desc">{card.desc}</p>
               </div>
@@ -454,8 +298,7 @@ export default function AboutPage() {
           </div>
 
           <p className={`about-risk__note ${riskNote.className}`} ref={riskNote.ref}>
-            Detailed policies are available in our legal center, including privacy,
-            terms, cookies, accessibility and AI usage.{' '}
+            {t('risk.note')}{' '}
             <a href="/legal" className="about-risk__note-link">
               /legal
             </a>
@@ -474,7 +317,7 @@ export default function AboutPage() {
         <div className="container">
           <div className={`section-head ${workHead.className}`} ref={workHead.ref}>
             <img src={Threebusinesses} alt="" className="about-tech__badge" loading="lazy" />
-            <h2 className="section-title section-title--work">Three ways businesses work with us</h2>
+            <h2 className="section-title section-title--work">{t('work.title')}</h2>
           </div>
 
           <div className={`about-work__grid ${workGrid.className}`} ref={workGrid.ref}>
