@@ -5,10 +5,10 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyRelatedItem,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 import { createPlaceholderWorkData } from '../../data/workPlaceholder';
-import heroScreenshot from '../../assets/images/work-van-travel-business-two/figma/browser-mockup.png';
-import relatedWork1 from '../../assets/images/work-van-travel/figma/related-work-1.png';
+import heroScreenshot from '../../assets/images/work-van-travel-business-two/figma/browser-mockup.webp';
+import relatedWork1 from '../../assets/images/work-van-travel/figma/related-work-1.webp';
 import relatedWork2 from '../../assets/images/work-van-travel/figma/related-work-2.png';
-import relatedWork3 from '../../assets/images/work-van-travel/figma/related-work-3.png';
+import relatedWork3 from '../../assets/images/work-van-travel/figma/related-work-3.webp';
 
 // Hero content from Figma node 2316:547, middle sections from node 2316:548,
 // related work + closing from node 2316:549 (closing CTA matches the

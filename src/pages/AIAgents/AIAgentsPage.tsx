@@ -38,9 +38,9 @@ import smsSvg from '../../assets/icons/mdi-message-processing.svg?raw';
 import emailSvg from '../../assets/icons/ic-baseline-email.svg?raw';
 import restApiSvg from '../../assets/icons/dashicons-rest-api.svg?raw';
 
-import heroOrb from '../../assets/images/ai-agents/figma/hero-orb.png';
+import heroOrb from '../../assets/images/ai-agents/figma/hero-orb.webp';
 import sparkle3d from '../../assets/images/ai-agents/figma/sparkle-3d.png';
-import solutionIllustration from '../../assets/images/ai-agents/figma/agents-solution__graphic.png';
+import solutionIllustration from '../../assets/images/ai-agents/figma/agents-solution__graphic.webp';
 import pricingGlowOrb from '../../assets/images/ai-agents/figma/pricing-glow-orb.png';
 
 // Icon/image references only — text content comes from the `aiAgents` i18n

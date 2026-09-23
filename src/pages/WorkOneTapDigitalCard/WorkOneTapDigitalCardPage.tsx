@@ -5,10 +5,10 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyStat,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 import { createPlaceholderWorkData } from '../../data/workPlaceholder';
-import heroScreenshot from '../../assets/images/work-onetap-digital-card/figma/browser-mockup.png';
-import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.png';
-import relatedWorkMightyOak from '../../assets/images/work-van-travel/figma/related-work-mighty-oak.png';
-import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.png';
+import heroScreenshot from '../../assets/images/work-onetap-digital-card/figma/browser-mockup.webp';
+import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.webp';
+import relatedWorkMightyOak from '../../assets/images/work-van-travel/figma/related-work-mighty-oak.webp';
+import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.webp';
 
 // Hero content from Figma node 2319:550, middle sections from node
 // 2319:551, related work from node 2319:552 (closing CTA matches the

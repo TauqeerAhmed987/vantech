@@ -1,15 +1,32 @@
 {
   "hero": {
-    "badges": ["Servicios profesionales"],
-    "titleLines": ["The PMB", "Consulting"],
+    "badges": [
+      "Servicios profesionales"
+    ],
+    "titleLines": [
+      "The PMB",
+      "Consulting"
+    ],
     "description": "Una presencia digital profesional para una firma de consultoría que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento.",
     "screenshotAlt": "Captura de pantalla de la plataforma The PMB Consulting"
   },
   "stats": [
-    { "label": "Tipo de proyecto", "value": "Servicios profesionales" },
-    { "label": "Capacidades", "value": "Desarrollo web • Diseño UI/UX • Automatización" },
-    { "label": "Sector", "value": "Servicios profesionales" },
-    { "label": "Estado", "value": "En producción" }
+    {
+      "label": "Tipo de proyecto",
+      "value": "Servicios profesionales"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Desarrollo web • Diseño UI/UX • Automatización"
+    },
+    {
+      "label": "Sector",
+      "value": "Servicios profesionales"
+    },
+    {
+      "label": "Estado",
+      "value": "En producción"
+    }
   ],
   "detail": {
     "overviewDesc": "The PMB Consulting es una firma de consultoría empresarial y de marca personal. El sitio presenta sus servicios de asesoría — mentoría y coaching, constitución de empresas, branding, presencia digital, crecimiento y planificación financiera — y ofrece a los clientes potenciales una vía directa hacia una consulta.",
@@ -17,28 +34,65 @@
     "builtDesc": "Estructuramos la experiencia en torno a las áreas de servicio de la firma, cada una con su propia explicación y posicionamiento, respaldadas por secciones de credibilidad que cubren acreditaciones, valores y testimonios de clientes. El flujo de solicitud de consulta es accesible desde cualquier sección, y el sitio admite visitantes multilingües."
   },
   "sidebar": {
-    "serviceTags": ["Desarrollo web", "Diseño UI/UX", "Automatización"]
+    "serviceTags": [
+      "Desarrollo web",
+      "Diseño UI/UX",
+      "Automatización"
+    ]
   },
   "capabilities": {
     "desc": "",
     "items": [
-      { "number": "01", "title": "Presentación dedicada para cada servicio de asesoría" },
-      { "number": "02", "title": "Sección de mentoría y coaching empresarial" },
-      { "number": "03", "title": "Orientación sobre constitución y estructura empresarial" },
-      { "number": "04", "title": "Posicionamiento de branding e identidad empresarial" },
-      { "number": "05", "title": "Servicios de crecimiento y expansión" },
-      { "number": "06", "title": "Flujo de solicitud de consulta" },
-      { "number": "07", "title": "Soporte para visitantes multilingües" }
+      {
+        "number": "01",
+        "title": "Presentación dedicada para cada servicio de asesoría"
+      },
+      {
+        "number": "02",
+        "title": "Sección de mentoría y coaching empresarial"
+      },
+      {
+        "number": "03",
+        "title": "Orientación sobre constitución y estructura empresarial"
+      },
+      {
+        "number": "04",
+        "title": "Posicionamiento de branding e identidad empresarial"
+      },
+      {
+        "number": "05",
+        "title": "Servicios de crecimiento y expansión"
+      },
+      {
+        "number": "06",
+        "title": "Flujo de solicitud de consulta"
+      },
+      {
+        "number": "07",
+        "title": "Soporte para visitantes multilingües"
+      }
     ]
   },
   "flow": {
     "heading": "Flujo del negocio",
-    "steps": ["Descubrir", "Comparar servicios", "Solicitar"],
+    "steps": [
+      "Descubrir",
+      "Comparar servicios",
+      "Solicitar"
+    ],
     "caption": "Vista conceptual del sistema"
   },
   "diagram": {
-    "badgeLines": ["Vista", "conceptual del sistema"],
-    "pills": ["Visitante", "Páginas de servicios", "Recepción de consultas", "Seguimiento de la firma"]
+    "badgeLines": [
+      "Vista",
+      "conceptual del sistema"
+    ],
+    "pills": [
+      "Visitante",
+      "Páginas de servicios",
+      "Recepción de consultas",
+      "Seguimiento de la firma"
+    ]
   },
   "outcomes": [
     "Se creó una presencia digital centralizada para una firma de consultoría multiservicio",
@@ -49,17 +103,20 @@
     {
       "tag": "Servicios profesionales",
       "title": "Solid Rock Leadership Development",
-      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, audiencias y un recorrido de reserva de consultas."
+      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, audiencias y un recorrido de reserva de consultas.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "Servicios profesionales",
       "title": "Power Mindset Breakthrough",
-      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido.",
+      "href": "/power-mindset-breakthrough"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace público de tarjeta o un código QR."
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace público de tarjeta o un código QR.",
+      "href": "/onetap-digital-card"
     }
   ]
 }

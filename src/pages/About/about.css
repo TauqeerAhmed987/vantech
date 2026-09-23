@@ -66,7 +66,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 3840 / 820;
-  background-image: url(../../assets/images/about/hero-grid-dip.png);
+  background-image: url(../../assets/images/about/hero-grid-dip.webp);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -82,7 +82,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 3840 / 2156;
-  background-image: url(../../assets/images/about/hero-banner-bg.png);
+  background-image: url(../../assets/images/about/hero-banner-bg.webp);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
@@ -238,7 +238,7 @@
   left: 0;
   width: 267px;
   height: 612px;
-  background-image: url(../../assets/images/about/process-left-deco.png);
+  background-image: url(../../assets/images/about/process-left-deco.webp);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
@@ -250,7 +250,7 @@
   right: 0;
   width: 256px;
   height: 605px;
-  background-image: url(../../assets/images/about/process-right-deco.png);
+  background-image: url(../../assets/images/about/process-right-deco.webp);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
@@ -522,7 +522,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 3840 / 3882;
-  background-image: url(../../assets/images/about/layers-ambient-glow.png);
+  background-image: url(../../assets/images/about/layers-ambient-glow.webp);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -655,7 +655,7 @@
   width: 1300px;
   height: auto;
   aspect-ratio: 2649 / 598;
-  background-image: url(../../assets/images/about/principles-glow-bottom.png);
+  background-image: url(../../assets/images/about/principles-glow-bottom.webp);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -1170,7 +1170,7 @@
   width: 700px;
   height: auto;
   aspect-ratio: 1936 / 3872;
-  background-image: url(../../assets/images/about/risk-left-deco.png);
+  background-image: url(../../assets/images/about/risk-left-deco.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -1186,7 +1186,7 @@
   width: 800px;
   height: auto;
   aspect-ratio: 1998 / 3904;
-  background-image: url(../../assets/images/about/risk-right-deco.png);
+  background-image: url(../../assets/images/about/risk-right-deco.webp);
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 100% auto;

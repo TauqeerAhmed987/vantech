@@ -23,7 +23,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 3840 / 2928;
-  background-image: url(../../assets/images/partners/hero-banner-bg.png);
+  background-image: url(../../assets/images/partners/hero-banner-bg.webp);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
@@ -451,7 +451,7 @@
   width: 700px;
   height: auto;
   aspect-ratio: 2032 / 3904;
-  background-image: url(../../assets/images/partners/tiers-grid-left.png);
+  background-image: url(../../assets/images/partners/tiers-grid-left.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -468,7 +468,7 @@
   width: 600px;
   height: auto;
   aspect-ratio: 1724 / 3840;
-  background-image: url(../../assets/images/partners/tiers-grid-right.png);
+  background-image: url(../../assets/images/partners/tiers-grid-right.webp);
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 100% auto;
@@ -679,6 +679,19 @@
   display: block;
 }
 
+/* FR/ES line 2 is longer than English and wraps onto an extra line —
+   shrink each language just enough to keep it at the intended 2 lines,
+   matching English's layout. PT already fits, so it's left untouched. */
+@media (min-width: 981px) {
+  .partners-pipeline__title.partners-pipeline__title--fr {
+    font-size: 2.2042vw;
+  }
+
+  .partners-pipeline__title.partners-pipeline__title--es {
+    font-size: 1.9646vw;
+  }
+}
+
 .partners-pipeline__track {
   position: relative;
   z-index: 1;
@@ -793,7 +806,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  margin-top: 24px;
+  margin-top:37px;
 }
 
 .partners-catalog__grid-top > .partners-catalog-card:nth-child(1) { transition-delay: 0s; }
@@ -805,6 +818,15 @@
 
 .partners-catalog__title span {
   display: block;
+}
+
+/* French catalog title line 1 is longer than English and wraps onto a third
+   line at desktop widths — shrink just enough for French to keep it at the
+   intended two lines, matching English's layout. */
+@media (min-width: 981px) {
+  .partners-catalog__title--fr {
+    font-size: 2.0347vw;
+  }
 }
 
 .partners-catalog-card {
@@ -886,7 +908,7 @@
 }
 
 .partners-catalog-card--sm {
-  padding: 24px 14px 26px;
+  padding: 18px;
   width: 100%;
   max-width: 472px;
 }
@@ -1509,7 +1531,7 @@
   width: 80%;
   height: auto;
   aspect-ratio: 2990 / 674;
-  background-image: url(../../assets/images/partnerspageimg/partners-sectin/partners-brandbackground.png);
+  background-image: url(../../assets/images/partnerspageimg/partners-sectin/partners-brandbackground.webp);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -1536,6 +1558,15 @@
 
 .partners-brand__title span {
   display: block;
+}
+
+/* French line 1 is much longer than English and wraps to a second line on
+   its own, pushing the whole title to 4 lines — shrink just enough to keep
+   it at the intended 3, matching English's layout. */
+@media (min-width: 981px) {
+  .partners-brand__title.partners-brand__title--fr {
+    font-size: 2.5521vw;
+  }
 }
 
 .partners-brand__desc {
@@ -1945,6 +1976,23 @@
   display: block;
 }
 
+/* FR/ES/PT line 2 ("Many Client" equivalent) runs much longer than English
+   and wraps onto an extra line each — shrink per language just enough to
+   keep the title at its intended 3 lines, matching English's layout. */
+@media (min-width: 981px) {
+  .partners-intel__col-title--ai.partners-intel__col-title--ai-fr {
+    font-size: 2.0903vw;
+  }
+
+  .partners-intel__col-title--ai.partners-intel__col-title--ai-es {
+    font-size: 2.2444vw;
+  }
+
+  .partners-intel__col-title--ai.partners-intel__col-title--ai-pt {
+    font-size: 2.338vw;
+  }
+}
+
 .partners-intel__col-desc--ai {
   max-width: 525px;
   font-size: 22px;
@@ -2063,7 +2111,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 3838 / 841;
-  background-image: url('../../assets/images/partnerspageimg/partners-sectin/partners-plansbackground.png');
+  background-image: url('../../assets/images/partnerspageimg/partners-sectin/partners-plansbackground.webp');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -2146,7 +2194,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 944 / 790;
-  background-image: url('../../assets/images/partnerspageimg/partners-sectin/.partners-plans__grid.png');
+  background-image: url('../../assets/images/partnerspageimg/partners-sectin/.partners-plans__grid.webp');
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -2511,7 +2559,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url(../../assets/images/partnerspageimg/partners-sectin/partners-calculator.png);
+  background-image: url(../../assets/images/partnerspageimg/partners-sectin/partners-calculator.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3070,6 +3118,31 @@
     font-size: 0.8333vw;
   }
 
+  /* FR/ES/PT stage names/roles run longer than English and were clipping
+     inside the fixed-height step box — let the box grow with its content
+     and give wrapped uppercase lines a little breathing room. */
+  .partners-pipeline-step--fr,
+  .partners-pipeline-step--es,
+  .partners-pipeline-step--pt {
+    height: auto;
+  }
+
+  .partners-pipeline-step--fr .partners-pipeline-step__name,
+  .partners-pipeline-step--es .partners-pipeline-step__name,
+  .partners-pipeline-step--pt .partners-pipeline-step__name {
+    font-size: 0.9375vw;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* "Descubrimiento" and "Construcción" are still a few px wider than the
+     box even at the shared FR/ES/PT size above — nudge Spanish down a
+     little further so both stay on one line like the rest. */
+  .partners-pipeline-step--es .partners-pipeline-step__name {
+    font-size: 0.8438vw;
+  }
+
   .partners-pipeline-step__glow {
     right: -1.0417vw;
     bottom: -2.0833vw;
@@ -3096,7 +3169,7 @@
 
   .partners-catalog__grid-bottom {
     gap: 1.25vw;
-    margin-top: 1.25vw;
+    margin-top: 1.927vw;
   }
 
   .partners-catalog-card {
@@ -3133,7 +3206,7 @@
   }
 
   .partners-catalog-card--sm {
-    padding: 1.25vw 0.7292vw 1.3542vw;
+    padding: 0.9375vw;
     width: 24.5833vw;
   }
 
@@ -3190,6 +3263,73 @@
 
   .partners-catalog-card__chips-grid--icon-right {
     padding-right: 4.1667vw;
+  }
+
+  /* The rigid 2-column grid splits its row exactly in half regardless of
+     content, so a chip wider than that fixed half overflows into the next
+     column. Switch to flex-wrap for FR/ES/PT so two chips still pair up on
+     one row whenever they actually fit together, matching English's layout,
+     and only drop to their own line where the pair genuinely doesn't fit. */
+  .partners-catalog-card__chips-grid--fr,
+  .partners-catalog-card__chips-grid--es,
+  .partners-catalog-card__chips-grid--pt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Automation card: even after the flex-wrap switch above, all three of its
+     chip pairs are still too wide together to share a row — shrink just
+     these six chips further so each pair keeps sitting side by side like
+     English, instead of every chip landing on its own line. */
+  .partners-catalog-card--automation .partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--pt {
+    font-size: 0.5vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--crm-automation.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--crm-automation.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--crm-automation.partners-chip--pt {
+    width: 6.8056vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--email-sms-workflows.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--email-sms-workflows.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--email-sms-workflows.partners-chip--pt {
+    width: 8.8958vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--lead-follow-up-systems.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--lead-follow-up-systems.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--lead-follow-up-systems.partners-chip--pt {
+    width: 10.3542vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--operations-automation.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--operations-automation.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--operations-automation.partners-chip--pt {
+    width: 8.4583vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--appointment-automation.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--appointment-automation.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--appointment-automation.partners-chip--pt {
+    width: 8.6042vw;
+  }
+
+  .partners-catalog-card--automation .partners-chip--business-process-automation.partners-chip--fr,
+  .partners-catalog-card--automation .partners-chip--business-process-automation.partners-chip--es,
+  .partners-catalog-card--automation .partners-chip--business-process-automation.partners-chip--pt {
+    width: 10.3056vw;
+  }
+
+  /* Consulting card: this one chip is a few px too wide to sit beside
+     "Product Strategy" like English does, so it wraps alone to the next
+     row instead — trim it slightly so the pair stays together. */
+  .partners-catalog-card--consulting .partners-chip--technology-architecture.partners-chip--fr,
+  .partners-catalog-card--consulting .partners-chip--technology-architecture.partners-chip--es,
+  .partners-catalog-card--consulting .partners-chip--technology-architecture.partners-chip--pt {
+    width: 10.4167vw;
   }
 
   .partners-catalog-card__icon-badge {
@@ -3431,6 +3571,217 @@
   .partners-chip--system-audits {
     width: 7.5vw;
     height: 2.2917vw;
+  }
+
+  /* FR/ES/PT catalog chip labels run longer than English — widen just these
+     chips for those languages so the translated text stops overlapping the
+     next chip. English keeps its original Figma-derived widths above. */
+  .partners-chip--ai-receptionists.partners-chip--fr,
+  .partners-chip--ai-receptionists.partners-chip--es,
+  .partners-chip--ai-receptionists.partners-chip--pt {
+    width: 9.7917vw;
+  }
+
+  .partners-chip--ai-voice-agents.partners-chip--fr,
+  .partners-chip--ai-voice-agents.partners-chip--es,
+  .partners-chip--ai-voice-agents.partners-chip--pt {
+    width: 9.7917vw;
+  }
+
+  .partners-chip--ai-chat-agents.partners-chip--fr,
+  .partners-chip--ai-chat-agents.partners-chip--es,
+  .partners-chip--ai-chat-agents.partners-chip--pt {
+    width: 10.2083vw;
+  }
+
+  .partners-chip--ai-lead-qualification.partners-chip--fr,
+  .partners-chip--ai-lead-qualification.partners-chip--es,
+  .partners-chip--ai-lead-qualification.partners-chip--pt {
+    width: 12.8472vw;
+  }
+
+  .partners-chip--ai-customer-support.partners-chip--fr,
+  .partners-chip--ai-customer-support.partners-chip--es,
+  .partners-chip--ai-customer-support.partners-chip--pt {
+    width: 11.5972vw;
+  }
+
+  .partners-chip--ai-knowledge-systems.partners-chip--fr,
+  .partners-chip--ai-knowledge-systems.partners-chip--es,
+  .partners-chip--ai-knowledge-systems.partners-chip--pt {
+    width: 14.3056vw;
+  }
+
+  .partners-chip--ai-knowledge-systems-bottom.partners-chip--fr,
+  .partners-chip--ai-knowledge-systems-bottom.partners-chip--es,
+  .partners-chip--ai-knowledge-systems-bottom.partners-chip--pt {
+    width: 14.3056vw;
+  }
+
+  .partners-chip--ai-workflow-automation.partners-chip--fr,
+  .partners-chip--ai-workflow-automation.partners-chip--es,
+  .partners-chip--ai-workflow-automation.partners-chip--pt {
+    width: 17.7083vw;
+  }
+
+  .partners-chip--custom-web-applications.partners-chip--fr,
+  .partners-chip--custom-web-applications.partners-chip--es,
+  .partners-chip--custom-web-applications.partners-chip--pt {
+    width: 14.3056vw;
+  }
+
+  .partners-chip--saas-platforms.partners-chip--fr,
+  .partners-chip--saas-platforms.partners-chip--es,
+  .partners-chip--saas-platforms.partners-chip--pt {
+    width: 8.6806vw;
+  }
+
+  .partners-chip--marketplace-platforms.partners-chip--fr,
+  .partners-chip--marketplace-platforms.partners-chip--es,
+  .partners-chip--marketplace-platforms.partners-chip--pt {
+    width: 12.5694vw;
+  }
+
+  .partners-chip--client-portals.partners-chip--fr,
+  .partners-chip--client-portals.partners-chip--es,
+  .partners-chip--client-portals.partners-chip--pt {
+    width: 9.3056vw;
+  }
+
+  .partners-chip--internal-business-systems.partners-chip--fr,
+  .partners-chip--internal-business-systems.partners-chip--es,
+  .partners-chip--internal-business-systems.partners-chip--pt {
+    width: 14.2361vw;
+  }
+
+  .partners-chip--crm-platforms.partners-chip--fr,
+  .partners-chip--crm-platforms.partners-chip--es,
+  .partners-chip--crm-platforms.partners-chip--pt {
+    width: 9.7222vw;
+  }
+
+  .partners-chip--crm-automation.partners-chip--fr,
+  .partners-chip--crm-automation.partners-chip--es,
+  .partners-chip--crm-automation.partners-chip--pt {
+    width: 9.7222vw;
+  }
+
+  .partners-chip--email-sms-workflows.partners-chip--fr,
+  .partners-chip--email-sms-workflows.partners-chip--es,
+  .partners-chip--email-sms-workflows.partners-chip--pt {
+    width: 12.7083vw;
+  }
+
+  .partners-chip--lead-follow-up-systems.partners-chip--fr,
+  .partners-chip--lead-follow-up-systems.partners-chip--es,
+  .partners-chip--lead-follow-up-systems.partners-chip--pt {
+    width: 14.7917vw;
+  }
+
+  .partners-chip--operations-automation.partners-chip--fr,
+  .partners-chip--operations-automation.partners-chip--es,
+  .partners-chip--operations-automation.partners-chip--pt {
+    width: 12.0833vw;
+  }
+
+  .partners-chip--appointment-automation.partners-chip--fr,
+  .partners-chip--appointment-automation.partners-chip--es,
+  .partners-chip--appointment-automation.partners-chip--pt {
+    width: 12.2917vw;
+  }
+
+  .partners-chip--business-process-automation.partners-chip--fr,
+  .partners-chip--business-process-automation.partners-chip--es,
+  .partners-chip--business-process-automation.partners-chip--pt {
+    width: 14.7222vw;
+  }
+
+  .partners-chip--e-commerce.partners-chip--fr,
+  .partners-chip--e-commerce.partners-chip--es,
+  .partners-chip--e-commerce.partners-chip--pt {
+    width: 8.8889vw;
+  }
+
+  .partners-chip--product-strategy.partners-chip--fr,
+  .partners-chip--product-strategy.partners-chip--es,
+  .partners-chip--product-strategy.partners-chip--pt {
+    width: 9.2361vw;
+  }
+
+  .partners-chip--ai-readiness.partners-chip--fr,
+  .partners-chip--ai-readiness.partners-chip--es,
+  .partners-chip--ai-readiness.partners-chip--pt {
+    width: 8.8194vw;
+  }
+
+  .partners-chip--system-audits.partners-chip--fr,
+  .partners-chip--system-audits.partners-chip--es,
+  .partners-chip--system-audits.partners-chip--pt {
+    width: 9.2361vw;
+  }
+
+  /* AI Solutions card: its 3 chip rows are narrower than the other cards, so
+     even the widened FR/ES/PT chips above don't all fit per row like English
+     does. Scale this card's chips down a little further, and keep row 3
+     (which pairs two chips, same as English) from wrapping — otherwise its
+     two chips land on separate lines and one repeats the previous row's
+     last label right above it, reading like a glitch. */
+  .partners-catalog-card--ai-solutions .partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--pt {
+    font-size: 0.75vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-receptionists.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-receptionists.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-receptionists.partners-chip--pt {
+    width: 8.8125vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-voice-agents.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-voice-agents.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-voice-agents.partners-chip--pt {
+    width: 8.8125vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-chat-agents.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-chat-agents.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-chat-agents.partners-chip--pt {
+    width: 9.1875vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-lead-qualification.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-lead-qualification.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-lead-qualification.partners-chip--pt {
+    width: 11.5625vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-customer-support.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-customer-support.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-customer-support.partners-chip--pt {
+    width: 10.4375vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems.partners-chip--pt {
+    width: 12.875vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems-bottom.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems-bottom.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-knowledge-systems-bottom.partners-chip--pt {
+    width: 12.875vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-chip--ai-workflow-automation.partners-chip--fr,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-workflow-automation.partners-chip--es,
+  .partners-catalog-card--ai-solutions .partners-chip--ai-workflow-automation.partners-chip--pt {
+    width: 15.9375vw;
+  }
+
+  .partners-catalog-card--ai-solutions .partners-catalog-card__chips-row:nth-child(3) {
+    flex-wrap: nowrap;
   }
 
   .partners-catalog__cta {

@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["Aplicaciones Web", "Viajes e inmigración"],
-    "titleLines": ["Van Travel", "Business"],
+    "badges": [
+      "Aplicaciones Web",
+      "Viajes e inmigración"
+    ],
+    "titleLines": [
+      "Van Travel",
+      "Business"
+    ],
     "description": "Una plataforma empresarial de viajes e inmigración que abarca paquetes, recepción de documentos y consultas de clientes.",
     "screenshotAlt": "Captura de pantalla de la plataforma Van Travel Business"
   },
   "stats": [
-    { "label": "Tipo de proyecto", "value": "Aplicaciones Web" },
-    { "label": "Capacidades", "value": "Desarrollo Web • Automatización" },
-    { "label": "Sector", "value": "Viajes e inmigración" },
-    { "label": "Estado", "value": "En línea" }
+    {
+      "label": "Tipo de proyecto",
+      "value": "Aplicaciones Web"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Desarrollo Web • Automatización"
+    },
+    {
+      "label": "Sector",
+      "value": "Viajes e inmigración"
+    },
+    {
+      "label": "Estado",
+      "value": "En línea"
+    }
   ],
   "detail": {
     "overviewDesc": "Van Travel Business gestiona servicios de viajes e inmigración que dependen de una recepción de clientes estructurada. Creamos una plataforma que combina catálogos de servicios, flujos de consulta que tienen en cuenta los documentos y una vista de operaciones para el seguimiento.",
@@ -17,25 +35,50 @@
     "builtDesc": "Combinamos un catálogo de servicios estructurado con flujos de consulta que tienen en cuenta los documentos y una vista de operaciones, de modo que cada caso se abre con sus requisitos y evidencias ya recopilados."
   },
   "sidebar": {
-    "serviceTags": ["Desarrollo Web", "Automatización"]
+    "serviceTags": [
+      "Desarrollo Web",
+      "Automatización"
+    ]
   },
   "capabilities": {
     "desc": "Combinamos un catálogo de servicios estructurado con flujos de consulta que tienen en cuenta los documentos y una vista de operaciones, de modo que cada caso se abre con sus requisitos y evidencias ya recopilados.",
     "items": [
-      { "title": "Catálogo de servicios y paquetes" },
-      { "title": "Recepción de consultas con reconocimiento de documentos" },
-      { "title": "Vista de operaciones para el seguimiento de casos" },
-      { "title": "Confirmaciones automatizadas de consultas" },
-      { "title": "Experiencia de cliente multidispositivo" }
+      {
+        "title": "Catálogo de servicios y paquetes"
+      },
+      {
+        "title": "Recepción de consultas con reconocimiento de documentos"
+      },
+      {
+        "title": "Vista de operaciones para el seguimiento de casos"
+      },
+      {
+        "title": "Confirmaciones automatizadas de consultas"
+      },
+      {
+        "title": "Experiencia de cliente multidispositivo"
+      }
     ]
   },
   "flow": {
-    "steps": ["Explorar", "Consultar", "Seguimiento"],
+    "steps": [
+      "Explorar",
+      "Consultar",
+      "Seguimiento"
+    ],
     "caption": "Vista conceptual del sistema"
   },
   "diagram": {
-    "badgeLines": ["Vista", "conceptual del sistema"],
-    "pills": ["Viajero", "Experiencia pública", "Lógica de consultas", "Operaciones"]
+    "badgeLines": [
+      "Vista",
+      "conceptual del sistema"
+    ],
+    "pills": [
+      "Viajero",
+      "Experiencia pública",
+      "Lógica de consultas",
+      "Operaciones"
+    ]
   },
   "outcomes": [
     "Los casos comienzan con los datos requeridos ya recopilados",
@@ -46,17 +89,20 @@
     {
       "tag": "Servicios profesionales",
       "title": "Solid Rock Leadership Development",
-      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, públicos y un recorrido de reserva de consultas."
+      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, públicos y un recorrido de reserva de consultas.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, públicos y un recorrido de reserva de consultas."
+      "desc": "Una plataforma de educación en liderazgo y finanzas que presenta programas, públicos y un recorrido de reserva de consultas.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Servicios profesionales",
       "title": "The PMB Consulting",
-      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento.",
+      "href": "/pmb-consulting"
     }
   ]
 }

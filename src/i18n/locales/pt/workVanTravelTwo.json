@@ -1,15 +1,32 @@
 {
   "hero": {
-    "badges": ["IA", "Viagens e imigração"],
-    "titleLines": ["AI FNA"],
+    "badges": [
+      "IA",
+      "Viagens e imigração"
+    ],
+    "titleLines": [
+      "AI FNA"
+    ],
     "description": "Uma ferramenta de análise de necessidades financeiras assistida por IA que transforma os dados do cliente em recomendações prontas para o consultor.",
     "screenshotAlt": "Captura de tela da plataforma AI FNA"
   },
   "stats": [
-    { "label": "Tipo de projeto", "value": "IA" },
-    { "label": "Capacidades", "value": "Engenharia de IA • Software personalizado" },
-    { "label": "Setor", "value": "Seguros" },
-    { "label": "Status", "value": "Ao vivo" }
+    {
+      "label": "Tipo de projeto",
+      "value": "IA"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Engenharia de IA • Software personalizado"
+    },
+    {
+      "label": "Setor",
+      "value": "Seguros"
+    },
+    {
+      "label": "Status",
+      "value": "Ao vivo"
+    }
   ],
   "detail": {
     "overviewDesc": "O AI FNA digitaliza a análise de necessidades financeiras para consultores. Criamos uma captura de dados guiada, uma camada de pontuação e recomendação por IA, e relatórios exportáveis prontos para o cliente.",
@@ -17,7 +34,10 @@
     "builtDesc": "Criamos uma análise de necessidades assistida por IA que guia o cliente por meio de perguntas estruturadas, calcula um perfil de necessidades e entrega ao consultor um resultado consistente e fácil de revisar."
   },
   "sidebar": {
-    "serviceTags": ["Engenharia de IA", "Software personalizado"]
+    "serviceTags": [
+      "Engenharia de IA",
+      "Software personalizado"
+    ]
   },
   "capabilities": {
     "items": [
@@ -30,12 +50,25 @@
   },
   "flow": {
     "heading": "Fluxo de negócio",
-    "steps": ["Questionário", "Análise", "Resumo", "Consultor"],
+    "steps": [
+      "Questionário",
+      "Análise",
+      "Resumo",
+      "Consultor"
+    ],
     "caption": "Visão conceitual do sistema"
   },
   "diagram": {
-    "badgeLines": ["Visão conceitual", "do sistema"],
-    "pills": ["Cliente", "Admissão guiada", "Análise por IA", "Espaço do consultor"]
+    "badgeLines": [
+      "Visão conceitual",
+      "do sistema"
+    ],
+    "pills": [
+      "Cliente",
+      "Admissão guiada",
+      "Análise por IA",
+      "Espaço do consultor"
+    ]
   },
   "outcomes": [
     "A admissão é consistente para cada cliente",
@@ -46,17 +79,20 @@
     {
       "tag": "Estudo de caso",
       "title": "Solid Rock Leadership Development",
-      "desc": "Uma plataforma de liderança e educação financeira que apresenta programas, públicos e uma jornada de agendamento de consultas."
+      "desc": "Uma plataforma de liderança e educação financeira que apresenta programas, públicos e uma jornada de agendamento de consultas.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "Estudo de caso",
       "title": "OneTap Digital Card",
-      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento."
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Estudo de caso",
       "title": "The PMB Consulting",
-      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento."
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento.",
+      "href": "/pmb-consulting"
     }
   ]
 }

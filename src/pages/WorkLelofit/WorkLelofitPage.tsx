@@ -6,14 +6,14 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyRelatedItem,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 
-import heroScreenshot from '../../assets/images/work-lelofit/figma/browser-mockup.png';
-import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.png';
+import heroScreenshot from '../../assets/images/work-lelofit/figma/browser-mockup.webp';
+import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.webp';
 import relatedWorkOneTap from '../../assets/images/work-van-travel/figma/related-work-2.png';
 // The Figma "Power Mindset Breakthrough" related-work card mistakenly reused
 // the Mighty Oak Legacy screenshot again here (same recurring issue seen on
 // several other pages), so we reuse that page's own real hero screenshot
 // instead of the wrong asset.
-import relatedWorkPowerMindset from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.png';
+import relatedWorkPowerMindset from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.webp';
 
 // Hero content from Figma node 2328:565, middle sections from node
 // 2328:566, related work from node 2328:567 (closing CTA matches the

@@ -17,7 +17,7 @@ import funnelSvg from '../../assets/icons/ant-design-funnel-plot-filled.svg?raw'
 import databaseSvg from '../../assets/icons/bi-database-fill.svg?raw';
 import webhookSvg from '../../assets/icons/carbon-webhook.svg?raw';
 
-import heroStar from '../../assets/images/mvp-development/figma/hero-orbit/rocket-single.png';
+import heroStar from '../../assets/images/mvp-development/figma/hero-orbit/rocket-single.webp';
 import rocketBgLines from '../../assets/images/mvp-development/figma/hero-orbit/rocket-bg-lines.png';
 import orbitEllipse from '../../assets/images/mvp-development/figma/hero-orbit/orbit-ellipse.svg';
 import orbitBadgeShield from '../../assets/images/mvp-development/figma/hero-orbit/movicon1.png';

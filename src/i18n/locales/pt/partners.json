@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "pill": "Rede de Parceiros VTS",
+    "title": "Faça sua agência crescer. Nós impulsionamos a tecnologia.",
+    "desc1": "Ofereça soluções premium de IA, automação, software, SaaS, desenvolvimento web e transformação digital sem montar uma grande equipe técnica interna.",
+    "desc2": "A Van Tech Systems fornece a tecnologia e a infraestrutura de entrega. Você foca em relacionamentos, vendas, estratégia e crescimento.",
+    "ctaPrimary": "Torne-se um parceiro VTS",
+    "ctaSecondary": "Ver preços para parceiros"
+  },
+  "stats": [
+    { "value": "0%", "label": "Sem participação acionária" },
+    { "value": "04", "label": "Formas de ser parceiro" },
+    { "value": "1 equipe", "label": "Parceiro de entrega tecnológica" },
+    { "value": "Global", "label": "Capacidade de entrega remota" }
+  ],
+  "tiers": {
+    "titleLine1": "Um único parceiro tecnológico.",
+    "titleLine2": "Várias formas de crescer.",
+    "items": [
+      {
+        "title": "Parceiro de indicação",
+        "desc": "Ideal para quem simplesmente deseja apresentar negócios qualificados à Van Tech Systems.",
+        "columns": [
+          { "label": "Parceiro", "items": ["Identifica a oportunidade", "Faz a apresentação", "Continua sendo a origem do relacionamento"] },
+          { "label": "Van Tech Systems", "items": ["Define o escopo do projeto", "Fecha o projeto", "Contrata o cliente", "Entrega a tecnologia", "Dá suporte ao cliente"] }
+        ],
+        "cta": "Tornar-se Parceiro de Indicação"
+      },
+      {
+        "title": "Parceiro revendedor",
+        "desc": "Ideal para agências que querem revender diretamente as soluções VTS.",
+        "columns": [
+          { "label": "Parceiro", "items": ["Detém o relacionamento comercial", "Seleciona as soluções", "Gerencia o relacionamento comercial"] },
+          { "label": "Van Tech Systems", "items": ["Oferece preços de parceiro", "Oferece o escopo técnico", "Constrói a solução", "Apoia a implementação"] }
+        ],
+        "cta": "Tornar-se Parceiro Revendedor"
+      },
+      {
+        "title": "Parceiro white-label",
+        "desc": "Ideal para agências que querem tecnologia entregue sob sua própria marca.",
+        "columns": [
+          { "label": "Parceiro", "items": ["Detém a marca", "Detém o relacionamento com o cliente", "Define o preço de venda", "Cuida da estratégia de conta"] },
+          { "label": "Van Tech Systems", "items": ["Realiza a entrega técnica", "Trabalha nos bastidores", "Garante o controle de qualidade", "Apoia as implantações"] }
+        ],
+        "cta": "Tornar-se Parceiro White-Label"
+      },
+      {
+        "title": "Parceiro de entrega estratégica",
+        "desc": "Ideal para agências estabelecidas que precisam de uma capacidade tecnológica dedicada.",
+        "columns": [
+          { "label": "Suporte possível", "items": ["Software personalizado", "Desenvolvimento SaaS", "Sistemas de IA", "Agentes de IA", "Automação"] },
+          { "label": "Também disponível", "items": ["Integrações", "Arquitetura", "Manutenção", "Consultoria técnica"] }
+        ],
+        "cta": "Tornar-se Parceiro de Entrega Estratégica"
+      }
+    ]
+  },
+  "pipeline": {
+    "titleLine1": "Você conquista o cliente.",
+    "titleLine2": "Nós ajudamos a entregar a tecnologia.",
+    "stages": [
+      { "name": "Lead", "who": "Parceiro" },
+      { "name": "Descoberta", "who": "Parceiro + VTS" },
+      { "name": "Escopo", "who": "VTS" },
+      { "name": "Construção", "who": "VTS" },
+      { "name": "Controle de qualidade", "who": "VTS" },
+      { "name": "Lançamento", "who": "Conjunto" },
+      { "name": "Suporte", "who": "De acordo com o modelo de parceria" }
+    ]
+  },
+  "catalog": {
+    "badge": "O que os parceiros podem vender",
+    "titleLine1": "Amplie seu catálogo de serviços sem",
+    "titleLine2": "ampliar sua equipe de engenharia.",
+    "cta": "Começar",
+    "top": [
+      { "title": "Soluções de IA", "desc": "Sistemas de IA conversacionais e operacionais construídos em torno dos fluxos de trabalho de um cliente." },
+      { "title": "Software", "desc": "Aplicações e plataformas personalizadas projetadas para a forma como um negócio opera." }
+    ],
+    "bottom": [
+      { "title": "Automação", "desc": "Automação de processos que elimina trabalho manual em vendas e operações." },
+      { "title": "Plataformas digitais", "desc": "Produtos digitais voltados ao cliente com um padrão de engenharia premium." },
+      { "title": "Consultoria", "desc": "Orientação estratégica e arquitetural antes de uma construção." }
+    ],
+    "items": {
+      "ai-receptionists": "Recepcionistas de IA",
+      "ai-voice-agents": "Agentes de voz de IA",
+      "ai-chat-agents": "Agentes de chat de IA",
+      "ai-lead-qualification": "Qualificação de leads com IA",
+      "ai-customer-support": "Suporte ao cliente com IA",
+      "ai-knowledge-systems": "Sistemas de conhecimento de IA",
+      "ai-workflow-automation": "Automação de fluxo de trabalho com IA",
+      "custom-web-applications": "Aplicações web personalizadas",
+      "saas-platforms": "Plataformas SaaS",
+      "marketplace-platforms": "Plataformas de marketplace",
+      "client-portals": "Portais de clientes",
+      "internal-business-systems": "Sistemas empresariais internos",
+      "crm-platforms": "Plataformas de CRM",
+      "crm-automation": "Automação de CRM",
+      "email-sms-workflows": "Fluxos de trabalho de e-mail/SMS",
+      "lead-follow-up-systems": "Sistemas de acompanhamento de leads",
+      "operations-automation": "Automação de operações",
+      "appointment-automation": "Automação de agendamentos",
+      "business-process-automation": "Automação de processos de negócio",
+      "premium-website": "Site premium",
+      "e-commerce": "E-commerce",
+      "customer-portals": "Portais de clientes",
+      "business-dashboards": "Painéis de negócio",
+      "membership-platforms": "Plataformas de associação",
+      "product-strategy": "Estratégia de produto",
+      "technology-architecture": "Arquitetura de tecnologia",
+      "ai-readiness": "Prontidão para IA",
+      "digital-transformation": "Transformação digital",
+      "system-audits": "Auditorias de sistemas"
+    }
+  },
+  "brand": {
+    "titleLine1": "Sua marca à frente.",
+    "titleLine2": "Nossa tecnologia",
+    "titleLine3": "por trás.",
+    "desc": "Mantenha seu relacionamento com o cliente enquanto ganha acesso a uma capacidade de entrega tecnológica mais ampla.",
+    "layers": [
+      { "label": "Sua agência", "tags": ["Relacionamento com o cliente", "Marca", "Vendas", "Estratégia"] },
+      { "label": "Van Tech Systems", "tags": ["Arquitetura", "Desenvolvimento", "IA", "Automação", "QA", "Infraestrutura"] },
+      { "label": "Solução do cliente", "tags": ["Site", "Agente de IA", "SaaS", "Automação", "Plataforma"] }
+    ]
+  },
+  "intel": {
+    "visibility": {
+      "titleLine1": "Visibilidade em cada",
+      "titleLine2": "etapa da entrega",
+      "desc": "Os parceiros veem o progresso da entrega, o status de cada etapa e os próximos marcos dos projetos que trazem para a Van Tech Systems."
+    },
+    "aiEngine": {
+      "titleLine1": "Um único mecanismo de IA.",
+      "titleLine2": "Múltiplos pontos de contato",
+      "titleLine3": "com o cliente.",
+      "desc": "Os sistemas de IA são montados a partir dos canais e dados que um cliente realmente utiliza. As integrações mostradas são exemplos conceituais e são confirmadas durante o escopo.",
+      "chips": ["Voz", "Chat", "CRM", "E-mail", "SMS", "Calendário", "Base de conhecimento", "Análise", "Automação", "API"],
+      "flow": {
+        "clientBusiness": "Negócio do cliente",
+        "customerInteractions": "Interações com clientes"
+      }
+    }
+  },
+  "plans": {
+    "recommended": "Recomendado",
+    "titleLine1": "Escolha a parceria que",
+    "titleLine2": "combina com seu negócio",
+    "items": [
+      {
+        "name": "VTS Connect",
+        "priceNote": "Inscrição de parceiro",
+        "desc": "Para profissionais que ocasionalmente encontram oportunidades de tecnologia e desejam um parceiro de entrega confiável para encaminhá-las.",
+        "cta": "Entrar no VTS Connect",
+        "features": [
+          "Conta de parceiro",
+          "Rastreamento de indicações",
+          "Catálogo de serviços VTS",
+          "Formulário de apresentação de projeto",
+          "Materiais de vendas básicos",
+          "Rastreamento de oportunidades de indicação",
+          "A VTS contrata e fatura o cliente diretamente"
+        ]
+      },
+      {
+        "name": "VTS Pro Partner",
+        "priceNote": "integração",
+        "secondaryPeriod": "mês",
+        "desc": "Tudo do Connect, além de preços de parceiro e direitos de revenda para serviços elegíveis.",
+        "cta": "Tornar-se Parceiro Pro",
+        "features": [
+          "Tudo incluído no VTS Connect",
+          "Preços de serviço para parceiros",
+          "Direitos de revenda para serviços elegíveis",
+          "Escopo de projeto prioritário",
+          "Apoio na elaboração de propostas",
+          "Recursos de vendas para parceiros",
+          "Materiais de solução co-marcados",
+          "Painel de entrega de projetos",
+          "Sessão de integração de parceiros",
+          "Suporte de consultoria técnica",
+          "Acesso a pacotes de soluções padronizados"
+        ]
+      },
+      {
+        "name": "VTS White Label",
+        "priceNote": "integração",
+        "secondaryPeriod": "mês",
+        "desc": "Tudo do Pro, além da entrega sob sua própria marca quando combinado.",
+        "cta": "Solicitar White Label",
+        "features": [
+          "Tudo incluído no VTS Pro Partner",
+          "Serviços elegíveis para white-label",
+          "Entrega ao cliente sob a marca do parceiro quando combinado",
+          "Contato de parceria dedicado",
+          "Fila de produção prioritária",
+          "Modelos de proposta white-label",
+          "Assistência de descoberta técnica",
+          "Consultoria de arquitetura",
+          "Suporte de controle de qualidade",
+          "Suporte de implantação",
+          "Relatórios de entrega para parceiros",
+          "Assistência para catálogo de serviços personalizado"
+        ]
+      }
+    ]
+  },
+  "compare": {
+    "title": "Comparar níveis de parceria",
+    "headers": { "plans": "Planos", "connect": "Connect", "pro": "Pro Partner", "white": "White Label" },
+    "rows": [
+      { "label": "Rastreamento de indicações", "connect": true, "pro": true, "white": true },
+      { "label": "Preços de parceiro", "connect": false, "pro": true, "white": true },
+      { "label": "Revenda", "connect": false, "pro": true, "white": true },
+      { "label": "Apoio na elaboração de propostas", "connect": false, "pro": true, "white": true },
+      { "label": "Escopo técnico", "connect": "Conduzido pela VTS", "pro": true, "white": true },
+      { "label": "Entrega white-label", "connect": false, "pro": false, "white": true },
+      { "label": "Fila prioritária", "connect": false, "pro": false, "white": true },
+      { "label": "Contato de parceria dedicado", "connect": false, "pro": false, "white": true },
+      { "label": "Relatórios de entrega", "connect": false, "pro": true, "white": true },
+      { "label": "Suporte de arquitetura", "connect": false, "pro": "Sob solicitação", "white": true }
+    ]
+  },
+  "fulfillment": {
+    "badge": "Tarifas de parceiros de serviço",
+    "title": "Preços de entrega para parceiros",
+    "note": "O preço final do parceiro é determinado após o escopo técnico. Software de terceiros, infraestrutura, mensagens, telefonia, uso de IA, hospedagem, licenciamento e outros custos externos podem ser cobrados separadamente quando aplicável.",
+    "customQuoteLabel": "Orçamento personalizado",
+    "startingAt": "A partir de",
+    "categories": { "AI": "IA", "Web": "Web", "Software": "Software" },
+    "services": [
+      { "title": "Recepcionista de IA", "note": "Contínuo a partir de US$ 249/mês" },
+      { "title": "Sistema de automação de IA" },
+      { "title": "Site profissional para empresas" },
+      { "title": "Site avançado para empresas" },
+      { "title": "Aplicação web personalizada" },
+      { "title": "MVP SaaS" },
+      { "title": "Plataforma SaaS avançada", "note": "Escopo personalizado." },
+      { "title": "Agente de IA personalizado" },
+      { "title": "RAG / IA de conhecimento empresarial" },
+      { "title": "Plataforma CRM / Operações" }
+    ]
+  },
+  "calculator": {
+    "title": "Calculadora de margem para parceiros",
+    "cardTitle": "Modele sua própria economia",
+    "grossRevenue": "Receita bruta",
+    "fulfillmentCost": "Custo de entrega VTS",
+    "additionalCosts": "Custos adicionais do parceiro",
+    "recapFulfillmentCost": "Custo de entrega",
+    "resultLabel": "Margem bruta estimada",
+    "marginPrefix": "Margem",
+    "disclaimer": "Cálculo meramente ilustrativo. Preços reais, custos, impostos, taxas, reembolsos, obrigações de suporte e rentabilidade variam de acordo com o projeto."
+  },
+  "verticals": {
+    "badge": "Setores",
+    "titleLine1": "Feito para negócios",
+    "titleLine2": "que querem vender mais",
+    "titleLine3": "do que constroem.",
+    "cta": "Começar",
+    "row1": ["Agências digitais", "Consultores", "Consultores de CRM", "Consultores de negócios", "Desenvolvedores freelancers", "Provedores de serviços gerenciados"],
+    "row2": ["Agências de marketing", "Agências de automação", "Web designers", "Empresas de TI", "Empreendedores", "Agências de IA existentes"]
+  }
+}

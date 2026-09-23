@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "badges": [
+      "Aplicações web",
+      "Viagens e imigração"
+    ],
+    "titleLines": [
+      "All Access Trip"
+    ],
+    "description": "Uma plataforma de reserva de viagens e itinerários para viagens, grupos e experiências personalizadas.",
+    "screenshotAlt": "Captura de tela da plataforma All Access Trip"
+  },
+  "stats": [
+    {
+      "label": "Tipo de projeto",
+      "value": "Aplicações web"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Desenvolvimento web • Plataforma empresarial"
+    },
+    {
+      "label": "Setor",
+      "value": "Viagens e imigração"
+    },
+    {
+      "label": "Status",
+      "value": "Ao vivo"
+    }
+  ],
+  "detail": {
+    "overviewDesc": "A All Access Trip cria experiências de viagem para indivíduos e grupos. Desenvolvemos a descoberta de viagens, a apresentação de itinerários e os fluxos de solicitação de reserva com gestão do lado do operador.",
+    "challengeDesc": "O conteúdo de planejamento de viagens estava disperso, e as solicitações careciam das datas, tamanho do grupo e orçamento necessários para responder com algo concreto.",
+    "builtDesc": "Reconstruímos a descoberta em torno de destinos e tipos de viagem, e adicionamos um fluxo de solicitação estruturado que captura datas, tamanho do grupo e orçamento antes de uma resposta ser redigida."
+  },
+  "sidebar": {
+    "serviceTags": [
+      "Desenvolvimento web",
+      "Plataforma empresarial"
+    ]
+  },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      {
+        "title": "Descoberta por destino e tipo de viagem"
+      },
+      {
+        "title": "Captura estruturada de solicitações de viagem"
+      },
+      {
+        "title": "Layout responsivo orientado a imagens"
+      },
+      {
+        "title": "Confirmação automatizada de solicitações"
+      },
+      {
+        "title": "Conteúdo de destino orientado a SEO"
+      }
+    ]
+  },
+  "flow": {
+    "heading": "Fluxo de negócio",
+    "steps": [
+      "Explorar",
+      "Reservar",
+      "Viajar"
+    ],
+    "caption": "Visão conceitual do sistema"
+  },
+  "diagram": {
+    "badgeLines": [
+      "Visão conceitual",
+      "do sistema"
+    ],
+    "pills": [
+      "Viajante",
+      "Experiência pública",
+      "Recepção de reservas",
+      "Operações"
+    ]
+  },
+  "outcomes": [
+    "As solicitações incluem os detalhes necessários para orçar",
+    "A descoberta é organizada de acordo com a forma como os viajantes realmente pesquisam",
+    "As respostas são enviadas mais rápido com menos esclarecimentos"
+  ],
+  "relatedWork": [
+    {
+      "tag": "SaaS",
+      "title": "OneTap Digital Card",
+      "desc": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de reservas por meio de um link público do cartão ou um código QR.",
+      "href": "/onetap-digital-card"
+    },
+    {
+      "tag": "IA",
+      "title": "The PMB Consulting",
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação de empresas, branding e serviços de crescimento.",
+      "href": "/pmb-consulting"
+    },
+    {
+      "tag": "Serviços profissionais",
+      "title": "Power Mindset Breakthrough",
+      "desc": "Uma plataforma de coaching e desenvolvimento pessoal com programas, reservas e entrega de conteúdo.",
+      "href": "/power-mindset-breakthrough"
+    }
+  ]
+}

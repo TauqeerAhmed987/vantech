@@ -1,15 +1,32 @@
 {
   "hero": {
-    "badges": ["Ai", "Travel & Immigration"],
-    "titleLines": ["AI FNA"],
+    "badges": [
+      "Ai",
+      "Travel & Immigration"
+    ],
+    "titleLines": [
+      "AI FNA"
+    ],
     "description": "An AI-assisted financial needs analysis tool that turns client data into advisor-ready recommendations.",
     "screenshotAlt": "AI FNA platform screenshot"
   },
   "stats": [
-    { "label": "Project type", "value": "Ai" },
-    { "label": "Capabilities", "value": "AI Engineering • Custom Software" },
-    { "label": "Industry", "value": "Insurance" },
-    { "label": "Status", "value": "Live" }
+    {
+      "label": "Project type",
+      "value": "Ai"
+    },
+    {
+      "label": "Capabilities",
+      "value": "AI Engineering • Custom Software"
+    },
+    {
+      "label": "Industry",
+      "value": "Insurance"
+    },
+    {
+      "label": "Status",
+      "value": "Live"
+    }
   ],
   "detail": {
     "overviewDesc": "AI FNA digitises financial needs analysis for advisors. We built guided data capture, an AI scoring and recommendation layer, and exportable client-ready reports.",
@@ -17,7 +34,10 @@
     "builtDesc": "We built an AI-assisted needs analysis that guides the client through structured questions, computes a needs profile and hands the advisor a consistent, reviewable output."
   },
   "sidebar": {
-    "serviceTags": ["AI Engineering", "Custom Software"]
+    "serviceTags": [
+      "AI Engineering",
+      "Custom Software"
+    ]
   },
   "capabilities": {
     "items": [
@@ -30,12 +50,25 @@
   },
   "flow": {
     "heading": "Business workflow",
-    "steps": ["Questionnaire", "Analysis", "Summary", "Advisor"],
+    "steps": [
+      "Questionnaire",
+      "Analysis",
+      "Summary",
+      "Advisor"
+    ],
     "caption": "Conceptual system view"
   },
   "diagram": {
-    "badgeLines": ["Conceptual", "system view"],
-    "pills": ["Client", "Guided intake", "AI analysis", "Advisor workspace"]
+    "badgeLines": [
+      "Conceptual",
+      "system view"
+    ],
+    "pills": [
+      "Client",
+      "Guided intake",
+      "AI analysis",
+      "Advisor workspace"
+    ]
   },
   "outcomes": [
     "Intake is consistent across every client",
@@ -46,17 +79,20 @@
     {
       "tag": "Case Study",
       "title": "Solid Rock Leadership Development",
-      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey."
+      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "Case Study",
       "title": "OneTap Digital Card",
-      "desc": "A digital business card platform where professionals share contact details, links and a booking page."
+      "desc": "A digital business card platform where professionals share contact details, links and a booking page.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Case Study",
       "title": "The PMB Consulting",
-      "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services."
+      "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.",
+      "href": "/pmb-consulting"
     }
   ]
 }

@@ -20,7 +20,7 @@ import databaseSvg from '../../assets/icons/ant-design-database-filled.svg?raw';
 import webhookSvg from '../../assets/icons/carbon-webhook.svg?raw';
 import restApiSvg from '../../assets/icons/dashicons-rest-api.svg?raw';
 
-import heroWebAppScreen from '../../assets/images/web-applications/figma/hero-web-app-screen.png';
+import heroWebAppScreen from '../../assets/images/web-applications/figma/hero-web-app-screen.webp';
 import heroWebAppIcon from '../../assets/images/web-applications/figma/hero-web-app-icon.png';
 import webApplicationsIcon from '../../assets/images/web-applications/figma/web-applicationsicon.png';
 import solutionIllustration from '../../assets/images/web-applications/figma/solution-illustration.png';

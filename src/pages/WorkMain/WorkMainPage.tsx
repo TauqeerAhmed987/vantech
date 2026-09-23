@@ -14,15 +14,15 @@ import caseStudyArrowSvg from '../../assets/icons/at-icons-arrow-right.svg?raw';
 
 // import oneTapImg from '../../assets/images/work-van-travel/figma/related-work-2.png';
 import oneTapImg from '../../assets/images/Tap-Digital-Card-box.png';
-import vanTravelImg from '../../assets/images/work-van-travel/figma/browser-mockup.png';
-import mightyOakImg from '../../assets/images/work-main/figma/mighty-oak-legacy.png';
-import pmbConsultingImg from '../../assets/images/work-main/figma/pmb-consulting.png';
-import aiFnaImg from '../../assets/images/work-main/figma/ai-fna.png';
-import allAccessTripImg from '../../assets/images/work-main/figma/all-access-trip.png';
-import solidRockImg from '../../assets/images/work-main/figma/solid-rock-leadership.png';
-import powerMindsetImg from '../../assets/images/work-main/figma/power-mindset-breakthrough.png';
-import lelofitImg from '../../assets/images/work-main/figma/lelofit.png';
-import buketiImg from '../../assets/images/work-main/figma/buketi-financial-consulting.png';
+import vanTravelImg from '../../assets/images/work-van-travel/figma/browser-mockup.webp';
+import mightyOakImg from '../../assets/images/work-main/figma/mighty-oak-legacy.webp';
+import pmbConsultingImg from '../../assets/images/work-main/figma/pmb-consulting.webp';
+import aiFnaImg from '../../assets/images/work-main/figma/ai-fna.webp';
+import allAccessTripImg from '../../assets/images/work-main/figma/all-access-trip.webp';
+import solidRockImg from '../../assets/images/work-main/figma/solid-rock-leadership.webp';
+import powerMindsetImg from '../../assets/images/work-main/figma/power-mindset-breakthrough.webp';
+import lelofitImg from '../../assets/images/work-main/figma/lelofit.webp';
+import buketiImg from '../../assets/images/work-main/figma/buketi-financial-consulting.webp';
 
 const CASE_STUDY_CTA = 'https://vantechsystems.tech/start-a-project';
 

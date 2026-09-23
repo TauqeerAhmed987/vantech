@@ -25,8 +25,8 @@ export default function LegalPage() {
       <section className="legal-hero section">
         <div className={`container legal-hero__content ${hero.className}`} ref={hero.ref}>
           <span className="eyebrow-pill">{t('legal.eyebrow')}</span>
-          <h1 className="legal-hero__title">{t('legalCenter.hero.title')}</h1>
-          <p className="legal-hero__updated">{t('legalCenter.hero.desc')}</p>
+          <h1 className="legal-hero__title">{t('legalCenter:hero.title')}</h1>
+          <p className="legal-hero__updated">{t('legalCenter:hero.desc')}</p>
         </div>
       </section>
 
@@ -35,9 +35,9 @@ export default function LegalPage() {
           {policyKeys.map((p) => (
             <Link key={p.href} to={localizePath(p.href, currentLang)} className="legal-center__card">
               <h3 className="legal-center__card-title">{t(`legal.${p.key}`)}</h3>
-              <p className="legal-center__card-desc">{t(`legalCenter.policies.${p.key}`)}</p>
+              <p className="legal-center__card-desc">{t(`legalCenter:policies.${p.key}`)}</p>
               <div className="legal-center__card-footer">
-                <span className="legal-center__card-updated">{t('legalCenter.updated')}</span>
+                <span className="legal-center__card-updated">{t('legalCenter:updated')}</span>
                 <span className="legal-center__card-arrow" aria-hidden="true">&rarr;</span>
               </div>
             </Link>
@@ -45,9 +45,9 @@ export default function LegalPage() {
         </div>
 
         <p className="legal-center__contact">
-          {t('legalCenter.contactPrefix')}{' '}
+          {t('legalCenter:contactPrefix')}{' '}
           <a href="mailto:hello@vantechsystems.tech">hello@vantechsystems.tech</a>{' '}
-          {t('legalCenter.contactSuffix')}
+          {t('legalCenter:contactSuffix')}
         </p>
       </section>
     </main>

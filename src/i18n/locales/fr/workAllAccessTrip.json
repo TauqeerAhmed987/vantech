@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "badges": ["Applications web", "Voyage et immigration"],
+    "titleLines": ["All Access Trip"],
+    "description": "Une plateforme de réservation de voyages et d'itinéraires pour des voyages, groupes et expériences sur mesure.",
+    "screenshotAlt": "Capture d'écran de la plateforme All Access Trip"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Applications web" },
+    { "label": "Capacités", "value": "Développement web • Plateforme métier" },
+    { "label": "Secteur", "value": "Voyage et immigration" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "All Access Trip conçoit des expériences de voyage pour particuliers et groupes. Nous avons développé la découverte de voyages, la présentation d'itinéraires et les parcours de demande de réservation avec une gestion côté opérateur.",
+    "challengeDesc": "Le contenu de planification de voyage était dispersé, et les demandes manquaient des dates, de la taille du groupe et du budget nécessaires pour répondre de façon concrète.",
+    "builtDesc": "Nous avons reconstruit la découverte autour des destinations et types de voyages, et ajouté un parcours de demande structuré capturant les dates, la taille du groupe et le budget avant qu'une réponse ne soit rédigée."
+  },
+  "sidebar": { "serviceTags": ["Développement web", "Plateforme métier"] },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Découverte par destination et type de voyage" },
+      { "title": "Capture structurée des demandes de voyage" },
+      { "title": "Mise en page réactive et axée sur l'image" },
+      { "title": "Confirmation automatisée des demandes" },
+      { "title": "Contenu de destination orienté SEO" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux opérationnel",
+    "steps": ["Parcourir", "Réserver", "Voyager"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue", "conceptuelle du système"],
+    "pills": ["Voyageur", "Expérience publique", "Prise en charge des réservations", "Opérations"]
+  },
+  "outcomes": [
+    "Les demandes incluent les détails nécessaires pour établir un devis",
+    "La découverte est organisée selon la façon dont les voyageurs recherchent réellement",
+    "Les réponses sont envoyées plus rapidement avec moins de clarifications"
+  ],
+  "relatedWork": [
+    { "tag": "SaaS", "title": "OneTap Digital Card", "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, liens et une page de réservation via un lien de carte public ou un code QR.", "href": "/onetap-digital-card" },
+    { "tag": "IA", "title": "The PMB Consulting", "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance.", "href": "/pmb-consulting" },
+    { "tag": "Services professionnels", "title": "Power Mindset Breakthrough", "desc": "Une plateforme de coaching et de développement personnel avec des programmes, la réservation et la diffusion de contenu.", "href": "/power-mindset-breakthrough" }
+  ]
+}

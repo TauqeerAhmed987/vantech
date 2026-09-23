@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import vanTravelBusiness from '../assets/images/portfolio/van-travel-business.png';
+import vanTravelBusiness from '../assets/images/portfolio/van-travel-business.webp';
 import powerMindset from '../assets/images/portfolio/power-mindset.png';
-import aiFna from '../assets/images/portfolio/ai-fna.png';
+import aiFna from '../assets/images/portfolio/ai-fna.webp';
 import oneTapDigitalCard from '../assets/images/portfolio/onetap-digital-card.png';
 import Icon from './Icon';
 import { useReveal } from '../hooks/useReveal';

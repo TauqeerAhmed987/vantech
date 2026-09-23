@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["Servicios profesionales", "Formación y desarrollo"],
-    "titleLines": ["Solid Rock Leadership", "Development"],
+    "badges": [
+      "Servicios profesionales",
+      "Formación y desarrollo"
+    ],
+    "titleLines": [
+      "Solid Rock Leadership",
+      "Development"
+    ],
     "description": "Una plataforma de liderazgo y educación financiera que presenta programas, públicos y un recorrido de reserva de consultas.",
     "screenshotAlt": "Captura de pantalla de la plataforma Solid Rock Leadership Development"
   },
   "stats": [
-    { "label": "Tipo de proyecto", "value": "Servicios profesionales" },
-    { "label": "Capacidades", "value": "Desarrollo Web • Diseño UI/UX • Automatización" },
-    { "label": "Sector", "value": "Formación y desarrollo" },
-    { "label": "Estado", "value": "En línea" }
+    {
+      "label": "Tipo de proyecto",
+      "value": "Servicios profesionales"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Desarrollo Web • Diseño UI/UX • Automatización"
+    },
+    {
+      "label": "Sector",
+      "value": "Formación y desarrollo"
+    },
+    {
+      "label": "Estado",
+      "value": "En línea"
+    }
   ],
   "detail": {
     "overviewDesc": "Solid Rock Leadership Development & Financial Solutions apoya a personas y familias mediante una educación financiera simplificada y el desarrollo del liderazgo. La plataforma presenta sus servicios principales, los públicos a los que atiende, la historia de su fundador, un recorrido de oportunidades de asociación y una vía directa para reservar una consulta gratuita.",
@@ -17,29 +35,62 @@
     "builtDesc": "Estructuramos la plataforma en torno a sus seis servicios principales, una sección «A quién servimos» para la autoselección de públicos, una narrativa del fundador para generar credibilidad, un recorrido de oportunidades para posibles socios, y áreas editoriales y de blog, todo ello conduciendo a un único paso de reserva de consulta con la mínima fricción."
   },
   "sidebar": {
-    "serviceTags": ["Desarrollo Web", "Diseño UI/UX", "Automatización"]
+    "serviceTags": [
+      "Desarrollo Web",
+      "Diseño UI/UX",
+      "Automatización"
+    ]
   },
   "capabilities": {
     "desc": "",
     "items": [
-      { "title": "Presentación de los seis servicios principales" },
-      { "title": "Segmentación de públicos «A quién servimos»" },
-      { "title": "Narrativa del fundador y credibilidad" },
-      { "title": "Narrativa del fundador y credibilidad" },
-      { "title": "Recorrido de oportunidades de asociación" },
-      { "title": "Secciones de blog y medios" },
-      { "title": "Recorrido de reserva de consulta gratuita" },
-      { "title": "Secciones de valores y preguntas frecuentes" }
+      {
+        "title": "Presentación de los seis servicios principales"
+      },
+      {
+        "title": "Segmentación de públicos «A quién servimos»"
+      },
+      {
+        "title": "Narrativa del fundador y credibilidad"
+      },
+      {
+        "title": "Narrativa del fundador y credibilidad"
+      },
+      {
+        "title": "Recorrido de oportunidades de asociación"
+      },
+      {
+        "title": "Secciones de blog y medios"
+      },
+      {
+        "title": "Recorrido de reserva de consulta gratuita"
+      },
+      {
+        "title": "Secciones de valores y preguntas frecuentes"
+      }
     ]
   },
   "flow": {
     "heading": "Flujo de negocio",
-    "steps": ["Explorar", "Autoseleccionar", "Reservar", "Asesoramiento"],
+    "steps": [
+      "Explorar",
+      "Autoseleccionar",
+      "Reservar",
+      "Asesoramiento"
+    ],
     "caption": "Vista conceptual del sistema"
   },
   "diagram": {
-    "badgeLines": ["Vista", "conceptual del sistema"],
-    "pills": ["Visitante", "Contenido del programa", "Recorrido de reserva", "Seguimiento del asesor"]
+    "badgeLines": [
+      "Vista",
+      "conceptual del sistema"
+    ],
+    "pills": [
+      "Visitante",
+      "Contenido del programa",
+      "Recorrido de reserva",
+      "Seguimiento del asesor"
+    ]
   },
   "outcomes": [
     "Creamos una plataforma estructurada para programas de liderazgo y educación financiera",
@@ -50,17 +101,20 @@
     {
       "tag": "IA",
       "title": "The PMB Consulting",
-      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento."
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento.",
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Servicios profesionales",
       "title": "Power Mindset Breakthrough",
-      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido.",
+      "href": "/power-mindset-breakthrough"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas mediante un enlace de tarjeta público o un código QR."
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas mediante un enlace de tarjeta público o un código QR.",
+      "href": "/onetap-digital-card"
     }
   ]
 }

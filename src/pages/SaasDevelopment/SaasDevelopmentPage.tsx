@@ -19,8 +19,8 @@ import analyticsSvg from '../../assets/icons/clarity-analytics-solid.svg?raw';
 import toolsSvg from '../../assets/icons/bi-tools.svg?raw';
 import webhooksSvg from '../../assets/icons/ph-webhooks-logo-fill.svg?raw';
 
-import heroMockup from '../../assets/images/saas-development/figma/hero-dashboard-mockup.png';
-import solutionIllustration from '../../assets/images/saas-development/figma/solution-illustration-new.png';
+import heroMockup from '../../assets/images/saas-development/figma/hero-dashboard-mockup.webp';
+import solutionIllustration from '../../assets/images/saas-development/figma/solution-illustration-new.webp';
 import solutionBgLines from '../../assets/images/saas-development/figma/solution-bg-lines.png';
 
 import buildIconMultitenant from '../../assets/images/saas-development/figma/build-icon-multitenant.png';

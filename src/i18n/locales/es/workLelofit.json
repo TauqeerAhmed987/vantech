@@ -46,17 +46,20 @@
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace de tarjeta público o un código QR."
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas a través de un enlace de tarjeta público o un código QR.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "IA",
       "title": "The PMB Consulting",
-      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, marca y servicios de crecimiento."
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, marca y servicios de crecimiento.",
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Servicios profesionales",
       "title": "Power Mindset Breakthrough",
-      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido."
+      "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido.",
+      "href": "/power-mindset-breakthrough"
     }
   ]
 }

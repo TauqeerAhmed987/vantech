@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["Web Applications", "Travel & Immigration"],
-    "titleLines": ["Van Travel", "Business"],
+    "badges": [
+      "Web Applications",
+      "Travel & Immigration"
+    ],
+    "titleLines": [
+      "Van Travel",
+      "Business"
+    ],
     "description": "A travel and immigration business platform covering packages, document intake and client enquiries.",
     "screenshotAlt": "Van Travel Business platform screenshot"
   },
   "stats": [
-    { "label": "Project type", "value": "Web Applications" },
-    { "label": "Capabilities", "value": "Web Development • Automation" },
-    { "label": "Industry", "value": "Travel & Immigration" },
-    { "label": "Status", "value": "Live" }
+    {
+      "label": "Project type",
+      "value": "Web Applications"
+    },
+    {
+      "label": "Capabilities",
+      "value": "Web Development • Automation"
+    },
+    {
+      "label": "Industry",
+      "value": "Travel & Immigration"
+    },
+    {
+      "label": "Status",
+      "value": "Live"
+    }
   ],
   "detail": {
     "overviewDesc": "Van Travel Business runs travel and immigration services that depend on structured client intake. We built a platform combining service catalogues, document-aware enquiry flows and an operations view for follow-up.",
@@ -17,25 +35,50 @@
     "builtDesc": "We combined a structured service catalogue with document-aware enquiry flows and an operations view, so each case opens with its requirements and evidence already captured."
   },
   "sidebar": {
-    "serviceTags": ["Web Development", "Automation"]
+    "serviceTags": [
+      "Web Development",
+      "Automation"
+    ]
   },
   "capabilities": {
     "desc": "We combined a structured service catalogue with document-aware enquiry flows and an operations view, so each case opens with its requirements and evidence already captured.",
     "items": [
-      { "title": "Service and package catalogue" },
-      { "title": "Document-aware enquiry intake" },
-      { "title": "Operations view for case follow-up" },
-      { "title": "Automated enquiry confirmations" },
-      { "title": "Multi-device client experience" }
+      {
+        "title": "Service and package catalogue"
+      },
+      {
+        "title": "Document-aware enquiry intake"
+      },
+      {
+        "title": "Operations view for case follow-up"
+      },
+      {
+        "title": "Automated enquiry confirmations"
+      },
+      {
+        "title": "Multi-device client experience"
+      }
     ]
   },
   "flow": {
-    "steps": ["Explore", "Enquire", "Follow-up"],
+    "steps": [
+      "Explore",
+      "Enquire",
+      "Follow-up"
+    ],
     "caption": "Conceptual system view"
   },
   "diagram": {
-    "badgeLines": ["Conceptual", "system view"],
-    "pills": ["Traveller", "Public experience", "Enquiry logic", "Operations"]
+    "badgeLines": [
+      "Conceptual",
+      "system view"
+    ],
+    "pills": [
+      "Traveller",
+      "Public experience",
+      "Enquiry logic",
+      "Operations"
+    ]
   },
   "outcomes": [
     "Cases start with the required details captured",
@@ -46,17 +89,20 @@
     {
       "tag": "Professional Services",
       "title": "Solid Rock Leadership Development",
-      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey."
+      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey."
+      "desc": "A leadership and financial education platform presenting programs, audiences and a consultation booking journey.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Professional Services",
       "title": "The PMB Consulting",
-      "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services."
+      "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.",
+      "href": "/pmb-consulting"
     }
   ]
 }

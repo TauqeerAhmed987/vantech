@@ -4,7 +4,7 @@ import './contact.css';
 import { useReveal } from '../../hooks/useReveal';
 import FAQ from '../../components/FAQ';
 import Testimonials from '../../components/Testimonials';
-import heroBg from '../../assets/images/contact/contact-page-banner.png';
+import heroBg from '../../assets/images/contact/contact-page-banner.webp';
 
 export default function ContactPage() {
   const { t } = useTranslation('contact');

@@ -17,13 +17,13 @@ import hostGroupSvg from '../../assets/icons/clarity-host-group-solid.svg?raw';
 import restApiSvg from '../../assets/icons/dashicons-rest-api.svg?raw';
 import analyticsSvg from '../../assets/icons/clarity-analytics-solid-badged.svg?raw';
 
-import heroIllustration from '../../assets/images/model-development/figma/bannnersectionimg/modeldev-hero__graphic.png';
+import heroIllustration from '../../assets/images/model-development/figma/bannnersectionimg/modeldev-hero__graphic.webp';
 import heroStarLeft from '../../assets/images/model-development/figma/bannnersectionimg/modeldev-heroIconleft.png';
 import heroStarRight from '../../assets/images/model-development/figma/bannnersectionimg/modeldev-heroIconright.png';
 import solutionStar from '../../assets/images/model-development/figma/solution-parts/star.png';
 import solutionBgArcs from '../../assets/images/model-development/figma/solution-parts/bg-arcs.png';
 import solutionIconTopLeft from '../../assets/images/model-development/figma/solution-parts/icon-top-left.png';
-import solutionIconTopRight from '../../assets/images/model-development/figma/solution-parts/icon-top-right.png';
+import solutionIconTopRight from '../../assets/images/model-development/figma/solution-parts/icon-top-right.webp';
 import solutionIconBottomLeft from '../../assets/images/model-development/figma/solution-parts/icon-bottom-left.png';
 import solutionIconBottomRight from '../../assets/images/model-development/figma/solution-parts/icon-bottom-right.png';
 import pricingGlowOrb from '../../assets/images/model-development/figma/pricing-glow.png';

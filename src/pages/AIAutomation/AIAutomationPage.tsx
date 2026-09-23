@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import './ai-automation.css';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
 import FAQ from '../../components/FAQ';
@@ -121,7 +123,7 @@ type CardText = { title: string; desc: string };
 type TimelineText = { title: string; tags: string[][] };
 
 export default function AIAutomationPage() {
-  const { t } = useTranslation('aiAutomation');
+  const { t, i18n } = useTranslation('aiAutomation');
 
   const frictionTexts = t('friction.points', { returnObjects: true }) as string[];
   const frictionPoints = frictionTexts.map((text, i) => ({
@@ -215,7 +217,7 @@ export default function AIAutomationPage() {
 
             <p className="ai-automation-hero__desc">{t('hero.desc')}</p>
 
-            <div className="ai-automation-hero__actions">
+            <div className={`ai-automation-hero__actions ai-automation-hero__actions--${i18n.language}`}>
               <a
                 href="https://vantechsystems.tech/start-a-project"
                 target="_blank"
@@ -225,7 +227,7 @@ export default function AIAutomationPage() {
                 {t('hero.ctaPrimary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
-              <a href="/#services" className="btn btn-outline">
+              <a href={`${localizePath('/', (i18n.language as SupportedLanguage) || 'en')}#services`} className="btn btn-outline">
                 {t('hero.ctaSecondary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>

@@ -6,6 +6,8 @@ import FAQ from '../../components/FAQ';
 import Testimonials from '../../components/Testimonials';
 import CTA from '../../components/CTA';
 import { useReveal } from '../../hooks/useReveal';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 
 import arrowRightSvg from '../../assets/icons/boxicons-arrow-right-stroke.svg?raw';
 import vtsSparkleSvg from '../../assets/icons/vts-sparkle.svg?raw';
@@ -178,6 +180,8 @@ function PersonIcon() {
 }
 
 function TierCard({ tier }: { tier: Tier }) {
+  const { i18n } = useTranslation();
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const reveal = useReveal('up');
   return (
     <div className={`partners-tier-card ${reveal.className}`} ref={reveal.ref}>
@@ -201,7 +205,7 @@ function TierCard({ tier }: { tier: Tier }) {
             </div>
           ))}
         </div>
-        <a href="/contact" className="partners-tier-card__cta">
+        <a href={localizePath('/contact', currentLang)} className="partners-tier-card__cta">
           {tier.cta}
           <Icon svg={partnerCtaArrowSvg} className="partners-tier-card__cta-icon" />
         </a>
@@ -223,10 +227,11 @@ function PipelineStep({
   onEnter: () => void;
   onLeave: () => void;
 }) {
+  const { i18n } = useTranslation();
   const reveal = useReveal('up');
   return (
     <div
-      className={`partners-pipeline-step${isLast ? ' partners-pipeline-step--last' : ''}${isActive ? ' partners-pipeline-step--active' : ''} ${reveal.className}`}
+      className={`partners-pipeline-step partners-pipeline-step--${i18n.language}${isLast ? ' partners-pipeline-step--last' : ''}${isActive ? ' partners-pipeline-step--active' : ''} ${reveal.className}`}
       ref={reveal.ref}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
@@ -239,6 +244,7 @@ function PipelineStep({
 }
 
 function CatalogTopCard({ cat }: { cat: CatalogTopCardData }) {
+  const { i18n } = useTranslation();
   const reveal = useReveal('up');
   return (
     <div
@@ -258,7 +264,7 @@ function CatalogTopCard({ cat }: { cat: CatalogTopCardData }) {
                   const suffix = entry.variant ? `${entry.id}-${entry.variant}` : entry.id;
                   return (
                     <span
-                      className={`partners-chip partners-chip--glass partners-chip--${suffix}`}
+                      className={`partners-chip partners-chip--glass partners-chip--${suffix} partners-chip--${i18n.language}`}
                       key={`${entry.id}-${entry.variant ?? ''}`}
                     >
                       {entry.label}
@@ -270,11 +276,11 @@ function CatalogTopCard({ cat }: { cat: CatalogTopCardData }) {
           </div>
         ) : (
           <div
-            className={`partners-catalog-card__chips-grid${cat.iconRight ? ' partners-catalog-card__chips-grid--icon-right' : ''}`}
+            className={`partners-catalog-card__chips-grid partners-catalog-card__chips-grid--${i18n.language}${cat.iconRight ? ' partners-catalog-card__chips-grid--icon-right' : ''}`}
           >
             {cat.items.map((item) => (
               <span
-                className={`partners-chip partners-chip--glass partners-chip--${item.id}`}
+                className={`partners-chip partners-chip--glass partners-chip--${item.id} partners-chip--${i18n.language}`}
                 key={item.id}
               >
                 {item.label}
@@ -290,6 +296,7 @@ function CatalogTopCard({ cat }: { cat: CatalogTopCardData }) {
 }
 
 function CatalogBottomCard({ cat }: { cat: CatalogBottomCardData }) {
+  const { i18n } = useTranslation();
   const reveal = useReveal('up');
   return (
     <div
@@ -301,10 +308,10 @@ function CatalogBottomCard({ cat }: { cat: CatalogBottomCardData }) {
           <img src={orbSphere} alt="" className="partners-catalog-card__icon-orb" loading="lazy" />
           <Icon svg={catalogIcons[cat.icon]} className="partners-catalog-card__icon" />
         </span>
-        <div className="partners-catalog-card__chips-grid partners-catalog-card__chips-grid--sm">
+        <div className={`partners-catalog-card__chips-grid partners-catalog-card__chips-grid--sm partners-catalog-card__chips-grid--${i18n.language}`}>
           {cat.items.map((item) => (
             <span
-              className={`partners-chip partners-chip--glass partners-chip--sm partners-chip--${item.id}`}
+              className={`partners-chip partners-chip--glass partners-chip--sm partners-chip--${item.id} partners-chip--${i18n.language}`}
               key={item.id}
             >
               {item.label}
@@ -366,7 +373,8 @@ const originForEdge: Record<'top' | 'bottom' | 'left' | 'right', string> = {
 };
 
 function PartnerPlanCard({ plan }: { plan: Plan }) {
-  const { t } = useTranslation('partners');
+  const { t, i18n } = useTranslation('partners');
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const reveal = useReveal('up');
   const fillRef = useRef<HTMLSpanElement>(null);
 
@@ -400,7 +408,7 @@ function PartnerPlanCard({ plan }: { plan: Plan }) {
         )}
       </div>
       <p className="partners-plan-card__desc">{plan.desc}</p>
-      <a href="/contact" className="partners-plan-card__cta">
+      <a href={localizePath('/contact', currentLang)} className="partners-plan-card__cta">
         {plan.cta}
       </a>
       <div className="partners-plan-card__features">
@@ -438,7 +446,7 @@ function FulfillmentCard({
       onMouseLeave={onLeave}
     >
       <div className="plan-card__glow" />
-      <span className="plan-card__category">{svc.category}</span>
+      <span className="plan-card__category">{t(`fulfillment.categories.${svc.category}`)}</span>
       <h3 className="plan-card__title">{svc.title}</h3>
       <div className="plan-card__footer">
         {svc.customQuote ? (
@@ -556,7 +564,8 @@ function MarginCalculator() {
 }
 
 export default function PartnersPage() {
-  const { t } = useTranslation('partners');
+  const { t, i18n } = useTranslation('partners');
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const [fulfillmentActiveIndex, setFulfillmentActiveIndex] = useState(0);
   const [statsActiveIndex, setStatsActiveIndex] = useState(0);
   const [pipelineActiveIndex, setPipelineActiveIndex] = useState(0);
@@ -661,7 +670,7 @@ export default function PartnersPage() {
             <p className="partners-hero__desc">{t('hero.desc1')}</p>
             <p className="partners-hero__desc">{t('hero.desc2')}</p>
             <div className="partners-hero__actions">
-              <a href="/contact" className="btn btn-outline">
+              <a href={localizePath('/contact', currentLang)} className="btn btn-outline">
                 {t('hero.ctaPrimary')}
                 <Icon svg={arrowRightSvg} className="btn-icon" />
               </a>
@@ -725,7 +734,7 @@ export default function PartnersPage() {
       <section className="partners-pipeline section">
         <div className="container">
           <div className={`section-head ${pipelineHead.className}`} ref={pipelineHead.ref}>
-            <h2 className="section-title partners-pipeline__title">
+            <h2 className={`section-title partners-pipeline__title partners-pipeline__title--${i18n.language}`}>
               <span>{t('pipeline.titleLine1')}</span>
               <span>{t('pipeline.titleLine2')}</span>
             </h2>
@@ -751,7 +760,7 @@ export default function PartnersPage() {
         <div className="container">
           <div className={`section-head ${catalogHead.className}`} ref={catalogHead.ref}>
             <span className="eyebrow-pill partners-catalog__badge">{t('catalog.badge')}</span>
-            <h2 className="section-title partners-catalog__title">
+            <h2 className={`section-title partners-catalog__title partners-catalog__title--${i18n.language}`}>
               <span>{t('catalog.titleLine1')}</span>
               <span>{t('catalog.titleLine2')}</span>
             </h2>
@@ -770,7 +779,7 @@ export default function PartnersPage() {
           </div>
 
           <div className="partners-catalog__cta">
-            <a href="/contact" className="btn btn-outline-gradient">
+            <a href={localizePath('/contact', currentLang)} className="btn btn-outline-gradient">
               {t('catalog.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
@@ -782,7 +791,7 @@ export default function PartnersPage() {
       <section className="partners-brand section">
         <div className="container partners-brand__row">
           <div className={brandCopy.className} ref={brandCopy.ref}>
-            <h2 className="partners-brand__title">
+            <h2 className={`partners-brand__title partners-brand__title--${i18n.language}`}>
               <span>{t('brand.titleLine1')}</span>
               <span>{t('brand.titleLine2')}</span>
               <span>{t('brand.titleLine3')}</span>
@@ -880,7 +889,7 @@ export default function PartnersPage() {
             </div>
 
             <div className={intelRight.className} ref={intelRight.ref}>
-              <h2 className="partners-intel__col-title partners-intel__col-title--ai">
+              <h2 className={`partners-intel__col-title partners-intel__col-title--ai partners-intel__col-title--ai-${i18n.language}`}>
                 <span>{t('intel.aiEngine.titleLine1')}</span>
                 <span>{t('intel.aiEngine.titleLine2')}</span>
                 <span>{t('intel.aiEngine.titleLine3')}</span>
@@ -1023,7 +1032,7 @@ export default function PartnersPage() {
           </div>
 
           <div className="partners-verticals__cta">
-            <a href="/contact" className="btn btn-outline-gradient">
+            <a href={localizePath('/contact', currentLang)} className="btn btn-outline-gradient">
               {t('verticals.cta')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>

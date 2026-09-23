@@ -20,8 +20,8 @@ import formSvg from '../../assets/icons/fluent-form-32-filled.svg?raw';
 import personSupportSvg from '../../assets/icons/fluent-person-support-28-filled.svg?raw';
 import databaseSvg from '../../assets/icons/bi-database-fill.svg?raw';
 
-import heroPhoto from '../../assets/images/auto-pilot/figma/hero-hand.png';
-import heroStar from '../../assets/images/auto-pilot/figma/hero-star.png';
+import heroPhoto from '../../assets/images/auto-pilot/figma/hero-hand.webp';
+import heroStar from '../../assets/images/auto-pilot/figma/hero-star.webp';
 import solutionMoon from '../../assets/images/orb-sphere.webp';
 import solutionStar from '../../assets/images/banner-star.svg';
 import solutionRipple from '../../assets/images/auto-pilot/figma/solution-ripple.png';

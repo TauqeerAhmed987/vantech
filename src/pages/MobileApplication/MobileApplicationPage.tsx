@@ -18,8 +18,8 @@ import funnelSvg from '../../assets/icons/ant-design-funnel-plot-filled.svg?raw'
 import databaseSvg from '../../assets/icons/ant-design-database-filled.svg?raw';
 import restApiSvg from '../../assets/icons/dashicons-rest-api.svg?raw';
 
-import heroMockupGlow from '../../assets/images/mobile-application/figma/hero-parts/glow-badges.png';
-import heroMockupPhone from '../../assets/images/mobile-application/figma/hero-parts/phone.png';
+import heroMockupGlow from '../../assets/images/mobile-application/figma/hero-parts/glow-badges.webp';
+import heroMockupPhone from '../../assets/images/mobile-application/figma/hero-parts/phone.webp';
 import heroMockupIcon from '../../assets/images/mobile-application/figma/hero-parts/icon-card.png';
 import solutionIllustration from '../../assets/images/mobile-application/figma/solution-illustration.png';
 

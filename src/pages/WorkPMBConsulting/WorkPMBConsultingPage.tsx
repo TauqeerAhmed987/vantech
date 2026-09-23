@@ -5,13 +5,13 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyStat,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 import { createPlaceholderWorkData } from '../../data/workPlaceholder';
-import heroScreenshot from '../../assets/images/work-pmb-consulting/figma/browser-mockup.png';
-import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.png';
+import heroScreenshot from '../../assets/images/work-pmb-consulting/figma/browser-mockup.webp';
+import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.webp';
 import relatedWorkOneTap from '../../assets/images/work-van-travel/figma/related-work-2.png';
 // The Figma "Power Mindset Breakthrough" related-work card mistakenly reused
 // the Mighty Oak Legacy screenshot, so we reuse that page's own real hero
 // screenshot instead of the wrong asset.
-import relatedWorkPowerMindset from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.png';
+import relatedWorkPowerMindset from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.webp';
 
 type RelatedWorkTranslation = Omit<WorkCaseStudyRelatedItem, 'image'>;
 

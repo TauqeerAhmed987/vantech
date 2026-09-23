@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "pill": "VTS Partner Network",
+    "title": "Grow Your Agency. We Power the Technology.",
+    "desc1": "Offer premium AI, automation, software, SaaS, web development and digital transformation solutions without building a large technical team internally.",
+    "desc2": "Van Tech Systems provides the technology and delivery infrastructure. You focus on relationships, sales, strategy and growth.",
+    "ctaPrimary": "Become VTS Partner",
+    "ctaSecondary": "Explore Pricing Partner"
+  },
+  "stats": [
+    { "value": "0%", "label": "Equity Required" },
+    { "value": "04", "label": "Ways to partner" },
+    { "value": "1 Team", "label": "Technology delivery partner" },
+    { "value": "Global", "label": "Remote delivery capability" }
+  ],
+  "tiers": {
+    "titleLine1": "One Technology Partner.",
+    "titleLine2": "Multiple Ways to Grow.",
+    "items": [
+      {
+        "title": "Referral Partner",
+        "desc": "Best for people who simply want to introduce qualified businesses to Van Tech Systems.",
+        "columns": [
+          { "label": "Partner", "items": ["Identifies opportunity", "Makes introduction", "Remains relationship source"] },
+          { "label": "Van Tech Systems", "items": ["Scopes project", "Closes project", "Contracts client", "Delivers technology", "Supports client"] }
+        ],
+        "cta": "Become Referral Partner"
+      },
+      {
+        "title": "Reseller Partner",
+        "desc": "Best for agencies wanting to sell VTS solutions directly.",
+        "columns": [
+          { "label": "Partner", "items": ["Owns sales relationship", "Selects solutions", "Manages commercial relationship"] },
+          { "label": "Van Tech Systems", "items": ["Provides partner pricing", "Provides technical scoping", "Builds solution", "Supports implementation"] }
+        ],
+        "cta": "Become Reseller Partner"
+      },
+      {
+        "title": "White-Label Partner",
+        "desc": "Best for agencies that want technology delivered behind their own brand.",
+        "columns": [
+          { "label": "Partner", "items": ["Owns brand", "Owns client relationship", "Sets retail pricing", "Handles account strategy"] },
+          { "label": "Van Tech Systems", "items": ["Performs technical delivery", "Works behind the scenes", "Provides QA", "Supports deployments"] }
+        ],
+        "cta": "Become White-Label Partner"
+      },
+      {
+        "title": "Strategic Delivery Partner",
+        "desc": "Best for established agencies requiring a dedicated technology capability.",
+        "columns": [
+          { "label": "Possible support", "items": ["Custom software", "SaaS development", "AI systems", "AI agents", "Automation"] },
+          { "label": "Also available", "items": ["Integrations", "Architecture", "Maintenance", "Technical consulting"] }
+        ],
+        "cta": "Become Strategic Delivery Partner"
+      }
+    ]
+  },
+  "pipeline": {
+    "titleLine1": "You Win the Client.",
+    "titleLine2": "We Help Deliver the Technology.",
+    "stages": [
+      { "name": "Lead", "who": "Partner" },
+      { "name": "Discovery", "who": "Partner + VTS" },
+      { "name": "Scope", "who": "VTS" },
+      { "name": "Build", "who": "VTS" },
+      { "name": "QA", "who": "VTS" },
+      { "name": "Launch", "who": "Joint" },
+      { "name": "Support", "who": "Based on partnership model" }
+    ]
+  },
+  "catalog": {
+    "badge": "What partners can sell",
+    "titleLine1": "Expand Your Service Catalog Without",
+    "titleLine2": "Expanding Your Engineering Team.",
+    "cta": "Get Started",
+    "top": [
+      { "title": "AI Solutions", "desc": "Conversational and operational AI systems built around a client's workflows." },
+      { "title": "Software", "desc": "Custom applications and platforms engineered for how a business operates." }
+    ],
+    "bottom": [
+      { "title": "Automation", "desc": "Process automation that removes manual work across sales and operations." },
+      { "title": "Digital Platforms", "desc": "Customer-facing digital products with a premium engineering standard." },
+      { "title": "Consulting", "desc": "Strategic and architectural guidance ahead of a build." }
+    ],
+    "items": {
+      "ai-receptionists": "AI Receptionists",
+      "ai-voice-agents": "AI Voice Agents",
+      "ai-chat-agents": "AI Chat Agents",
+      "ai-lead-qualification": "AI Lead Qualification",
+      "ai-customer-support": "AI Customer Support",
+      "ai-knowledge-systems": "AI Knowledge Systems",
+      "ai-workflow-automation": "AI Workflow Automation",
+      "custom-web-applications": "Custom Web Applications",
+      "saas-platforms": "SaaS Platforms",
+      "marketplace-platforms": "Marketplace Platforms",
+      "client-portals": "Client Portals",
+      "internal-business-systems": "Internal Business Systems",
+      "crm-platforms": "CRM Platforms",
+      "crm-automation": "CRM Automation",
+      "email-sms-workflows": "Email/SMS Workflows",
+      "lead-follow-up-systems": "Lead Follow-Up Systems",
+      "operations-automation": "Operations Automation",
+      "appointment-automation": "Appointment Automation",
+      "business-process-automation": "Business Process Automation",
+      "premium-website": "Premium Website",
+      "e-commerce": "E-Commerce",
+      "customer-portals": "Customer Portals",
+      "business-dashboards": "Business Dashboards",
+      "membership-platforms": "Membership Platforms",
+      "product-strategy": "Product Strategy",
+      "technology-architecture": "Technology Architecture",
+      "ai-readiness": "AI Readiness",
+      "digital-transformation": "Digital Transformation",
+      "system-audits": "System Audits"
+    }
+  },
+  "brand": {
+    "titleLine1": "Your Brand in Front.",
+    "titleLine2": "Our Technology",
+    "titleLine3": "Behind It.",
+    "desc": "Keep your client relationship while gaining access to a broader technology delivery capability.",
+    "layers": [
+      { "label": "Your Agency", "tags": ["Client Relationship", "Brand", "Sales", "Strategy"] },
+      { "label": "Van Tech Systems", "tags": ["Architecture", "Development", "AI", "Automation", "QA", "Infrastructure"] },
+      { "label": "Client Solution", "tags": ["Website", "AI Agent", "SaaS", "Automation", "Platform"] }
+    ]
+  },
+  "intel": {
+    "visibility": {
+      "titleLine1": "Visibility Across",
+      "titleLine2": "Every Delivery Stage",
+      "desc": "Partners see delivery progress, stage status and upcoming milestones for the projects they bring to Van Tech Systems."
+    },
+    "aiEngine": {
+      "titleLine1": "One AI Engine.",
+      "titleLine2": "Many Client",
+      "titleLine3": "Touchpoints.",
+      "desc": "AI systems are assembled from the channels and data a client actually uses. Integrations shown are conceptual examples and are confirmed during scoping.",
+      "chips": ["Voice", "Chat", "CRM", "Email", "SMS", "Calendar", "Knowledge Base", "Analytics", "Automation", "API"],
+      "flow": {
+        "clientBusiness": "Client Business",
+        "customerInteractions": "Customer Interactions"
+      }
+    }
+  },
+  "plans": {
+    "recommended": "Recommended",
+    "titleLine1": "Choose the Partnership That",
+    "titleLine2": "Fits Your Business",
+    "items": [
+      {
+        "name": "VTS Connect",
+        "priceNote": "Partner Enrollment",
+        "desc": "For professionals who occasionally encounter technology opportunities and want a reliable delivery partner to hand them to.",
+        "cta": "Join VTS Connect",
+        "features": [
+          "Partner account",
+          "Referral tracking",
+          "VTS service catalog",
+          "Project introduction form",
+          "Basic sales materials",
+          "Referral opportunity tracking",
+          "VTS contracts and invoices the client directly"
+        ]
+      },
+      {
+        "name": "VTS Pro Partner",
+        "priceNote": "onboarding",
+        "secondaryPeriod": "month",
+        "desc": "Everything in Connect, plus partner pricing and reseller rights for eligible services.",
+        "cta": "Become Pro Partner",
+        "features": [
+          "Everything in VTS Connect",
+          "Partner service pricing",
+          "Reseller rights for eligible services",
+          "Priority project scoping",
+          "Proposal support",
+          "Partner sales resources",
+          "Co-branded solution materials",
+          "Project delivery dashboard",
+          "Partner onboarding session",
+          "Technical consultation support",
+          "Access to standardized solution packages"
+        ]
+      },
+      {
+        "name": "VTS White Label",
+        "priceNote": "onboarding",
+        "secondaryPeriod": "month",
+        "desc": "Everything in Pro, plus delivery behind your own brand where agreed.",
+        "cta": "Apply For White Label",
+        "features": [
+          "Everything in VTS Pro Partner",
+          "White-label eligible services",
+          "Client-facing delivery under partner brand where agreed",
+          "Dedicated partnership contact",
+          "Priority production queue",
+          "White-label proposal templates",
+          "Technical discovery assistance",
+          "Architecture consultation",
+          "QA support",
+          "Deployment support",
+          "Partner delivery reporting",
+          "Custom service catalog assistance"
+        ]
+      }
+    ]
+  },
+  "compare": {
+    "title": "Compare partnership levels",
+    "headers": { "plans": "Plans", "connect": "Connect", "pro": "Pro Partner", "white": "White Label" },
+    "rows": [
+      { "label": "Referral tracking", "connect": true, "pro": true, "white": true },
+      { "label": "Partner pricing", "connect": false, "pro": true, "white": true },
+      { "label": "Reselling", "connect": false, "pro": true, "white": true },
+      { "label": "Proposal support", "connect": false, "pro": true, "white": true },
+      { "label": "Technical scoping", "connect": "VTS-led", "pro": true, "white": true },
+      { "label": "White-label delivery", "connect": false, "pro": false, "white": true },
+      { "label": "Priority queue", "connect": false, "pro": false, "white": true },
+      { "label": "Dedicated partnership contact", "connect": false, "pro": false, "white": true },
+      { "label": "Delivery reporting", "connect": false, "pro": true, "white": true },
+      { "label": "Architecture support", "connect": false, "pro": "On request", "white": true }
+    ]
+  },
+  "fulfillment": {
+    "badge": "Service partner rates",
+    "title": "Partner Fulfillment Pricing",
+    "note": "Final partner pricing is determined after technical scoping. Third-party software, infrastructure, messaging, telephony, AI usage, hosting, licensing and other external costs may be billed separately where applicable.",
+    "customQuoteLabel": "Custom Quote",
+    "startingAt": "Starting at",
+    "categories": { "AI": "AI", "Web": "Web", "Software": "Software" },
+    "services": [
+      { "title": "AI Receptionist", "note": "Ongoing from $249/mo" },
+      { "title": "AI Automation System" },
+      { "title": "Professional Business Website" },
+      { "title": "Advanced Business Website" },
+      { "title": "Custom Web Application" },
+      { "title": "SaaS MVP" },
+      { "title": "Advanced SaaS Platform", "note": "Custom scope." },
+      { "title": "Custom AI Agent" },
+      { "title": "RAG / Business Knowledge AI" },
+      { "title": "CRM / Operations Platform" }
+    ]
+  },
+  "calculator": {
+    "title": "Partner Margin Calculator",
+    "cardTitle": "Model Your Own Economics",
+    "grossRevenue": "Gross revenue",
+    "fulfillmentCost": "VTS fulfillment cost",
+    "additionalCosts": "Additional partner costs",
+    "recapFulfillmentCost": "Fulfillment cost",
+    "resultLabel": "Estimated gross margin",
+    "marginPrefix": "Margin",
+    "disclaimer": "Illustrative calculation only. Actual pricing, costs, taxes, fees, refunds, support obligations and profitability vary by project."
+  },
+  "verticals": {
+    "badge": "Industries",
+    "titleLine1": "Built for Businesses",
+    "titleLine2": "That Want to Sell More",
+    "titleLine3": "Than They Build.",
+    "cta": "Get Started",
+    "row1": ["Digital Agencies", "Consultants", "CRM Consultants", "Business Consultants", "Freelance Developers", "Managed Service Providers"],
+    "row2": ["Marketing Agencies", "Automation Agencies", "Web Designers", "IT Companies", "Entrepreneurs", "Existing AI Agencies"]
+  }
+}

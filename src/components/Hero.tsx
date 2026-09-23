@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
-import heroBg from '../assets/images/hero-banner.png';
+import heroBg from '../assets/images/hero-banner.webp';
 import { useReveal } from '../hooks/useReveal';
 import { useCountUp } from '../hooks/useCountUp';
 import OrbSphere from './OrbSphere';
@@ -51,7 +51,7 @@ function Stat({ value, suffix, label }: { value: number; suffix: string; label: 
 }
 
 export default function Hero() {
-  const { t } = useTranslation('home');
+  const { t, i18n } = useTranslation('home');
   const eyebrow = t('hero.eyebrow', { returnObjects: true }) as string[];
   const copy = useReveal('left');
   const graphic = useReveal('right');
@@ -69,7 +69,10 @@ export default function Hero() {
             ))}
           </span>
 
-          <h1 className="hero__title" dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
+          <h1
+            className={`hero__title hero__title--${i18n.language}`}
+            dangerouslySetInnerHTML={{ __html: t('hero.title') }}
+          />
 
           <p className="hero__desc">{t('hero.desc')}</p>
 

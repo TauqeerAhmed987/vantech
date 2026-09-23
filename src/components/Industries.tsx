@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import Icon from './Icon';
 import { useReveal } from '../hooks/useReveal';
 import arrowRightSvg from '../assets/icons/boxicons-arrow-right-stroke.svg?raw';
-import orbGlowSoft from '../assets/images/industries-glow-soft.png';
+import orbGlowSoft from '../assets/images/industries-glow-soft.webp';
 import healthcareSvg from '../assets/icons/healthcare.svg?raw';
 import dentalSvg from '../assets/icons/dental.svg?raw';
 import legalSvg from '../assets/icons/legal.svg?raw';

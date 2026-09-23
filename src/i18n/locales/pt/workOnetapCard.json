@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["SaaS", "Networking profissional"],
-    "titleLines": ["OneTap", "Digital Card"],
+    "badges": [
+      "SaaS",
+      "Networking profissional"
+    ],
+    "titleLines": [
+      "OneTap",
+      "Digital Card"
+    ],
     "description": "Uma plataforma de cartão de visita digital onde profissionais compartilham dados de contato, links e uma página de agendamento através de um link público do cartão ou de um código QR.",
     "screenshotAlt": "Captura de tela da plataforma OneTap Digital Card"
   },
   "stats": [
-    { "label": "Tipo de projeto", "value": "SaaS" },
-    { "label": "Capacidades", "value": "Engenharia de produto • Design UI/UX • Software sob medida" },
-    { "label": "Setor", "value": "Networking profissional" },
-    { "label": "Status", "value": "No ar" }
+    {
+      "label": "Tipo de projeto",
+      "value": "SaaS"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Engenharia de produto • Design UI/UX • Software sob medida"
+    },
+    {
+      "label": "Setor",
+      "value": "Networking profissional"
+    },
+    {
+      "label": "Status",
+      "value": "No ar"
+    }
   ],
   "detail": {
     "overviewDesc": "OneTap Digital Card é um produto de networking digital de propriedade e operado pela Van Tech Systems. Os profissionais criam um cartão com sua foto, dados de contato e links personalizados, e depois o compartilham por meio de um link público ou de um código QR exclusivo — sem necessidade de aplicativo em nenhum dos lados. Um portal do cliente reúne em um só lugar a gestão do cartão, a captura de leads e as análises de engajamento.",
@@ -17,29 +35,71 @@
     "builtDesc": "Projetamos e desenvolvemos o produto completo: um criador de cartões, um renderizador de cartão público servido a partir de links curtos compartilháveis, geração de código QR, captura de leads e um portal do cliente onde os proprietários gerenciam seu cartão, links, leads e análises. Links de agendamento como o Calendly podem ser anexados para que um escaneamento leve direto a uma conversa agendada."
   },
   "sidebar": {
-    "serviceTags": ["Engenharia de produto", "Design UI/UX", "Software sob medida"]
+    "serviceTags": [
+      "Engenharia de produto",
+      "Design UI/UX",
+      "Software sob medida"
+    ]
   },
   "capabilities": {
     "desc": "",
     "items": [
-      { "number": "01", "title": "Criador de cartão digital com foto, dados de contato e identidade visual" },
-      { "number": "02", "title": "Código QR exclusivo por cartão para compartilhamento impresso ou em tela" },
-      { "number": "03", "title": "Link público do cartão que funciona sem aplicativo" },
-      { "number": "04", "title": "Links personalizados ilimitados para portfólio, redes sociais e produtos" },
-      { "number": "05", "title": "Integração de agendamento para marcar horários a partir do cartão" },
-      { "number": "06", "title": "Captura de leads no cartão público" },
-      { "number": "07", "title": "Análises de visualizações, escaneamentos, cliques em links e leads" },
-      { "number": "08", "title": "Portal do cliente para gestão de cartão, leads e integrações" }
+      {
+        "number": "01",
+        "title": "Criador de cartão digital com foto, dados de contato e identidade visual"
+      },
+      {
+        "number": "02",
+        "title": "Código QR exclusivo por cartão para compartilhamento impresso ou em tela"
+      },
+      {
+        "number": "03",
+        "title": "Link público do cartão que funciona sem aplicativo"
+      },
+      {
+        "number": "04",
+        "title": "Links personalizados ilimitados para portfólio, redes sociais e produtos"
+      },
+      {
+        "number": "05",
+        "title": "Integração de agendamento para marcar horários a partir do cartão"
+      },
+      {
+        "number": "06",
+        "title": "Captura de leads no cartão público"
+      },
+      {
+        "number": "07",
+        "title": "Análises de visualizações, escaneamentos, cliques em links e leads"
+      },
+      {
+        "number": "08",
+        "title": "Portal do cliente para gestão de cartão, leads e integrações"
+      }
     ]
   },
   "flow": {
     "heading": "Fluxo de negócio",
-    "steps": ["Criar", "Compartilhar", "Conectar", "Capturar", "Acompanhar"],
+    "steps": [
+      "Criar",
+      "Compartilhar",
+      "Conectar",
+      "Capturar",
+      "Acompanhar"
+    ],
     "caption": "Visão conceitual do sistema"
   },
   "diagram": {
-    "badgeLines": ["Visão conceitual", "do sistema"],
-    "pills": ["Link público do cartão", "Serviço de cartão e perfil", "Armazenamento de leads e análises", "Portal do cliente"]
+    "badgeLines": [
+      "Visão conceitual",
+      "do sistema"
+    ],
+    "pills": [
+      "Link público do cartão",
+      "Serviço de cartão e perfil",
+      "Armazenamento de leads e análises",
+      "Portal do cliente"
+    ]
   },
   "outcomes": [
     "Criamos um único produto onde identidade profissional, links e agendamento convivem",
@@ -50,17 +110,20 @@
     {
       "tag": "IA",
       "title": "The PMB Consulting",
-      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento."
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento.",
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Plataformas empresariais",
       "title": "Mighty Oak Legacy",
-      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento."
+      "desc": "Uma presença digital profissional para uma consultoria que abrange mentoria empresarial, formação, branding e serviços de crescimento.",
+      "href": "/mighty-oak-legacy"
     },
     {
       "tag": "Serviços profissionais",
       "title": "Solid Rock Leadership Development",
-      "desc": "Uma plataforma de liderança e educação financeira que apresenta programas, públicos e uma jornada de agendamento de consultoria."
+      "desc": "Uma plataforma de liderança e educação financeira que apresenta programas, públicos e uma jornada de agendamento de consultoria.",
+      "href": "/solid-rock-leadership-development"
     }
   ]
 }

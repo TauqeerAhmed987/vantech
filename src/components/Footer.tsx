@@ -13,7 +13,7 @@ function useFooterLinks() {
     { label: t('nav.home'), href: '#home' },
     { label: t('nav.aboutUs'), href: '/about' },
     { label: t('nav.partnerProgram'), href: '/partners' },
-    { label: t('nav.work'), href: '#work' },
+    { label: t('nav.work'), href: '/work' },
     { label: t('nav.faq'), href: '#faq' },
     { label: t('nav.contact'), href: '/contact' },
   ];
@@ -87,11 +87,14 @@ export default function Footer() {
               <h4 className="footer-links__title gradient-text">{t('footer.company')}</h4>
               <ul>
                 {companyLinks.map((l) => {
-                  const href = l.href.startsWith('#')
-                    ? !isHome
-                      ? `${localizePath('/', currentLang)}${l.href}`
-                      : l.href
-                    : localizePath(l.href, currentLang);
+                  const href =
+                    l.href === '#home'
+                      ? localizePath('/', currentLang)
+                      : l.href.startsWith('#')
+                        ? !isHome
+                          ? `${localizePath('/', currentLang)}${l.href}`
+                          : l.href
+                        : localizePath(l.href, currentLang);
                   return (
                     <li key={l.label}>
                       <a href={href}>{l.label}</a>

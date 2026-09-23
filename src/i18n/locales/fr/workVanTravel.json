@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["Applications Web", "Voyages et immigration"],
-    "titleLines": ["Van Travel", "Business"],
+    "badges": [
+      "Applications Web",
+      "Voyages et immigration"
+    ],
+    "titleLines": [
+      "Van Travel",
+      "Business"
+    ],
     "description": "Une plateforme d'entreprise de voyage et d'immigration couvrant les forfaits, la collecte de documents et les demandes des clients.",
     "screenshotAlt": "Capture d'écran de la plateforme Van Travel Business"
   },
   "stats": [
-    { "label": "Type de projet", "value": "Applications Web" },
-    { "label": "Capacités", "value": "Développement Web • Automatisation" },
-    { "label": "Secteur", "value": "Voyages et immigration" },
-    { "label": "Statut", "value": "En ligne" }
+    {
+      "label": "Type de projet",
+      "value": "Applications Web"
+    },
+    {
+      "label": "Capacités",
+      "value": "Développement Web • Automatisation"
+    },
+    {
+      "label": "Secteur",
+      "value": "Voyages et immigration"
+    },
+    {
+      "label": "Statut",
+      "value": "En ligne"
+    }
   ],
   "detail": {
     "overviewDesc": "Van Travel Business gère des services de voyage et d'immigration qui reposent sur une collecte structurée des informations clients. Nous avons conçu une plateforme combinant des catalogues de services, des parcours de demande tenant compte des documents et une vue opérationnelle pour le suivi.",
@@ -17,25 +35,50 @@
     "builtDesc": "Nous avons associé un catalogue de services structuré à des parcours de demande tenant compte des documents et une vue opérationnelle, afin que chaque dossier s'ouvre avec ses exigences et ses justificatifs déjà réunis."
   },
   "sidebar": {
-    "serviceTags": ["Développement Web", "Automatisation"]
+    "serviceTags": [
+      "Développement Web",
+      "Automatisation"
+    ]
   },
   "capabilities": {
     "desc": "Nous avons associé un catalogue de services structuré à des parcours de demande tenant compte des documents et une vue opérationnelle, afin que chaque dossier s'ouvre avec ses exigences et ses justificatifs déjà réunis.",
     "items": [
-      { "title": "Catalogue de services et de forfaits" },
-      { "title": "Prise en charge des demandes tenant compte des documents" },
-      { "title": "Vue opérationnelle pour le suivi des dossiers" },
-      { "title": "Confirmations automatisées des demandes" },
-      { "title": "Expérience client multi-appareils" }
+      {
+        "title": "Catalogue de services et de forfaits"
+      },
+      {
+        "title": "Prise en charge des demandes tenant compte des documents"
+      },
+      {
+        "title": "Vue opérationnelle pour le suivi des dossiers"
+      },
+      {
+        "title": "Confirmations automatisées des demandes"
+      },
+      {
+        "title": "Expérience client multi-appareils"
+      }
     ]
   },
   "flow": {
-    "steps": ["Explorer", "Demander", "Suivi"],
+    "steps": [
+      "Explorer",
+      "Demander",
+      "Suivi"
+    ],
     "caption": "Vue conceptuelle du système"
   },
   "diagram": {
-    "badgeLines": ["Vue", "conceptuelle du système"],
-    "pills": ["Voyageur", "Expérience publique", "Logique de demande", "Opérations"]
+    "badgeLines": [
+      "Vue",
+      "conceptuelle du système"
+    ],
+    "pills": [
+      "Voyageur",
+      "Expérience publique",
+      "Logique de demande",
+      "Opérations"
+    ]
   },
   "outcomes": [
     "Les dossiers démarrent avec les informations requises déjà collectées",
@@ -46,17 +89,20 @@
     {
       "tag": "Services professionnels",
       "title": "Solid Rock Leadership Development",
-      "desc": "Une plateforme d'éducation au leadership et à la finance présentant des programmes, des publics cibles et un parcours de réservation de consultation."
+      "desc": "Une plateforme d'éducation au leadership et à la finance présentant des programmes, des publics cibles et un parcours de réservation de consultation.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Une plateforme d'éducation au leadership et à la finance présentant des programmes, des publics cibles et un parcours de réservation de consultation."
+      "desc": "Une plateforme d'éducation au leadership et à la finance présentant des programmes, des publics cibles et un parcours de réservation de consultation.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Services professionnels",
       "title": "The PMB Consulting",
-      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance."
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance.",
+      "href": "/pmb-consulting"
     }
   ]
 }

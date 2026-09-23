@@ -18,7 +18,7 @@ import identityPlatformSvg from '../../assets/icons/material-symbols-light-ident
 import toolsSvg from '../../assets/icons/bi-tools.svg?raw';
 import restApiSvg from '../../assets/icons/dashicons-rest-api.svg?raw';
 
-import heroBracket from '../../assets/images/custom-development/figma/hero-graphic-glow.png';
+import heroBracket from '../../assets/images/custom-development/figma/hero-graphic-glow.webp';
 import solutionIllustration from '../../assets/images/custom-development/figma/solution-illustration.png';
 
 import buildIconOperations from '../../assets/images/custom-development/figma/build-icon-operations.png';

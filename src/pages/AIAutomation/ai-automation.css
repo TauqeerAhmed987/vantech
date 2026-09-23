@@ -1282,6 +1282,12 @@
     margin-top: 2.0833vw;
   }
 
+  .ai-automation-hero__actions--fr,
+  .ai-automation-hero__actions--es,
+  .ai-automation-hero__actions--pt {
+    flex-wrap: nowrap;
+  }
+
   .ai-automation-hero__actions .btn-primary {
     border: 0.0938vw solid var(--color-border);
   }

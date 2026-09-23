@@ -1,15 +1,33 @@
 {
   "hero": {
-    "badges": ["Plateformes d'entreprise", "Services financiers"],
-    "titleLines": ["Buketi Financial", "& Consulting"],
+    "badges": [
+      "Plateformes d'entreprise",
+      "Services financiers"
+    ],
+    "titleLines": [
+      "Buketi Financial",
+      "& Consulting"
+    ],
     "description": "Une plateforme pour un cabinet de conseil et de services financiers avec positionnement des services, offres de conseil et collecte de demandes qualifiées.",
     "screenshotAlt": "Capture d'écran de la plateforme Buketi Financial & Consulting"
   },
   "stats": [
-    { "label": "Type de projet", "value": "Plateformes d'entreprise" },
-    { "label": "Capacités", "value": "Développement Web • Design UI/UX" },
-    { "label": "Secteur", "value": "Services financiers" },
-    { "label": "Statut", "value": "En ligne" }
+    {
+      "label": "Type de projet",
+      "value": "Plateformes d'entreprise"
+    },
+    {
+      "label": "Capacités",
+      "value": "Développement Web • Design UI/UX"
+    },
+    {
+      "label": "Secteur",
+      "value": "Services financiers"
+    },
+    {
+      "label": "Statut",
+      "value": "En ligne"
+    }
   ],
   "detail": {
     "overviewDesc": "Buketi Financial & Consulting avait besoin d'une vitrine numérique crédible pour ses services de conseil. Nous avons conçu et développé une plateforme axée sur la conversion, avec des pages de services structurées, une collecte de demandes en plusieurs étapes et un routage des prospects prêt pour l'analyse.",
@@ -17,26 +35,51 @@
     "builtDesc": "Nous avons créé des pages de services structurées pour chaque offre de conseil ainsi qu'un parcours de demande en plusieurs étapes qui recueille l'objectif, la situation et le délai, en acheminant chaque soumission vers le cabinet sous forme de dossier complet."
   },
   "sidebar": {
-    "serviceTags": ["Développement Web", "Design UI/UX"]
+    "serviceTags": [
+      "Développement Web",
+      "Design UI/UX"
+    ]
   },
   "capabilities": {
     "desc": "",
     "items": [
-      { "title": "Pages de services de conseil structurées" },
-      { "title": "Collecte de demandes en plusieurs étapes avec champs contextuels" },
-      { "title": "Routage des prospects prêt pour l'analyse" },
-      { "title": "Sections de crédibilité et de processus" },
-      { "title": "Mise en page réactive axée sur la conversion" }
+      {
+        "title": "Pages de services de conseil structurées"
+      },
+      {
+        "title": "Collecte de demandes en plusieurs étapes avec champs contextuels"
+      },
+      {
+        "title": "Routage des prospects prêt pour l'analyse"
+      },
+      {
+        "title": "Sections de crédibilité et de processus"
+      },
+      {
+        "title": "Mise en page réactive axée sur la conversion"
+      }
     ]
   },
   "flow": {
     "heading": "Flux métier",
-    "steps": ["Découvrir", "Demander", "Consultation"],
+    "steps": [
+      "Découvrir",
+      "Demander",
+      "Consultation"
+    ],
     "caption": "Vue conceptuelle du système"
   },
   "diagram": {
-    "badgeLines": ["Vue", "conceptuelle du système"],
-    "pills": ["Client", "Expérience publique", "Réception des demandes", "Opérations des conseillers"]
+    "badgeLines": [
+      "Vue",
+      "conceptuelle du système"
+    ],
+    "pills": [
+      "Client",
+      "Expérience publique",
+      "Réception des demandes",
+      "Opérations des conseillers"
+    ]
   },
   "outcomes": [
     "Les demandes arrivent suffisamment qualifiées pour être cadrées",
@@ -47,17 +90,20 @@
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, leurs liens et une page de réservation via un lien de carte public ou un code QR."
+      "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, leurs liens et une page de réservation via un lien de carte public ou un code QR.",
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Ai",
       "title": "The PMB Consulting",
-      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance."
+      "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance.",
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Services professionnels",
       "title": "Power Mindset Breakthrough",
-      "desc": "Une plateforme de coaching et de développement personnel avec des programmes, des réservations et de la diffusion de contenu."
+      "desc": "Une plateforme de coaching et de développement personnel avec des programmes, des réservations et de la diffusion de contenu.",
+      "href": "/power-mindset-breakthrough"
     }
   ]
 }

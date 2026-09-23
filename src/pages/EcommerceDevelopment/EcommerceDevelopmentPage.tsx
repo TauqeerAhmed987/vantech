@@ -19,8 +19,8 @@ import analyticsSvg from '../../assets/icons/clarity-analytics-solid.svg?raw';
 import warehouseSvg from '../../assets/icons/ic-baseline-warehouse.svg?raw';
 import accountingSvg from '../../assets/icons/map-accounting.svg?raw';
 
-import heroGlow from '../../assets/images/ecommerce-development/figma/hero-glow.png';
-import solutionGlow from '../../assets/images/ecommerce-development/figma/solution-glow.png';
+import heroGlow from '../../assets/images/ecommerce-development/figma/hero-glow.webp';
+import solutionGlow from '../../assets/images/ecommerce-development/figma/solution-glow.webp';
 
 import buildIconStorefront from '../../assets/images/ecommerce-development/figma/build-icon-storefront.png';
 import buildIconAssistant from '../../assets/images/ecommerce-development/figma/build-icon-assistant.png';

@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './about.css';
+import { type SupportedLanguage } from '../../i18n/i18n';
+import { localizePath } from '../../i18n/localizedPath';
 import Icon from '../../components/Icon';
 import Testimonials from '../../components/Testimonials';
 import FAQ from '../../components/FAQ';
@@ -46,7 +48,8 @@ function TechCard({ text, primary }: { text: string; primary: boolean }) {
 }
 
 export default function AboutPage() {
-  const { t } = useTranslation('about');
+  const { t, i18n } = useTranslation('about');
+  const currentLang = (i18n.language as SupportedLanguage) || 'en';
   const processSteps = t('process.steps', { returnObjects: true }) as ProcessStep[];
   const techCards = t('tech.cards', { returnObjects: true }) as string[];
   const layers = t('layers.items', { returnObjects: true }) as LayerItem[];
@@ -104,7 +107,7 @@ export default function AboutPage() {
               {t('hero.startAProject')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
-            <a href="/#work" className="btn btn-outline">
+            <a href={`${localizePath('/', currentLang)}#work`} className="btn btn-outline">
               {t('hero.ourWork')}
               <Icon svg={arrowRightSvg} className="btn-icon" />
             </a>
@@ -299,7 +302,7 @@ export default function AboutPage() {
 
           <p className={`about-risk__note ${riskNote.className}`} ref={riskNote.ref}>
             {t('risk.note')}{' '}
-            <a href="/legal" className="about-risk__note-link">
+            <a href={localizePath('/legal', currentLang)} className="about-risk__note-link">
               /legal
             </a>
           </p>

@@ -5,9 +5,9 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyStat,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 import { createPlaceholderWorkData } from '../../data/workPlaceholder';
-import heroScreenshot from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.png';
-import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.png';
-import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.png';
+import heroScreenshot from '../../assets/images/work-power-mindset-breakthrough/figma/browser-mockup.webp';
+import relatedWorkPMB from '../../assets/images/work-van-travel/figma/related-work-3.webp';
+import relatedWorkSolidRock from '../../assets/images/work-van-travel/figma/related-work-1.webp';
 import relatedWorkOneTap from '../../assets/images/work-van-travel/figma/related-work-2.png';
 
 // Hero section content from Figma node 2306:542, middle sections from node

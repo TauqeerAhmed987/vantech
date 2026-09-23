@@ -47,19 +47,19 @@
       "tag": "SaaS",
       "title": "OneTap Digital Card",
       "desc": "A digital business card platform where professionals share contact details, links and a booking page through a public card link or QR code.",
-      "href": "https://www.onetapdigitalcard.com/"
+      "href": "/onetap-digital-card"
     },
     {
       "tag": "Ai",
       "title": "The PMB Consulting",
       "desc": "A professional digital presence for a consulting practice covering business mentorship, formation, branding and growth services.",
-      "href": "https://thepmbconsulting.com/"
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Professional Services",
       "title": "Power Mindset Breakthrough",
       "desc": "A coaching and personal development platform with programmes, booking and content delivery.",
-      "href": "https://powermindsetbreakthrough.com/"
+      "href": "/power-mindset-breakthrough"
     }
   ]
 }

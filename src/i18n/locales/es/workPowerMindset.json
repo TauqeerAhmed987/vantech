@@ -1,14 +1,28 @@
 {
   "hero": {
-    "badges": ["Servicios profesionales"],
-    "titleLines": ["Power Mindset", "Breakthrough"],
+    "badges": [
+      "Servicios profesionales"
+    ],
+    "titleLines": [
+      "Power Mindset",
+      "Breakthrough"
+    ],
     "description": "Una plataforma de negocio de viajes e inmigración que abarca paquetes, recepción de documentos y consultas de clientes.",
     "screenshotAlt": "Captura de pantalla de la plataforma Power Mindset Breakthrough"
   },
   "stats": [
-    { "label": "Tipo de proyecto", "value": "Servicios profesionales" },
-    { "label": "Capacidades", "value": "Desarrollo web • Diseño UI/UX" },
-    { "label": "Estado", "value": "En vivo" }
+    {
+      "label": "Tipo de proyecto",
+      "value": "Servicios profesionales"
+    },
+    {
+      "label": "Capacidades",
+      "value": "Desarrollo web • Diseño UI/UX"
+    },
+    {
+      "label": "Estado",
+      "value": "En vivo"
+    }
   ],
   "detail": {
     "overviewDesc": "Power Mindset Breakthrough ofrece programas de coaching a gran escala. Creamos una plataforma que presenta la metodología, gestiona la reserva de sesiones y distribuye el contenido del programa a los clientes inscritos.",
@@ -16,24 +30,49 @@
     "builtDesc": "Creamos una plataforma única que presenta la metodología, gestiona la reserva de sesiones y distribuye el contenido del programa a los clientes inscritos, con acceso vinculado a la inscripción."
   },
   "sidebar": {
-    "serviceTags": ["Desarrollo web", "Automatización"]
+    "serviceTags": [
+      "Desarrollo web",
+      "Automatización"
+    ]
   },
   "capabilities": {
     "items": [
-      { "title": "Presentación de la metodología y el programa" },
-      { "title": "Reserva de sesiones según disponibilidad" },
-      { "title": "Entrega de contenido del programa a clientes inscritos" },
-      { "title": "Control de acceso basado en la inscripción" },
-      { "title": "Confirmaciones de reserva automatizadas" }
+      {
+        "title": "Presentación de la metodología y el programa"
+      },
+      {
+        "title": "Reserva de sesiones según disponibilidad"
+      },
+      {
+        "title": "Entrega de contenido del programa a clientes inscritos"
+      },
+      {
+        "title": "Control de acceso basado en la inscripción"
+      },
+      {
+        "title": "Confirmaciones de reserva automatizadas"
+      }
     ]
   },
   "flow": {
-    "steps": ["Descubrir", "Elegir", "Reservar"],
+    "steps": [
+      "Descubrir",
+      "Elegir",
+      "Reservar"
+    ],
     "caption": "Vista conceptual del sistema"
   },
   "diagram": {
-    "badgeLines": ["Vista conceptual", "del sistema"],
-    "pills": ["Visitante", "Contenido del programa", "Recorrido de reserva", "Operaciones del coach"]
+    "badgeLines": [
+      "Vista conceptual",
+      "del sistema"
+    ],
+    "pills": [
+      "Visitante",
+      "Contenido del programa",
+      "Recorrido de reserva",
+      "Operaciones del coach"
+    ]
   },
   "outcomes": [
     "La reserva y la entrega de contenido conviven en un solo lugar",
@@ -44,17 +83,20 @@
     {
       "tag": "Servicios profesionales",
       "title": "The PMB Consulting",
-      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución, marca y servicios de crecimiento."
+      "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución, marca y servicios de crecimiento.",
+      "href": "/pmb-consulting"
     },
     {
       "tag": "Servicios profesionales",
       "title": "Solid Rock Leadership Development",
-      "desc": "Una plataforma de liderazgo y educación financiera que presenta programas, públicos y un recorrido de reserva de consultas."
+      "desc": "Una plataforma de liderazgo y educación financiera que presenta programas, públicos y un recorrido de reserva de consultas.",
+      "href": "/solid-rock-leadership-development"
     },
     {
       "tag": "SaaS",
       "title": "OneTap Digital Card",
-      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas mediante un enlace de tarjeta público o un código QR."
+      "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten datos de contacto, enlaces y una página de reservas mediante un enlace de tarjeta público o un código QR.",
+      "href": "/onetap-digital-card"
     }
   ]
 }

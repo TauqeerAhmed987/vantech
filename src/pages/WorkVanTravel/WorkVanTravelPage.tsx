@@ -6,10 +6,10 @@ import WorkCaseStudyTemplate, {
   type WorkCaseStudyRelatedItem,
 } from '../../components/WorkCaseStudyTemplate/WorkCaseStudyTemplate';
 
-import browserMockup from '../../assets/images/work-van-travel/figma/browser-mockup.png';
-import relatedWork1 from '../../assets/images/work-van-travel/figma/related-work-1.png';
+import browserMockup from '../../assets/images/work-van-travel/figma/browser-mockup.webp';
+import relatedWork1 from '../../assets/images/work-van-travel/figma/related-work-1.webp';
 import relatedWork2 from '../../assets/images/work-van-travel/figma/related-work-2.png';
-import relatedWork3 from '../../assets/images/work-van-travel/figma/related-work-3.png';
+import relatedWork3 from '../../assets/images/work-van-travel/figma/related-work-3.webp';
 
 export default function WorkVanTravelPage() {
   const { t } = useTranslation('workVanTravel');

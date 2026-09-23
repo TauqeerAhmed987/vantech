@@ -10,7 +10,6 @@ import { type SupportedLanguage } from '../../i18n/i18n';
 import { localizePath } from '../../i18n/localizedPath';
 
 import arrowRightSvg from '../../assets/icons/boxicons-arrow-right-stroke.svg?raw';
-import caseStudyArrowSvg from '../../assets/icons/at-icons-arrow-right.svg?raw';
 import badgeCheckSvg from '../../assets/icons/work-van-badge-check.svg?raw';
 import shareIconSvg from '../../assets/icons/ci-share-ios-export.svg?raw';
 import copyIconSvg from '../../assets/icons/akar-icons-copy.svg?raw';
