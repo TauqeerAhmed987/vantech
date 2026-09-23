@@ -1487,7 +1487,7 @@
   }
 
   .about-hero__content {
-    max-width: 46.875vw;
+    max-width: 52.734vw;
   }
 
   .about-hero__title {
@@ -1496,7 +1496,7 @@
   }
 
   .about-hero__desc {
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     margin-bottom: 2.8646vw;
   }
 
@@ -1537,7 +1537,7 @@
 
   .about-desc {
     margin: 1.9792vw 0 0;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
   }
 
   .about-desc + .about-desc {
@@ -1867,9 +1867,11 @@
     filter: blur(0.5208vw);
   }
 
-  .about-ai .about-title,
-.about-ai .about-desc {
+  .about-ai .about-title {
     max-width: 34.375vw;
+  }
+  .about-ai .about-desc {
+    max-width: 38.672vw;
   }
 
   .about-ai__list {
@@ -1950,7 +1952,7 @@
 
   .about-risk__note {
     margin: 2.9167vw auto 0;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
   }
 
   .about-risk__note-link {

@@ -29,7 +29,7 @@
 
   .work-hero__content {
     width: 100%;
-    max-width: 40.885vw;
+    max-width: 45.996vw;
     margin: 0 auto;
   }
 
@@ -74,7 +74,7 @@
     margin-top: 1.25vw;
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.833vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }

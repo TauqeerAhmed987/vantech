@@ -236,7 +236,7 @@ export default function WorkCaseStudyTemplate({
 
             <div className={`wvt-capabilities ${capabilitiesReveal.className}`} ref={capabilitiesReveal.ref}>
               <span className="wvt-eyebrow-number">04 — {t('sections.coreCapabilities')}</span>
-              <p className="wvt-section-desc">{data.capabilities.desc}</p>
+              {data.capabilities.desc && <p className="wvt-section-desc">{data.capabilities.desc}</p>}
 
               <div className="wvt-capabilities__grid">
                 {data.capabilities.items.map((c) => (

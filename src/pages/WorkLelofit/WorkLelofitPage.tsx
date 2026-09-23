@@ -56,7 +56,7 @@ export default function WorkLelofitPage() {
       serviceTags: t('sidebar.serviceTags', { returnObjects: true }) as string[],
     },
     capabilities: {
-      desc: t('capabilities.desc'),
+      desc: '',
       items: capabilityItems.map((item, index) => ({
         number: String(index + 1).padStart(2, '0'),
         title: item.title,

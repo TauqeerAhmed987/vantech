@@ -6,7 +6,7 @@
     "screenshotAlt": "Lelofit platform screenshot"
   },
   "stats": [
-    { "label": "Project type", "value": "Web Applications" },
+    { "label": "Project type", "value": "Web Application" },
     { "label": "Capabilities", "value": "Web Development • Mobile Experience • UI/UX Design" },
     { "label": "Status", "value": "Live" }
   ],

@@ -1406,11 +1406,13 @@ body .backimage-boy {
     flex-wrap: wrap;
   }
   
-  .wvt-hero__left,
-  .wvt-hero__right {
+  .wvt-hero__left {
     max-width: 31.25vw;
   }
-  
+  .wvt-hero__right {
+    max-width: 35.156vw;
+  }
+
   .wvt-badges {
     display: flex;
     flex-wrap: wrap;
@@ -1507,7 +1509,7 @@ body .backimage-boy {
   .wvt-hero__desc {
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }
@@ -1693,10 +1695,10 @@ body .backimage-boy {
   
   .wvt-detail-item__desc {
     margin-top: 0.9375vw;
-    max-width: 52.0833vw;
+    max-width: 58.594vw;
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }
@@ -1818,10 +1820,10 @@ body .backimage-boy {
   
   .wvt-section-desc {
     margin-top: 0.8333vw;
-    max-width:52.0833vw;
+    max-width: 58.594vw;
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }
@@ -1896,7 +1898,7 @@ body .backimage-boy {
     margin-top: 1.4583vw;
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }
@@ -2158,7 +2160,7 @@ body .backimage-boy {
     gap: 0.5208vw;
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     color: var(--color-white);
   }
   
@@ -2427,7 +2429,7 @@ body .backimage-boy {
     position: relative;
     z-index: 1;
     order: 1;
-    max-width: 32.4479vw;
+    max-width: 36.504vw;
     display: flex;
     flex-direction: column;
     gap: 1.0417vw;
@@ -2444,7 +2446,7 @@ body .backimage-boy {
   .wvt-closing__desc {
     font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 0.8333vw;
+    font-size: 0.9375vw;
     line-height: 1.5;
     color: var(--color-white);
   }

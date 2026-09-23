@@ -2,7 +2,7 @@
   "hero": {
     "badges": [
       "Ai",
-      "Travel & Immigration"
+      "Financial Health"
     ],
     "titleLines": [
       "AI FNA"
@@ -13,7 +13,7 @@
   "stats": [
     {
       "label": "Project type",
-      "value": "Ai"
+      "value": "AI"
     },
     {
       "label": "Capabilities",

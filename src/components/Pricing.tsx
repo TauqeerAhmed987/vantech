@@ -29,12 +29,25 @@ function PlanCard({
 }) {
   const reveal = useReveal('left');
 
+  const handleClick = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div
       className={`plan-card${isActive ? ' plan-card--active' : ''} ${reveal.className}`}
       ref={reveal.ref}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
     >
       <div className="plan-card__glow" />
       <span className="plan-card__category">{categoryLabel}</span>

@@ -1554,6 +1554,7 @@ a.navbar__cta--mobile {
   border-radius: 12px;
   background: linear-gradient(168.65deg, rgba(0,0,0,0.8) -2.45%, rgba(22,22,22,0.9) 102.09%);
   transition: background 0.4s ease, opacity 0.8s ease, transform 0.8s ease;
+  cursor: pointer;
 }
 .plan-card--active {
   background: var(--color-bg);
@@ -2691,8 +2692,8 @@ a.navbar__cta--mobile {
     width: 30.2083vw;
   }
   .section-subtitle {
-    font-size: 0.833vw;
-    line-height: 1.25vw;
+    font-size: 0.9375vw;
+    line-height: 1.406vw;
   }
   .btn {
     gap: 0.625vw;
@@ -2840,9 +2841,9 @@ a.navbar__cta--mobile {
   }
   .solutions__desc {
     margin-top: 1.042vw;
-    max-width: 26.406vw;
-    font-size: 0.833vw;
-    line-height: 1.25vw;
+    max-width: 29.707vw;
+    font-size: 0.9375vw;
+    line-height: 1.406vw;
   }
   .solutions__copy .btn {
     margin-top: 2.083vw;
@@ -3170,7 +3171,7 @@ a.navbar__cta--mobile {
   }
   .pricing__note {
     margin-top: 3.854vw;
-    font-size: 0.833vw;
+    font-size: 0.9375vw;
   }
   .pricing__cta {
     margin-top: 2.969vw;
@@ -3194,8 +3195,8 @@ a.navbar__cta--mobile {
   }
   .faq__intro-desc {
     margin-top: 0.938vw;
-    font-size: 0.833vw;
-    width: 11.771vw;
+    font-size: 0.9375vw;
+    width: 13.242vw;
   }
   .faq__intro .btn {
     margin-top: 1.667vw;
@@ -3446,9 +3447,9 @@ a.navbar__cta--mobile {
   }
   .hero__desc {
     margin-top: 1.667vw;
-    max-width: 33.646vw;
-    font-size: 0.833vw;
-    line-height: 1.25vw;
+    max-width: 37.852vw;
+    font-size: 0.9375vw;
+    line-height: 1.406vw;
   }
   .hero__actions {
     gap: 1.354vw;

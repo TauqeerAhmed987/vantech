@@ -46,7 +46,7 @@ export default function WorkOneTapDigitalCardPage() {
       serviceTags: t('sidebar.serviceTags', { returnObjects: true }) as string[],
     },
     capabilities: {
-      desc: t('capabilities.desc'),
+      desc: '',
       items: t('capabilities.items', { returnObjects: true }) as WorkCaseStudyCapability[],
     },
     flow: {
