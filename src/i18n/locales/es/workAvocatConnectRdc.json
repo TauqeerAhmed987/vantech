@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badges": ["Aplicaciones web", "Plataforma LegalTech"],
+    "titleLines": ["AvocatConnect RDC"],
+    "description": "Una plataforma de servicios legales que conecta a personas y empresas de toda la República Democrática del Congo con abogados verificados, recursos legales confiables y herramientas de consulta seguras.",
+    "screenshotAlt": "Captura de pantalla de la plataforma AvocatConnect RDC"
+  },
+  "stats": [
+    { "label": "Tipo de proyecto", "value": "Aplicaciones web" },
+    { "label": "Capacidades", "value": "Búsqueda • Consulta • Gestión de clientes" },
+    { "label": "Industria", "value": "LegalTech" },
+    { "label": "Estado", "value": "En vivo" }
+  ],
+  "detail": {
+    "overviewDesc": "AvocatConnect RDC es una plataforma moderna de acceso a servicios legales diseñada para facilitar el descubrimiento de apoyo jurídico profesional en toda la República Democrática del Congo. La plataforma reúne la búsqueda de abogados y bufetes, información legal, reserva de consultas y comunicación segura con el cliente en una experiencia digital estructurada.",
+    "challengeDesc": "Encontrar al profesional legal adecuado podía implicar varios pasos desconectados: identificar el área legal relevante, encontrar un abogado apropiado, comprender su experiencia y coordinar una consulta.",
+    "builtDesc": "Creamos una plataforma de servicios legales estructurada donde los usuarios pueden buscar abogados por área legal y ciudad, explorar perfiles profesionales, acceder a recursos legales confiables y pasar directamente a los flujos de consulta y comunicación."
+  },
+  "sidebar": { "serviceTags": ["Desarrollo web", "Arquitectura de plataforma", "Sistema de reservas", "Diseño UX/UI"] },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Búsqueda de abogados y bufetes" },
+      { "title": "Búsqueda por área legal y ciudad" },
+      { "title": "Flujos de reserva de consultas" },
+      { "title": "Comunicación segura con el cliente" },
+      { "title": "Incorporación de profesionales" }
+    ]
+  },
+  "flow": {
+    "heading": "Flujo de negocio",
+    "steps": ["Descubrir", "Comparar", "Consultar"],
+    "caption": "Vista conceptual del sistema"
+  },
+  "diagram": {
+    "badgeLines": ["Vista", "conceptual del sistema"],
+    "pills": ["Cliente", "Búsqueda de abogados", "Lógica de consulta", "Operaciones profesionales"]
+  },
+  "outcomes": [
+    "Los profesionales del derecho son más fáciles de encontrar por especialidad y ubicación",
+    "Los recorridos de consulta se consolidan en una sola plataforma",
+    "Los documentos y comunicaciones del cliente permanecen en flujos protegidos",
+    "Los abogados y bufetes obtienen una presencia digital estructurada y un flujo de consultas"
+  ],
+  "relatedWork": [
+    { "tag": "SaaS", "title": "OneTap Digital Card", "desc": "Una plataforma de tarjeta de presentación digital donde los profesionales comparten sus datos de contacto, enlaces y una página de reservas a través de un enlace de tarjeta público o un código QR.", "href": "/onetap-digital-card" },
+    { "tag": "IA", "title": "The PMB Consulting", "desc": "Una presencia digital profesional para una consultora que abarca mentoría empresarial, constitución de empresas, branding y servicios de crecimiento.", "href": "/pmb-consulting" },
+    { "tag": "Servicios profesionales", "title": "Power Mindset Breakthrough", "desc": "Una plataforma de coaching y desarrollo personal con programas, reservas y entrega de contenido.", "href": "/power-mindset-breakthrough" }
+  ]
+}

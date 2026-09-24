@@ -78,7 +78,7 @@
    a fixed px width would overflow narrower screens. */
 @media (min-width: 981px) {
   .wvt-page--solid-rock h1.wvt-hero__title {
-    width: 715px;
+    width: 37.24vw;
   }
 }
 
@@ -347,6 +347,13 @@ body .backimage-boy {
   padding-top: 58px;
 }
 
+/* Scoped to the AvocatConnect RDC page only — its own Figma hero top-aligns
+   the right column with the badge pill instead of the title, unlike the
+   other case-study pages sharing this template. */
+.wvt-page--avocat-connect-rdc .wvt-hero__right {
+  padding-top: 0;
+}
+
 .wvt-hero__desc {
   font-family: var(--font-heading);
   font-weight: 500;
@@ -360,6 +367,13 @@ body .backimage-boy {
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 32px;
+}
+
+/* Scoped to the AvocatConnect RDC page only — its own Figma hero specifies a
+   17px gap between the description and the buttons, instead of the 32px
+   used on the other case-study pages sharing this template. */
+.wvt-page--avocat-connect-rdc .wvt-hero__actions {
+  margin-top: 17px;
 }
 
 /* ---------- Browser mockup ---------- */
@@ -1505,7 +1519,11 @@ body .backimage-boy {
        where the right column starts level with the title, not the badges. */
     padding-top: 3.0208vw;
   }
-  
+
+  .wvt-page--avocat-connect-rdc .wvt-hero__right {
+    padding-top: 0;
+  }
+
   .wvt-hero__desc {
     font-family: var(--font-heading);
     font-weight: 500;
@@ -1513,12 +1531,16 @@ body .backimage-boy {
     line-height: 1.5;
     color: var(--color-white);
   }
-  
+
   .wvt-hero__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 1.0417vw;
     margin-top: 1.6667vw;
+  }
+
+  .wvt-page--avocat-connect-rdc .wvt-hero__actions {
+    margin-top: 0.8854vw;
   }
   
   /* ---------- Browser mockup ---------- */

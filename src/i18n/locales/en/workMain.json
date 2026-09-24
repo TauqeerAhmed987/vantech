@@ -59,6 +59,10 @@
     "allAccessTrip": {
       "title": "All Access Trip",
       "desc": "A travel booking and itinerary platform for curated trips, groups and experiences."
+    },
+    "avocatConnectRdc": {
+      "title": "AvocatConnect RDC",
+      "desc": "A premier platform connecting individuals and businesses across the DRC with verified lawyers and legal resources."
     }
   }
 }

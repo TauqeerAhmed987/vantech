@@ -32,6 +32,7 @@ const WorkSolidRockLeadershipPage = lazy(() => import('./pages/WorkSolidRockLead
 const WorkBuketiFinancialConsultingPage = lazy(() => import('./pages/WorkBuketiFinancialConsulting/WorkBuketiFinancialConsultingPage'));
 const WorkLelofitPage = lazy(() => import('./pages/WorkLelofit/WorkLelofitPage'));
 const WorkAllAccessTripPage = lazy(() => import('./pages/WorkAllAccessTrip/WorkAllAccessTripPage'));
+const WorkAvocatConnectRDCPage = lazy(() => import('./pages/WorkAvocatConnectRDC/WorkAvocatConnectRDCPage'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicy/PrivacyPolicyPage'));
 const TermsOfServicePage = lazy(() => import('./pages/TermsOfService/TermsOfServicePage'));
 const LegalPage = lazy(() => import('./pages/Legal/LegalPage'));
@@ -78,6 +79,7 @@ const pageRoutes: { path: string; element: React.ReactNode }[] = [
   { path: '/buketi-insurance-services', element: <WorkBuketiFinancialConsultingPage /> },
   { path: '/lelofit', element: <WorkLelofitPage /> },
   { path: '/all-access-trip', element: <WorkAllAccessTripPage /> },
+  { path: '/avocat-connect-rdc', element: <WorkAvocatConnectRDCPage /> },
   { path: '/contact', element: <ContactPage /> },
   { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
   { path: '/terms-of-service', element: <TermsOfServicePage /> },

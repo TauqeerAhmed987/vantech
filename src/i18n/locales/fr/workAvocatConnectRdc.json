@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "badges": ["Applications web", "Plateforme LegalTech"],
+    "titleLines": ["AvocatConnect RDC"],
+    "description": "Une plateforme de services juridiques mettant en relation particuliers et entreprises à travers la République démocratique du Congo avec des avocats vérifiés, des ressources juridiques fiables et des outils de consultation sécurisés.",
+    "screenshotAlt": "Capture d'écran de la plateforme AvocatConnect RDC"
+  },
+  "stats": [
+    { "label": "Type de projet", "value": "Applications web" },
+    { "label": "Capacités", "value": "Découverte • Consultation • Gestion des clients" },
+    { "label": "Secteur", "value": "LegalTech" },
+    { "label": "Statut", "value": "En ligne" }
+  ],
+  "detail": {
+    "overviewDesc": "AvocatConnect RDC est une plateforme moderne d'accès au droit conçue pour rendre l'accompagnement juridique professionnel plus facile à trouver à travers la République démocratique du Congo. La plateforme réunit la découverte d'avocats et de cabinets, l'information juridique, la réservation de consultations et la communication client sécurisée en une seule expérience numérique structurée.",
+    "challengeDesc": "Trouver le bon professionnel du droit pouvait impliquer plusieurs étapes disjointes — identifier le domaine juridique concerné, trouver un avocat adapté, comprendre son expertise et organiser une consultation.",
+    "builtDesc": "Nous avons créé une plateforme de services juridiques structurée où les utilisateurs peuvent rechercher des avocats par domaine juridique et par ville, explorer des profils professionnels, accéder à des ressources juridiques fiables et passer directement aux parcours de consultation et de communication."
+  },
+  "sidebar": { "serviceTags": ["Développement web", "Architecture de plateforme", "Système de réservation", "Design UX/UI"] },
+  "capabilities": {
+    "desc": "",
+    "items": [
+      { "title": "Découverte d'avocats et de cabinets" },
+      { "title": "Recherche par domaine juridique et ville" },
+      { "title": "Parcours de réservation de consultations" },
+      { "title": "Communication client sécurisée" },
+      { "title": "Intégration des professionnels" }
+    ]
+  },
+  "flow": {
+    "heading": "Flux opérationnel",
+    "steps": ["Découvrir", "Comparer", "Consulter"],
+    "caption": "Vue conceptuelle du système"
+  },
+  "diagram": {
+    "badgeLines": ["Vue", "conceptuelle du système"],
+    "pills": ["Client", "Découverte d'avocats", "Logique de consultation", "Opérations professionnelles"]
+  },
+  "outcomes": [
+    "Les professionnels du droit sont plus faciles à trouver par expertise et par lieu",
+    "Les parcours de consultation sont regroupés sur une seule plateforme",
+    "Les documents et communications des clients restent dans des parcours protégés",
+    "Les avocats et cabinets bénéficient d'une présence numérique structurée et d'un flux de demandes"
+  ],
+  "relatedWork": [
+    { "tag": "SaaS", "title": "OneTap Digital Card", "desc": "Une plateforme de carte de visite numérique où les professionnels partagent leurs coordonnées, liens et une page de réservation via un lien de carte public ou un code QR.", "href": "/onetap-digital-card" },
+    { "tag": "IA", "title": "The PMB Consulting", "desc": "Une présence numérique professionnelle pour un cabinet de conseil couvrant le mentorat d'entreprise, la création d'entreprise, l'image de marque et les services de croissance.", "href": "/pmb-consulting" },
+    { "tag": "Services professionnels", "title": "Power Mindset Breakthrough", "desc": "Une plateforme de coaching et de développement personnel avec des programmes, la réservation et la diffusion de contenu.", "href": "/power-mindset-breakthrough" }
+  ]
+}

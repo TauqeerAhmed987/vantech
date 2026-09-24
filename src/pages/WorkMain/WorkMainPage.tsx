@@ -23,6 +23,7 @@ import solidRockImg from '../../assets/images/work-main/figma/solid-rock-leaders
 import powerMindsetImg from '../../assets/images/work-main/figma/power-mindset-breakthrough.webp';
 import lelofitImg from '../../assets/images/work-main/figma/lelofit.webp';
 import buketiImg from '../../assets/images/work-main/figma/buketi-financial-consulting.webp';
+import avocatConnectRdcImg from '../../assets/images/AvocatConnect-RDC.webp';
 
 const CASE_STUDY_CTA = 'https://vantechsystems.tech/start-a-project';
 
@@ -39,6 +40,7 @@ const portfolioItems = [
   { key: 'powerMindset', category: 'businessPlatforms', image: powerMindsetImg, caseHref: '/power-mindset-breakthrough' },
   { key: 'lelofit', category: 'saas', image: lelofitImg, caseHref: '/lelofit' },
   { key: 'allAccessTrip', category: 'webApplications', image: allAccessTripImg, caseHref: '/all-access-trip' },
+  { key: 'avocatConnectRdc', category: 'webApplications', image: avocatConnectRdcImg, caseHref: '/avocat-connect-rdc' },
 ] as const;
 
 export default function WorkMainPage() {

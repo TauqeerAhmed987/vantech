@@ -45,6 +45,7 @@ function useNavLinks() {
         { label: t('nav.buketiFinancial'), href: '/buketi-insurance-services' },
         { label: t('nav.lelofit'), href: '/lelofit' },
         { label: t('nav.allAccessTrip'), href: '/all-access-trip' },
+        { label: t('nav.avocatConnectRdc'), href: '/avocat-connect-rdc' },
       ],
     },
     { label: t('nav.faq'), href: '#faq', samePage: true },
