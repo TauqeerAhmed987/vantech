@@ -30,17 +30,17 @@ const CASE_STUDY_CTA = 'https://vantechsystems.tech/start-a-project';
 const filterTabKeys = ['all', 'ai', 'saas', 'webApplications', 'businessPlatforms', 'insurance', 'ecommerce'] as const;
 
 const portfolioItems = [
-  { key: 'onetap', category: 'saas', image: oneTapImg, caseHref: '/onetap-digital-card' },
-  { key: 'pmb', category: 'businessPlatforms', image: pmbConsultingImg, caseHref: '/pmb-consulting' },
-  { key: 'buketi', category: 'businessPlatforms', image: buketiImg, caseHref: '/buketi-insurance-services' },
-  { key: 'mightyOak', category: 'businessPlatforms', image: mightyOakImg, caseHref: '/mighty-oak-legacy' },
-  { key: 'solidRock', category: 'businessPlatforms', image: solidRockImg, caseHref: '/solid-rock-leadership-development' },
-  { key: 'vanTravel', category: 'webApplications', image: vanTravelImg, caseHref: '/van-travel-business' },
-  { key: 'aiFna', category: 'ai', image: aiFnaImg, caseHref: CASE_STUDY_CTA },
-  { key: 'powerMindset', category: 'businessPlatforms', image: powerMindsetImg, caseHref: '/power-mindset-breakthrough' },
-  { key: 'lelofit', category: 'saas', image: lelofitImg, caseHref: '/lelofit' },
-  { key: 'allAccessTrip', category: 'webApplications', image: allAccessTripImg, caseHref: '/all-access-trip' },
-  { key: 'avocatConnectRdc', category: 'webApplications', image: avocatConnectRdcImg, caseHref: '/avocat-connect-rdc' },
+  { key: 'onetap', category: 'saas', image: oneTapImg, caseHref: '/onetap-digital-card', liveUrl: 'https://www.onetapdigitalcard.com/' },
+  { key: 'pmb', category: 'businessPlatforms', image: pmbConsultingImg, caseHref: '/pmb-consulting', liveUrl: 'https://thepmbconsulting.com/' },
+  { key: 'buketi', category: 'businessPlatforms', image: buketiImg, caseHref: '/buketi-insurance-services', liveUrl: 'https://buketifinancialconsulting.com/' },
+  { key: 'mightyOak', category: 'businessPlatforms', image: mightyOakImg, caseHref: '/mighty-oak-legacy', liveUrl: 'https://mightyoaklegacy.com/' },
+  { key: 'solidRock', category: 'businessPlatforms', image: solidRockImg, caseHref: '/solid-rock-leadership-development', liveUrl: CASE_STUDY_CTA },
+  { key: 'vanTravel', category: 'webApplications', image: vanTravelImg, caseHref: '/van-travel-business', liveUrl: 'https://vantravelbusiness.com/' },
+  { key: 'aiFna', category: 'ai', image: aiFnaImg, caseHref: CASE_STUDY_CTA, liveUrl: 'https://vantechsystems.tech/work/ai-fna' },
+  { key: 'powerMindset', category: 'businessPlatforms', image: powerMindsetImg, caseHref: '/power-mindset-breakthrough', liveUrl: 'https://powermindsetbreakthrough.com/' },
+  { key: 'lelofit', category: 'saas', image: lelofitImg, caseHref: '/lelofit', liveUrl: 'https://lelofit.com/' },
+  { key: 'allAccessTrip', category: 'webApplications', image: allAccessTripImg, caseHref: '/all-access-trip', liveUrl: 'https://www.allaccesstrip.com/' },
+  { key: 'avocatConnectRdc', category: 'webApplications', image: avocatConnectRdcImg, caseHref: '/avocat-connect-rdc', liveUrl: 'https://www.avocatconnectrdc.com/' },
 ] as const;
 
 export default function WorkMainPage() {
@@ -132,12 +132,17 @@ export default function WorkMainPage() {
                         <Icon svg={caseStudyArrowSvg} />
                       </span>
                     </a>
-                    <span className="work-card__link">
+                    <a
+                      href={item.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-card__link"
+                    >
                       {t('viewLiveSite')}
                       <span className="work-card__link-icon work-card__link-icon--site">
                         <Icon svg={caseStudyArrowSvg} />
                       </span>
-                    </span>
+                    </a>
                   </div>
                 </article>
               );
