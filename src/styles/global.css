@@ -232,8 +232,21 @@ h1, h2, h3, h4, p {
 /* Scoped to .home-page so the sitewide h2.section-title width on other pages is untouched. */
 .home-page h2.section-title {
   width: 100%;
+  max-width: 100%;
 }
-
+.pricing:after {
+  position: absolute;
+  content: '';
+  top: 23px;
+  left: -150px;
+  width: 345px;
+  height: 335px;
+  background-image: url(/src/assets/images/dashboard-mock-orb.png?t=1790261156261);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  animation: orb-spin 26s linear infinite;
+}
 .testimonials.section h2.section-title {
   width: 100%;
 }
@@ -3570,6 +3583,12 @@ a.navbar__cta--mobile {
     left: calc(var(--x) / 19.2 * 1vw);
     top: calc(var(--y) / 19.2 * 1vw);
   }
+  .pricing:after {
+    top: 1.198vw;
+    left: -7.813vw;
+    width: 17.969vw;
+    height: 17.448vw;
+  }
 
 }
 
@@ -4559,6 +4578,12 @@ a.navbar__cta--mobile {
     letter-spacing: 0.2px;
     width: 80%;
   }
+  .pricing:after {
+    top: 23px;
+    width: 195px;
+    height: 190px;
+    left: -80px;
+  }
 }
 
 /* / 600 to 767 --Nexus 7-- / */
@@ -4847,7 +4872,9 @@ a.navbar__cta--mobile {
     width: 280px;
     white-space: normal;
   }
-
+  .pricing:after {
+    display: none;
+  }
   .container,
   .container--wide {
     width: 90%;
