@@ -74,7 +74,7 @@ export default function Hero() {
             dangerouslySetInnerHTML={{ __html: t('hero.title') }}
           />
 
-          <p className="hero__desc">{t('hero.desc')}</p>
+          <p className={`hero__desc hero__desc--${i18n.language}`}>{t('hero.desc')}</p>
 
           <div className="hero__actions">
             <a href="#contact" className="btn btn-outline">
