@@ -29,3 +29,6 @@ pnpm-debug.log*
 *.swp
 .vscode/*
 !.vscode/extensions.json
+
+# Deploy zip
+site.zip
