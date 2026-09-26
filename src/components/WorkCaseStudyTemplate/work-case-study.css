@@ -2148,7 +2148,25 @@ body .backimage-boy {
     color: var(--color-white);
     white-space: nowrap;
   }
-  
+
+  /* Scoped to FR/ES/PT only — their longer system-approach pill labels
+     overflow the narrow pill column at this desktop size on some
+     case-study pages (e.g. "Búsqueda de abogados", "Acompanhamento da
+     consultoria"), unlike EN which already fits. Shared across all
+     case-study pages using this template, so each needs to stay small
+     enough for every page's longest label in that language. */
+  .wvt-diagram__pill.wvt-diagram__pill--fr {
+    font-size: 0.5469vw;
+  }
+
+  .wvt-diagram__pill.wvt-diagram__pill--es {
+    font-size: 0.703vw;
+  }
+
+  .wvt-diagram__pill.wvt-diagram__pill--pt {
+    font-size: 0.5469vw;
+  }
+
   .wvt-diagram__pill::before {
     content: '';
     position: absolute;
@@ -2592,6 +2610,24 @@ body .backimage-boy {
 
   .wvt-diagram {
     max-width: 500px;
+  }
+
+  /* Scoped to FR/ES/PT only — their longer system-approach pill labels (e.g.
+     "Recepción de consultas", "Acompanhamento da consultoria") overflow the
+     narrow 500px diagram's pill column at this tablet width, unlike EN
+     which already fits. Shared across all case-study pages using this
+     template, so each needs to stay small enough for every page's longest
+     label in that language. */
+  .wvt-diagram__pill.wvt-diagram__pill--fr {
+    font-size: 8px;
+  }
+
+  .wvt-diagram__pill.wvt-diagram__pill--es {
+    font-size: 10px;
+  }
+
+  .wvt-diagram__pill.wvt-diagram__pill--pt {
+    font-size: 8px;
   }
 
   .wvt-closing .container {

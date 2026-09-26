@@ -181,6 +181,11 @@
   color: var(--color-white);
 }
 
+.autopilot-hero__title--fr {
+  font-size: 50px;
+  word-spacing: 6px;
+}
+
 .autopilot-hero__desc {
   margin-top: 24px;
   max-width: 552px;
@@ -1040,6 +1045,10 @@
     font-size: 3.2292vw;
   }
 
+  .autopilot-hero__title--fr {
+    font-size: 2.6042vw;
+  }
+
   .autopilot-hero__desc {
     margin-top: 1.25vw;
     max-width: 32.344vw;
@@ -1461,6 +1470,9 @@
   .autopilot-hero__title {
     font-size: 42px;
   }
+  .autopilot-hero__title--fr {
+    font-size: 36px;
+  }
   .autopilot-hero__graphic {
     position: relative;
     width: 300px;
@@ -1693,6 +1705,9 @@
   .autopilot-hero__title {
     font-size: 32px;
   }
+  .autopilot-hero__title--fr {
+    font-size: 28px;
+  }
   .autopilot-hero__actions {
     flex-direction: column;
     align-items: center;
@@ -1820,6 +1835,9 @@
   .autopilot-hero__title {
     font-size: 30px;
   }
+  .autopilot-hero__title--fr {
+    font-size: 26px;
+  }
   .autopilot-hero__desc {
     margin-left: auto;
     margin-right: auto;
@@ -1918,6 +1936,9 @@
 @media (max-width: 320px) {
   .autopilot-hero__title {
     font-size: 28px;
+  }
+  .autopilot-hero__title--fr {
+    font-size: 24px;
   }
   .autopilot-included-card__desc {
     font-size: 16px;

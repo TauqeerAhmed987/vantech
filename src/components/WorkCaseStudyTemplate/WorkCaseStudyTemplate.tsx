@@ -288,7 +288,7 @@ export default function WorkCaseStudyTemplate({
                   {data.diagram.pills.map((pill, i) => (
                     <span className="wvt-diagram__pill-row" key={`${pill}-${i}`}>
                       <span className="wvt-diagram__pill-dot" />
-                      <span className="wvt-diagram__pill">{pill}</span>
+                      <span className={`wvt-diagram__pill wvt-diagram__pill--${currentLang}`}>{pill}</span>
                     </span>
                   ))}
                 </div>

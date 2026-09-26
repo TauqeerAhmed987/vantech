@@ -133,6 +133,19 @@
     border-color: var(--color-orange);
   }
 
+  /* Scoped to ES/PT only — their longer filter-tab labels ("Comercio
+     electrónico" / "Plataformas empresariais" etc.) push the last tab onto
+     its own second row at every desktop width, unlike EN/FR which already
+     fit all 7 tabs on one row. Shrinking just these two languages' tab text
+     brings the row back to matching EN/FR's single-row layout. */
+  .work-portfolio__tab.work-portfolio__tab--es {
+    font-size: 0.651vw;
+  }
+
+  .work-portfolio__tab.work-portfolio__tab--pt {
+    font-size: 0.677vw;
+  }
+
   .work-portfolio__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -356,6 +369,13 @@
   .work-portfolio__tab.is-active {
     background: var(--color-orange);
     border-color: var(--color-orange);
+  }
+
+  /* Scoped to ES only — its longer filter-tab labels push the last tab onto
+     its own second row at this tablet width, unlike EN/FR/PT which already
+     fit all 7 tabs on one row here. */
+  .work-portfolio__tab.work-portfolio__tab--es {
+    font-size: 12.5px;
   }
 
   .work-portfolio__grid {

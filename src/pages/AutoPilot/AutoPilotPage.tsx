@@ -50,7 +50,8 @@ interface CardText {
 }
 
 export default function AutoPilotPage() {
-  const { t } = useTranslation('autoPilot');
+  const { t, i18n } = useTranslation('autoPilot');
+  const isFr = i18n.language.startsWith('fr');
 
   const problems = t('problem.items', { returnObjects: true }) as string[];
 
@@ -150,7 +151,7 @@ export default function AutoPilotPage() {
                 <Icon svg={servicesStarSvg} />
                 {t('hero.badge')}
               </span>
-              <h1 className="autopilot-hero__title">{t('hero.title')}</h1>
+              <h1 className={`autopilot-hero__title${isFr ? ' autopilot-hero__title--fr' : ''}`}>{t('hero.title')}</h1>
               <p className="autopilot-hero__desc">{t('hero.desc')}</p>
               <div className="autopilot-hero__actions">
                 <a href="#contact" className="btn btn-primary">

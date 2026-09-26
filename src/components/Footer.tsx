@@ -21,8 +21,8 @@ function useFooterLinks() {
     { label: t('nav.aiAgents'), href: '/ai-agents' },
     { label: t('nav.aiAutomations'), href: '/ai-automation' },
     { label: t('nav.modelDevelopment'), href: '/model-development' },
-    { label: t('nav.autopilot'), href: '/auto-pilot' },
-    { label: t('nav.mvpDevelopment'), href: '/mvp-development' },
+    { label: t('nav.autopilot'), href: '/automation-suite' },
+    { label: t('nav.mvpDevelopment'), href: '/product-development' },
   ];
   const servicesLinksB = [
     { label: t('nav.webApplications'), href: '/web-applications' },

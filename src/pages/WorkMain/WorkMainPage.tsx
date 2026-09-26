@@ -89,7 +89,7 @@ export default function WorkMainPage() {
               <button
                 type="button"
                 key={tab}
-                className={`work-portfolio__tab${tab === activeTab ? ' is-active' : ''}`}
+                className={`work-portfolio__tab work-portfolio__tab--${currentLang}${tab === activeTab ? ' is-active' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
                 {t(`filterTabs.${tab}`)}
