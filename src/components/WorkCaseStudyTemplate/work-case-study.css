@@ -2054,7 +2054,8 @@ body .backimage-boy {
     line-height: 1.15;
     color: var(--color-white);
   }
-  
+
+
   .wvt-diagram__vector {
     position: absolute;
     left: 46.14%;
@@ -3135,6 +3136,14 @@ body .backimage-boy {
 
   .wvt-diagram__badge-label {
     font-size: 17px;
+  }
+
+  /* Scoped to FR only — its longer 3-line "conceptuelle du système" text
+     still spills past this small 150px circle at the shared 17px size,
+     unlike EN/ES/PT which fit. Shared across all case-study pages using
+     this template. */
+  .wvt-diagram__badge-label.wvt-diagram__badge-label--fr {
+    font-size: 15px;
   }
 
   .wvt-related__title {

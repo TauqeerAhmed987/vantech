@@ -85,7 +85,8 @@
   "diagram": {
     "badgeLines": [
       "Vue",
-      "conceptuelle du système"
+      "conceptuelle",
+      "du système"
     ],
     "pills": [
       "Visiteur",
