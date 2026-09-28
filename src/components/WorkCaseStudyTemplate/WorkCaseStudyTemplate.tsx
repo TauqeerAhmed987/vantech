@@ -268,7 +268,7 @@ export default function WorkCaseStudyTemplate({
               <div className="wvt-diagram">
                 <div className="wvt-diagram__badge">
                   <Icon svg={carbonReferenceArchitectureSvg} className="wvt-diagram__badge-icon" />
-                  <span className="wvt-diagram__badge-label">
+                  <span className={`wvt-diagram__badge-label wvt-diagram__badge-label--${currentLang}`}>
                     {data.diagram.badgeLines.map((line, i) => (
                       <Fragment key={line}>
                         {line}

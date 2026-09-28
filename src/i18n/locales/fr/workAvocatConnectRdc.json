@@ -33,7 +33,7 @@
     "caption": "Vue conceptuelle du système"
   },
   "diagram": {
-    "badgeLines": ["Vue", "conceptuelle du système"],
+    "badgeLines": ["Vue", "conceptuelle", "du système"],
     "pills": ["Client", "Découverte d'avocats", "Logique de consultation", "Opérations professionnelles"]
   },
   "outcomes": [
